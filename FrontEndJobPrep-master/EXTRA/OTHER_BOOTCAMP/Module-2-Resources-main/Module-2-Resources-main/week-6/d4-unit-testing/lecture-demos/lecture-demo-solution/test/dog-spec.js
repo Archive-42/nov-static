@@ -1,6 +1,6 @@
-// chai is an assertion library 
-const chai = require('chai');
-const spies = require('chai-spies');
+// chai is an assertion library
+const chai = require("chai");
+const spies = require("chai-spies");
 
 // assertion style included with chai
 const expect = chai.expect;
@@ -9,11 +9,10 @@ const expect = chai.expect;
 chai.use(spies);
 
 // import the object we're testing
-const Dog = require('../problems/dog');
-
+const Dog = require("../problems/dog");
 
 // way to group test, here we are testing Elephant class
-describe('Dog class', () => {
+describe("Dog class", () => {
   let bodhi;
 
   // runs before each test in a "describe" block
@@ -127,4 +126,4 @@ describe('Dog class', () => {
       expect(numTricksSpy).to.have.been.called.once;
     });
   });
-})
+});

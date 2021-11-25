@@ -33,7 +33,7 @@
   border-bottom: 1px solid #e2e2e2;
   display: grid;
   grid-template-columns: 1fr auto;
-  padding: .5em;
+  padding: 0.5em;
 }
 
 .interests-bar__stock-price:last-child {

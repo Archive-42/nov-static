@@ -2,7 +2,6 @@
 // - should return a promise
 // - should console.log "done stretching" and fulfill the promise after 1 second
 
-
 function stretch() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -14,7 +13,7 @@ function stretch() {
 
 // TODO: write a function called runOnTreadmill
 // - should return a promise
-// - should console.log "done running on treadmill" and fulfill the promise 
+// - should console.log "done running on treadmill" and fulfill the promise
 // after 0.5 seconds
 
 function runOnTreadmill() {
@@ -28,7 +27,7 @@ function runOnTreadmill() {
 
 // TODO: write a function called liftWeights
 // - should return a promise
-// - should console.log "done lifting weights" and fulfill the promise 
+// - should console.log "done lifting weights" and fulfill the promise
 // after 2 seconds
 
 function liftWeights() {

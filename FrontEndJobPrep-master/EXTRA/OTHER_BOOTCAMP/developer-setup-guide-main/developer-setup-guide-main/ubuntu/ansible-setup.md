@@ -12,7 +12,7 @@ At the command line:
 
 - [zsh] - If you didn't already have it, your default shell will now be zsh.
 - [nvm] - The node version manager, a program to help you manage different node
-versions
+  versions
 - [Node.JS] - A JavaScript code runner, we'll be using this to run our JavaScript
 - [zip and unzip] - Command line utilities to compress and uncompress zip files.
 - [htop] - A nice way to view all the programs running on your computer from the terminal
@@ -33,7 +33,7 @@ First type this command into your shell to cause Linux's package manager `apt` t
 sudo apt update
 ```
 
-This will prompt you for your linux password in order to become the super  user. (this is what `sudo` does)
+This will prompt you for your linux password in order to become the super user. (this is what `sudo` does)
 
 Then we can run the rest of these commands one at a time to install ansible without having to type the password again.
 
@@ -59,14 +59,14 @@ sudo apt install -y ansible
 
 Once you've got this done, move on to [Running the Ansible Playbook]
 
-[Ansible]:https://ansible.com
-[Running the Ansible Playbook]:../common/ansible-playbook-setup.md
-[Ansible]:https://ansible.com
-[zsh]:https://www.zsh.org/
-[nvm]:https://github.com/nvm-sh/nvm
-[Node.JS]:https://nodejs.org/en/
-[htop]:https://htop.dev/
-[pgcli]:https://www.pgcli.com/
-[starship]:https://starship.rs
-[PostgreSQL]:https://www.postgresql.org/
-[zip and unzip]:http://infozip.sourceforge.net/
+[ansible]: https://ansible.com
+[running the ansible playbook]: ../common/ansible-playbook-setup.md
+[ansible]: https://ansible.com
+[zsh]: https://www.zsh.org/
+[nvm]: https://github.com/nvm-sh/nvm
+[node.js]: https://nodejs.org/en/
+[htop]: https://htop.dev/
+[pgcli]: https://www.pgcli.com/
+[starship]: https://starship.rs
+[postgresql]: https://www.postgresql.org/
+[zip and unzip]: http://infozip.sourceforge.net/

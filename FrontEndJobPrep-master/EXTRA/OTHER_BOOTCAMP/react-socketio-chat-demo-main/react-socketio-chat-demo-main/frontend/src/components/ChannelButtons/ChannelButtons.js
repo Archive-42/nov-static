@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from 'react-redux';
-import { addChannels, setCurrentChannel } from '../../redux/actions/channels';
+import { useDispatch, useSelector } from "react-redux";
+import { addChannels, setCurrentChannel } from "../../redux/actions/channels";
 import { apiUrl } from "../../config";
 import styles from "./ChannelButtons.module.css";
 
@@ -27,7 +27,7 @@ const ChannelButtons = () => {
   // set the current Channel in Redux
   const joinChannel = (channel) => {
     dispatch(setCurrentChannel(channel));
-  }
+  };
 
   // Render the buttons, one for each channel
   return channels.map((channel) => {

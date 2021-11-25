@@ -1,5 +1,3 @@
-
-
 function multiplyByFive(num) {
   // console.log(this);
   return num * 5;
@@ -17,14 +15,12 @@ const pony = {
   },
   changeName: function (name) {
     this.name = name;
-  }
+  },
 };
-
 
 pony.whatIsThis();
 pony.sayName();
 pony.changeName("Tony");
-
 
 let ponyName = pony.sayName;
 
@@ -33,13 +29,10 @@ ponyName();
 let boundName = pony.sayName.bind(pony);
 boundName();
 
-
 const lizard = {
-  name: "Lionel"
+  name: "Lionel",
 };
-
 
 let boundLizardName = pony.sayName.bind(lizard);
 
 boundLizardName();
-

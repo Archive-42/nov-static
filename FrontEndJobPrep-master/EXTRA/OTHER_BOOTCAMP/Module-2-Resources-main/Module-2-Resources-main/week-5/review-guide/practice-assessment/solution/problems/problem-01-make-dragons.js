@@ -70,8 +70,7 @@ class Dragon {
   static getDragons(...dragons) {
     return dragons.map((dragon) => dragon.name);
   }
-
-};
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

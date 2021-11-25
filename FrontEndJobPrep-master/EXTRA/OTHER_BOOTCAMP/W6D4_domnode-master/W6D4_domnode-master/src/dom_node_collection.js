@@ -15,7 +15,7 @@ class DOMNodeCollection {
 
   empty() {
     this.htmlEls.forEach((el) => {
-      el.innerHTML = '';
+      el.innerHTML = "";
     });
   }
 
@@ -33,17 +33,11 @@ class DOMNodeCollection {
     }
   }
 
-  attr(attribute, value) {
-    
-  }
+  attr(attribute, value) {}
 
-  addClass() {
+  addClass() {}
 
-  }
-
-  removeClass() {
-
-  }
+  removeClass() {}
 }
 
 module.exports = DOMNodeCollection;

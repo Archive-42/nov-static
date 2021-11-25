@@ -1,40 +1,27 @@
 // SCOPE : visibility and availability of variables
 
-
-
 function increment() {
-	let count = 0;
-	count++;
-	console.log(count);
+  let count = 0;
+  count++;
+  console.log(count);
 }
 
 // console.log(count)
 
 // increment();
 
-
-
-
-
-
-
-
-
-
 // CONTEXT : the object to which a function belongs
 // - value of `this` keyword when code is executed
-
 
 // context with regular functions
 // - value of `this` depends on how a function is invoked
 // - function style invocation: `this` set to global object
 // - method style invocation: `this` set to object it is called on
 
-
 // GLOBAL FUNCTIONS
 
 function whatIsThis() {
-	console.log(this);
+  console.log(this);
 }
 
 // when we invoke a method function style, the context is automatically
@@ -42,22 +29,18 @@ function whatIsThis() {
 
 // whatIsThis(); // global
 
-
-
 // OBJECT METHODS
 
 let myObj = {
-	whatIsThis: function() {
-		console.log(this)
-	}
-}
+  whatIsThis: function () {
+    console.log(this);
+  },
+};
 
 // when we invoke a method method-style, the context will be the object the
-// method was called upon 
+// method was called upon
 
 // myObj.whatIsThis(); // { whatIsThis: [Function: whatIsThis] }
-
-
 
 // ISOLATED OBJECT METHODS
 
@@ -68,17 +51,7 @@ let myObj = {
 let myFunc = myObj.whatIsThis;
 // myFunc(); // global
 
-
-
-
-
-
-
-
-
-
-
-// ACCESSING PROPERTIES/METHODS USING THIS IN OBJECT METHODS 
+// ACCESSING PROPERTIES/METHODS USING THIS IN OBJECT METHODS
 // - we can access any methods/properties of an object using 'this'
 
 // let dog = {
@@ -96,16 +69,6 @@ let myFunc = myObj.whatIsThis;
 // dog.speak(); // hi my name is bodhi
 // dog.changeName('pancake'); // hi my name is pancake
 // console.log(dog);
-
-
-
-
-
-
-
-
-
-
 
 // METHODS WITH UNEXPECTED CONTEXT
 
@@ -125,20 +88,5 @@ let myFunc = myObj.whatIsThis;
 // let changeNameFunc = dog.changeName;
 // changeNameFunc('bob');
 
-
 // dog.changeName('bob');
 // console.log(dog);
-
-
-
-
-
-
-
-
-
-
-
-
-
-

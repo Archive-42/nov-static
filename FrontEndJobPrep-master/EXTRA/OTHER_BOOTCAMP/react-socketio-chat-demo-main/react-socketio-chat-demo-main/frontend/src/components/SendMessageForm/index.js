@@ -1,2 +1,2 @@
-import SendMessageForm from './SendMessageForm';
+import SendMessageForm from "./SendMessageForm";
 export default SendMessageForm;

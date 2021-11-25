@@ -1,4 +1,3 @@
-
 class Animal {
   constructor(name, age) {
     this.name = name;
@@ -7,15 +6,10 @@ class Animal {
 
   speak() {
     console.log(`hi my name is ${this.name}`);
-	}
+  }
 }
 
-
-class Banana {
-
-}
-
-
+class Banana {}
 
 // console.log(module);
 
@@ -23,9 +17,6 @@ class Banana {
 module.exports = Animal;
 
 // console.log(module.exports)
-
-
-
 
 // EXPORT METHOD #2
 // module.exports.Animal = Animal;

@@ -18,9 +18,9 @@ Here's some common ones you may hear:
 - [Terminal] - A text based interface for interacting with your computer. This is
   based on actual pieces of hardware that used to exist for connecting to a remote computer. Today we primarily mean an application which _emulates_ one of these terminals. This means terminal applications are often called [Terminal Emulators]
 
-    | An early terminal    | The macos Terminal App|
-    |----------------------|-----------------------|
-    | ![An early terminal] | ![macos terminal app] |
+  | An early terminal    | The macos Terminal App |
+  | -------------------- | ---------------------- |
+  | ![An early terminal] | ![macos terminal app]  |
 
 - [Shell] - Distinct from the terminal this is usually the default program running when you first open the terminal. It accepts input from the user, and can enter commands that will run other programs. The shell usually has it's own unique mini-programming language as well. Common shells are [bash] and [zsh]
 - [Command] - the name of a program or alias we can type at the shell which performs some action

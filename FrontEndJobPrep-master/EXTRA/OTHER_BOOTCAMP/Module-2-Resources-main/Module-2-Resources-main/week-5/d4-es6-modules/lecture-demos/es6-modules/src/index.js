@@ -3,7 +3,7 @@
 // import { Dog, Cat } from './animal.js';
 
 // we're export defaulting the shelter class so we dont need curlies
-import Shelter from './shelter.js';
+import Shelter from "./shelter.js";
 
 // const Shelter = require('./shelter')
 
@@ -11,7 +11,6 @@ import Shelter from './shelter.js';
 // let pancake = new Cat('pancake', 10);
 
 let shelter = new Shelter();
-
 
 // remember that in order to get browser support for ES6 module syntax
 // we must use a server to open our files in the browser
@@ -24,5 +23,3 @@ let shelter = new Shelter();
 
 // shelter.receiveAnimal(bodhi);
 // shelter.receiveAnimal(pancake);
-
-

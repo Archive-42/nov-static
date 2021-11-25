@@ -30,7 +30,7 @@ const messagesReducer = (state = initialState, action) => {
         : [];
       return {
         ...state,
-        [message.ChannelId]: [...oldMessages, message]
+        [message.ChannelId]: [...oldMessages, message],
       };
     // This sets all the messages for a channel.
     // Used on first load
@@ -38,7 +38,7 @@ const messagesReducer = (state = initialState, action) => {
       const { messages, channel } = action;
       return {
         ...state,
-        [channel.id]: [...messages]
+        [channel.id]: [...messages],
       };
     default:
       return state;

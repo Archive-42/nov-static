@@ -9,9 +9,7 @@ const expect = chai.expect;
 chai.use(spies);
 
 // import the object we're testing
-const Dog = require('../problems/dog');
-
-
+const Dog = require("../problems/dog");
 
 describe("Dog class", () => {
   let bodhi;

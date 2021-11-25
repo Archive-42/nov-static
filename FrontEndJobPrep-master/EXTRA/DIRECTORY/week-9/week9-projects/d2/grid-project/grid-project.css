@@ -106,8 +106,7 @@ hr {
     "discovery discovery"
     "most-popular most-popular"
     "news news"
-    "footer footer"
-  ;
+    "footer footer";
 }
 
 /* Grid Section 1 - Flex Styles */
@@ -190,11 +189,11 @@ hr {
     "g2-5 g2-5 g2-5 g2-5 g2-5"
     "g2-6 g2-6 g2-6 g2-6 g2-6"
     "g2-7 g2-7 g2-7 g2-8 g2-8"
-    "g2-9 g2-9 g2-9 g2-9 g2-9"
-  ;
+    "g2-9 g2-9 g2-9 g2-9 g2-9";
 }
 
-.flex__item, .grid__item {
+.flex__item,
+.grid__item {
   border: 1px solid #333333;
 }
 
@@ -210,7 +209,7 @@ hr {
   height: 290px;
 }
 
- .grid__item-3-3 {
+.grid__item-3-3 {
   grid-area: g3-3;
   height: 760px;
 }
@@ -244,8 +243,7 @@ hr {
     "g3-3 g3-4"
     "g3-5 g3-5"
     "g3-6 g3-6"
-    "g3-7 g3-7"
-  ;
+    "g3-7 g3-7";
 }
 
 /* Grid Section 4 - Nested Grid Styles */
@@ -431,7 +429,7 @@ hr {
 
 /* Responsive Styles */
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .nyt-masthead {
     width: 430px;
     height: 58px;

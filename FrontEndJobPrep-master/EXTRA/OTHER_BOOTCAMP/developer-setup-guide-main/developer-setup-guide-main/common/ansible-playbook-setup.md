@@ -25,7 +25,7 @@ Now we can run the following command to run the ansible playbook.
 ansible-pull -K -U https://github.com/bartdorsey/developer-playbook.git playbook.yml
 ```
 
-The first thing the playbook does is ask you for a `BECOMES` password.  This is
+The first thing the playbook does is ask you for a `BECOMES` password. This is
 because ansible needs to `BECOME` the superuser in order to install some of the
 software. Just type your macOS or Linux password here and press enter.
 
@@ -58,6 +58,6 @@ You've now got all the software installed you need to be a real web developer!
 
 Once you've got this completed you can move on an read about [extra resources]
 
-[Visual Studio Code]:https://code.visualstudio.com/
-[extra resources]:extra-resources.md
-[starship]:https://starship.rs
+[visual studio code]: https://code.visualstudio.com/
+[extra resources]: extra-resources.md
+[starship]: https://starship.rs

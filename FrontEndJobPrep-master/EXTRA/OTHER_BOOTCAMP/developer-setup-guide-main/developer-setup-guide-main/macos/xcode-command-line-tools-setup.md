@@ -15,6 +15,6 @@ command line tools, click Ok and wait for the tools to finish installing.
 
 Once this is finished, move on to [Installing homebrew]
 
-[Installing homebrew]:homebrew-setup.md
-[Xcode]:https://developer.apple.com/xcode/
-[Xcode command line tools]:https://developer.apple.com/library/archive/technotes/tn2339/_index.html#//apple_ref/doc/uid/DTS40014588-CH1-WHAT_IS_THE_COMMAND_LINE_TOOLS_PACKAGE_
+[installing homebrew]: homebrew-setup.md
+[xcode]: https://developer.apple.com/xcode/
+[xcode command line tools]: https://developer.apple.com/library/archive/technotes/tn2339/_index.html#//apple_ref/doc/uid/DTS40014588-CH1-WHAT_IS_THE_COMMAND_LINE_TOOLS_PACKAGE_

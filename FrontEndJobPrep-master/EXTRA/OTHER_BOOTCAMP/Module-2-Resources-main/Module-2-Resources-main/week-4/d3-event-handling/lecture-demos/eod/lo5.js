@@ -1,4 +1,3 @@
-const checkPasswords = () => {
-};
+const checkPasswords = () => {};
 
-window.addEventListener('DOMContentLoaded', checkPasswords);
+window.addEventListener("DOMContentLoaded", checkPasswords);

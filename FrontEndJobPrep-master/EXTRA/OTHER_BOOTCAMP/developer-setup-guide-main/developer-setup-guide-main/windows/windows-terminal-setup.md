@@ -1,6 +1,6 @@
 # Install Windows Terminal
 
-While WSL includes an Ubuntu terminal, it is not very user friendly when it comes to copy and pasting stuff into the terminal.  Luckily for us Microsoft has a new Windows Terminal app that is much nicer to use. It also supports both Powershell and WSL.
+While WSL includes an Ubuntu terminal, it is not very user friendly when it comes to copy and pasting stuff into the terminal. Luckily for us Microsoft has a new Windows Terminal app that is much nicer to use. It also supports both Powershell and WSL.
 
 You can simply download and install [Windows Terminal] from the Microsoft Store.
 
@@ -23,8 +23,8 @@ Then head to the list of profiles on the left, and select the Ubuntu profile.
 
 ![Windows-Terminal-Ubuntu-Starting-Directory](images/Windows-Terminal-Ubuntu-Starting-Directory.png)
 
-By default WSL, starts us up in our *Windows Home Folder*. However microsoft recommends we *DO NOT* keep our files inside our Windows Home Folder, but instead
-inside our Linux home folder.  So we can change the Starting directory to the following, replacing **`username`** with the username you created for your Ubuntu system.
+By default WSL, starts us up in our _Windows Home Folder_. However microsoft recommends we _DO NOT_ keep our files inside our Windows Home Folder, but instead
+inside our Linux home folder. So we can change the Starting directory to the following, replacing **`username`** with the username you created for your Ubuntu system.
 
 ```text
 \\wsl$\Ubuntu\home\username
@@ -43,7 +43,7 @@ But you should see the `~` (tilde) in your prompt showing you are currently in y
 ## Installing a nerd font (Optional)
 
 This is **optional**, but to get the most out of your terminal prompt, you may want to install
-a Nerd font.  These fonts are patched to give extra characters used by the prompt we will
+a Nerd font. These fonts are patched to give extra characters used by the prompt we will
 use in class.
 
 [Download a Nerd Font]
@@ -63,9 +63,9 @@ You may want to read about certain [Unix Terminology] that you will need to be f
 
 Once you've read that, move on to [Installing Windows Apps]
 
-[Installing Ansible]:ansible-setup.md
-[Unix Terminology]:../resources/unix-terminology.md
-[Windows Terminal]:https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701
-[Installing Windows Apps]:windows-app-setup.md
-[Download a Nerd Font]:https://www.nerdfonts.com/font-downloads
-[Fira Code Nerd]:https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
+[installing ansible]: ansible-setup.md
+[unix terminology]: ../resources/unix-terminology.md
+[windows terminal]: https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701
+[installing windows apps]: windows-app-setup.md
+[download a nerd font]: https://www.nerdfonts.com/font-downloads
+[fira code nerd]: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip

@@ -1,7 +1,6 @@
-
 class Horse {
   constructor(name) {
-    this.name = name; 
+    this.name = name;
   }
 
   gallop() {
@@ -17,7 +16,7 @@ class Dog {
   constructor(name) {
     this.name = name;
   }
-  
+
   run() {
     console.log(`${this.name} runs.`);
   }
@@ -42,9 +41,9 @@ class Pig {
 }
 
 // Lets make some Horses, Dogs, and Pigs:
-const bob = new Horse('Bob');
-const clifford = new Dog('Clifford');
-const pinky = new Pig('Pinky');
+const bob = new Horse("Bob");
+const clifford = new Dog("Clifford");
+const pinky = new Pig("Pinky");
 
 // Lets make our instances speak:
 bob.neigh(); // Bob The Horse says neigh!

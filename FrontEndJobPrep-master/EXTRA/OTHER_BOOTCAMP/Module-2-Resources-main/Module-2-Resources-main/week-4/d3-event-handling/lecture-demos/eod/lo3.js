@@ -1,6 +1,3 @@
-const stopOrElse = () => {
-};
+const stopOrElse = () => {};
 
-window.addEventListener('DOMContentLoaded', () => {
-  
-});
+window.addEventListener("DOMContentLoaded", () => {});

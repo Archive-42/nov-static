@@ -1,33 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. update click count on button via span
 
-	// 1. update click count on button via span
-	
+  // method #1
+  // let button = document.getElementById("my-button");
+  // let span = document.getElementById("my-span");
 
-	// method #1
-	// let button = document.getElementById("my-button");
-	// let span = document.getElementById("my-span");
+  // button.addEventListener("click", (event) => {
+  // 	span.innerText = `${event.detail}`;
+  // });
 
-	// button.addEventListener("click", (event) => {
-	// 	span.innerText = `${event.detail}`;
-	// });
+  // method #2
+  let button = document.getElementById("my-button");
+  let span = document.getElementById("my-span");
+  let count = 0;
+  button.addEventListener("click", (event) => {
+    count++;
+    span.innerText = count;
+  });
 
-
-	// method #2
-	let button = document.getElementById("my-button");
-	let span = document.getElementById("my-span");
-	let count = 0;
-	button.addEventListener("click", (event) => {
-		count++;
-		span.innerText = count;
-	});
-
-
-
-
-
-
-
-	// 2. create dog image when button is clicked
+  // 2. create dog image when button is clicked
 
   // append the image "dog-pic.jpg" to the div with the id of "dog-img"
   // when the user clicks the button with the id of "show-dog-button"
@@ -36,28 +27,20 @@ document.addEventListener('DOMContentLoaded', () => {
   let dogDiv = document.getElementById("dog-img");
 
   showDogButton.addEventListener("click", (event) => {
-		// method #1
-		let img = document.createElement('img');
-		img.src = './dog-pic.jpg';
+    // method #1
+    let img = document.createElement("img");
+    img.src = "./dog-pic.jpg";
 
-		if (dogDiv.innerHTML === '') {
-			dogDiv.appendChild(img);
-		}
+    if (dogDiv.innerHTML === "") {
+      dogDiv.appendChild(img);
+    }
 
-		// method #2
-		// let img = '<img src="./dog-pic.jpg" >'
-		// dogDiv.innerHTML = img;
+    // method #2
+    // let img = '<img src="./dog-pic.jpg" >'
+    // dogDiv.innerHTML = img;
+  });
 
-	});
-	
-
-
-
-
-
-
-
-	// 3.  *BONUS*  handling user input
+  // 3.  *BONUS*  handling user input
 
   let userInput = document.getElementById("user-input");
   let myDiv = document.getElementById("my-div");
@@ -73,30 +56,23 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   userInput.addEventListener("input", (event) => {
-		let value = event.target.value;
-		
-		if (validColors.includes(value)) {
-			myDiv.style.backgroundColor = value;
-		}
+    let value = event.target.value;
+
+    if (validColors.includes(value)) {
+      myDiv.style.backgroundColor = value;
+    }
   });
 
-
-
-
-
-
-
-
-	// 4.  *BONUS* pizza demo using classes
+  // 4.  *BONUS* pizza demo using classes
 
   let options = document.getElementById("options");
 
   options.addEventListener("click", (event) => {
     if (event.target.type === "checkbox") {
-			let checkbox = event.target;
-			// event.target.id = 'mushroom'
+      let checkbox = event.target;
+      // event.target.id = 'mushroom'
       let toppings = document.getElementsByClassName(event.target.id);
-			
+
       if (checkbox.checked) {
         Array.from(toppings).forEach((item) => {
           item.classList.remove("invisible");
@@ -108,11 +84,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
-
-
-
-
-
-
-
-})
+});

@@ -1,5 +1,5 @@
 class Animal {
-  constructor(name, noise=null, move=null) {
+  constructor(name, noise = null, move = null) {
     this.noise = noise;
     this.move = move;
     this.name = name;
@@ -14,47 +14,39 @@ class Animal {
   }
 }
 
-
-
-
 class Horse extends Animal {
-  constructor(name){
-    super(name, 'neigh', 'gallops');
-	}
-	
-	makeMove() {
-		super.makeMove(); // `${this.name} ${this.move}.`)
-		console.log('hello')
-	}
+  constructor(name) {
+    super(name, "neigh", "gallops");
+  }
+
+  makeMove() {
+    super.makeMove(); // `${this.name} ${this.move}.`)
+    console.log("hello");
+  }
 }
 
-let horse = new Horse('horsey')
+let horse = new Horse("horsey");
 
 class Pig extends Animal {
   constructor(name) {
-    super(name, 'oink', 'trots');
+    super(name, "oink", "trots");
   }
 }
 
 class Dog extends Animal {
   constructor(name) {
-    super(name, 'woof', 'runs');
+    super(name, "woof", "runs");
   }
 }
 
-
-
 module.exports = {
-  Horse:Horse,
-  Dog:Dog, 
-  Pig:Pig, 
+  Horse: Horse,
+  Dog: Dog,
+  Pig: Pig,
 };
-
-
 
 // module.exports = {
 //   Horse,
-//   Dog, 
-//   Pig 
+//   Dog,
+//   Pig
 // };
-

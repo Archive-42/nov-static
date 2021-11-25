@@ -1,6 +1,6 @@
-const bonus = number => {
+const bonus = (number) => {
   return number * 2;
-}
+};
 
 class Employee {
   constructor(name, salary) {
@@ -29,4 +29,4 @@ class Employee {
   }
 }
 
-module.exports = { bonus, Employee }
+module.exports = { bonus, Employee };

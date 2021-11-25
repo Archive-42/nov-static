@@ -1,7 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 
-html, body, div, h1, h2, h3 {
-  font-family: 'Bangers', cursive;
+html,
+body,
+div,
+h1,
+h2,
+h3 {
+  font-family: "Bangers", cursive;
   letter-spacing: 1.2px;
   margin: 0;
   padding: 0;

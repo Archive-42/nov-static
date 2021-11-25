@@ -1,14 +1,15 @@
 /* page wide styles */
 body {
   margin: 0;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans,
+    Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 14px;
 }
 
 /* style header nav w/ flexbox */
 .header-nav__container {
-  background-color: #026AA7;
-  color: #FFFFFF;
+  background-color: #026aa7;
+  color: #ffffff;
   padding: 4px;
   line-height: 20px;
   font-size: 16px;
@@ -25,14 +26,14 @@ body {
   text-decoration: none;
   align-items: center;
   text-align: center;
-  background-color: hsla(0,0%,100%,.3);
+  background-color: hsla(0, 0%, 100%, 0.3);
   box-shadow: none;
   color: #fff;
   height: 32px;
   line-height: 32px;
   margin: 0 4px 0 0;
   padding: 0;
-  transition: .1s ease;
+  transition: 0.1s ease;
   white-space: nowrap;
   padding: 8px;
   height: 32px;
@@ -40,7 +41,7 @@ body {
 }
 
 .header-nav__button#alerts {
-  background-color: #CF513D;
+  background-color: #cf513d;
 }
 
 /***** PHASE 2 - Team Container *****/
@@ -94,7 +95,7 @@ body {
   color: #172b4d;
   line-height: 20px;
   font-weight: 700;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 /***** PHASE 4 - Flexboxing the Boards *****/
@@ -112,7 +113,7 @@ body {
   border-radius: 3px;
   /* shorthand - flex: [flex-grow] [flex-shrink] [flex-basis] */
   flex: 0 0 220px;
-  background-color:#6C547B;
+  background-color: #6c547b;
   padding: 0 20px;
   max-width: 180px;
   padding-bottom: 32px;
@@ -124,7 +125,7 @@ body {
 /* setting both of these at once with a comma (css or operator) */
 .boards__sidebar-content p.title,
 .boards__sidebar-content a {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .boards__sidebar-content > p.description {
@@ -141,7 +142,7 @@ body {
   height: 100px;
   max-width: 250px;
   background-color: hotpink;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 700;
   border-radius: 3px;
   box-sizing: border-box;
@@ -157,7 +158,6 @@ body {
   justify-content: space-between;
 }
 
-
 /***** Supplied CSS follows *****/
 .header-nav__button {
   display: inline;
@@ -167,14 +167,14 @@ body {
   text-decoration: none;
   align-items: center;
   text-align: center;
-  background-color: hsla(0,0%,100%,.3);
+  background-color: hsla(0, 0%, 100%, 0.3);
   box-shadow: none;
   color: #fff;
   height: 32px;
   line-height: 32px;
   margin: 0 4px 0 0;
   padding: 0;
-  transition: .1s ease;
+  transition: 0.1s ease;
   white-space: nowrap;
   padding: 8px;
   height: 32px;
@@ -211,7 +211,7 @@ body {
 
 /* Header Breakpoint */
 @media screen and (max-width: 730px) {
-  .header-nav__button#search > input, 
+  .header-nav__button#search > input,
   .boards-label {
     display: none;
   }
@@ -246,7 +246,7 @@ body {
 @media screen and (max-width: 1175px) {
   .boards__sidebar {
     margin: 0 auto 32px;
-  } 
+  }
   .boards__group {
     margin: 0 auto;
   }

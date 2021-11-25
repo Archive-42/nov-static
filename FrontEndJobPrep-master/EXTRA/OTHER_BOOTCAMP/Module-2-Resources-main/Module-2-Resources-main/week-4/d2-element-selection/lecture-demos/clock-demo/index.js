@@ -1,25 +1,20 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const title = document.getElementById("title");
 
+  const getTime = () => {
+    const date = new Date();
+    const seconds = date.getSeconds();
+    const minutes = date.getMinutes();
+    const hours = date.getHours();
 
-document.addEventListener('DOMContentLoaded', () => {
+    let titleText = `${hours}:${minutes}:${seconds}`;
+    title.innerText = titleText;
 
-	const title = document.getElementById('title');
+    // title.innerHTML = hours + ":" + minutes + ":" + seconds;
+  };
 
-	const getTime = () => {
-		const date = new Date();
-		const seconds = date.getSeconds();
-		const minutes = date.getMinutes();
-		const hours = date.getHours();
-
-		let titleText = `${hours}:${minutes}:${seconds}`
-		title.innerText = titleText;
-
-		// title.innerHTML = hours + ":" + minutes + ":" + seconds;
-	}
-
-	setInterval(getTime, 1000);
-})
-
-
+  setInterval(getTime, 1000);
+});
 
 // // generate a random number for each list item
 // const getRandomInt = max => {
@@ -39,5 +34,3 @@ document.addEventListener('DOMContentLoaded', () => {
 // 	const listElement = document.getElementById("your-worst-enemy");
 // 	listElement.innerHTML = liString;
 // });
-
-

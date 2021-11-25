@@ -16,7 +16,7 @@ At the command line:
 
 - [zsh] - If you didn't already have it, your default shell will now be zsh.
 - [nvm] - The node version manager, a program to help you manage different node
-versions
+  versions
 - [Node.JS] - A JavaScript code runner, we'll be using this to run our JavaScript
 - [zip and unzip] - Command line utilities to compress and uncompress zip files.
 - [htop] - A nice way to view all the programs running on your computer from the terminal
@@ -41,17 +41,17 @@ brew install ansible
 
 Once it has successfully installed, your shell prompt should reappear and you can move on to [Running the Ansible Playbook]
 
-[Running the Ansible Playbook]:../common/ansible-playbook-setup.md
-[Ansible]:https://ansible.com
-[Visual Studio Code]:https://code.visualstudio.com/
-[Postico]:https://eggerapps.at/postico/
-[Postbird]:https://github.com/Paxa/postbird
-[Insomnia]:https://insomnia.rest/
-[zsh]:https://www.zsh.org/
-[nvm]:https://github.com/nvm-sh/nvm
-[Node.JS]:https://nodejs.org/en/
-[htop]:https://htop.dev/
-[pgcli]:https://www.pgcli.com/
-[starship]:https://starship.rs
-[PostgreSQL]:https://www.postgresql.org/
-[zip and unzip]:http://infozip.sourceforge.net/
+[running the ansible playbook]: ../common/ansible-playbook-setup.md
+[ansible]: https://ansible.com
+[visual studio code]: https://code.visualstudio.com/
+[postico]: https://eggerapps.at/postico/
+[postbird]: https://github.com/Paxa/postbird
+[insomnia]: https://insomnia.rest/
+[zsh]: https://www.zsh.org/
+[nvm]: https://github.com/nvm-sh/nvm
+[node.js]: https://nodejs.org/en/
+[htop]: https://htop.dev/
+[pgcli]: https://www.pgcli.com/
+[starship]: https://starship.rs
+[postgresql]: https://www.postgresql.org/
+[zip and unzip]: http://infozip.sourceforge.net/

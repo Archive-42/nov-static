@@ -115,7 +115,6 @@ describe("Problem 4:", () => {
         expect(dragons).to.deep.include(solution.falkor.name);
         expect(dragons).to.deep.include(solution.smaug.name);
       });
-
     });
   });
 });

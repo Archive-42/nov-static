@@ -1,6 +1,6 @@
-// chai is an assertion library 
-const chai = require('chai');
-const spies = require('chai-spies');
+// chai is an assertion library
+const chai = require("chai");
+const spies = require("chai-spies");
 
 // assertion style included with chai
 const expect = chai.expect;
@@ -9,8 +9,7 @@ const expect = chai.expect;
 chai.use(spies);
 
 // import objects/functions we're testing
-const { bonus, Employee } = require('../problems/employee')
-
+const { bonus, Employee } = require("../problems/employee");
 
 describe("bonus function", () => {
   it("should take a number and return twice as much", () => {

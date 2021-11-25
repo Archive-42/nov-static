@@ -10,7 +10,8 @@ html {
   box-sizing: border-box;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -23,11 +24,17 @@ a {
   border-bottom: 1px solid transparent;
 }
 
-a:hover, a:visited {
+a:hover,
+a:visited {
   border-bottom: 1px solid red;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: inherit;
   font-size: inherit;
   font-weight: normal;

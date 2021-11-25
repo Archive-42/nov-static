@@ -20,9 +20,9 @@ After a reboot, the setup of Ubuntu will continue, you will see powershell reope
 
 and then an "Ubuntu" window opens and installs Ubuntu (this step might take a while)
 
-It will prompt you for your username.  You can make this whatever you would like.
+It will prompt you for your username. You can make this whatever you would like.
 
-Remember this is a new *virtual computer*, it has it's own username and it's own password. So don't forget it!
+Remember this is a new _virtual computer_, it has it's own username and it's own password. So don't forget it!
 
 ![Ubuntu install step 3](images/ubuntu-install-step3.png)
 
@@ -32,4 +32,4 @@ Once Ubuntu is finished, you should see the Ubuntu terminal prompt.
 
 Once you've got the Ubuntu Terminal prompt, Move on to [Installing Windows Terminal]
 
-[Installing Windows Terminal]:windows-terminal-setup.md
+[installing windows terminal]: windows-terminal-setup.md

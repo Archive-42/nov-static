@@ -1,116 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handling Learning Objectives</title>
+    <script src="lo1.js"></script>
+    <script src="lo2.js"></script>
+    <script src="lo3.js"></script>
+    <script src="lo4.js"></script>
+    <script src="lo5.js"></script>
+    <script src="lo6.js"></script>
+    <script src="lo7.js"></script>
+    <style>
+      body {
+        margin: 0 100px;
+      }
+      .box {
+        height: 20px;
+        width: 20px;
+        border: 1px solid black;
+        margin: 5px;
+      }
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Event Handling Learning Objectives</title>
-        <script src="lo1.js"></script>
-        <script src="lo2.js"></script>
-        <script src="lo3.js"></script>
-        <script src="lo4.js"></script>
-        <script src="lo5.js"></script>
-        <script src="lo6.js"></script>
-        <script src="lo7.js"></script>
-        <style>
-            body {
-                margin: 0 100px;
-            }
-            .box {
-                height: 20px;
-                width: 20px;
-                border: 1px solid black;
-                margin: 5px;
-            }
+      #red-square {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+      }
 
-            #red-square {
-                width: 50px;
-                height: 50px;
-                background-color: red;
-            }
+      #drop-zone {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+      }
 
-            #drop-zone {
-                width: 200px;
-                height: 200px;
-                border: 1px solid black
-            }
+      #password-form {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+      }
 
-            #password-form {
-                display: flex;
-                flex-direction:column;
-                width: 400px;
-            }
+      #password-form input,
+      #password-form button {
+        margin: 10px;
+      }
+    </style>
+  </head>
 
-            #password-form input, #password-form button {
-                margin: 10px;
-            }
-        </style>
-    </head>
-
-    <body>
-        <ol>
-            <li>
-                <h3>
-                    Given an HTML page that includes <code>&lt;button id="increment-count"&gt;I have been
-                    clicked &lt;span id="clicked-count"&gt;0&lt;/span&gt; times&lt;/button&gt;</code>, write JavaScript
-                    that increases the value of the content of span#clicked-count by 1 every time
-                    <code>button#increment-count</code> is clicked.
-                </h3>
-                <button id="count-button">
-                    You have clicked this <span id="count-span">0</span> times
-                </button>
-            </li>
-            <li>
-                <h3>Given an HTML page that includes
-                    <code>&lt;input type="checkbox" id="on-off"&gt;&lt;div id="now-you-see-me"&gt;Now you see
-                    me&lt;/div&gt;</code>, write JavaScript that sets the display of div#now-you-see-me to
-                    "none" when input#on-off is checked and to "block" when input#on-off is not
-                    checked.
-                </h3>
-                <input type="checkbox" id="on-off">
-                <div id="now-you-see-me">Now you see me!</div>
-            </li>
-            <li>
-                <h3>Given an HTML file that includes
-                    <code>&lt;input id="stopper" type="text" placeholder="Quick! Type STOP"&gt;</code>,
-                    write
-                    JavaScript that will change the background color of the page to cyan five
-                    seconds after a page loads unless the field input#stopper contains only the
-                    text "STOP".
-                </h3>
-                <input id="stopper" type="text" placeholder="Quick! Type STOP">
-            </li>
-            <li>
-                <h3>Given an HTML page with that includes <code>&lt;input type=”text” id=”fancypants”&gt;</code>,
-                    write JavaScript that changes the background color of the textbox to #E8F5E9
-                    when the caret is in the textbox and turns it back to its normal color when
-                    focus is elsewhere.</h3>
-                    <form id="fancyform">
-                        <input type="text" id="fancypants">
-                    </form>
-            </li>
-            <li>
-                <h3>Given an HTML page that includes a form with two password fields, write
-                    JavaScript that subscribes to the forms submission event and cancels it if
-                    the values in the two password fields differ.</h3>
-                <form id="password-form">
-                    <input id="password" type="password" placeholder="Password">
-                    <input id="confirm-password" type="password" placeholder="Confirm Password">
-                    <button id="submit" type="submit">Submit</button>
-                </form>
-            </li>
-            <li>
-                <h3>Given an HTML page that includes a div styled as a square with a red
-                    background, write JavaScript that allows a user to drag the square around the
-                    screen.</h3>
-                <div id="red-square" draggable="true"></div>
-                <div id="drop-zone">drop zone</div>
-            </li>
-            <li>
-                <h3>Given an HTML page that has 300 DIVs, create one click event subscription
-                    that will print the id of the element clicked on to the console.</h3>
-                <section id="div-container">
-                    <!-- <div class="box" id="div-number1"></div>
+  <body>
+    <ol>
+      <li>
+        <h3>
+          Given an HTML page that includes
+          <code
+            >&lt;button id="increment-count"&gt;I have been clicked &lt;span
+            id="clicked-count"&gt;0&lt;/span&gt; times&lt;/button&gt;</code
+          >, write JavaScript that increases the value of the content of
+          span#clicked-count by 1 every time
+          <code>button#increment-count</code> is clicked.
+        </h3>
+        <button id="count-button">
+          You have clicked this <span id="count-span">0</span> times
+        </button>
+      </li>
+      <li>
+        <h3>
+          Given an HTML page that includes
+          <code
+            >&lt;input type="checkbox" id="on-off"&gt;&lt;div
+            id="now-you-see-me"&gt;Now you see me&lt;/div&gt;</code
+          >, write JavaScript that sets the display of div#now-you-see-me to
+          "none" when input#on-off is checked and to "block" when input#on-off
+          is not checked.
+        </h3>
+        <input type="checkbox" id="on-off" />
+        <div id="now-you-see-me">Now you see me!</div>
+      </li>
+      <li>
+        <h3>
+          Given an HTML file that includes
+          <code
+            >&lt;input id="stopper" type="text" placeholder="Quick! Type
+            STOP"&gt;</code
+          >, write JavaScript that will change the background color of the page
+          to cyan five seconds after a page loads unless the field input#stopper
+          contains only the text "STOP".
+        </h3>
+        <input id="stopper" type="text" placeholder="Quick! Type STOP" />
+      </li>
+      <li>
+        <h3>
+          Given an HTML page with that includes
+          <code>&lt;input type=”text” id=”fancypants”&gt;</code>, write
+          JavaScript that changes the background color of the textbox to #E8F5E9
+          when the caret is in the textbox and turns it back to its normal color
+          when focus is elsewhere.
+        </h3>
+        <form id="fancyform">
+          <input type="text" id="fancypants" />
+        </form>
+      </li>
+      <li>
+        <h3>
+          Given an HTML page that includes a form with two password fields,
+          write JavaScript that subscribes to the forms submission event and
+          cancels it if the values in the two password fields differ.
+        </h3>
+        <form id="password-form">
+          <input id="password" type="password" placeholder="Password" />
+          <input
+            id="confirm-password"
+            type="password"
+            placeholder="Confirm Password"
+          />
+          <button id="submit" type="submit">Submit</button>
+        </form>
+      </li>
+      <li>
+        <h3>
+          Given an HTML page that includes a div styled as a square with a red
+          background, write JavaScript that allows a user to drag the square
+          around the screen.
+        </h3>
+        <div id="red-square" draggable="true"></div>
+        <div id="drop-zone">drop zone</div>
+      </li>
+      <li>
+        <h3>
+          Given an HTML page that has 300 DIVs, create one click event
+          subscription that will print the id of the element clicked on to the
+          console.
+        </h3>
+        <section id="div-container">
+          <!-- <div class="box" id="div-number1"></div>
                     <div class="box" id="div-number2"></div>
                     <div class="box" id="div-number3"></div>
                     <div class="box" id="div-number4"></div>
@@ -210,17 +232,16 @@
                     <div class="box" id="div-number98"></div>
                     <div class="box" id="div-number99"></div>
                     <div class="box" id="div-number100"></div> -->
-                </section>
-            </li>
-            <li>
-                <h3>Identify the definition of the bubbling principle.</h3>
-                <p>
-                    When an event happens on an element, it first runs the listeners on it, then on its parent, then all
-                    the way up on other
-                    ancestors, until it reaches the document element.
-                </p>
-            </li>
-        </ol>
-    </body>
-
+        </section>
+      </li>
+      <li>
+        <h3>Identify the definition of the bubbling principle.</h3>
+        <p>
+          When an event happens on an element, it first runs the listeners on
+          it, then on its parent, then all the way up on other ancestors, until
+          it reaches the document element.
+        </p>
+      </li>
+    </ol>
+  </body>
 </html>

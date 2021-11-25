@@ -3,19 +3,18 @@ const assert = require("assert");
 const countVowels = require("../problems/count-vowels.js");
 
 // "describe" used to group tests
-describe("countVowels()", function() {
-	// an alias for "describe"
-	// provides additional grouping
+describe("countVowels()", function () {
+  // an alias for "describe"
+  // provides additional grouping
   context("with a valid argument", () => {
-		
-		// provides the actual test case
-    it("should return a count of all the argument's vowels", function() {
+    // provides the actual test case
+    it("should return a count of all the argument's vowels", function () {
       const result = countVowels("bootcamp");
       const answer = 3;
       assert.deepStrictEqual(result, answer);
     });
 
-    it("should return a count of all the argument's lower and uppercase vowels", function() {
+    it("should return a count of all the argument's lower and uppercase vowels", function () {
       const result1 = countVowels("BaNAnAnA");
       const answer1 = 4;
 
@@ -23,26 +22,24 @@ describe("countVowels()", function() {
       const answer2 = 6;
 
       assert.deepStrictEqual(result1, answer1);
-			assert.deepStrictEqual(result2, answer2);
-			
+      assert.deepStrictEqual(result2, answer2);
 
+      // deepStrictEqual vs strictEqual
 
-			// deepStrictEqual vs strictEqual 
+      // let arr = [1,2,3];
+      // let arr2 = [1,2,3];
+      // let arr3 = arr;
 
-			// let arr = [1,2,3];
-			// let arr2 = [1,2,3];
-			// let arr3 = arr;
-
-			// assert.deepStrictEqual(arr, arr2);
-			// assert.strictEqual(arr, arr2);
-			// assert.strictEqual(arr, arr3)
+      // assert.deepStrictEqual(arr, arr2);
+      // assert.strictEqual(arr, arr2);
+      // assert.strictEqual(arr, arr3)
     });
   });
 
   context("with an invalid argument", () => {
-    it("should throw a TypeError when given an argument that is not of type String", function() {
+    it("should throw a TypeError when given an argument that is not of type String", function () {
       assert.throws(
-        function() {
+        function () {
           countVowels({ apple: "app" });
         },
         TypeError,

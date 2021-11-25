@@ -7,7 +7,7 @@ const logger = require("morgan");
 const app = express();
 app.use(bodyParser.json());
 app.use(express.static("public"));
-app.use(logger('dev'));
+app.use(logger("dev"));
 
 const port = 3000;
 
@@ -24,7 +24,7 @@ const getRandomInt = () => {
 const potentialErrors = [
   "No cat for you!",
   "Sad day. No kitten here.",
-  "Please try again!"
+  "Please try again!",
 ];
 
 const generateRandomError = () => {
@@ -39,7 +39,7 @@ const generateRandomError = () => {
 
 const kitten = {
   score: 0,
-  comments: []
+  comments: [],
 };
 
 app.get("/", (req, res) => {
@@ -50,8 +50,8 @@ app.get("/kitten/image", (req, res) => {
   try {
     generateRandomError();
     fetch("https://api.thecatapi.com/v1/images/search?size=small")
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         kitten.score = 0;
         kitten.comments = [];
         kitten.src = data[0].url;
@@ -80,12 +80,12 @@ app.post("/kitten/comments", (req, res) => {
 
 app.delete("/kitten/comments/:id", (req, res) => {
   // :id in the /kitten/comments/:id is a wildcard in the url that will be mapped
-    // to whatever comes after the /comments in the url path and be included in the
-    // req object as `req.params.id` as seen below
+  // to whatever comes after the /comments in the url path and be included in the
+  // req object as `req.params.id` as seen below
   // ex: a DELETE request to "/kittens/comments/hello" will make `req.params.id`
-    // equal to "hello"
+  // equal to "hello"
   // ex: a DELETE request to "/kittens/comments/3" will make `req.params.id`
-    // equal to "3"
+  // equal to "3"
   const updatedComments = kitten.comments.filter((_, i) => i != req.params.id);
   kitten.comments = updatedComments;
   res.json({ comments: kitten.comments });

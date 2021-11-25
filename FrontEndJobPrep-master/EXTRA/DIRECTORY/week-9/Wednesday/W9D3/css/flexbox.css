@@ -14,13 +14,10 @@
   /* flex-wrap: wrap-reverse; */
   /* justify-content: center; */
   /* flex-direction: column; */
-  
+
   height: 300px;
   /* align-items: flex-start; */
-
 }
-
-
 
 .flexbox__container__item {
   margin: 10px;
@@ -28,7 +25,6 @@
   background-color: greenyellow;
   text-align: center;
   /* flex-grow: 2; */
-  
 }
 
 .flexbox__container__item.one {

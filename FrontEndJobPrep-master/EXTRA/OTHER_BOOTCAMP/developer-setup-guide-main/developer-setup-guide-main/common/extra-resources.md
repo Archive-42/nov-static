@@ -14,10 +14,10 @@ This will apply to any Linux or Unix based operating system.
 ## [Visual Studio Code Basics]
 
 The [Visual Studio Code Basics] is a guide to how to do the most common tasks
-in VSCode. 
+in VSCode.
 -->
 
-[Using WSL]:../windows/using-wsl.md
-[guide]:../windows/using-wsl.md
-[Shell basics]:shell-basics.md
-[Visual Studio Code Basics]:vscode-basics.md
+[using wsl]: ../windows/using-wsl.md
+[guide]: ../windows/using-wsl.md
+[shell basics]: shell-basics.md
+[visual studio code basics]: vscode-basics.md

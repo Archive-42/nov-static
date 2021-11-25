@@ -21,7 +21,7 @@
 }
 
 /*************** Positioning ***************/
-.position__container__item { 
+.position__container__item {
   border: 5px dashed black;
   background-color: greenyellow;
   text-align: center;
@@ -30,7 +30,7 @@
   height: 150px;
   padding: 15px;
   margin: 25px;
-  
+
   /* Play with the below styles */
   /* position: static; */
   /* top: 60px; */

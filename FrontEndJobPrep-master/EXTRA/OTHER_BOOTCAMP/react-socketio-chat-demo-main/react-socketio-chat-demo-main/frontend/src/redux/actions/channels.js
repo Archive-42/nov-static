@@ -7,18 +7,18 @@ export const addChannels = (channels) => {
     type: ADD_CHANNELS,
     channels,
   };
-}
+};
 
 export const setCurrentChannel = (channel) => {
-    return {
-        type: SET_CURRENT_CHANNEL,
-        channel
-    };
-}
+  return {
+    type: SET_CURRENT_CHANNEL,
+    channel,
+  };
+};
 
 export const addJoinedChannel = (channel) => {
-    return {
-        type: ADD_JOINED_CHANNEL,
-        channel
-    }
-}
+  return {
+    type: ADD_JOINED_CHANNEL,
+    channel,
+  };
+};

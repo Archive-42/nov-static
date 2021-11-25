@@ -1,35 +1,39 @@
 /* two functions, `move` and `makeNoise` */
 
-const move = function(name, animalType) { 
+const move = function (name, animalType) {
   let verb;
-  switch (animalType) { // 'horse'
-    case 'horse':
-      verb = 'gallops';
+  switch (
+    animalType // 'horse'
+  ) {
+    case "horse":
+      verb = "gallops";
       break;
-    case 'dog':
-      verb = 'runs';
+    case "dog":
+      verb = "runs";
       break;
-    case 'pig':
-      verb = 'trots';
+    case "pig":
+      verb = "trots";
       break;
   }
 
   console.log(`${name} ${verb}.`);
 };
 
-move('Bob', 'horse');  
+move("Bob", "horse");
 
 const makeNoise = function (name, animalType) {
   let noise;
-  switch (animalType) { // animalType === 'dog'
-    case 'horse':
-      noise = 'neigh';
+  switch (
+    animalType // animalType === 'dog'
+  ) {
+    case "horse":
+      noise = "neigh";
       break;
-    case 'dog':
-      noise = 'woof';
+    case "dog":
+      noise = "woof";
       break;
-    case 'pig':
-      noise = 'oink';
+    case "pig":
+      noise = "oink";
       break;
   }
 
@@ -37,9 +41,9 @@ const makeNoise = function (name, animalType) {
 };
 
 // Lets make a horse move:
-move('Bob', 'horse');         // Bob gallops.
+move("Bob", "horse"); // Bob gallops.
 
 // Lets make a dog named Clifford make noise:
-makeNoise('Clifford', 'dog'); // Clifford says woof!
+makeNoise("Clifford", "dog"); // Clifford says woof!
 
-// Next step: make an animal class, use instance methods, like make noise, etc. 
+// Next step: make an animal class, use instance methods, like make noise, etc.

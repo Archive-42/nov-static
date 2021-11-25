@@ -38,11 +38,11 @@ Then once you are in the project folder, just run the following command:
 code .
 ```
 
-The `.` in Unix means *current folder*. So this opens up VSCode already connected to WSL and opens up your current project in it. This is often a faster and easier way to open your projects than navigating the graphical user interface.
+The `.` in Unix means _current folder_. So this opens up VSCode already connected to WSL and opens up your current project in it. This is often a faster and easier way to open your projects than navigating the graphical user interface.
 
 ## Accessing your files from Windows
 
-Sometimes you may want to copy files in and out of the WSL machine. Since it's a separate computer this can be tricky.  Luckily Microsoft has provided us a way.
+Sometimes you may want to copy files in and out of the WSL machine. Since it's a separate computer this can be tricky. Luckily Microsoft has provided us a way.
 
 There's a special Network Share created in Windows that lets you access WSL's filesystem from Windows Explorer.
 
@@ -58,7 +58,7 @@ You should see a network share called `Ubuntu`. This is the entire contents of y
 
 Open it up and then open the folder named 📁`home`
 
-You should see your home folder (named the same as your username) now.  For easy access so you won't have to go through these steps all the time, right click on your home folder and choose "Pin to Quick Access". This puts a link in your Windows Explorer sidebar so you can quickly get to your WSL home folder.
+You should see your home folder (named the same as your username) now. For easy access so you won't have to go through these steps all the time, right click on your home folder and choose "Pin to Quick Access". This puts a link in your Windows Explorer sidebar so you can quickly get to your WSL home folder.
 
 ![WSL-Pin-to-Quick-Access]
 
@@ -100,12 +100,12 @@ wsl --shutdown
 
 Then open a new Windows Terminal, the WSL machine will automatically start back up.
 
-[WSL Remote Development]:vscode:extension/ms-vscode-remote.remote-wsl
-[VSCode Remote Status Bar Item]:https://code.visualstudio.com/assets/docs/remote/wsl-tutorial/remote-status-bar.png
-[VSCode WSL Menu]:https://code.visualstudio.com/assets/docs/remote/wsl-tutorial/remote-wsl-commands.png
-[VSCode Connected WSL]:https://code.visualstudio.com/assets/docs/remote/wsl-tutorial/wsl-status-bar.png
-[VSCode Terminal]:https://code.visualstudio.com/assets/docs/remote/wsl-tutorial/new-terminal-in-wsl.png
-[Windows-Explorer-WSL]:images/Windows-Explorer-WSL.png
-[WSL-Pin-to-Quick-Access]:images/WSL-Pin-to-Quick-Access.png
-[WSL-Home-Folder-Contents]:images/WSL-Home-Folder-Contents.png
-[How to get rid of Zone Identifier Files]:https://blog.realhe.ro/how-to-get-rid-of-zone-identifier-files/
+[wsl remote development]: vscode:extension/ms-vscode-remote.remote-wsl
+[vscode remote status bar item]: https://code.visualstudio.com/assets/docs/remote/wsl-tutorial/remote-status-bar.png
+[vscode wsl menu]: https://code.visualstudio.com/assets/docs/remote/wsl-tutorial/remote-wsl-commands.png
+[vscode connected wsl]: https://code.visualstudio.com/assets/docs/remote/wsl-tutorial/wsl-status-bar.png
+[vscode terminal]: https://code.visualstudio.com/assets/docs/remote/wsl-tutorial/new-terminal-in-wsl.png
+[windows-explorer-wsl]: images/Windows-Explorer-WSL.png
+[wsl-pin-to-quick-access]: images/WSL-Pin-to-Quick-Access.png
+[wsl-home-folder-contents]: images/WSL-Home-Folder-Contents.png
+[how to get rid of zone identifier files]: https://blog.realhe.ro/how-to-get-rid-of-zone-identifier-files/

@@ -4,18 +4,14 @@ export default class Game {
   }
 
   start() {
-    document
-      .getElementById('button')
-      .addEventListener('click', () => {
-        const messageContainer = document.getElementById('message');
-        messageContainer.innerText = this.gameStartMessage;
+    document.getElementById("button").addEventListener("click", () => {
+      const messageContainer = document.getElementById("message");
+      messageContainer.innerText = this.gameStartMessage;
     });
   }
 }
 
-export function hello() {
-
-}
+export function hello() {}
 
 // commonJS
 // module.exports = { Game }

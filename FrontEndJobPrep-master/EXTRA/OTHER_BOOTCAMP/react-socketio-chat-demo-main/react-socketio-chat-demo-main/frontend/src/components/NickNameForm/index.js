@@ -1,2 +1,2 @@
-import NickNameForm from './NickNameForm';
+import NickNameForm from "./NickNameForm";
 export default NickNameForm;

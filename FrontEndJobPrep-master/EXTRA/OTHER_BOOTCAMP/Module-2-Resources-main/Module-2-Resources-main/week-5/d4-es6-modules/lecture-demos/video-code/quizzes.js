@@ -1,4 +1,4 @@
-const ui = require('./ui');
+const ui = require("./ui");
 
 class Quiz {
   constructor(name) {
@@ -29,7 +29,7 @@ class Quiz {
     for (let question of this.questions) {
       question.addToUI();
     }
-    ui.run(responses => {
+    ui.run((responses) => {
       for (let i = 0; i < responses.length; i += 1) {
         const question = this.questions[i];
         const response = responses[i];

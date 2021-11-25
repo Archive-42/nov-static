@@ -4,8 +4,8 @@
 
 You never use the mouse to navigate in the shell, you always use the keyboard.
 You can select text in the Terminal and copy it to the clipboard, but you can't
-perform any actions with your mouse.  A common mistake is trying to move the location
-of your typing cursor with the mouse.  
+perform any actions with your mouse. A common mistake is trying to move the location
+of your typing cursor with the mouse.
 
 ### Arrow keys
 
@@ -30,15 +30,15 @@ These are the most common ones, here's a more exhaustive list of [shell keyboard
 ### Kill foreground process
 
 <kbd>Ctrl</kbd>+<kbd>C</kbd> in graphical operating systems often means to copy text to the clipboard.
-This is not true in Unix or Linux.  <kbd>Ctrl</kbd>+<kbd>C</kbd> kills the **Foreground Process** running
-in the terminal.  So if you have started up a program in the terminal and you would
-like to stop it from running, <kbd>Ctrl</kbd>+<kbd>C</kbd> is your friend.  The shell is the one notable
+This is not true in Unix or Linux. <kbd>Ctrl</kbd>+<kbd>C</kbd> kills the **Foreground Process** running
+in the terminal. So if you have started up a program in the terminal and you would
+like to stop it from running, <kbd>Ctrl</kbd>+<kbd>C</kbd> is your friend. The shell is the one notable
 exception to this, <kbd>Ctrl</kbd>+<kbd>C</kbd> does not kill the shell itself.
 
 ### Suspending the foreground process
 
 One other thing you can do in the shell is to suspend a foreground
-process so it pauses.  If you do this you get your shell prompt
+process so it pauses. If you do this you get your shell prompt
 back but the program is still technically in memory but paused or suspended.
 
 <kbd>Ctrl</kbd>+<kbd>Z</kbd> suspends the current foreground program, and gives you your shell prompt back. To bring the program back to running in the foreground you can type the `fg` command.
@@ -53,13 +53,13 @@ Then you can add `%` followed by the number from the jobs list to either `fg` or
 
 ### Exiting the Shell
 
-A good thign to know how to do is how to exit a shell.  <kbd>Ctrl</kbd>+<kbd>D</kbd> or typing the command `exit` will cause the shell to quit. Sometimes (but not always depending
+A good thign to know how to do is how to exit a shell. <kbd>Ctrl</kbd>+<kbd>D</kbd> or typing the command `exit` will cause the shell to quit. Sometimes (but not always depending
 on the preferences) this will also close your Terminal.
 
 ### Tab completion
 
 The <kbd>Tab</kbd> key can be used to trigger autocompletion of files, folders and sometimes
-other things like command line flags etc.  The most often use is when typing in
+other things like command line flags etc. The most often use is when typing in
 a file path, you can hit <kbd>Tab</kbd> once after typing in a few letters and the shell
 will attempt to autocomplete the rest of the file name. Hitting <kbd>Tab</kbd> again will
 print out all of the matches. You can type a few more letters and hit <kbd>Tab</kbd> again
@@ -90,7 +90,7 @@ Here's a list of super useful commands you should learn.
     - `-a` - All files
     - `-l` - Long listing (prints more details about the files)
 - `top` or `htop` - A command line program for showing you running
-  processes.  `htop` is a prettier nicer version of the regular top command.
+  processes. `htop` is a prettier nicer version of the regular top command.
 - `ps` Lists running processes. Like top and htop, this lists out the processes running, but it's a little harder to use than those.
 - `cp` and `mv` - Copies and moves files. You give these a source file and a destination file path. (Note, there is no rename command in unix, you just use `mv` to rename a file)
 - `rm` - Removes a file. Be careful with this, there is no trash can for the command line.
@@ -98,11 +98,11 @@ Here's a list of super useful commands you should learn.
   - `-r` Remove recursively (Used to remove a heirarchy of files and folders)
   - `-v` Print out the files as they are bring removed
 - `mkdir` and `rmdir` - Creates and removes a directory. Note: `rmdir` only works if the directory is empty, so you'll probably want to use `rm -r` to remove a folder recursively.
-- `man` Look at the *manual* page for any command.  If you want to know more about the flags and options for a command, just type `man` followed by the command. Example: `man ls`
+- `man` Look at the _manual_ page for any command. If you want to know more about the flags and options for a command, just type `man` followed by the command. Example: `man ls`
 
 ## Files
 
-Unix is a file based operating system. Sometimes it's said that "In Unix, everything's a file".  Here's some handy tips about the kinds of files you will see in Unix.
+Unix is a file based operating system. Sometimes it's said that "In Unix, everything's a file". Here's some handy tips about the kinds of files you will see in Unix.
 
 If you do a `ls -al` on a folder you might see output similar to this:
 
@@ -119,7 +119,7 @@ regular file.
 
 the directories `.` and `..` represent the current directory, and the parent directory of the current working directory.
 
-The file `.secret.txt` is a *hidden* file. Files that start with a period are considered hidden in Unix. This means if we use `ls` without the `-a` option, we won't see those files.
+The file `.secret.txt` is a _hidden_ file. Files that start with a period are considered hidden in Unix. This means if we use `ls` without the `-a` option, we won't see those files.
 
 All those `r`, `w`, and `x` letters are the permissions of the files.
 
@@ -144,9 +144,9 @@ And finally the filename itself.
 
 Or broken down into table form, like this
 
-| Permissions | Links | Owner | Group | Size |  Date Modified | Filename |
-|--|--|--|--|--|--|--|
-|drwxr-xr-x| 8 |user| group |4096 |Jan  1 00:00 |.|
-|drwxr-xr-x| 48 |user| group |4096 |Jan  1 00:00 |..|
-|-rw-r--r--| 1  |user| group |1    |Jan  1 00:00 |.secret.txt|
-|-rw-r--r--| 1  |user |group| 1 |   Jan  1 00:00 |README.md|
+| Permissions | Links | Owner | Group | Size | Date Modified | Filename    |
+| ----------- | ----- | ----- | ----- | ---- | ------------- | ----------- |
+| drwxr-xr-x  | 8     | user  | group | 4096 | Jan 1 00:00   | .           |
+| drwxr-xr-x  | 48    | user  | group | 4096 | Jan 1 00:00   | ..          |
+| -rw-r--r--  | 1     | user  | group | 1    | Jan 1 00:00   | .secret.txt |
+| -rw-r--r--  | 1     | user  | group | 1    | Jan 1 00:00   | README.md   |

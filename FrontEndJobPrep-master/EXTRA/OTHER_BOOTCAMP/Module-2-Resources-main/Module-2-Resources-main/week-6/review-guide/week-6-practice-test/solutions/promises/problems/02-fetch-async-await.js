@@ -52,7 +52,7 @@ const gettingAsyncQuote = async (url) => {
     console.log(quote[0].q);
     console.log(`- ${quote[0].a}`);
   } catch (error) {
-      throw error;
+    throw error;
   }
 };
 

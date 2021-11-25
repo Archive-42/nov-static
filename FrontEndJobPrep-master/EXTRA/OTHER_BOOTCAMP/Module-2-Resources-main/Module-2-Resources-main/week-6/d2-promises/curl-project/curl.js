@@ -60,11 +60,6 @@ let url = urls[0];
 
 const output = opts.output;
 
-
-
-
-
-
 // JUST GETTING A URL
 
 // terminal command: node curl.js https://artii.herokuapp.com/make?text=curl++this
@@ -77,14 +72,6 @@ const output = opts.output;
 //   .then(res => res.text())
 //   .then(txtRes => console.log(txtRes))
 //   .catch(err => console.log(err))
-
-
-
-
-
-
-
-
 
 // JUST FAILING TO GET URL
 // terminal command: node curl.js https://artii.herokuFLAP.com/make?text=curl++this
@@ -102,13 +89,6 @@ const output = opts.output;
 //     }
 //   })
 
-
-
-
-
-
-
-
 // NOW PUT IT IN A FILE
 // command: node curl.js -o data.txt https://artii.herokuapp.com/make?text=curl++this
 
@@ -122,13 +102,6 @@ const output = opts.output;
 //     return fs.promises.writeFile(fileName, txtRes )
 //   })
 //   .catch(err => console.log('curlError:', err.message))
-
-
-
-
-
-
-
 
 // SETTING AN ARBITRARY HEADER
 
@@ -158,14 +131,6 @@ if (arbHeaders) {
 // terminal command: node curl.js -H headerKey:headerValue
 // console.log(headers)
 
-
-
-
-
-
-
-
-
 // SETTING SPECIAL HEADERS
 
 const userAgent = opts.agent;
@@ -177,12 +142,6 @@ const referer = opts.referer;
 if (referer) {
   headers.append("Referer", referer);
 }
-
-
-
-
-
-
 
 // CAPTURING RESPONSE HEADERS
 
@@ -214,16 +173,6 @@ const dump = opts.dump_header;
 //   })
 //   .catch(err => console.log('curlError: ', err.message))
 
-
-
-
-
-
-
-
-
-
-
 // SENDING DATA
 // terminal command: node curl.js -X 'POST' -d '{"title": "Sir", "name": "Robin"}' -H 'Content-Type: application/json' https://jsonplaceholder.typicode.com/posts
 
@@ -231,11 +180,6 @@ const dump = opts.dump_header;
 if (opts.data) {
   init.body = opts.data;
 }
-
-
-
-
-
 
 // OVERRIDING THE METHOD OF THE REQUEST
 
@@ -258,13 +202,6 @@ if (opts.method) {
 //       console.log(err)
 //     }
 //   })
-
-
-
-
-
-
-
 
 // PUT ALL TOGETHER
 

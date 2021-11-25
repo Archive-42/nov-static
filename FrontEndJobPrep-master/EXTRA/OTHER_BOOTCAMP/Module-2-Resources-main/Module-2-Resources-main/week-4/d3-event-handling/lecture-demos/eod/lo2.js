@@ -1,4 +1,3 @@
-const messageToggle = () => {
-};
+const messageToggle = () => {};
 
-window.addEventListener('DOMContentLoaded', messageToggle);
+window.addEventListener("DOMContentLoaded", messageToggle);

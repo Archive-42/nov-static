@@ -3,13 +3,13 @@
 ## Background
 
 JSON Web Tokens (JWT) are an interesting way to authenticate remote users that
-do not require a central "Session" store on the backend.  However, one common
+do not require a central "Session" store on the backend. However, one common
 way that they have been used in Single Page Applications (SPA) is to store the
 token in localStorage and then send it back down on each request in an Authorization
 header.
 
-It turns out, that this is a very *bad* idea as localStorage is not protected by any
-cross origin protections in the browser.  This means XSS attacks against localStorage
+It turns out, that this is a very _bad_ idea as localStorage is not protected by any
+cross origin protections in the browser. This means XSS attacks against localStorage
 are possible.
 
 Because of this, the recommended way to use JWTs with a frontend framework like
@@ -17,7 +17,7 @@ React is to just store the JWT in a `httpOnly` cookie, with the `sameSite` prote
 on that cookie to prevent CSRF attacks (much like you would do with a session token)
 
 Unfortunately, I have not seen a lot of examples of how to do this in a modern React
-frontend and Express backend.  So this project is a demonstration of how to set this up.
+frontend and Express backend. So this project is a demonstration of how to set this up.
 
 ## How this is done
 
@@ -43,14 +43,21 @@ Then once they are verified you generate a JWT and set the cookie on the respons
 
 ```js
 // We sign a JWT and store it in a cookie on the response.
-    // The browser will store it and send it back down
-    res.cookie('token', jwt.sign({
-      username
-    }, secret),{
-      sameSite: 'strict',
-      httpOnly: true,
-      signed: true
-    })
+// The browser will store it and send it back down
+res.cookie(
+  "token",
+  jwt.sign(
+    {
+      username,
+    },
+    secret
+  ),
+  {
+    sameSite: "strict",
+    httpOnly: true,
+    signed: true,
+  }
+);
 ```
 
 ### Reauthenticating users when they access a protected route
@@ -66,17 +73,16 @@ const authRequired = (req, res, next) => {
   const token = req.signedCookies.token;
   // jwt verify throws an exception when the token isn't valid
   try {
-    jwt.verify(token, secret)
-  }
-  catch (error) {
+    jwt.verify(token, secret);
+  } catch (error) {
     res.status(401).send({
       loggedIn: false,
-      message: "Unauthorized"
+      message: "Unauthorized",
     });
     return;
   }
   next();
-}
+};
 ```
 
 We can now attach this middleware to any route in our application that we want to
@@ -87,11 +93,11 @@ be protected by the JWT.
 Logging the user out is just a matter of clearing the token cookie.
 
 ```js
-res.clearCookie('token', {
-    sameSite: 'strict',
-    httpOnly: true,
-    signed: true
-  });
+res.clearCookie("token", {
+  sameSite: "strict",
+  httpOnly: true,
+  signed: true,
+});
 ```
 
 ## Handling this on the client
@@ -105,15 +111,15 @@ request to your backend to determine if the user's JWT is valid or not before re
 We do this in the `<App>` component in react with a fetch call to the backend.
 
 ```js
-  useEffect(() => {
-    async function fetchAuthenticated() {
-      const response = await fetch('/authenticated');
-      const result = await response.json();
-      setMessage(result.message);
-      setLoggedIn(result.loggedIn);
-    }
-    fetchAuthenticated();
-  },[loggedIn])
+useEffect(() => {
+  async function fetchAuthenticated() {
+    const response = await fetch("/authenticated");
+    const result = await response.json();
+    setMessage(result.message);
+    setLoggedIn(result.loggedIn);
+  }
+  fetchAuthenticated();
+}, [loggedIn]);
 ```
 
 ### Other things to handle

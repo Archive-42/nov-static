@@ -1,4 +1,4 @@
-const bonus = number => {
+const bonus = (number) => {
   return number * 2;
 };
 
@@ -16,7 +16,7 @@ class Employee {
 
   goHome() {
     if (this.atWork) {
-			// this.commute();
+      // this.commute();
       return this.commute();
     }
   }

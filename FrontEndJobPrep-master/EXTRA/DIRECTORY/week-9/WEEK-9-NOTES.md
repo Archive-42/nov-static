@@ -1,6 +1,5 @@
 # Tuesday
 
-
 # **Notes**
 
 ## **Getting CSS Into Your HTML**
@@ -271,12 +270,15 @@ h2.subheading {
 
 ---
 
+---
 
-------
 ---
+
 # Wednesday
+
 ---
-------
+
+---
 
 # **Notes**
 
@@ -407,11 +409,16 @@ fetch("https://jservice.xyz/api/categories", {
 
 ---
 
-------
---
-# Thursday
 ---
-------
+
+--
+
+# Thursday
+
+---
+
+---
+
 # **Notes**
 
 ## **The Box Model**
@@ -733,13 +740,16 @@ fetch("https://jservice.xyz/api/categories", {
 
 ---
 
-
-
-------
 ---
+
+---
+
 # Friday
+
 ---
-------
+
+---
+
 # **Notes**
 
 ## **CSS Hover Effect and Handling Overflow**

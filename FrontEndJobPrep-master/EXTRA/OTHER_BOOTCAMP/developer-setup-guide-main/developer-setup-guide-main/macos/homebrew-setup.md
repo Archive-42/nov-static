@@ -1,7 +1,7 @@
 # Installing [Homebrew]
 
 [Homebrew] is a piece of software used on macOS to install additional unix command
-line tools.  Homebrew can also be used to install regular mac apps via a mechanism
+line tools. Homebrew can also be used to install regular mac apps via a mechanism
 called Homebrew cask. But before we can do any of that, we need to install Homebrew
 itself.
 
@@ -18,5 +18,5 @@ Homebrew will prompt you for your password, just type in your macOS password her
 
 Once this is finished, move on to [Installing Ansible]
 
-[Installing Ansible]:ansible-setup.md
-[Homebrew]:https://brew.sh
+[installing ansible]: ansible-setup.md
+[homebrew]: https://brew.sh

@@ -1,16 +1,16 @@
-Array.prototype.myEach = function(callback) {
-  for(let i = 0; i < this.length; i++) {
+Array.prototype.myEach = function (callback) {
+  for (let i = 0; i < this.length; i++) {
     callback(this[i]);
   }
-}
+};
 
-Array.prototype.myMap = function(callback) {
+Array.prototype.myMap = function (callback) {
   let arr = [];
-  for(let i = 0; i < this.length; i++) {
+  for (let i = 0; i < this.length; i++) {
     arr.push(callback(this[i]));
   }
   return arr;
-}
+};
 
 Array.prototype.myReduce = function (callback, acc) {
   let initial = 0;
@@ -22,4 +22,4 @@ Array.prototype.myReduce = function (callback, acc) {
     acc = callback(acc, this[i]);
   }
   return acc;
-}
+};

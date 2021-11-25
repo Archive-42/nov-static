@@ -102,7 +102,6 @@ const smaug = new EvilDragon(
 // class
 const allDragons = Dragon.getDragons(falkor, smaug);
 
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = { falkor, smaug, allDragons };

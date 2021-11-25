@@ -21,10 +21,4 @@ class Cat extends Animal {
   }
 }
 
-module.exports = { Animal, Cat }
-
-
-
-
-
-
+module.exports = { Animal, Cat };

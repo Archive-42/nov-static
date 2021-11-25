@@ -1,77 +1,76 @@
 class Wallet {
-	constructor(startAmount, cards) {
-		this.balance = startAmount;
-		this.cards = cards;
-	}
+  constructor(startAmount, cards) {
+    this.balance = startAmount;
+    this.cards = cards;
+  }
 
-	addMoney(amount) {
-		this.balance += amount;
-	}
-	
-	removeMoney(amount) {
-		this.balance -= amount;
-	}
-	
-	getBalance() {
-		return this.balance;
-	}
-	
-	getCardCount() {
-		return this.cards.length;
-	}
-	
-	putCardIn(card) {
-		this.cards.push(card);
-	}
-	
-	getCardOut(name) {
-		const index = this.cards.findIndex(x => x.name === name);
-		if (index === -1) return null;
-		const card = this.cards[index];
-		this.cards.splice(index, 1);
-		return card;
-	}
+  addMoney(amount) {
+    this.balance += amount;
+  }
+
+  removeMoney(amount) {
+    this.balance -= amount;
+  }
+
+  getBalance() {
+    return this.balance;
+  }
+
+  getCardCount() {
+    return this.cards.length;
+  }
+
+  putCardIn(card) {
+    this.cards.push(card);
+  }
+
+  getCardOut(name) {
+    const index = this.cards.findIndex((x) => x.name === name);
+    if (index === -1) return null;
+    const card = this.cards[index];
+    this.cards.splice(index, 1);
+    return card;
+  }
 }
 
-
-
-console.log('Create a wallet with $101 in it.');
+console.log("Create a wallet with $101 in it.");
 const wallet = new Wallet(101, []);
 
-console.log('Balance:', wallet.getBalance());
+console.log("Balance:", wallet.getBalance());
 console.log();
-console.log('Add $32');
+console.log("Add $32");
 wallet.addMoney(32);
-console.log('Balance:', wallet.getBalance());
+console.log("Balance:", wallet.getBalance());
 console.log();
-console.log('Spend $98');
+console.log("Spend $98");
 wallet.removeMoney(98);
-console.log('Balance:', wallet.getBalance());
+console.log("Balance:", wallet.getBalance());
 console.log();
-console.log('Put an AMEX in the wallet');
+console.log("Put an AMEX in the wallet");
 
 const card = {
-	name: 'AMEX',
-	number: '3524 100098 11223'
+  name: "AMEX",
+  number: "3524 100098 11223",
 };
 
 wallet.putCardIn(card);
 
-console.log('Card count:', wallet.getCardCount());
+console.log("Card count:", wallet.getCardCount());
 console.log();
-console.log('Get Visa:', wallet.getCardOut('Visa'));
-console.log('Card count:', wallet.getCardCount());
+console.log("Get Visa:", wallet.getCardOut("Visa"));
+console.log("Card count:", wallet.getCardCount());
 console.log();
-console.log('Get AMEX:', wallet.getCardOut('AMEX'));
-console.log('Card count:', wallet.getCardCount());
+console.log("Get AMEX:", wallet.getCardOut("AMEX"));
+console.log("Card count:", wallet.getCardCount());
 console.log();
 
 const curtisWallet = new Wallet(100, []);
-const bartsWallet = new Wallet(324, [{
-	name: 'Visa',
-	number: '0000 0000 0000 0000',
-}]);
-
+const bartsWallet = new Wallet(324, [
+  {
+    name: "Visa",
+    number: "0000 0000 0000 0000",
+  },
+]);
 
 curtisWallet.addMoney(15);
 bartsWallet.addMoney(16);

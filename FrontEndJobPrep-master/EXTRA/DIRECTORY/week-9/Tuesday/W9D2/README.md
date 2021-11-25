@@ -27,6 +27,7 @@ Uses this API: https://jservice.xyz/
 ## Cat Project API
 
 ### GET /kitten/image
+
 Fetches an image from an external API, "https://api.thecatapi.com/v1/images/search?size=small", that returns information on a random cat image url.
 
 ```json
@@ -46,6 +47,7 @@ If it doesn't succeed, it returns an error message.
 ```
 
 ### PATCH /kitten/upvote
+
 Increments the score of the current kitten by 1 and returns the current score.
 
 ```json
@@ -55,6 +57,7 @@ Increments the score of the current kitten by 1 and returns the current score.
 ```
 
 ### PATCH /kitten/downvote
+
 Decrements the score of the current kitten by 1 and returns the current score.
 
 ```json
@@ -64,16 +67,17 @@ Decrements the score of the current kitten by 1 and returns the current score.
 ```
 
 ### POST /kitten/comments
+
 Creates a new comment for the current kitten.
 
 Send a comment.
 
 ```json
-{ 
+{
   "comment": string
 }
 ```
-    
+
 Returns all the comments of the kitten in the order that they were created.
 
 ```json
@@ -90,6 +94,6 @@ Returns all the comments of the kitten in the order that they were created.
 - Describe the different steps in an AJAX request/response cycle
 - Fully use the fetch API to make dynamic Web pages without refreshing the page
 
-[Pre-AJAX Flow]: ./pre-ajax.png
-[AJAX Flow]: ./ajax.png
-[Example Project]: ./example-project/README.md
+[pre-ajax flow]: ./pre-ajax.png
+[ajax flow]: ./ajax.png
+[example project]: ./example-project/README.md

@@ -1,8 +1,8 @@
 const messageToggle = () => {
   const checkbox = document.getElementById("on-off");
   const message = document.getElementById("now-you-see-me");
-  
-  checkbox.addEventListener("click", event => {
+
+  checkbox.addEventListener("click", (event) => {
     if (checkbox.checked) {
       message.style.display = "none";
     } else {
@@ -11,4 +11,4 @@ const messageToggle = () => {
   });
 };
 
-window.addEventListener('DOMContentLoaded', messageToggle);
+window.addEventListener("DOMContentLoaded", messageToggle);

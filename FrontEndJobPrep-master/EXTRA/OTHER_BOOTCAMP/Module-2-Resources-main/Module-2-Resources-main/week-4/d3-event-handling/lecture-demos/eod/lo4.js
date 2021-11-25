@@ -1,4 +1,3 @@
-const changeColor = () => {
-};
+const changeColor = () => {};
 
-window.addEventListener('DOMContentLoaded', changeColor);
+window.addEventListener("DOMContentLoaded", changeColor);

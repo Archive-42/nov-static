@@ -1,4 +1,3 @@
-
 class Shelter {
   constructor() {
     this.animals = [];

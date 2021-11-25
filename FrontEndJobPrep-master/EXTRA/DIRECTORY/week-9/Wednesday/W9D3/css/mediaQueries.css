@@ -18,7 +18,7 @@
   /* position: relative; */
 }
 
-.mediaQuery__container__item { 
+.mediaQuery__container__item {
   display: inline-block;
   border: 5px dashed black;
   background-color: greenyellow;
@@ -37,9 +37,6 @@
   }
 } */
 
-
-
-
 /* intermidiate media query */
 /* @media (max-width: 780px) and (min-width: 451px) {
   .mediaQuery__container__item {
@@ -48,20 +45,12 @@
   }
 } */
 
-
-
-
-
-
 /* Mobile-First Design */
 /* @media screen and (min-width: 781px) {
   .mediaQuery__container__item {
     display: inline-block;
   }
 } */
-
-
-
 
 /* Orientation */
 /* @media screen and (orientation: landscape) {

@@ -3,26 +3,15 @@ const fetch = require("node-fetch");
 // what is fetch?
 // console.log(fetch)
 
-
-
 // what does fetch return?
 // console.log(fetch('https://api.github.com/users/github'))
 
-
-
-
-
-
-fetch("https://api.github.com/users/", { })
-	.then(res => res.json())
-	.then(json => console.log(json.login))
-  .catch(reason => {
+fetch("https://api.github.com/users/", {})
+  .then((res) => res.json())
+  .then((json) => console.log(json.login))
+  .catch((reason) => {
     console.log("rejected because", reason);
   });
-
-
-
-
 
 // TURN RESPONSE INTO JSON OBJECT
 
@@ -33,10 +22,6 @@ fetch("https://api.github.com/users/", { })
 //     console.log("rejected because", reason);
 //   });
 
-
-
-
-
 // CAN KEY INTO RESPONSE OBJECT
 
 // fetch("https://api.github.com/users/github")
@@ -46,20 +31,12 @@ fetch("https://api.github.com/users/", { })
 //     console.log("rejected because", reason);
 //   });
 
-
-
-
-
-
-
-
-
 // API KEYS
 
 let apiKey = "afab3d6d&t";
 
 fetch(`http://www.omdbapi.com/?apikey=${apiKey}=harry+potter`)
-  .then((res) => res.json()) 
+  .then((res) => res.json())
   .then((jsonRes) => {
     // printing the json jsonResponse object
     console.log(jsonRes);

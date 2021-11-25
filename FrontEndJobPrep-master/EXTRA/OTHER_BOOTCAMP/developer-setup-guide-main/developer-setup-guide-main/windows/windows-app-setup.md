@@ -22,7 +22,7 @@ so here's the big list of all the common ones we usually worry about.
 You will need to launch VSCode and install an extension to get it to work correctly
 with WSL.
 
-The extension is called *Remote - WSL*.  You can navigate to the Extensions panel
+The extension is called _Remote - WSL_. You can navigate to the Extensions panel
 using the button on the panel on the left of VSCode.
 
 ![extension button](images/vscode-extension-button.png)
@@ -40,5 +40,4 @@ Once you've got everything installed, move on to [Installing Ansible]
 [firefox]: https://firefox.com
 [edge]: https://www.microsoft.com/en-us/edge
 [safari]: https://www.apple.com/safari/
-
-[Installing Ansible]:../ubuntu/ansible-setup.md
+[installing ansible]: ../ubuntu/ansible-setup.md

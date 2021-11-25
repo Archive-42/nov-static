@@ -1,12 +1,12 @@
 div {
-	display:flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 h3 {
-	margin-left: 10px;
+  margin-left: 10px;
 }
 
 h2 {
-	margin-bottom: -10px;
+  margin-bottom: -10px;
 }

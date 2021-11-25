@@ -3,7 +3,7 @@ const checkPasswords = () => {
   const confirmation = document.getElementById("confirm-password");
   const form = document.getElementById("password-form");
 
-  form.addEventListener("submit", event => {
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (password.value === confirmation.value) {
       alert("Form submited successfully");
@@ -15,4 +15,4 @@ const checkPasswords = () => {
   });
 };
 
-window.addEventListener('DOMContentLoaded', checkPasswords);
+window.addEventListener("DOMContentLoaded", checkPasswords);

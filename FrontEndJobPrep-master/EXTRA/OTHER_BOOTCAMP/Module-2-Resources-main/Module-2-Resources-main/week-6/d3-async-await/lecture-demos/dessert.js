@@ -13,7 +13,6 @@
 // 	})
 // }
 
-
 // // TODO: create a function called bakeCookies
 // // - should console.log 'start baking cookies' as soon as it is invoked
 // // - should return a promise that resolves after two seconds with a value
@@ -28,8 +27,6 @@
 // 		}, 2000)
 // 	})
 // }
-
-
 
 // TODO: create a function called makeDessert
 // - should use .then statements to ensure that we begin baking cookies
@@ -46,9 +43,7 @@
 // 	  .catch(err => console.log('ERROR: ', err))
 // }
 
-
 // TODO: recreate makeDessert method using async & await
-
 
 // async function makeDessert() {
 // 	try {
@@ -63,7 +58,6 @@
 // 	}
 // }
 
-
 // (async () => {
 // 	await makeDessert();
 // })()
@@ -73,25 +67,11 @@
 
 // console.log('hello');
 
-
-
-
 // start preparing dough
 // done preparing dough
 // start baking cookies
 // done baking cookies
 // dessert is ready!
-
-
-
-
-
-
-
-
-
-
-
 
 // ERROR HANDLING
 
@@ -100,26 +80,21 @@ function prepareDough() {
 
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-			reject('bad dough ')
+      reject("bad dough ");
       // resolve("done preparing dough");
     }, 1000);
   });
 }
 
-
 function bakeCookies() {
-	console.log('start baking cookies')
+  console.log("start baking cookies");
 
-	return new Promise((resolve, reject) => {
-		setTimeout(() => {
-
-			reject('uh oh, burnt cookies!')
-		}, 2000)
-	})
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject("uh oh, burnt cookies!");
+    }, 2000);
+  });
 }
-
-
-
 
 // ERROR HANDLING WITH TRY CATCH BLOCK
 
@@ -137,9 +112,6 @@ async function makeDessert() {
 
 makeDessert();
 
-
-
-
 // ASYNC FUNCTIONS RETURN A PROMISE SO YOU CAN CHAIN .THEN AND .CATCH
 
 // async function makeDessert() {
@@ -150,25 +122,9 @@ makeDessert();
 // 	console.log("dessert is ready!!!");
 // }
 
-
-
 // makeDessert()
 // 	.catch(err => console.log('ERROR: ', err))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
 // VALUE RETURNED FROM ASYNC FUNCTION IS VALUE PROMISE FULFIILLS WITH
 
 // function prepareDough() {
@@ -180,7 +136,6 @@ makeDessert();
 //     }, 1000);
 //   });
 // }
-
 
 // function bakeCookies() {
 // 	console.log('start baking cookies')
@@ -203,32 +158,3 @@ makeDessert();
 // makeDessert()
 // 	.then(res => console.log(res))
 // 	.catch(err => console.log('ERROR: ', err))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

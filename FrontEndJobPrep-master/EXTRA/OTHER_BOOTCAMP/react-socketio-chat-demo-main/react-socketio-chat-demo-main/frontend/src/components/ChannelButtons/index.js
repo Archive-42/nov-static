@@ -1,2 +1,2 @@
-import ChannelButtons from './ChannelButtons'
+import ChannelButtons from "./ChannelButtons";
 export default ChannelButtons;

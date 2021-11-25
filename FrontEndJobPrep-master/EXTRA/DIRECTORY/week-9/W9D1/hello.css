@@ -13,7 +13,7 @@ main {
 }
 
 main::after {
-  content: '';
+  content: "";
   background-color: green;
   display: block;
   height: 30px;
@@ -21,7 +21,7 @@ main::after {
 }
 
 p.after {
-  content: '';
+  content: "";
   background-color: green;
   display: block;
   height: 30px;
@@ -34,9 +34,7 @@ div {
 }
 
 div.comments > form > button {
-
 }
 
 .comments-form-button {
-  
 }

@@ -7,7 +7,7 @@ function countVowels(word) {
 
   const vowels = "aeiou";
 
-  word.split("").forEach(letter => {
+  word.split("").forEach((letter) => {
     const lowerCaseLetter = letter.toLowerCase();
     if (vowels.includes(lowerCaseLetter)) {
       numVowels += 1;

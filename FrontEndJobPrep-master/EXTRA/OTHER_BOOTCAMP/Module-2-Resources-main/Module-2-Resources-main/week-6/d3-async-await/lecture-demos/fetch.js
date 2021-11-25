@@ -1,10 +1,6 @@
 const fetch = require("node-fetch");
 
-
 let apiKey = "afab3d6d&t";
-
-
-
 
 // USING .THEN
 
@@ -13,34 +9,7 @@ let apiKey = "afab3d6d&t";
 //   .then((jsonRes) => console.log(jsonRes))
 //   .catch((err) => console.log(err));
 
-
-
-
-
 // USING ASYNC AWAIT
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // MAKE IT DYNAMIC
 
@@ -48,18 +17,17 @@ let apiKey = "afab3d6d&t";
 // 	try {
 // 		let query = movieName.split(' ').join('+');
 // 		let url = `http://www.omdbapi.com/?apikey=${apiKey}=${query}`;
-	
+
 // 		let res = await fetch(url);
 // 		let jsonRes = await res.json();
-	
+
 // 		console.log('fetch successful!');
 // 		console.log(jsonRes);
 
 // 	} catch (err) {
-		
+
 // 		console.log('error: ', err);
 // 	}
 // }
-
 
 // fetchMovie('harry potter')

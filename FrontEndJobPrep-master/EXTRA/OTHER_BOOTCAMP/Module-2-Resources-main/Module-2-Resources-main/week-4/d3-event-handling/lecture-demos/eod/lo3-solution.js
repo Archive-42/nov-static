@@ -5,6 +5,6 @@ const stopOrElse = () => {
   }
 };
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("DOMContentLoaded", () => {
   setTimeout(stopOrElse, 5000);
 });

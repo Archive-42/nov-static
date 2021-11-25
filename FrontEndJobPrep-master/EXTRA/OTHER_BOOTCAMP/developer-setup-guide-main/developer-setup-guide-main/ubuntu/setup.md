@@ -19,13 +19,13 @@ You can right click on the terminal icon and choose `Add to Favorites` and it wi
 ## Google Chrome
 
 Ubuntu comes with Firefox, which is a fine web browser, but as a working web
-developer, you'll need to test your sites in multiple web browsers.  So we'll
+developer, you'll need to test your sites in multiple web browsers. So we'll
 install the popular web browser Google Chrome.
 
 Open Firefox and visit the [Chrome Website]
 
 Click download Chrome and make sure the 64 bit .deb (For Debian/Ubuntu) option
-is selected.  Then click **Accept and Install**.
+is selected. Then click **Accept and Install**.
 
 The following dialog box will appear:
 
@@ -95,8 +95,9 @@ sudo apt install git
 
 Once you've installed this, move on to [Installing Ansible]
 
-[Chrome Website]:https://www.google.com/chrome
-[VSCode Website]:https://code.visualstudio.com
-[Insomnia Website]:https://insomnia.rest/download
-[postbird website on github]:https://github.com/Paxa/postbird
+[chrome website]: https://www.google.com/chrome
+[vscode website]: https://code.visualstudio.com
+[insomnia website]: https://insomnia.rest/download
+[postbird website on github]: https://github.com/Paxa/postbird
+
 [Installing Ansible](ansible-setup.md)

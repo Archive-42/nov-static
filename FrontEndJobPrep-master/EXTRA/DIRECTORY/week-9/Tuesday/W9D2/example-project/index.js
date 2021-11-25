@@ -13,7 +13,7 @@ const createCategory = (title) => {
     body: JSON.stringify({
       title: title,
     }),
-  })
+  });
 };
 
 const run = async () => {
@@ -30,22 +30,7 @@ const run = async () => {
 
 // run();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const list = document.getElementById('list'); // ul
+const list = document.getElementById("list"); // ul
 
 const makeCategories = async () => {
   const res = await fetchCategories();
@@ -91,4 +76,4 @@ const submitCategory = async (e) => {
   }
 };
 
-form.addEventListener('submit', submitCategory);
+form.addEventListener("submit", submitCategory);

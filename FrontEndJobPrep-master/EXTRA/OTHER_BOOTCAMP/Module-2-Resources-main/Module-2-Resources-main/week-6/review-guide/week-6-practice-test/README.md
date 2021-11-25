@@ -1,6 +1,6 @@
 # Promises and Unit Tests Practice Test
 
-Please treat this practice test like 2 seperate tests.  The practice problems 
+Please treat this practice test like 2 seperate tests. The practice problems
 on promises are completely seperate from the practice problems on testing.
 
 There is a solution folder that will contain the solution code for both practice
@@ -20,13 +20,12 @@ To get started, use the following commands:
 2. `cd` into the `/promises` directory`
 3. `mocha` to run the test cases
 
-If you want to run the tests for one problem file at a time, you can do so 
+If you want to run the tests for one problem file at a time, you can do so
 with the following command in your terminal:
-    `mocha test/test-01-fetch-promise-spec.js`
+`mocha test/test-01-fetch-promise-spec.js`
 
 Please remember you will need to be in the `/promises` directory for this portion
 of the practice, and it is not at all connected to the section on Unit Testing.
-
 
 # Unit Testing Section
 
@@ -39,9 +38,9 @@ To get started, use the following commands:
 1. `cd` into the `/testing` directory (you do NOT need to npm install again)
 2. `mocha` to run the test cases
 
-If you want to run the tests for one problem file at a time, you can do so 
+If you want to run the tests for one problem file at a time, you can do so
 with the following command in your terminal:
-    `mocha test/03-test-driven--specs-reverse.js`
+`mocha test/03-test-driven--specs-reverse.js`
 
 Please remember you will need to be in the `/testing` directory for this portion
 of the practice, and it is not at all connected to the section on Promises.

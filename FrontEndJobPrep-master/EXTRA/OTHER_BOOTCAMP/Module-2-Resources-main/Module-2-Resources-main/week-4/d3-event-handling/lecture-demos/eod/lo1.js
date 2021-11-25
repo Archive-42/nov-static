@@ -1,4 +1,3 @@
-const countClicks = () => {
-};
+const countClicks = () => {};
 
-window.addEventListener('DOMContentLoaded', countClicks);
+window.addEventListener("DOMContentLoaded", countClicks);

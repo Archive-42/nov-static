@@ -84,7 +84,6 @@ describe("Problem 2:", () => {
     });
 
     context("that", () => {
-
       beforeEach(() => {
         sinon.stub(console, "log");
       });
@@ -92,7 +91,6 @@ describe("Problem 2:", () => {
       afterEach(() => {
         console.log.restore();
       });
-
 
       it("each life goal is logged to the console", () => {
         const instance = new FriendlyDragon(

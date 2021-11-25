@@ -73,7 +73,6 @@ describe("Problem 3:", () => {
     });
 
     context("that", () => {
-
       beforeEach(() => {
         sinon.stub(console, "log");
       });
@@ -82,7 +81,7 @@ describe("Problem 3:", () => {
         console.log.restore();
       });
 
-      it("each evil doing is logged to the console", () => {        
+      it("each evil doing is logged to the console", () => {
         const instance = new EvilDragon(
           "Ender Dragon",
           "black",
@@ -107,7 +106,7 @@ describe("Problem 3:", () => {
           console.log.calledWith(
             "Ender Dragon will destroy all blocks in its way"
           )
-        ).to.be.true;        
+        ).to.be.true;
       });
     });
 

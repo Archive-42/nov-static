@@ -3,7 +3,7 @@
 This is a docker-compose.yml file and setup instructions for running
 postgreSQL in docker for local development.
 
-This installs the *latest* postgres version by default. If you want a different
+This installs the _latest_ postgres version by default. If you want a different
 version you will need to edit the docker-compose.yml file and change `postgres:latest`
 to the version you want.
 

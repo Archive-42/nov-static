@@ -1,10 +1,10 @@
 # Week 5 Learning Objectives
 
-
-
 ## JavaScript Classes
 
-  1. Declare a class in JavaScript.
+1. Declare a class in JavaScript.
+
+
     ```javascript
     class Book {
       constructor(title, series, author) {
@@ -14,8 +14,10 @@
       }
     }
     ```
-    
-  2. Implement a constructor method in a javaScript class.
+
+2. Implement a constructor method in a javaScript class.
+
+
     ```javascript
     Book.prototype.getInformation = function () {
       if (this.series) {
@@ -26,7 +28,9 @@
     }
     ```
 
-  3. Define an instance method on a class.
+3. Define an instance method on a class.
+
+
     ```javascript
     class Book {
       // constructor
@@ -40,8 +44,10 @@
       }
     }
     ```
-  
-  4. Define a static method on a class.
+
+4. Define a static method on a class.
+
+
     ```javascript
     class Book {
       // constructor
@@ -57,20 +63,26 @@
       }
     }
     ```
-  
-  5. Instantiate an instance of a class using the new keyword.
+
+5. Instantiate an instance of a class using the new keyword.
+
+
     ```javascript
     const theGrapesOfWrath = new Book('The Grapes of Wrath', null, 'John Steinbeck');
     ```
-  
-  6. Implement inheritance using the ES6 extends syntax for an ES6 class.
+
+6. Implement inheritance using the ES6 extends syntax for an ES6 class.
+
+
     ```javascript
     class Book extends CatalogItem {
       // Book code
     }
     ```
-  
-  7. Utilize the super keyword in a child class to inherit from a parent class.
+
+7. Utilize the super keyword in a child class to inherit from a parent class.
+
+
     ```javascript
     class CatalogItem {
       constructor(title, series) {
@@ -109,10 +121,12 @@
         return result;
       }
     }
-    
+
     ```
-  
-  8. Utilize module.exports and require to import and export functions and class from one file to another.
+
+8. Utilize module.exports and require to import and export functions and class from one file to another.
+
+
     - In this first example, we are exporting a single item from each file. We are assigning that item to module.exports directly.
     ```javascript
     // catalog-item.js
@@ -166,26 +180,29 @@
     const aNewHope = new Movie('Episode 4: A New Hope', 'Star Wars', 'George Lucas');
     ```
 
-
 ## Object-Oriented Programming
-    
-  1. Conceptual understanding of OOP
-    - The main concept behind OOP is the idea that you can group data and related 
+
+1. Conceptual understanding of OOP
+
+
+    - The main concept behind OOP is the idea that you can group data and related
       actions or behaviors together in order to treat them as a single entity within a larger system.
     - An item containing data and behaviors is called an object.
     - The data parts are called properties or fields of the object.
     - The action parts are called methods of the object.
     - In this way, properties are like an object's "adjectives", and methods are its "verbs".
 
-  2. Basic design principles for OOP
-      OOP overview
-      - approach for breaking down large, complex products into simple solutions
-      - smaller parts can be implemented and tested separately
-      - results in higher confidence in overall solution
-      - makes it easier to pinpoint issues with code
-  
-  
-  3. Three pillars of OOP
+2. Basic design principles for OOP
+   OOP overview
+
+   - approach for breaking down large, complex products into simple solutions
+   - smaller parts can be implemented and tested separately
+   - results in higher confidence in overall solution
+   - makes it easier to pinpoint issues with code
+
+3. Three pillars of OOP
+
+
     - Encapsulation:
       - Puts the behavior and data together behind methods that hide the specific implementation.
       - Code that uses these methods doesn't need to worry about the details.
@@ -197,10 +214,10 @@
     - Polymorphism:
       - The ability to treat an object as if it were an instance of one of its parent classes.
       - We can use the methods of a parent class on an object of a child class.
-  
-  
-  
-  4. The Law of Demeter applied to OOP
+
+4. The Law of Demeter applied to OOP
+
+
     - A method of an object can only invoke the methods (or use the properties) of the following kinds of objects:
       - Methods on the object itself
       - Any of the objects passed in as parameters to the method
@@ -218,17 +235,17 @@
         ```
       - Visualizations of our program (UI has to know about the structure of our data)
 
-  5. SOLID principles of OOP (not tested on)
-      - S: Single-Responsibility Principle (IMPORTANT)
-        - A class/function/module should do one thing and do it well.
-        - A class/function/module should have only one reason to change.
-      - O: Open-Close Principle (less applicable)
-        - A class is open for extension and closed for modification.
-        - Creating new functionality can happen in child classes and not the original class.
-      - L: Liskov Substitution Principle (IMPORTANT)
-        - You can substitute child class objects for parent class objects and not cause errors.
-        - The methods that you override in child classes must match the intent of the methods found on the parent classes.
-      - I: Interface Segregation Principle (less applicable)
-        - Method names should be grouped together into granular collections called "interfaces".
-      - D: Dependency Inversion Principle (less applicable)
-        - Functionality that your class depends on should be provided as parameters to methods rather than using new in the class to create a new instance.
+5. SOLID principles of OOP (not tested on)
+   - S: Single-Responsibility Principle (IMPORTANT)
+     - A class/function/module should do one thing and do it well.
+     - A class/function/module should have only one reason to change.
+   - O: Open-Close Principle (less applicable)
+     - A class is open for extension and closed for modification.
+     - Creating new functionality can happen in child classes and not the original class.
+   - L: Liskov Substitution Principle (IMPORTANT)
+     - You can substitute child class objects for parent class objects and not cause errors.
+     - The methods that you override in child classes must match the intent of the methods found on the parent classes.
+   - I: Interface Segregation Principle (less applicable)
+     - Method names should be grouped together into granular collections called "interfaces".
+   - D: Dependency Inversion Principle (less applicable)
+     - Functionality that your class depends on should be provided as parameters to methods rather than using new in the class to create a new instance.

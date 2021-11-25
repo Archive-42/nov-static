@@ -17,21 +17,13 @@
 // workout(500) // "Error: you dont have enough time to stretch"
 // - if we only have 0.5 seconds to workout, we wont even have enough time to stretch
 
-function stretch(timeLeft) {
+function stretch(timeLeft) {}
 
-}
+function runOnTreadmill(timeLeft) {}
 
-function runOnTreadmill(timeLeft) {
+function liftWeights(timeLeft) {}
 
-}
-
-function liftWeights(timeLeft) {
-
-}
-
-function workout(totalTime) {
-	
-}
+function workout(totalTime) {}
 
 // TESTING:
 // - comment in each invocation of your workout function below and run

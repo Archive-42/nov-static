@@ -28,13 +28,13 @@ function exponent2(base, exp) {
   } else if (exp === 1) {
     return base;
   } else if (exp % 2 === 0) {
-    return exponent2(base, (exp / 2)) ** 2;
+    return exponent2(base, exp / 2) ** 2;
   } else {
     return base * exponent2(base, (exp - 1) / 2) ** 2;
   }
 }
 
-let arr=[1,2,3]
+let arr = [1, 2, 3];
 function fibonacci(n) {
   if (n === 1) {
     return [0, 1];
@@ -66,13 +66,13 @@ function bsearch(arr, target) {
   // debugger
   let mid = Math.floor(arr.length / 2);
   if (arr[mid] === target) {
-    return mid; 
+    return mid;
   } else if (arr[mid] > target) {
-    return bsearch(arr.slice(0, mid), target)
+    return bsearch(arr.slice(0, mid), target);
   } else {
     let answer = bsearch(arr.slice(mid + 1, arr.length + 1), target);
     if (answer >= 0) {
-      return mid + 1 + bsearch(arr.slice(mid+1, arr.length + 1), target);
+      return mid + 1 + bsearch(arr.slice(mid + 1, arr.length + 1), target);
     } else {
       return -1;
     }
@@ -85,11 +85,10 @@ function mergesort(arr) {
   if (arr.length <= 1) {
     return arr;
   }
-  let mid = Math.floor(arr.length/2);
+  let mid = Math.floor(arr.length / 2);
   let left = mergesort(arr.slice(0, mid));
   let right = mergesort(arr.slice(mid, arr.length));
   return myMerge(left, right);
-
 }
 function myMerge(arr1, arr2) {
   if (arr1.length === 0) {
@@ -107,10 +106,9 @@ function myMerge(arr1, arr2) {
 // mergesort([6, 3, 1])
 
 function subsets(arr) {
-  if (arr.length === 0 ) {
+  if (arr.length === 0) {
     return [[]];
   } else {
-
     let subs = subsets(arr.slice(1));
 
     return subs.concat(subs.myMap((subarr) => subarr.concat(arr[0])));

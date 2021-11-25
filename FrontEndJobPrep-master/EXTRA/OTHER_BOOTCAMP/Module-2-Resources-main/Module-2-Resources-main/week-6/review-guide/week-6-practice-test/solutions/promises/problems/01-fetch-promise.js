@@ -43,14 +43,14 @@ it should be formatted the same as above.
 
 *************** YOUR CODE BELOW ***************************************/
 
-const fetch = require('node-fetch');
+const fetch = require("node-fetch");
 
 const gettingQuote = (url) => {
   return fetch(url)
     .then((response) => response.json())
-    .then((quote) => { 
-          console.log(quote[0].q);
-          console.log(`- ${quote[0].a}`);
+    .then((quote) => {
+      console.log(quote[0].q);
+      console.log(`- ${quote[0].a}`);
     })
     .catch((e) => {
       throw e;

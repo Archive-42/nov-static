@@ -1,5 +1,3 @@
-
-
 // USING CONSTRUCTOR FUNCTION
 
 // function Dog(name, age) {
@@ -9,12 +7,7 @@
 
 // console.log(Dog);
 
-
-
-
-
-
-// USING ES6 CLASSES 
+// USING ES6 CLASSES
 
 // class Dog {
 // 	constructor(name, age) {
@@ -26,33 +19,13 @@
 // 	}
 // }
 
-
 // console.log(Dog); // [Function: Dog]
 
 // let frank = new Dog('frank', 5) // Dog { name: 'frank', age: 5 }
 
-
 // console.log(frank) // Dog { name: 'frank', age: 5 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // DEFINING INSTANCE METHODS
-
 
 // using constructor function
 
@@ -69,14 +42,10 @@
 // let bodhi = new Dog('bodhi', 5);
 // bodhi.speak(); // hi my name is bodhi
 
-// // DONT DO THIS 
+// // DONT DO THIS
 // // Dog.speak()
 
-
-
-
-
-// TODO: 
+// TODO:
 // - recreate using es6 classes
 // - assign an additional property `tricks` initialized to empty array
 // - create a new method called 'learnNewTrick(trick)`
@@ -86,7 +55,6 @@
 // - create a new method called 'performTricks`
 //   - console.log `${this.name} performs trick: ${trick}` for each trick
 //     in tricks array
-
 
 // class Dog {
 // 	constructor(name, age) {
@@ -115,8 +83,6 @@
 
 // console.log(bodhi); // Dog { name: 'bodhi', age: 5, tricks: [ 'sit' ] }
 
-
-
 // let bodhi = new Dog("bodhi", 5);
 
 // bodhi.speak(); // hi my name is bodhi
@@ -130,24 +96,9 @@
 // bodhi.performTricks(); // bodhi performs trick: sit
 //                        // bodhi performs trick: roll over
 
-
-
-
-
-
-
-
-
-
-
-
 // DEFINING STATIC METHODS
 
-
 // using constructor function
-
-
-
 
 // function Dog(name, age) {
 //   this.name = name;
@@ -166,14 +117,9 @@
 // 	console.log(`${oldest.name} is the oldest dog`)
 // }
 
-
 // let bodhi = new Dog("bodhi", 5);
 // let lucy = new Dog("lucy", 10);
 // Dog.findOldest(bodhi, lucy); // lucy is the oldest dog
-
-
-
-
 
 // TODO = recreate using classes
 
@@ -200,23 +146,13 @@
 // 	}
 // }
 
-
 // let bodhi = new Dog("bodhi", 5);
 // let lucy = new Dog("lucy", 10);
 // Dog.findOldest(bodhi, lucy); // lucy is the oldest dog
 
 // bodhi.speak();
 
-
-
-
-
-
-
-
-
-
-// HOISTING 
+// HOISTING
 
 // functions are hoisted - below will work
 
@@ -227,11 +163,7 @@
 // 	this.name = name;
 // }
 
-
-
-// classes are not hoisted - below will not work 
-
-
+// classes are not hoisted - below will not work
 
 // class Penguin {
 // 	constructor(name) {
@@ -242,14 +174,7 @@
 // let penguin = new Penguin("sally");
 // console.log(penguin);
 
-
-
-
-
-
-
 // CONTEXT AND CLASSES
-
 
 // class Clock {
 // 	constructor() {
@@ -267,6 +192,3 @@
 // 		setInterval(this.tick, 1000)
 // 	}
 // }
-
-
-

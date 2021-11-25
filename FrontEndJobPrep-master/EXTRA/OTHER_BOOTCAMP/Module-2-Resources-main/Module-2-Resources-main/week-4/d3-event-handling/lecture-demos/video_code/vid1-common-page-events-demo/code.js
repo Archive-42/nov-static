@@ -1,17 +1,16 @@
 //  clicker demo
-window.addEventListener("DOMContentLoaded", event => {
+window.addEventListener("DOMContentLoaded", (event) => {
   const button = document.getElementById("increment-count");
   const count = document.getElementById("clicked-count");
 
-  button.addEventListener("click", event => {
-
+  button.addEventListener("click", (event) => {
     // event.detail === read only event property
     // when nonzero, provides the current(or next, depending on the event) click count
     count.innerHTML = `event detail: ${event.detail}`;
   });
-})
+});
 
-// // checkbox demo 
+// // checkbox demo
 // window.onload = () => {
 
 //   // store the elements we need in variables
@@ -33,7 +32,6 @@ window.addEventListener("DOMContentLoaded", event => {
 //     }
 //   });
 // };
-
 
 // // cyan demo
 // window.addEventListener("DOMContentLoaded", event => {

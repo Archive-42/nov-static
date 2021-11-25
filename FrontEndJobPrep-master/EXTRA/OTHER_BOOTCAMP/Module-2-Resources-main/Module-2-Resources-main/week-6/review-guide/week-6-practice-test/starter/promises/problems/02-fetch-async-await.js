@@ -43,10 +43,6 @@ it should be formatted the same as above.
 
 *************** YOUR CODE BELOW ***************************************/
 
-
-
-
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 
 try {

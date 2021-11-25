@@ -1,28 +1,28 @@
 /* TODO Add site wide styles */
 
 * {
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 body {
-    background-color: #FBE7C6
+  background-color: #fbe7c6;
 }
 
 .title {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 main {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
 }
 
 .sidebar {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .message-view {
-    flex-grow: 1
+  flex-grow: 1;
 }

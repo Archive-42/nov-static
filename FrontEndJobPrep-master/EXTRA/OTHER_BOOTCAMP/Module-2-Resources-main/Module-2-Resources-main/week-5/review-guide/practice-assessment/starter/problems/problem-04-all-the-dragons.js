@@ -67,10 +67,6 @@ The static method from step 4, when called and logged to the console...
 
 *************** YOUR CODE BELOW ***************************************/
 
-
-
-
-
 try {
   module.exports = { falkor, smaug };
 } catch {

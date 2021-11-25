@@ -9,7 +9,7 @@ class Elephant {
 
   static elephantStrike(elephants) {
     const strike = [];
-    elephants.forEach(elephant => {
+    elephants.forEach((elephant) => {
       strike.push(elephant.sit());
     });
     return strike;

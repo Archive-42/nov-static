@@ -1,12 +1,9 @@
-
-const chai = require('chai');
+const chai = require("chai");
 const expect = chai.expect;
 
-const { double, doubleInPlace } = require('../problems/equal');
+const { double, doubleInPlace } = require("../problems/equal");
 
-
-
-// USING EXPECT 
+// USING EXPECT
 
 describe("double function", () => {
   it("should double every element in array", () => {
@@ -46,10 +43,7 @@ describe("doubleInPlace function", () => {
   });
 });
 
-
-
-
-// USING ASSERT 
+// USING ASSERT
 
 // const assert = require("assert");
 

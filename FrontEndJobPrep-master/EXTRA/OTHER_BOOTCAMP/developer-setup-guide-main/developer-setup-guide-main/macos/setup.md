@@ -25,7 +25,7 @@ You should see your command prompt. It will either end in a `$` or a `%` charact
 You'll also note, it'll display the `~` (tilde) character. In unix, the `~`
 represents your home directory.
 
-> Note: the difference between $ and % is which *[shell]* the operating system
+> Note: the difference between $ and % is which _[shell]_ the operating system
 > comes with by default... older macOS version came with the **[Bourne Again Shell]** ([bash])
 > while newer macOS versions include the **[Z Shell]** ([zsh]).
 > Once you finish these instructions you will have zsh no matter which version
@@ -33,11 +33,11 @@ represents your home directory.
 
 Once you've read about all the Unix terminology and have the terminal app open, move on to [Installing Xcode Command line tools]
 
-[shell]:https://en.wikipedia.org/wiki/Shell_%28computing%29
-[Ansible]:https://ansible.com
-[Unix Terminology]:../resources/unix-terminology.md
-[Bourne Again Shell]:https://www.gnu.org/software/bash/
-[bash]:https://www.gnu.org/software/bash/
-[Z Shell]:https://www.zsh.org/
-[zsh]:https://www.zsh.org/
-[Installing Xcode Command line tools]:xcode-command-line-tools-setup.md
+[shell]: https://en.wikipedia.org/wiki/Shell_%28computing%29
+[ansible]: https://ansible.com
+[unix terminology]: ../resources/unix-terminology.md
+[bourne again shell]: https://www.gnu.org/software/bash/
+[bash]: https://www.gnu.org/software/bash/
+[z shell]: https://www.zsh.org/
+[zsh]: https://www.zsh.org/
+[installing xcode command line tools]: xcode-command-line-tools-setup.md

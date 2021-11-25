@@ -32,24 +32,24 @@ First some terms:
 
 ## Glossary
 
-__File Manager__ - A Graphical program for creating folders, copying/moving and renaming your files.
+**File Manager** - A Graphical program for creating folders, copying/moving and renaming your files.
 
-__Command Line__ - the unix command line you interact with inside a Terminal application
+**Command Line** - the unix command line you interact with inside a Terminal application
 
-__Folder/Directory__ - These words are interchangable and mean the same thing. Directory is the older term which existed before there were graphical operating systems. When the Macintosh brought the graphical user interface to computing in 1984, they choose the icon representing a folder for a directory. A folder can contain files or other folders.
+**Folder/Directory** - These words are interchangable and mean the same thing. Directory is the older term which existed before there were graphical operating systems. When the Macintosh brought the graphical user interface to computing in 1984, they choose the icon representing a folder for a directory. A folder can contain files or other folders.
 
-__Path__ - A textual way of describing part of a folder heirarchy. In unix we separate the folders in a path with the forward slash character `/`. 
+**Path** - A textual way of describing part of a folder heirarchy. In unix we separate the folders in a path with the forward slash character `/`.
 
-__Home Directory__ - The default directory for a user. This is where the user should be storing thier files. The shorthand for the home directory is the `~` 
+**Home Directory** - The default directory for a user. This is where the user should be storing thier files. The shorthand for the home directory is the `~`
 character.
 
 - macOS: The home directory on macos is located at `/Users/<username>`
 - Ubuntu Desktop: Nearly all linux systems use `/home/<username>` as your home directory
 - Windows: Windows has a _Windows Home Directory_ on the `C:` drive, but WSL has a home directory in the same location it is in Ubuntu Linux, in `/home/<username>` We recommend storing your coding files inside the Linux home directory, and not in the Windows home directory. (Microsoft also recommends this). If you do need to access the Windows home directory from WSL it's located at `/mnt/c/Users/<username>` where username is your Windows user name.
 
-__Current Directory__ - The directory your terminal is currently "in". This is also known as the "Working Directory". A shortcut to it is the period character `.`
+**Current Directory** - The directory your terminal is currently "in". This is also known as the "Working Directory". A shortcut to it is the period character `.`
 
-__Parent Directory__ - the directory ABOVE the current directory in the file hierarchy. A shortcut to it is  double period. `..`
+**Parent Directory** - the directory ABOVE the current directory in the file hierarchy. A shortcut to it is double period. `..`
 
 ## Changing to a directory
 
@@ -59,7 +59,7 @@ a specific folder.
 
 `cd <path>`
 
-Normally your command line's *PROMPT* will display the current path, but you 
+Normally your command line's _PROMPT_ will display the current path, but you
 can also find it out at any time by typing
 
 `pwd`
@@ -117,19 +117,19 @@ code <path>
 There is no standard command for opening up a file into a graphical
 file manager that works across every OS. So here are the commands for each OS.
 
-- __macOS__ - You can use the command `open` to open Finder
+- **macOS** - You can use the command `open` to open Finder
 
 ```shell
 open <path>
 ```
 
-- __Windows with WSL__ - You can use the command `explorer.exe` to open Windows Explorer
+- **Windows with WSL** - You can use the command `explorer.exe` to open Windows Explorer
 
 ```shell
 explorer.exe <path>
 ```
 
-- __Ubuntu Desktop__ - You can use the command `xdg-open` to open the File Manager
+- **Ubuntu Desktop** - You can use the command `xdg-open` to open the File Manager
 
 ```shell
 xdg-open <path>
@@ -187,7 +187,7 @@ rm -r -i -v <path to folder>
 
 ## Deleting a single folder
 
-You can use the `rmdir` command to delete a folder.  However this folder **MUST BE EMPTY** before you can do this.
+You can use the `rmdir` command to delete a folder. However this folder **MUST BE EMPTY** before you can do this.
 
 ```shell
 rmdir <path to folder>
@@ -197,16 +197,15 @@ rmdir <path to folder>
 
 Sometimes you may want to unzip a `.zip` file or zip a folder into a new `.zip` file.
 
-```unzip <path to zip file>```
-
+`unzip <path to zip file>`
 
 You can peek inside the zip file without unzipping it like this:
 
-```unzip -t <path to zip file>```
+`unzip -t <path to zip file>`
 
-You can zip up a folder like so: 
+You can zip up a folder like so:
 
-```zip -r <zipfilename.zip> <folder>```
+`zip -r <zipfilename.zip> <folder>`
 
 Note: you must be one directory ABOVE the folder in the heirarchy before you do this. The `-r` flag is needed for zip to recursively zip up all the files.
 
@@ -214,5 +213,4 @@ Note: you must be one directory ABOVE the folder in the heirarchy before you do 
 
 The curl command can take a URL and download it to a file on your computer.
 
-```curl -o <filename> <url>```
-
+`curl -o <filename> <url>`
