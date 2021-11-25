@@ -1,0 +1,94 @@
+:root {
+  --green: #22ce94;
+  --green-20: #22ce9440;
+  --green-80: #22ce9490;
+  --dark-green: #27ae60;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+ul.ant-menu {
+  text-align: center;
+}
+
+.logo {
+  color: white;
+  margin-right: 1rem;
+  float: left;
+}
+
+.ant-pagination-item {
+  font-family: inherit;
+}
+
+.TabPane {
+  background: #fff;
+  padding: 6rem 24px;
+  min-height: calc(100vh - 64px - 53px - 69px);
+  text-align: center;
+}
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected,
+.ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+  background-color: var(--green);
+}
+
+.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub {
+  color: rgba(255, 255, 255, 0.65);
+  background: #000000;
+}
+
+.ant-layout-header {
+  height: 64px;
+  padding: 0px;
+  line-height: 64px;
+  background: #000000;
+}
+
+.ant-card {
+  border-radius: 2px 2px 0 0;
+}
+
+.ant-btn-link {
+  color: var(--green);
+}
+
+.ant-list-item-meta-title > a:hover {
+  color: var(--dark-green);
+}
+
+.ant-btn-link:hover,
+.ant-btn-link:focus {
+  color: var(--dark-green);
+}
+
+.ant-select-auto-complete.ant-select .ant-input:focus,
+.ant-select-auto-complete.ant-select .ant-input:hover {
+  border-color: var(--green);
+}
+
+.ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
+  background-color: var(--green-20);
+}
+
+.ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled) {
+  background-color: var(--green-80);
+}
+
+.ant-input:focus {
+  -webkit-box-shadow: 0 0 0 2px var(--green-20);
+  box-shadow: 0 0 0 2px var(--green-20);
+}

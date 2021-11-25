@@ -1,0 +1,7 @@
+.jumbotron {
+  background-image: url(https://source.unsplash.com/1600x900/?city);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color: #000;
+}
