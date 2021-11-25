@@ -98,6 +98,7 @@ dog();
 - Refactor the code you just wrote. Your job is not over when the
   tests pass! One of the most important things you do as a software developer
   is to ensure the code you write is easy to maintain and read.
+
 ---
 
 - `SyntaxError` represents an error in the syntax of the code
@@ -105,8 +106,6 @@ dog();
 - `TypeError` represents an error when a variable or parameter is not of a
 
 ---
-
-
 
 ### First, set up a package.json file and import all needed dependencies
 
@@ -133,6 +132,7 @@ dog();
   }
 }
 ```
+
 des
 
 **The flow of development usually looks like this:**
@@ -152,18 +152,12 @@ before/after and beforeEach/afterEach
 We can setup before/after functions that execute before/after running tests, and also beforeEach/afterEach functions that execute before/after every it.
 
 For instance:
- mocha is a test framework, not an assertion library. it works with multiple assertion libraries
-    - test frameworks: run tests and present results
-    - assertion libraries: used to actually write tests
-        - node has a built in assertion library called `Assert`
-        - `Chai` is another assertion library
-            - the chainable functions available will often read like English.
+mocha is a test framework, not an assertion library. it works with multiple assertion libraries - test frameworks: run tests and present results - assertion libraries: used to actually write tests - node has a built in assertion library called `Assert` - `Chai` is another assertion library - the chainable functions available will often read like English.
+
 - file structure should include a `problems` directory and a `test` directory that both live in same project directory
 - import the `assert` module and the
 - use `describe`, `context`, and `it` blocks
-  - `describe`
-        - `describe` is an organizational function. takes two parameters: descriptive string and a callback
-        - the callback passed to describe is where we insert the actual tests
+  - `describe` - `describe` is an organizational function. takes two parameters: descriptive string and a callback - the callback passed to describe is where we insert the actual tests
     - `it`
       - it goes inside the callback passed to `describe`
       - accepts a descriptive string and a callback to set up our test
@@ -175,17 +169,16 @@ For instance:
 const assert = require("assert");
 const reverseString = require("../problems/reverse-string.js");
 
-
-describe("reverseString()", function() {
-  context("given a string argument", function() {
-    it("should reverse the given string", function() {
+describe("reverseString()", function () {
+  context("given a string argument", function () {
+    it("should reverse the given string", function () {
       let test = reverseString("hello");
       let result = "olleh";
 
       assert.strictEqual(test, result);
     });
 
-    it("should reverse the given string and output the same capitalization", function() {
+    it("should reverse the given string and output the same capitalization", function () {
       let test = reverseString("Apple");
       let result = "elppA";
       // assert.strictEqual compares return value of function
@@ -193,12 +186,14 @@ describe("reverseString()", function() {
     });
   });
 
-  context("given an argument that is not a string", function() {
-      it("should throw a TypeError when given an argument that is not a string", function () {
-          // assert.throws accepts a function as the first argument,
-          // then the error that should be thrown as the second argument
-          assert.throws(() => {reverseString(3)}, TypeError);
-      })
+  context("given an argument that is not a string", function () {
+    it("should throw a TypeError when given an argument that is not a string", function () {
+      // assert.throws accepts a function as the first argument,
+      // then the error that should be thrown as the second argument
+      assert.throws(() => {
+        reverseString(3);
+      }, TypeError);
+    });
   });
 });
 ```
@@ -226,70 +221,68 @@ chai.use(spies);
 ## -----> MORE GENERALIZED INFO BELOW:
 
 ```js
-describe("test", function() {
-
+describe("test", function () {
   before(() => alert("Testing started – before all tests"));
   after(() => alert("Testing finished – after all tests"));
 
   beforeEach(() => alert("Before a test – enter a test"));
   afterEach(() => alert("After a test – exit a test"));
 
-  it('test 1', () => alert(1));
-  it('test 2', () => alert(2));
-
+  it("test 1", () => alert(1));
+  it("test 2", () => alert(2));
 });
 ```
 
 ```js
-const assert = require('assert');
+const assert = require("assert");
 
-describe('Hooks demo', () => {
+describe("Hooks demo", () => {
   before(() => {
-    console.log('Before hook...');
+    console.log("Before hook...");
   });
 
   beforeEach(() => {
-    console.log('Before each hook...');
+    console.log("Before each hook...");
   });
 
   afterEach(() => {
-    console.log('After each hook...');
+    console.log("After each hook...");
   });
 
   after(() => {
-    console.log('After hook...');
+    console.log("After hook...");
   });
 
-  it('Placeholder one', () => {
+  it("Placeholder one", () => {
     assert.equal(true, true);
   });
 
-  it('Placeholder two', () => {
+  it("Placeholder two", () => {
     assert.equal(true, true);
   });
 
-  describe('nested tests', () => {
+  describe("nested tests", () => {
     before(() => {
-      console.log('Nested before hook...');
+      console.log("Nested before hook...");
     });
 
     beforeEach(() => {
-      console.log('Nested before each hook...');
+      console.log("Nested before each hook...");
     });
 
     afterEach(() => {
-      console.log('Nested after each hook...');
+      console.log("Nested after each hook...");
     });
 
     after(() => {
-      console.log('Nested after hook...');
+      console.log("Nested after hook...");
     });
 
-    it('Placeholder one', () => {
+    it("Placeholder one", () => {
       assert.equal(true, true);
     });
 
-    it('Placeholder two', () => {
+    it("Placeholder two", () => {
       assert.equal(true, true);
     });
   });
@@ -298,27 +291,24 @@ describe('Hooks demo', () => {
 
 ![](result.png)
 
-
 Notice that the `before` and `after` hooks defined in the top-level `describe` function run only once while the `beforeEach` and `afterEach` hooks run before and after (respectively) for each of the tests defined in the top-level `describe` function _and_ for each of the tests defined in the nested `describe` function.
 
 > While the need to define nested hooks won't come up very often (especially when you're just starting out with unit testing), it is very helpful to be able to define a `beforeEach` hook in a top-level `describe` function that will run before every test in that block _and_ before every test within nested `describe` or `context` functions (you'll do exactly that in just a bit).
 
 You can also optionally pass a description for a hook or a named function:
+
 ```js
-    beforeEach('My hook description', () => {
-      console.log('Before each hook...');
-    });
+beforeEach("My hook description", () => {
+  console.log("Before each hook...");
+});
 
-    beforeEach(function myHookName() {
-      console.log('Before each hook...');
-    });
+beforeEach(function myHookName() {
+  console.log("Before each hook...");
+});
 ```
-If an error occurs with executing the hook, the hook description or function name will display in the console along with the error information to assist with debugging.
 
+If an error occurs with executing the hook, the hook description or function name will display in the console along with the error information to assist with debugging.
 
 ---
 
 ## ex.)
-
-
-

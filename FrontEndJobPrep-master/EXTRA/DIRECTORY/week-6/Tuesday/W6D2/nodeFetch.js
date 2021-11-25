@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+const fetch = require("node-fetch");
 
 // fetch('https://api.github.com/users/azablan')
 //   .then(res => res.json())
@@ -8,20 +8,8 @@ const fetch = require('node-fetch');
 //     console.log('done parsing result')
 //   });
 
-
-
-
-
-
-
-
-
-
-
-
-
 // get your API Key here: http://www.omdbapi.com/
-const MOVIE_API_KEY = '';
+const MOVIE_API_KEY = "";
 
 // const queryParams = {
 //   t: 'fight club',
@@ -31,19 +19,23 @@ const MOVIE_API_KEY = '';
 const url = `http://www.omdbapi.com/?t=fight+club`;
 
 fetch(url)
-  .then(res => {
+  .then((res) => {
     return new Promise((resolve, reject) => {
       if (res.status >= 400) {
         // resolve(res.json())
-        reject('unsuccessful')
+        reject("unsuccessful");
       } else {
         // resolve(res.json())
       }
-    })
+    });
   })
-  .then(json => console.log('second then', json),
-  () => { throw new Error() })
-  .then(whatever => console.log(whatever))
-  .catch(reason => {
-    console.log('rejected because', reason);
+  .then(
+    (json) => console.log("second then", json),
+    () => {
+      throw new Error();
+    }
+  )
+  .then((whatever) => console.log(whatever))
+  .catch((reason) => {
+    console.log("rejected because", reason);
   });

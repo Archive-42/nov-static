@@ -16,5 +16,5 @@ function postOrderArray(root, arr = []) {
 
 module.exports = {
   inOrderArray,
-  postOrderArray
+  postOrderArray,
 };

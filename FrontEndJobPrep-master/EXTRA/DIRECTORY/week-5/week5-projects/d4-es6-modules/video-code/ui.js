@@ -1,12 +1,9 @@
-const readline = require('readline');
+const readline = require("readline");
 
-const rl = readline.createInterface(
-  process.stdin,
-  process.stdout,
-);
+const rl = readline.createInterface(process.stdin, process.stdout);
 
 let questions = [];
-let title = 'Quiz';
+let title = "Quiz";
 
 module.exports = {
   close() {
@@ -23,7 +20,7 @@ module.exports = {
       const question = questions[number];
       console.clear();
       console.log(title);
-      console.log(`Question ${number + 1}`)
+      console.log(`Question ${number + 1}`);
       console.log();
       console.log(question.text);
       console.group();
@@ -32,7 +29,7 @@ module.exports = {
       }
       console.groupEnd();
       console.log();
-      rl.question('What is your answer? ', response => {
+      rl.question("What is your answer? ", (response) => {
         responses.push(Number.parseInt(response) - 1);
         __show(number + 1, responses);
       });
@@ -41,5 +38,5 @@ module.exports = {
   },
   setTitle(s) {
     title = s;
-  }
+  },
 };

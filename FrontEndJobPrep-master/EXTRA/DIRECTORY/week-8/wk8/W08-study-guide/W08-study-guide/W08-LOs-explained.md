@@ -40,9 +40,9 @@
   - A tree doesn't have any parent nodes if there are no children.
   - What's the min/max number of parent and leaf nodes for a tree with 5 nodes?
     - Two extreme implementations:
-    ![min-max-nodes-ll.png](./public/min-max-nodes-ll.png)
+      ![min-max-nodes-ll.png](./public/min-max-nodes-ll.png)
     - Implementing in a chain results in max number of parents and min number of leaves: 4 parents, 1 leaf
-    ![min-max-nodes-balanced.png](./public/min-max-nodes-balanced.png)
+      ![min-max-nodes-balanced.png](./public/min-max-nodes-balanced.png)
     - Implementing as a balanced tree results in min number of parents and max number of leaves: 2 parents, 3 leaves
 - All that we need in order to implement a binary tree is a TreeNode class that can store a value and references to a left and right child. We can create a tree by assigning the left and right properties to point to other TreeNode instances:
 
@@ -61,7 +61,7 @@
 - Pre-order: Values are accessed as soon as the node is reached.
 - In-order: Values are accessed after we have fully explored the left but before we explore the right branch.
 - Post-order: Values are accessed after all of our children have been accessed.
-- *Breadth First: The previous three are types of Depth First Traversals. Breadth first accesses values of nodes by level, left to right, top to bottom.
+- \*Breadth First: The previous three are types of Depth First Traversals. Breadth first accesses values of nodes by level, left to right, top to bottom.
 - Given a tree, be able to determine the order of each traversal type:
   ![Number tree](./public/number-tree.png)
   - Breadth First: 20, 9, 24, 7, 11, 23, 27, 3, 10, 17, 36, 30
@@ -77,11 +77,11 @@
   ```javascript
   class BST {
     constructor() {
-        this.root = null;
+      this.root = null;
     }
 
-    insert(val, currentNode=this.root) {
-      if(!this.root) {
+    insert(val, currentNode = this.root) {
+      if (!this.root) {
         this.root = new TreeNode(val);
         return;
       }
@@ -117,23 +117,26 @@
     - Be missing a root node (don't have to have one node that connects to everything)
   - In a tree, we had an idea of children and parents, in a graph we have neighbors (no hierarchy)
 - Just like how we could represent trees in multiple ways, we can represent graphs many ways as well, with advantages/disadvantages to each:
+
   - Adjacency Matrix - 2D Array
+
     - Visually clear what's going on
     - One axis (outside array) has an entry (inner array) for each node in the graph. If one node is connected to another node in the graph, our entry in the inner array is set to true. Otherwise the entry is false.
 
     ```javascript
     let matrix = [
-    /*          A       B       C       D       E       F   */
-    /*A*/    [true,  true,   true,   false,  true,   false],
-    /*B*/    [false, true,   false,  false,  false,  false],
-    /*C*/    [false, true,   true,   true,   false,  false],
-    /*D*/    [false, false,  false,  true,   false,  false],
-    /*E*/    [true,  false,  false,  false,  true,   false],
-    /*F*/    [false, false,  false,  false,  true,   true]
+      /*          A       B       C       D       E       F   */
+      /*A*/ [true, true, true, false, true, false],
+      /*B*/ [false, true, false, false, false, false],
+      /*C*/ [false, true, true, true, false, false],
+      /*D*/ [false, false, false, true, false, false],
+      /*E*/ [true, false, false, false, true, false],
+      /*F*/ [false, false, false, false, true, true],
     ];
     ```
 
   - Adjacency List - POJO
+
     - Object where every value in the graph has a key
     - Value for the key is an array with each other node that it is connected to (neighbors)
     - Easy to iterate through
@@ -141,17 +144,18 @@
     - Can refer to the entire graph by referencing the object
 
     ```javascript
-      let list = {
-        a: ['b', 'c', 'e'],
-        b: [],
-        c: ['b', 'd'],
-        d: [],
-        e: ['a'],
-        f: ['e']
-      };
-      ```
+    let list = {
+      a: ["b", "c", "e"],
+      b: [],
+      c: ["b", "d"],
+      d: [],
+      e: ["a"],
+      f: ["e"],
+    };
+    ```
 
   - Nodes
+
     - Similar to our linked list or tree implementations
     - Track the value and the neighbors array as instance variables on the node
     - We don't have a reference to the overall graph with this implementation
@@ -186,19 +190,19 @@
 // and our visited nodes should never have repeats.
 // We could have accomplished the same thing with a different data structure
 // (object, array, etc.), but a Set makes sense with what we are tracking.
-function depthFirstRecur(node, visited=new Set()) {
-    // if this node has already been visited, then return early
-    if (visited.has(node.val)) return;
+function depthFirstRecur(node, visited = new Set()) {
+  // if this node has already been visited, then return early
+  if (visited.has(node.val)) return;
 
-    // otherwise it hasn't yet been visited,
-    // so print it's val and mark it as visited.
-    console.log(node.val);
-    visited.add(node.val);
+  // otherwise it hasn't yet been visited,
+  // so print it's val and mark it as visited.
+  console.log(node.val);
+  visited.add(node.val);
 
-    // then explore each of its neighbors
-    node.neighbors.forEach(neighbor => {
-        depthFirstRecur(neighbor, visited);
-    });
+  // then explore each of its neighbors
+  node.neighbors.forEach((neighbor) => {
+    depthFirstRecur(neighbor, visited);
+  });
 }
 
 depthFirstRecur(f);
@@ -210,23 +214,23 @@ depthFirstRecur(f);
 // This is easy to swap to a breadth-first approach by using a queue instead of a stack!
 // Instead of popping from the top, we can shift from the front
 function depthFirstIter(node) {
-    let visited = new Set();
-    let stack = [ node ];
+  let visited = new Set();
+  let stack = [node];
 
-    while (stack.length) {
-        let node = stack.pop();
+  while (stack.length) {
+    let node = stack.pop();
 
-        // if this node has already been visited, then skip this node
-        if (visited.has(node.val)) continue;
+    // if this node has already been visited, then skip this node
+    if (visited.has(node.val)) continue;
 
-        // otherwise it hasn't yet been visited,
-        // so print it's val and mark it as visited.
-        console.log(node.val);
-        visited.add(node.val);
+    // otherwise it hasn't yet been visited,
+    // so print it's val and mark it as visited.
+    console.log(node.val);
+    visited.add(node.val);
 
-        // then add its neighbors to the stack to be explored
-        stack.push(...node.neighbors);
-    }
+    // then add its neighbors to the stack to be explored
+    stack.push(...node.neighbors);
+  }
 }
 
 depthFirstIter(f);
@@ -237,27 +241,27 @@ depthFirstIter(f);
 
 ```js
 function depthFirst(graph) {
-    let visited = new Set();
+  let visited = new Set();
 
-    // This loop allows us to access every node/vertex, even if it wasn't connected
-    // to where we started.
-    // If we only wanted to reach points from a starting location, we could take in
-    // that value as an argument and use it as the node directly with our helper
-    // function, no need to loop.
-    for (let node in graph) {
-        _depthFirstRecur(node, graph, visited);
-    }
+  // This loop allows us to access every node/vertex, even if it wasn't connected
+  // to where we started.
+  // If we only wanted to reach points from a starting location, we could take in
+  // that value as an argument and use it as the node directly with our helper
+  // function, no need to loop.
+  for (let node in graph) {
+    _depthFirstRecur(node, graph, visited);
+  }
 }
 
 function _depthFirstRecur(node, graph, visited) {
-    if (visited.has(node)) return;
+  if (visited.has(node)) return;
 
-    console.log(node);
-    visited.add(node);
+  console.log(node);
+  visited.add(node);
 
-    graph[node].forEach(neighbor => {
-        _depthFirstRecur(neighbor, graph, visited);
-    });
+  graph[node].forEach((neighbor) => {
+    _depthFirstRecur(neighbor, graph, visited);
+  });
 }
 
 depthFirst(graph);
@@ -276,7 +280,7 @@ function depthFirstIter(graph, startNode) {
   while (stack.length > 0) {
     let node = stack.pop();
     if (visited.has(node)) continue;
-    console.log(node)
+    console.log(node);
     visited.add(node);
     stack.push(...graph[node]);
   }
@@ -303,14 +307,14 @@ NOTE: The breadth-first solution to the Adjacency List problem to consider can b
 1. Describe the structure and function of network models from the perspective of a developer.
 
 - Recognize a given model as the TCP/IP model
-![tcp-ip-model](./public/tcp-ip-model.svg)
+  ![tcp-ip-model](./public/tcp-ip-model.svg)
 - Give a brief description of each layer (What is its major concern and an example)
   - Application: User-facing data, such as HTTP or FTP (file transfer)
   - Transport: Connectivity between clients and servers, such as TCP or UDP
   - Internet: Routing between separate networks, such as IP
   - Link: Low-level communication between local resources on a network, such as Ethernet
 - Recognize a given model as the OSI model
-![osi-model](./public/osi-model.svg)
+  ![osi-model](./public/osi-model.svg)
 - Give a brief description of each layer (What is its major concern and an example)
 - Application (Layer 7)
   - Example: HTTP
@@ -352,7 +356,7 @@ NOTE: The breadth-first solution to the Adjacency List problem to consider can b
   6. Hop Limit: Decremented by one each time this packet passes through an intermediary. Prevents the packet from being passed around forever.
   7. Source IP Address
   8. Destination IP Address
-![ipv6-headers](./public/ipv6-headers.svg)
+     ![ipv6-headers](./public/ipv6-headers.svg)
 
 2. Distinguish an IPv4 packet from an IPv6.
 
@@ -367,10 +371,10 @@ NOTE: The breadth-first solution to the Adjacency List problem to consider can b
 3. Describe the following subjects and how they relate to one another: IP Addresses, Domain Names, and DNS.
 
 - An IP address is how we specify a location on the internet. When we send out a request, the IP address in the header is what guides our request to its final destination. Just like an address we would use to signify a unique house, the IP address signifies a unique location on the internet that we want to handle our request.
-- A Domain Name is our solution to solving the issue of long, seemingly random numbers being difficult for humans to memorize. They are the friendly name for a website's host. Instead of having to type in that you want to go to 208.65.153.238, you can just say that you want to go to http://www.youtube.com. 
+- A Domain Name is our solution to solving the issue of long, seemingly random numbers being difficult for humans to memorize. They are the friendly name for a website's host. Instead of having to type in that you want to go to 208.65.153.238, you can just say that you want to go to http://www.youtube.com.
   - When we look at a website, such as https://open.appacademy.io/learn/js-py--aug-2020-online/, we can break it down into components:
     - `https://` is the protocol that we are making the request with
-    - `open.appacademy.io` is the domain. The domain can be composed of any number of subdomains. 
+    - `open.appacademy.io` is the domain. The domain can be composed of any number of subdomains.
       - The right-most domain is the top-level domain (TLD), which is maintained by domain registries. Common TLDs would be .com, .org, .gov, etc
       - Each preceding domain can be referred to as a second-level, third-level, fourth-level, etc., domain. In our example, `appacademy` is the second-level and `open` is the third-level domain.
       - We often combine a second-level and top-level domain to refer to a generic 'domain' term, such as `google.com`, `amazon.com`, `usa.gov`, `appacademy.io`, etc.
@@ -406,14 +410,14 @@ NOTE: The breadth-first solution to the Adjacency List problem to consider can b
 
 - This is optional additional information! I've still included it here since it is listed on the AAO platform, but know that this material is more in depth than you need to know.
 - The TCP segment has many different header fields, similar to the fields on an IP packet:
-![tcp-headers](./public/tcp-headers.svg)
+  ![tcp-headers](./public/tcp-headers.svg)
   - Source Port: The port that the request originated from
   - Destination Port: The port that the request is intended for (determines which socket to use). Our most recognizable example may be when we think about localhost. If we set up a server on port 3000, the packets being sent need a destination port of 3000 for our server to receive them.
   - Sequence Number: Extablishes ordering of data. A starting number is created (Initial Sequence Number, or ISN), then each subsequent segment's number is incremented based on the size of the previous segment.
   - Acknowledgement Number: The number that corresponds to the sequence number we are responding to. The acknowledgement number is the sequence number that we received plus the length of the data that was transferred, plus 1. This allows us to determine if we've received all of the data. If there is a discrepency in numbers, we have to retransmit data.
   - Data Offset: The length of the segment header, allowing us to determine where our options field ends (or if an options field even exists)
   - Reserved: 3 bits that are always 0. Available for future flags.
-  - Control Flags: 9 (currently) bits that are used for congestion monitoring and to indicate the connection lifecycle 
+  - Control Flags: 9 (currently) bits that are used for congestion monitoring and to indicate the connection lifecycle
   - Window Size: Indicates how much data should be sent, allowing for throttling if a receiver is getting overloaded.
   - Checksum: Error-checking mechanism for an individual segment
   - Urgent Pointer: Marks data as urgent, which will be processed right away. Commonly used to terminate a transfer instead of having to wait until it finishes.
@@ -423,7 +427,7 @@ NOTE: The breadth-first solution to the Adjacency List problem to consider can b
 
 - This is optional additional information! I've still included it here since it is listed on the AAO platform, but know that this material is more in depth than you need to know.
 - Starting a Connection
-![three-way-handshake](./public/three-way-handshake.svg)
+  ![three-way-handshake](./public/three-way-handshake.svg)
   - Our first segment header has a synchronize flag, indicating we are opening a connection.
     - Our sequence number should be used by the response in their acknowledgement.
   - The receiver responds with a synchronize flag of their own as well as an acknowledgement flag.
@@ -432,12 +436,12 @@ NOTE: The breadth-first solution to the Adjacency List problem to consider can b
   - We send back an acknowledgment based on the sequence number sent by the server.
     - After this acknowledgement, both sides now know that a connection is established.
 - Dropped Data
-![dropped-segment](./public/dropped-segment.svg)
+  ![dropped-segment](./public/dropped-segment.svg)
   - If a segment doesn't reach the server, there will be a discrepency between the sequence number that it receives and what it expects based on the previous segment.
   - The server resends its most recent acknowledgement in order to indicate that we need to resend the segment that comes next in the series.
   - This acknowledgement is what makes TCP reliable. If we ever miss data, we know that it has occurred and we can request it to be sent again.
 - Closing a Connection
-![full-cycle](./public/full-cycle.svg)
+  ![full-cycle](./public/full-cycle.svg)
   - When we want to indicate that we are done with the transmission, we send a finished flag to the server.
   - The server sends an acknowledgement response, then waits a brief period to make sure there are no more segments are coming in.
   - The server then sends its own finished flag, indicating that it is closing the connection.

@@ -7,15 +7,13 @@ function TreeNode(val, left, right) {
   this.right = right === undefined ? null : right;
 }
 
-let nums = [-10,-3,0,5,9];
+let nums = [-10, -3, 0, 5, 9];
 function sortedArrayToBST(nums) {
-    for(let i = 0; i < nums.length; i++){
-        nums[i]
-        console.log("sortedArrayToBST -> nums[i]", nums[i])
-        nums[i]
-        console.log("sortedArrayToBST -> nums[i]", nums[i])
-    }
-
-
+  for (let i = 0; i < nums.length; i++) {
+    nums[i];
+    console.log("sortedArrayToBST -> nums[i]", nums[i]);
+    nums[i];
+    console.log("sortedArrayToBST -> nums[i]", nums[i]);
+  }
 }
-sortedArrayToBST(nums)
+sortedArrayToBST(nums);

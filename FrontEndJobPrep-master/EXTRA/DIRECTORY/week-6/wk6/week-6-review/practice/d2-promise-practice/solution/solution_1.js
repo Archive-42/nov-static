@@ -2,7 +2,6 @@
 // - should return a promise
 // - should console.log "done stretching" and fulfill the promise after 1 second
 
-
 function stretch() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {

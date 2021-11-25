@@ -10,12 +10,12 @@ function numRegions(graph) {
 function depthFirst(node, graph, visited) {
   if (visited.has(node)) return false;
   visited.add(node);
-  graph[node].forEach(neighbor => {
+  graph[node].forEach((neighbor) => {
     depthFirst(neighbor, graph, visited);
   });
   return true;
 }
 
 module.exports = {
-  numRegions
+  numRegions,
 };

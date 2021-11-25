@@ -2,14 +2,14 @@
 // Add an introduceSelf method that prints "Hi, I'm <<name>>. I work in <<department>>."
 
 class Employee {
-	constructor(name, department) {
-		this.name = name;
-		this.department = department;
-	}
+  constructor(name, department) {
+    this.name = name;
+    this.department = department;
+  }
 
-	introduceSelf() {
-		console.log(`Hi, I'm ${this.name}. I work in ${this.department}.`);
-	}
+  introduceSelf() {
+    console.log(`Hi, I'm ${this.name}. I work in ${this.department}.`);
+  }
 }
 
 // Export the Employee class using CommonJS so that we don't have to destructure later on.

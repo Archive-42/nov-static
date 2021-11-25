@@ -1,4 +1,3 @@
-
 /***********************************************************************
 
 Let's create an ES2015 class to represent SMS text messages!
@@ -48,7 +47,6 @@ class SMS {
     this.text = text;
   }
 }
-
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

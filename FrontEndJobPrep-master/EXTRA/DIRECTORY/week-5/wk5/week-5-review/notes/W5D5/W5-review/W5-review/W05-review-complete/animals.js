@@ -3,11 +3,11 @@
 // Do both of these requirements using a constructor function (ES5)
 
 function Animal(name) {
-	this.name = name;
+  this.name = name;
 }
 
-Animal.prototype.sayHello = function() {
-	console.log(`${this.name} says hello!`);
+Animal.prototype.sayHello = function () {
+  console.log(`${this.name} says hello!`);
 };
 
 // Create the same class and instance method using ES6
@@ -30,18 +30,18 @@ Animal.prototype.sayHello = function() {
 // Use ES6 syntax
 
 class Pig extends Animal {
-	constructor(name, ribbonColor) {
-		super(name);
-		this.ribbonColor = ribbonColor;
-	}
+  constructor(name, ribbonColor) {
+    super(name);
+    this.ribbonColor = ribbonColor;
+  }
 
-	showOff() {
-		let message = `${this.name} has a ${this.ribbonColor} ribbon!`;
-		if (this.ribbonColor === 'blue') {
-			message += ' Wow!!';
-		}
-		console.log(message);
-	}
+  showOff() {
+    let message = `${this.name} has a ${this.ribbonColor} ribbon!`;
+    if (this.ribbonColor === "blue") {
+      message += " Wow!!";
+    }
+    console.log(message);
+  }
 }
 
 // Export both the Animal class and the Pig class using CommonJS (not ES Modules)

@@ -5,16 +5,16 @@ function somethingSlow() {
 }
 
 function foo() {
-  console.log('food');
+  console.log("food");
 }
 
 function bar() {
   baz(); // add to call stack after bar gets invoked
-  console.log('bark');
+  console.log("bark");
 }
 
 function baz() {
-  console.log('bazaar');
+  console.log("bazaar");
 }
 
 setTimeout(foo, 1500); // add foo to message queue after 1500 ms

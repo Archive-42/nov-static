@@ -1,4 +1,3 @@
-
 class Graph {
   constructor() {
     this.adjList = {};
@@ -19,64 +18,66 @@ class Graph {
   buildGraph(edges) {
     for (let edge of edges) {
       if (edge.length === 1) {
-        this.addVertex(edge[0])
+        this.addVertex(edge[0]);
       } else {
-        this.addEdges(edge[0], edge[1])
+        this.addEdges(edge[0], edge[1]);
       }
     }
-    return this.adjList
+    return this.adjList;
   }
 
   breadthFirstTraversal(startingVertex) {
     const visited = new Set();
-    const vertices = []
-    const queue = [ startingVertex ];
+    const vertices = [];
+    const queue = [startingVertex];
 
-    while(queue.length){
+    while (queue.length) {
       let currentVertex = queue.shift();
       if (visited.has(currentVertex)) continue;
-      visited.add(currentVertex)
-      vertices.push(currentVertex)
+      visited.add(currentVertex);
+      vertices.push(currentVertex);
 
-      queue.push(...this.adjList[currentVertex])
+      queue.push(...this.adjList[currentVertex]);
     }
 
-    return vertices
+    return vertices;
   }
 
   depthFirstTraversalIterative(startingVertex) {
     const visited = new Set();
-    const vertices = []
-    const stack = [ startingVertex ];
+    const vertices = [];
+    const stack = [startingVertex];
 
     while (stack.length) {
       let currentVertex = stack.pop();
       if (visited.has(currentVertex)) continue;
-      visited.add(currentVertex)
-      vertices.push(currentVertex)
+      visited.add(currentVertex);
+      vertices.push(currentVertex);
 
-      stack.push(...this.adjList[currentVertex])
+      stack.push(...this.adjList[currentVertex]);
     }
 
-    return vertices
-  }
-
-  depthFirstTraversalRecursive(startingVertex, visited = new Set(), vertices = []) {
-    if (visited.has(startingVertex)) return;
-    visited.add(startingVertex);
-    vertices.push(startingVertex);
-    for(let neighbor of this.adjList[startingVertex]){
-      this.depthFirstTraversalRecursive(neighbor, visited, vertices)
-    }
     return vertices;
   }
 
+  depthFirstTraversalRecursive(
+    startingVertex,
+    visited = new Set(),
+    vertices = []
+  ) {
+    if (visited.has(startingVertex)) return;
+    visited.add(startingVertex);
+    vertices.push(startingVertex);
+    for (let neighbor of this.adjList[startingVertex]) {
+      this.depthFirstTraversalRecursive(neighbor, visited, vertices);
+    }
+    return vertices;
+  }
 }
 
 module.exports = {
-  Graph
+  Graph,
 };
-
 
 /* testing
 const di = {
@@ -109,10 +110,3 @@ console.log(graph.depthFirstTraversalRecursive('a')); // [ 'a', 'b', 'c', 'f', '
 
 
 */
-
-
-
-
-
-
-

@@ -4,43 +4,43 @@
 
 - 2 hours
 - Mixture of multiple choice (10-15) and VSCode (3-5) problems, each with multiple specs.
-    - Coding problems will have specs to run (`npm test`) and check your work against
+  - Coding problems will have specs to run (`npm test`) and check your work against
 - Standard assessment procedures
-    - You will be in an individual breakout room
-    - Use a single monitor and share your screen
-    - Only have open those resources needed to complete the assessment:
-        - Zoom
-        - VSCode
-        - Browser with AAO and Progress Tracker (to ask questions)
-        - Approved Resources for this assessment:
-        - MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  - You will be in an individual breakout room
+  - Use a single monitor and share your screen
+  - Only have open those resources needed to complete the assessment:
+    - Zoom
+    - VSCode
+    - Browser with AAO and Progress Tracker (to ask questions)
+    - Approved Resources for this assessment:
+    - MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 ## Binary Search (W7D1) - Learning Objectives
 
 1. Explain the complexity of and write a function that performs a binary search
-on a sorted array of numbers.
+   on a sorted array of numbers.
 
 - Time Complexity: O(log n)
   - With each recursive call, we split our input in half. This means we have to
-  make at most log n checks to know if the element is in our array.
+    make at most log n checks to know if the element is in our array.
 - Space Complexity: Our implementation O(n), Possible implementation O(1)
   - We have to make a subarray for each recursive call. In the worst case (we
-  don't find the element), the total length of these arrays is approximately
-  equal to the length of the original (n).
+    don't find the element), the total length of these arrays is approximately
+    equal to the length of the original (n).
   - If we kept references to the beginning and end index of the portion of the
-  array that we are searching, we could eliminate the need for creating new
-  subarrays. We could also use a while loop to perform this functionality until
-  we either found our target or our beginning and end indices crossed. This
-  would eliminate the space required for recursive calls (adding stack frames).
-  Ultimately we would be using the same number of variables independent of input
-  size, resulting in O(1).
+    array that we are searching, we could eliminate the need for creating new
+    subarrays. We could also use a while loop to perform this functionality until
+    we either found our target or our beginning and end indices crossed. This
+    would eliminate the space required for recursive calls (adding stack frames).
+    Ultimately we would be using the same number of variables independent of input
+    size, resulting in O(1).
 - Code example for binarySearch and binarySearchIndex:
 
 ```javascript
 // Returns simply true/false for presence
 function binarySearch(array, target) {
   if (array.length === 0) {
-      return false;
+    return false;
   }
 
   let midIdx = Math.floor(array.length / 2);
@@ -48,11 +48,11 @@ function binarySearch(array, target) {
   let rightHalf = array.slice(midIdx + 1);
 
   if (target < array[midIdx]) {
-      return binarySearch(leftHalf, target);
+    return binarySearch(leftHalf, target);
   } else if (target > array[midIdx]) {
-      return binarySearch(rightHalf, target);
+    return binarySearch(rightHalf, target);
   } else {
-      return true;
+    return true;
   }
 }
 
@@ -93,29 +93,28 @@ function binarySearchIndex(array, target) {
 }
 ```
 
-
 ## Sorting Algorithms (W7D2) - Learning Objectives
 
 1. Explain the complexity of and write a function that performs bubble sort on
-an array of numbers.
+   an array of numbers.
 
 - Time Complexity: O(n^2)
   - In our worst case, our input is in the opposite order. We have to perform n
-  swaps and loop through our input n times because a swap is made each time.
+    swaps and loop through our input n times because a swap is made each time.
 - Space Complexity: O(1)
   - We are creating the same number of variables with an exact size, independent
-  of our input. No new arrays are created.
+    of our input. No new arrays are created.
 - Code example for bubbleSort:
 
 ```javascript
 function bubbleSort(array) {
   let swapped = true;
 
-  while(swapped) {
+  while (swapped) {
     swapped = false;
 
     for (let i = 0; i < array.length - 1; i++) {
-      if (array[i] > array[i+1]) {
+      if (array[i] > array[i + 1]) {
         let temp = array[i];
         array[i] = array[i + 1];
         array[i + 1] = temp;
@@ -131,18 +130,18 @@ function bubbleSort(array) {
 ```
 
 2. Explain the complexity of and write a function that performs selection sort
-on an array of numbers.
+   on an array of numbers.
 
 - Time Complexity: O(n^2)
   - Our nested loop structure is dependent on the size of our input.
   - The outer loop always occurs n times.
   - For each of those iterations, we have another loop that runs (n - i) times.
-  This just means that the inner loop runs one less time each iteration, but
-  this averages out to (n/2).
-  - Our nested structure is then T(n * n/2) = O(n^2)
+    This just means that the inner loop runs one less time each iteration, but
+    this averages out to (n/2).
+  - Our nested structure is then T(n \* n/2) = O(n^2)
 - Space Complexity: O(1)
   - We are creating the same number of variables with an exact size, independent
-  of our input. No new arrays are created.
+    of our input. No new arrays are created.
 - Code example for selectSort:
 
 ```javascript
@@ -167,13 +166,13 @@ function selectionSort(arr) {
 ```
 
 3. Explain the complexity of and write a function that performs insertion sort
-on an array of numbers.
+   on an array of numbers.
 
 - Time Complexity: O(n^2)
   - Our nested loop structure is dependent on the size of our input.
   - The outer loop always occurs n times.
   - For each of those iterations, we have another loop that runs a maximum of (i - 1) times. This just means that the inner loop runs one more time each iteration, but this averages out to (n/2).
-  - Our nested structure is then T(n * n/2) = O(n^2)
+  - Our nested structure is then T(n \* n/2) = O(n^2)
 - Space Complexity: O(1)
   - We are creating the same number of variables with an exact size, independent of our input. No new arrays are created.
 - Code example for insertionSort:
@@ -192,20 +191,20 @@ function insertionSort(arr) {
 ```
 
 4. Explain the complexity of and write a function that performs merge sort on an
-array of numbers.
+   array of numbers.
 
 - Time Complexity: O(n log n)
   - Our mergeSort function divides our input in half at each step, recursively
-  calling itself with smaller and smaller input. This results in log n stack
-  frames.
+    calling itself with smaller and smaller input. This results in log n stack
+    frames.
   - On each stack frame, our worst case scenario is having to make n comparisons
-  in our merge function in order to determine which element should come next in
-  our sorted array.
+    in our merge function in order to determine which element should come next in
+    our sorted array.
   - Since we have log n stack frames and n operations on each frame, we end up
-  with an O(n log n) time complexity
+    with an O(n log n) time complexity
 - Space Complexity: O(n)
   - We are ultimately creating n subarrays, making our space complexity linear
-  to our input size.
+    to our input size.
 - Code example for mergeSort:
 
 ```javascript
@@ -259,31 +258,31 @@ function mergeSort(array) {
 ```
 
 5. Explain the complexity of and write a function that performs quick sort on an
-array of numbers.
+   array of numbers.
 
 - Time Complexity: Average O(n log n), Worst O(n^2)
   - In our worst case, the pivot that we select results in every element going
-  into either the left or right array. If this happens we end up making n
-  recursive calls to quickSort, with n comparisons at each call.
+    into either the left or right array. If this happens we end up making n
+    recursive calls to quickSort, with n comparisons at each call.
   - In our average case, we pick something that more evenly splits the arrays,
-  resulting in approximately log n recursive calls and an overall complexity of
-  O(n log n).
+    resulting in approximately log n recursive calls and an overall complexity of
+    O(n log n).
   - Quick sort is unique in that the worst case is so exceedingly rare that it
-  is often considered an O(n log n) complexity, even though this is not
-  technically accurate.
+    is often considered an O(n log n) complexity, even though this is not
+    technically accurate.
 - Space Complexity: Our implementation O(n), Possible implementation O(log n)
   - The partition arrays that we create are directly proportional to the size of
-  the input, resulting in O(n) space complexity.
+    the input, resulting in O(n) space complexity.
   - With some tweaking, we could implement an in-place quick sort, which would
-  eliminate the creation of new arrays. In this case, the log n stack frames from
-  the recursion are the only proportional amount of space that is used, resulting
-  in O(log n) space complexity.
+    eliminate the creation of new arrays. In this case, the log n stack frames from
+    the recursion are the only proportional amount of space that is used, resulting
+    in O(log n) space complexity.
 - Code example for quickSort:
 
 ```javascript
 function quickSort(array) {
   if (array.length <= 1) {
-      return array;
+    return array;
   }
 
   let pivot = array.shift();
@@ -292,13 +291,13 @@ function quickSort(array) {
   // We also could have iterated over the array (array.forEach(el => ...)) and
   //pushed each value into the appropriate left/right subarray as we encountered
   // it.
-  let left = array.filter(el => el < pivot);
-  let right = array.filter(el => el >= pivot);
+  let left = array.filter((el) => el < pivot);
+  let right = array.filter((el) => el >= pivot);
 
   let leftSorted = quickSort(left);
   let rightSorted = quickSort(right);
 
-  return [ ...leftSorted, pivot, ...rightSorted ];
+  return [...leftSorted, pivot, ...rightSorted];
   // We also could have concatenated the arrays instead of spreading their contents
   // return leftSorted.concat([pivot]).concat(rightSorted);
 }
@@ -321,31 +320,32 @@ function quickSort(array) {
 
 2. Identify the complexity classes of common sort methods
 
-| Sort Name | Time Complexity    | Space Complexity  |
-|:--------- |:------------------ |:----------------- |
-| bubble    | O(n^2)             | O(1)              |
-| selection | O(n^2)             | O(1)              |
-| insertion | O(n^2)             | O(1)              |
-| merge     | O(n log n)         | O(n)              |
-| quick     | *O(n log n)/O(n^2) | *O(n)/O(log n)    |
+| Sort Name | Time Complexity     | Space Complexity |
+| :-------- | :------------------ | :--------------- |
+| bubble    | O(n^2)              | O(1)             |
+| selection | O(n^2)              | O(1)             |
+| insertion | O(n^2)              | O(1)             |
+| merge     | O(n log n)          | O(n)             |
+| quick     | \*O(n log n)/O(n^2) | \*O(n)/O(log n)  |
 
-- *quick sort's complexities are a little more complicated
+- \*quick sort's complexities are a little more complicated
   - We are generally only concerned with the worst-scenario when we talk Big-O.
   - With quick sort, the worst case is exceedingly rare (only occurs when our
-  pivot for each round happens to be the next element, resulting in us having to
-  choose n pivot points)
+    pivot for each round happens to be the next element, resulting in us having to
+    choose n pivot points)
   - Because it is so rare that this occurs, most people will use consider quick
-  sort to be closer to O(n log n) time complexity.
+    sort to be closer to O(n log n) time complexity.
   - We also have two space complexities listed. The version that we used in
-  class creates a new array, resulting in O(n) space. With some tweaking, we
-  can sort in place, modifying the original array and cutting our space
-  complexity to O(log n), which is just a result of the stack frames that we
-  have to create. It's good to know this method exists, but you will not need to
-  create or identify this version.
+    class creates a new array, resulting in O(n) space. With some tweaking, we
+    can sort in place, modifying the original array and cutting our space
+    complexity to O(log n), which is just a result of the stack frames that we
+    have to create. It's good to know this method exists, but you will not need to
+    create or identify this version.
 
 3. Identify complexity classes of code
 
 - Important takeaway here is being able to connect code patterns with complexities
+
   - Doing an exact number of calculations (independent of input) -> constant O(n)
 
   ```javascript
@@ -362,7 +362,6 @@ function quickSort(array) {
       console.log(i);
     }
   }
-
   ```
 
   - Recursive calls that divide the input -> logarithmic O(log n)
@@ -386,7 +385,7 @@ function quickSort(array) {
   ```
 
   - Recursive calls that depend on the size of the input (decrementing instead
-  of dividing) -> linear O(n)
+    of dividing) -> linear O(n)
 
   ```javascript
   function linear_2(n) {
@@ -397,12 +396,13 @@ function quickSort(array) {
   ```
 
   - Looping through input on each stack frame, while recursively dividing our
-  data (commonly seen in sorts like merge and quick sort) -> loglinear O(n log n)
+    data (commonly seen in sorts like merge and quick sort) -> loglinear O(n log n)
 
   ```javascript
   function loglinear(n) {
     if (n <= 1) return;
-    for (let i = 1; i <= n; i++) { // n calculations in each stack frame
+    for (let i = 1; i <= n; i++) {
+      // n calculations in each stack frame
       console.log(n);
     }
     loglinear(n / 2); // log n number of stack frames
@@ -421,7 +421,7 @@ function quickSort(array) {
       }
     }
   }
-  
+
   // O(n^3)
   function cubic(n) {
     for (let i = 1; i <= n; i++) {
@@ -435,7 +435,7 @@ function quickSort(array) {
   ```
 
   - Branching out on each recursive call, with the number of calls dependent on
-  the size of the input -> exponential O(c^n)
+    the size of the input -> exponential O(c^n)
 
   ```javascript
   // O(2^n)
@@ -457,13 +457,14 @@ function quickSort(array) {
   ```
 
   - When both the number of recursive calls and the number of branches made in
-  the calls are dependent on the size of the input -> factorial O(n!)
+    the calls are dependent on the size of the input -> factorial O(n!)
 
   ```javascript
   function factorial(n) {
     console.log(n);
     if (n === 1) return;
-    for (let i = 1; i <= n; i++) { // Here we're making n branches on this frame
+    for (let i = 1; i <= n; i++) {
+      // Here we're making n branches on this frame
       factorial(n - 1); // Since we are decrementing, we're making n stack frames
     }
   }
@@ -476,9 +477,9 @@ function quickSort(array) {
 - Main steps for memoizing a problem:
   1. Write out the brute force recursion
   2. Add the memo object as an additional argument
-    - Keys on this object represent input, values are the corresponding output
+  - Keys on this object represent input, values are the corresponding output
   3. Add a base condition that returns the stored value if the argument is
-  already in the memo
+     already in the memo
   4. Before returning a calculation, store the result in the memo for future use
 - Example of a standard and memoized fibonacci:
 
@@ -503,7 +504,7 @@ function fib(n, memo = {}) {
 
   // Store the result in the memo first before returning
   // Make sure to pass the memo in to your calls to fib!
-  memo[n] = fib(n - 1, memo) + fib(n - 2, memo); 
+  memo[n] = fib(n - 1, memo) + fib(n - 2, memo);
   return memo[n];
 }
 ```
@@ -513,30 +514,30 @@ function fib(n, memo = {}) {
 - Main considerations for using tabulation:
   - Figure out how big is your table
     - Typically going to be base on input size (number in fibonacci, length of
-    string in wordBreak)
+      string in wordBreak)
   - What does my table represent?
     - You are generally building up your answer.
     - In fibonacci, we used the table to store the fib number at the
-    corresponding index.
+      corresponding index.
     - In stepper, we stored the boolean of whether it was possible to get to
-    that location.
+      that location.
   - What initial values do I need to seed?
     - Consider what your end result should be (boolean, number, etc.).
     - Your seed data is generally going to be the immediate answer that we know
-    from our base condition.
+      from our base condition.
     - In fibonacci, we knew the first two numbers of the series.
     - In stepper, we knew that it was possible to get to our starting location,
-    so we seeded it as true, defaulting the rest to false so that we could later
-    change its value if we could make that step.
+      so we seeded it as true, defaulting the rest to false so that we could later
+      change its value if we could make that step.
   - How do I iterate and fill out my table?
     - We typically need to iterate over or up to our input in some way in order
-    to update and build up our table until we get our final result.
+      to update and build up our table until we get our final result.
     - In fibonacci, we iterated up to our input number in order to calculate the
-    fib number at each step.
+      fib number at each step.
     - In stepper, we iterated over each possible stepping location. If we could
-    have made it to that point from our previous steps (ie that index was true
-    in our table), we continued updating our table by marking the possible
-    landing spots as true.
+      have made it to that point from our previous steps (ie that index was true
+      in our table), we continued updating our table by marking the possible
+      landing spots as true.
 - Example of a tabulated fibonacci:
 
 ```javascript
@@ -549,10 +550,10 @@ function fib(n) {
   // We create a table to track our values as we build them up
   // We're making it n+1 here so that table[n] lines up with the nth fib number
   // This is because arrays are zero-indexed.
-  // We could have used an array of length n, but we would have to remember that 
+  // We could have used an array of length n, but we would have to remember that
   // the nth fib number would then be stored at table[n-1]. Completely doable,
   // but I think making them line up is more intuitive.
-  let table = new Array(n + 1); 
+  let table = new Array(n + 1);
   // Seed our table with our starting values.
   // Again, if we had a table of length n, we could have seeded table[0] = 1
   // and table[1] = 1 and had the same final result with our indices shifted.
@@ -581,28 +582,28 @@ function fib(n) {
   - tail: end of the list
   - length: count of the number of elements in the list
 - The main differences between lists and arrays are that a list does not have
-random access or indices to signify where in the list an element is.
+  random access or indices to signify where in the list an element is.
   - The only references to elements that we have in a list are the head and the
-  tail.
+    tail.
   - If we want an element in the middle of the list, we would have to traverse
-  the list until we encountered it.
+    the list until we encountered it.
 - The two main types of linked lists that we talked about are Singly Linked Lists
-and Doubly Linked Lists.
+  and Doubly Linked Lists.
   - Singly Linked Lists are composed of nodes that only have a reference to the
-  next node in the list. We can only traverse the list in one direction.
+    next node in the list. We can only traverse the list in one direction.
   - Doubly Linked Lists are composed of nodes that have a reference to both the
-  next node and the previous node in the list. This allows us to traverse both
-  forwards and backwards.
+    next node and the previous node in the list. This allows us to traverse both
+    forwards and backwards.
 - Methods of a linked list that we should know are:
   - addToTail: Adds a new node to the end of the list.
   - addToHead: Adds a new node to the front of the list.
   - insertAt: Adds a new node at the specified position (we need to traverse to
-  that point, then update pointers)
+    that point, then update pointers)
   - removeTail: Removes the last node of the list.
   - removeHead: Removes the first node of the list.
   - removeFrom: Removes the node at the specified position.
   - contains: Traverses the list and returns a boolean to indicate if the value
-  was found at any node.
+    was found at any node.
   - get: Returns a reference to the node at the specified position.
   - set: Updates the value of the node at the specified position.
   - size: Returns the current length of the list.
@@ -610,28 +611,28 @@ and Doubly Linked Lists.
   - Accessing a node: O(n), because we may have to traverse the entire list.
   - Searching a list: O(n), because we may have to traverse the entire list.
   - Inserting a value: O(1), under the assumption that we have a reference to
-  the node that we want to insert it after/before. If we don't have this
-  reference we would first have to access it (O(n) from above), but the actual
-  creation is O(1)
+    the node that we want to insert it after/before. If we don't have this
+    reference we would first have to access it (O(n) from above), but the actual
+    creation is O(1)
   - Deleting a node: O(1), for the same reasons as insertion. If we first need
-  to find the previous and next nodes, we would need to access them (O(n) from
-  above), but the actual deletion is O(1)
+    to find the previous and next nodes, we would need to access them (O(n) from
+    above), but the actual deletion is O(1)
 - Be able to implement a Singly Linked List and a Doubly Linked List. This would
-require you to use a Node class with a value instance variable and an instance
-variable that points to the next (and possibly previous) Node instance(s).
-You should then be able to interact with these Nodes to perform all of the actions
-of a Linked List, as we defined above.
+  require you to use a Node class with a value instance variable and an instance
+  variable that points to the next (and possibly previous) Node instance(s).
+  You should then be able to interact with these Nodes to perform all of the actions
+  of a Linked List, as we defined above.
 
 2. Explain and implement a Stack.
 
 - A Last In First Out (LIFO) Abstract Data Type (ADT).
   - LIFO: The last element put into the stack is the first thing removed from it.
-  Think of it as a can of Pringles or a pile of dishes.
+    Think of it as a can of Pringles or a pile of dishes.
   - ADT: The actual implementation of the stack can vary as long as the main
-  principles and methods associated with them are abided by. We could use Nodes
-  like we did with Linked Lists, we could use an Array as an underlying instance
-  variable as long as the methods we implement only interact with it in the way
-  a stack should be interacted with, etc.
+    principles and methods associated with them are abided by. We could use Nodes
+    like we did with Linked Lists, we could use an Array as an underlying instance
+    variable as long as the methods we implement only interact with it in the way
+    a stack should be interacted with, etc.
 - Methods of a Stack we should know are:
   - push: Adds an element to the top of the stack.
   - pop: Removes an element from the top of the stack.
@@ -639,22 +640,22 @@ of a Linked List, as we defined above.
   - size: Returns the number of elements in the stack.
 - Time Complexities:
   - Adding an element: O(1), since we are always adding it to the top and the
-  addition doesn't affect any other elements.
+    addition doesn't affect any other elements.
   - Removing an element: O(1), we're always taking the top element of the stack.
   - Finding or Accessing a particular element: O(n), since we can only interact
-  with our stack by removing elements from the top, we may have to remove every
-  element to find what we're looking for.
-  
+    with our stack by removing elements from the top, we may have to remove every
+    element to find what we're looking for.
+
 3. Explain and implement a Queue.
 
 - A First In First Out (LIFO) Abstract Data Type (ADT).
   - LIFO: The first element put into the queue is the first thing removed from
-  it. Think of it as if you are waiting in line at a store, first come, first serve.
+    it. Think of it as if you are waiting in line at a store, first come, first serve.
   - ADT: The actual implementation of the queue can vary as long as the main
-  principles and methods associated with them are abided by. We could use Nodes
-  like we did with Linked Lists, we could use an Array as an underlying instance
-  variable as long as the methods we implement only interact with it in the way
-  a queue should be interacted with, etc.
+    principles and methods associated with them are abided by. We could use Nodes
+    like we did with Linked Lists, we could use an Array as an underlying instance
+    variable as long as the methods we implement only interact with it in the way
+    a queue should be interacted with, etc.
 - Methods of a Queue we should know are:
   - enqueue: Adds an element to the back of the queue.
   - dequeue: Removes an element from the front of the queue.
@@ -662,15 +663,14 @@ of a Linked List, as we defined above.
   - size: Returns the number of elements in the queue.
 - Time Complexities:
   - Adding an element: O(1), since we are always adding it to the back. If we
-  are using Nodes instead of a simple array, keeping a reference to the last
-  node allows us to immediately update these pointers without having to do any
-  traversal.
+    are using Nodes instead of a simple array, keeping a reference to the last
+    node allows us to immediately update these pointers without having to do any
+    traversal.
   - Removing an element: O(1), we're always taking the front element of the queue.
   - Finding or Accessing a particular element: O(n), since we can only interact
-  with our queue by removing elements from the front, we may have to remove
-  every element to find what we're looking for.
+    with our queue by removing elements from the front, we may have to remove
+    every element to find what we're looking for.
 
 ## Heaps (W7D5)
 
 Not on the assessment don't worry
-

@@ -1,7 +1,7 @@
-let count = 10
+let count = 10;
 
 function afterOneSecond() {
-  console.log('1 seconds is up!');
+  console.log("1 seconds is up!");
   count--;
   if (count !== 0) {
     setTimeout(afterOneSecond, 1000);

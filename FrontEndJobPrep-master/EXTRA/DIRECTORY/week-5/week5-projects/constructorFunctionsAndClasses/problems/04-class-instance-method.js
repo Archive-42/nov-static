@@ -1,4 +1,3 @@
-
 /***********************************************************************
 
 Let's create an ES2015 class to represent email messages that contains an
@@ -56,16 +55,15 @@ console.log(message2.getSubjectAndText());
 ***********************************************************************/
 class Email {
   constructor(recipient, sender, subject, text) {
-    this.recipient = recipient
-    this.sender = sender
-    this.subject = subject
-    this.text = text
+    this.recipient = recipient;
+    this.sender = sender;
+    this.subject = subject;
+    this.text = text;
   }
   getSubjectAndText() {
-    return `${this.subject}: ${this.text}`
+    return `${this.subject}: ${this.text}`;
   }
 }
-
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

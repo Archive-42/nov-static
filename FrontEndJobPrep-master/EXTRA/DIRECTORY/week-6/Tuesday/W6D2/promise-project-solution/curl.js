@@ -50,8 +50,8 @@ const options = {
     {
       names: ["integer", "I"],
       type: "integer",
-      help: "displays an integer"
-    }
+      help: "displays an integer",
+    },
   ],
 };
 const parser = dash.createParser(options);
@@ -70,7 +70,7 @@ const {
   _args: urls,
 } = opts;
 
-console.log(header)
+console.log(header);
 
 if (help) {
   console.log("node curl.js [OPTIONS] URL");
@@ -115,18 +115,16 @@ for (let url of urls) {
 
 fetch(url, {
   headers: {
-    'Content-Type': 'application/json'
-  }
-})
+    "Content-Type": "application/json",
+  },
+});
 
 // const Headers = fetch.Headers; // Headers is a class
 
 // new Headers({
 //   'Content-Type': 'application/json'
 // })
-fetch(url1, options)
-  .then(() => fetch(url2, options))
-  
+fetch(url1, options).then(() => fetch(url2, options));
 
 Promise.all(filesToFetch) // an array of promises
   .then((responses) => {

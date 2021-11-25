@@ -21,18 +21,15 @@ const rejectedCb = (myPromiseReject) => {
 
 const secondThenCb = (res) => {
   // console.log(res) // 10 or 9 depending on if promise was rejected or resolved
-}
+};
 
 const catchCb = (error) => {
   // will be run if resolvedCb, rejectedCb or secondThenCb has an error
 };
 
-myPromise
-  .then(resolvedCb, rejectedCb)
-  .then(secondThenCb)
-  .catch(catchCb)
+myPromise.then(resolvedCb, rejectedCb).then(secondThenCb).catch(catchCb);
 
 // 3 states
-  // pending
-  // resolved
-  // rejected
+// pending
+// resolved
+// rejected

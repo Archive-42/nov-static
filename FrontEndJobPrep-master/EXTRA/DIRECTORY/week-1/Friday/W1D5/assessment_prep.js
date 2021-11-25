@@ -1,5 +1,5 @@
 // return true if prime number, else false
-// making sure every prime number from 2 to that number - 1 is not 
+// making sure every prime number from 2 to that number - 1 is not
 // divisible into that number
 
 // function isPrime(num) {
@@ -26,21 +26,12 @@
 // console.log(isPrime(13)); // true
 // console.log(isPrime(25)); // false
 
-
-
-
-
 // 2D Arrays
 
-const outerArr = [
-  ['a0el0', 'a0el0'],
-  ['a1el0'],
-  ['a2el0', 'a2el1', 'a2el2']
-];
+const outerArr = [["a0el0", "a0el0"], ["a1el0"], ["a2el0", "a2el1", "a2el2"]];
 
 // console.log(outerArr[1]); // ['a1el0'];
 // console.log(outerArr[1][0]); // ['a1el0'];
-
 
 // // a2el1
 // console.log(outerArr[2][1]);
@@ -65,12 +56,12 @@ const outerArr = [
 //   });
 // });
 
-// Define a function that takes in a 2D array of numbers and returns the total 
+// Define a function that takes in a 2D array of numbers and returns the total
 // sum of all elements in the array
 
 function sumElements(outerArr) {
-  const outerSum = outerArr.reduce(function(outerAcc, innerArr) {
-    const innerSum = innerArr.reduce(function(innerAcc, num) {
+  const outerSum = outerArr.reduce(function (outerAcc, innerArr) {
+    const innerSum = innerArr.reduce(function (innerAcc, num) {
       // for every element in a 2D array
       return innerAcc + num;
     });
@@ -80,10 +71,6 @@ function sumElements(outerArr) {
   return outerSum;
 }
 
-const numbers = [
-  [1,2,3],
-  [4],
-  [5]
-]; 
+const numbers = [[1, 2, 3], [4], [5]];
 
 console.log(sumElements(numbers)); // 15

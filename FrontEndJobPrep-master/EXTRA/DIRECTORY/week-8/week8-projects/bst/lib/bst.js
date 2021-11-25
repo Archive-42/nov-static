@@ -11,9 +11,9 @@ class BST {
   constructor() {
     this.root = null;
   }
-  
+
   insert(val, root = this.root) {
-    // if root doesn't exist create it 
+    // if root doesn't exist create it
     if (!this.root) {
       this.root = new TreeNode(val);
       return;
@@ -51,22 +51,20 @@ class BST {
   }
   searchIter(val) {
     // define temp as the holder of node searched
-    let temp = this.root
+    let temp = this.root;
     // will BO when temp.right or temp.left is null for the node ie it is the leaf of the tree
     while (temp !== null) {
       if (val < temp.val) {
-        temp = temp.left
-      } else if(val > temp.val){
-        temp = temp.right
+        temp = temp.left;
+      } else if (val > temp.val) {
+        temp = temp.right;
         // if it isnt < or > its === so return true
       } else {
-        return true
+        return true;
       }
     }
-    return false
+    return false;
   }
-
-  
 }
 
 let tree = new BST();

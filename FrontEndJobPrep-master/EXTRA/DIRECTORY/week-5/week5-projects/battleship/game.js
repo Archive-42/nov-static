@@ -1,4 +1,4 @@
-const Board = require('./board');
+const Board = require("./board");
 
 class BattleshipGame {
   constructor(player1, numRows, numCols, numShips) {
@@ -25,13 +25,13 @@ class BattleshipGame {
         this.playTurn();
       }
     } else {
-      console.log('Please input a valid position.');
+      console.log("Please input a valid position.");
       this.currentPlayer.getMove(this.processMove);
     }
   }
 
   displayStatus() {
-    console.log('\n*******************************')
+    console.log("\n*******************************");
     console.log("'h' means hit, 'x' means no-hit\n");
     console.log(this.board.display());
   }

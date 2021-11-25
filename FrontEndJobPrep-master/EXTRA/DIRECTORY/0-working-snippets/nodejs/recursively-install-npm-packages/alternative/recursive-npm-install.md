@@ -17,15 +17,15 @@ const { spawn } = require('child_process');
 const ls = spawn('ls', ['-lh', '/usr']);
 
 ls.stdout.on('data', (data) => {
-  console.log(`stdout: ${data}`);
+console.log(`stdout: ${data}`);
 });
 
 ls.stderr.on('data', (data) => {
-  console.error(`stderr: ${data}`);
+console.error(`stderr: ${data}`);
 });
 
 ls.on('close', (code) => {
-  console.log(`child process exited with code ${code}`);
+console.log(`child process exited with code ${code}`);
 });
 By default, pipes for stdin, stdout, and stderr are established between
 the parent Node.js process and the spawned subprocess. These pipes have
@@ -107,31 +107,31 @@ const { spawn } = require('child_process');
 const bat = spawn('cmd.exe', ['/c', 'my.bat']);
 
 bat.stdout.on('data', (data) => {
-  console.log(data.toString());
+console.log(data.toString());
 });
 
 bat.stderr.on('data', (data) => {
-  console.error(data.toString());
+console.error(data.toString());
 });
 
 bat.on('exit', (code) => {
-  console.log(`Child exited with code ${code}`);
+console.log(`Child exited with code ${code}`);
 });
 // OR...
 const { exec, spawn } = require('child_process');
 exec('my.bat', (err, stdout, stderr) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-  console.log(stdout);
+if (err) {
+console.error(err);
+return;
+}
+console.log(stdout);
 });
 
 // Script with spaces in the filename:
 const bat = spawn('"my script.cmd"', ['a', 'b'], { shell: true });
 // or:
 exec('"my script.cmd" a b', (err, stdout, stderr) => {
-  // ...
+// ...
 });
 child_process.exec(command[, options][, callback])
 command {string} The command to run, with space-separated arguments.
@@ -147,7 +147,7 @@ timeout {number} Default: 0
 maxBuffer {number} Largest amount of data in bytes allowed on stdout or
 stderr. If exceeded, the child process is terminated and any output is
 truncated. See caveat at maxBuffer and Unicode.
-Default: 1024 * 1024.
+Default: 1024 \* 1024.
 killSignal {string|integer} Default: 'SIGTERM'
 uid {number} Sets the user identity of the process (see setuid(2)).
 gid {number} Sets the group identity of the process (see setgid(2)).
@@ -188,13 +188,13 @@ stderr output. If encoding is 'buffer', or an unrecognized character
 encoding, Buffer objects will be passed to the callback instead.
 
 const { exec } = require('child_process');
-exec('cat *.js missing_file | wc -l', (error, stdout, stderr) => {
-  if (error) {
-    console.error(`exec error: ${error}`);
-    return;
-  }
-  console.log(`stdout: ${stdout}`);
-  console.error(`stderr: ${stderr}`);
+exec('cat \*.js missing_file | wc -l', (error, stdout, stderr) => {
+if (error) {
+console.error(`exec error: ${error}`);
+return;
+}
+console.log(`stdout: ${stdout}`);
+console.error(`stderr: ${stderr}`);
 });
 If timeout is greater than 0, the parent will send the signal
 identified by the killSignal property (the default is 'SIGTERM') if the
@@ -214,9 +214,9 @@ const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 
 async function lsExample() {
-  const { stdout, stderr } = await exec('ls');
-  console.log('stdout:', stdout);
-  console.error('stderr:', stderr);
+const { stdout, stderr } = await exec('ls');
+console.log('stdout:', stdout);
+console.error('stderr:', stderr);
 }
 lsExample();
 child_process.execFile(file[, args][, options][, callback])
@@ -230,7 +230,7 @@ timeout {number} Default: 0
 maxBuffer {number} Largest amount of data in bytes allowed on stdout or
 stderr. If exceeded, the child process is terminated and any output is
 truncated. See caveat at maxBuffer and Unicode.
-Default: 1024 * 1024.
+Default: 1024 \* 1024.
 killSignal {string|integer} Default: 'SIGTERM'
 uid {number} Sets the user identity of the process (see setuid(2)).
 gid {number} Sets the group identity of the process (see setgid(2)).
@@ -259,10 +259,10 @@ supported.
 
 const { execFile } = require('child_process');
 const child = execFile('node', ['--version'], (error, stdout, stderr) => {
-  if (error) {
-    throw error;
-  }
-  console.log(stdout);
+if (error) {
+throw error;
+}
+console.log(stdout);
 });
 The stdout and stderr arguments passed to the callback will contain the
 stdout and stderr output of the child process. By default, Node.js will decode
@@ -281,8 +281,8 @@ callback, but with two additional properties stdout and stderr.
 const util = require('util');
 const execFile = util.promisify(require('child_process').execFile);
 async function getVersion() {
-  const { stdout } = await execFile('node', ['--version']);
-  console.log(stdout);
+const { stdout } = await execFile('node', ['--version']);
+console.log(stdout);
 }
 getVersion();
 If the shell option is enabled, do not pass unsanitized user input to this
@@ -296,7 +296,7 @@ the error passed to the callback will be an AbortError:
 const controller = new AbortController();
 const { signal } = controller;
 const child = execFile('node', ['--version'], { signal }, (error) => {
-  console.log(error); // an AbortError
+console.log(error); // an AbortError
 });
 signal.abort();
 child_process.fork(modulePath[, args][, options])
@@ -394,8 +394,8 @@ arbitrary command execution.
 A third argument may be used to specify additional options, with these defaults:
 
 const defaults = {
-  cwd: undefined,
-  env: process.env
+cwd: undefined,
+env: process.env
 };
 Use cwd to specify the working directory from which the process is spawned.
 If not given, the default is to inherit the current working directory. If given,
@@ -415,15 +415,15 @@ const { spawn } = require('child_process');
 const ls = spawn('ls', ['-lh', '/usr']);
 
 ls.stdout.on('data', (data) => {
-  console.log(`stdout: ${data}`);
+console.log(`stdout: ${data}`);
 });
 
 ls.stderr.on('data', (data) => {
-  console.error(`stderr: ${data}`);
+console.error(`stderr: ${data}`);
 });
 
 ls.on('close', (code) => {
-  console.log(`child process exited with code ${code}`);
+console.log(`child process exited with code ${code}`);
 });
 Example: A very elaborate way to run ps ax | grep ssh
 
@@ -432,32 +432,32 @@ const ps = spawn('ps', ['ax']);
 const grep = spawn('grep', ['ssh']);
 
 ps.stdout.on('data', (data) => {
-  grep.stdin.write(data);
+grep.stdin.write(data);
 });
 
 ps.stderr.on('data', (data) => {
-  console.error(`ps stderr: ${data}`);
+console.error(`ps stderr: ${data}`);
 });
 
 ps.on('close', (code) => {
-  if (code !== 0) {
-    console.log(`ps process exited with code ${code}`);
-  }
-  grep.stdin.end();
+if (code !== 0) {
+console.log(`ps process exited with code ${code}`);
+}
+grep.stdin.end();
 });
 
 grep.stdout.on('data', (data) => {
-  console.log(data.toString());
+console.log(data.toString());
 });
 
 grep.stderr.on('data', (data) => {
-  console.error(`grep stderr: ${data}`);
+console.error(`grep stderr: ${data}`);
 });
 
 grep.on('close', (code) => {
-  if (code !== 0) {
-    console.log(`grep process exited with code ${code}`);
-  }
+if (code !== 0) {
+console.log(`grep process exited with code ${code}`);
+}
 });
 Example of checking for failed spawn:
 
@@ -465,7 +465,7 @@ const { spawn } = require('child_process');
 const subprocess = spawn('bad_command');
 
 subprocess.on('error', (err) => {
-  console.error('Failed to start subprocess.');
+console.error('Failed to start subprocess.');
 });
 Certain platforms (macOS, Linux) will use the value of argv[0] for the process
 title while others (Windows, SunOS) will use command.
@@ -505,8 +505,8 @@ stdio file descriptors, in order to ignore the parent's termination:
 const { spawn } = require('child_process');
 
 const subprocess = spawn(process.argv[0], ['child_program.js'], {
-  detached: true,
-  stdio: 'ignore'
+detached: true,
+stdio: 'ignore'
 });
 
 subprocess.unref();
@@ -518,8 +518,8 @@ const out = fs.openSync('./out.log', 'a');
 const err = fs.openSync('./out.log', 'a');
 
 const subprocess = spawn('prg', [], {
-  detached: true,
-  stdio: [ 'ignore', out, err ]
+detached: true,
+stdio: [ 'ignore', out, err ]
 });
 
 subprocess.unref();
@@ -641,7 +641,7 @@ killSignal {string|integer} The signal value to be used when the spawned
 process will be killed. Default: 'SIGTERM'.
 maxBuffer {number} Largest amount of data in bytes allowed on stdout or
 stderr. If exceeded, the child process is terminated. See caveat at
-maxBuffer and Unicode. Default: 1024 * 1024.
+maxBuffer and Unicode. Default: 1024 \* 1024.
 encoding {string} The encoding used for all stdio inputs and outputs.
 Default: 'buffer'.
 windowsHide {boolean} Hide the subprocess console window that would
@@ -692,7 +692,7 @@ process will be killed. Default: 'SIGTERM'.
 maxBuffer {number} Largest amount of data in bytes allowed on stdout or
 stderr. If exceeded, the child process is terminated and any output is
 truncated. See caveat at maxBuffer and Unicode.
-Default: 1024 * 1024.
+Default: 1024 \* 1024.
 encoding {string} The encoding used for all stdio inputs and outputs.
 Default: 'buffer'.
 windowsHide {boolean} Hide the subprocess console window that would
@@ -734,7 +734,7 @@ process will be killed. Default: 'SIGTERM'.
 maxBuffer {number} Largest amount of data in bytes allowed on stdout or
 stderr. If exceeded, the child process is terminated and any output is
 truncated. See caveat at maxBuffer and Unicode.
-Default: 1024 * 1024.
+Default: 1024 \* 1024.
 encoding {string} The encoding used for all stdio inputs and outputs.
 Default: 'buffer'.
 shell {boolean|string} If true, runs command inside of a shell. Uses
@@ -788,15 +788,15 @@ const { spawn } = require('child_process');
 const ls = spawn('ls', ['-lh', '/usr']);
 
 ls.stdout.on('data', (data) => {
-  console.log(`stdout: ${data}`);
+console.log(`stdout: ${data}`);
 });
 
 ls.on('close', (code) => {
-  console.log(`child process close all stdio with code ${code}`);
+console.log(`child process close all stdio with code ${code}`);
 });
 
 ls.on('exit', (code) => {
-  console.log(`child process exited with code ${code}`);
+console.log(`child process exited with code ${code}`);
 });
 Event: 'disconnect'
 The 'disconnect' event is emitted after calling the
@@ -912,8 +912,8 @@ const { spawn } = require('child_process');
 const grep = spawn('grep', ['ssh']);
 
 grep.on('close', (code, signal) => {
-  console.log(
-    `child process terminated due to receipt of signal ${signal}`);
+console.log(
+`child process terminated due to receipt of signal ${signal}`);
 });
 
 // Send SIGHUP to process.
@@ -937,19 +937,19 @@ new process in a shell or with the use of the shell option of ChildProcess:
 const { spawn } = require('child_process');
 
 const subprocess = spawn(
-  'sh',
-  [
-    '-c',
-    `node -e "setInterval(() => {
-      console.log(process.pid, 'is alive')
-    }, 500);"`
-  ], {
-    stdio: ['inherit', 'inherit', 'inherit']
-  }
+'sh',
+[
+'-c',
+`node -e "setInterval(() => {
+console.log(process.pid, 'is alive')
+}, 500);"`
+], {
+stdio: ['inherit', 'inherit', 'inherit']
+}
 );
 
 setTimeout(() => {
-  subprocess.kill(); // Does not terminate the Node.js process in the shell.
+subprocess.kill(); // Does not terminate the Node.js process in the shell.
 }, 2000);
 subprocess.killed
 {boolean} Set to true after subprocess.kill() is used to successfully
@@ -974,8 +974,8 @@ to wait for the child to exit before exiting itself.
 const { spawn } = require('child_process');
 
 const subprocess = spawn(process.argv[0], ['child_program.js'], {
-  detached: true,
-  stdio: 'ignore'
+detached: true,
+stdio: 'ignore'
 });
 
 subprocess.unref();
@@ -1005,7 +1005,7 @@ const cp = require('child_process');
 const n = cp.fork(`${__dirname}/sub.js`);
 
 n.on('message', (m) => {
-  console.log('PARENT got message:', m);
+console.log('PARENT got message:', m);
 });
 
 // Causes the child to print: CHILD got message: { hello: 'world' }
@@ -1013,7 +1013,7 @@ n.send({ hello: 'world' });
 And then the child script, 'sub.js' might look like this:
 
 process.on('message', (m) => {
-  console.log('CHILD got message:', m);
+console.log('CHILD got message:', m);
 });
 
 // Causes the parent to print: PARENT got message: { foo: 'bar', baz: null }
@@ -1021,8 +1021,8 @@ process.send({ foo: 'bar', baz: NaN });
 Child Node.js processes will have a process.send() method of their own
 that allows the child to send messages back to the parent.
 
-There is a special case when sending a {cmd: 'NODE_foo'} message. Messages
-containing a NODE_ prefix in the cmd property are reserved for use within
+There is a special case when sending a {cmd: 'NODE*foo'} message. Messages
+containing a NODE* prefix in the cmd property are reserved for use within
 Node.js core and will not be emitted in the child's 'message'
 event. Rather, such messages are emitted using the
 'internalMessage' event and are consumed internally by Node.js.
@@ -1057,19 +1057,19 @@ const subprocess = require('child_process').fork('subprocess.js');
 // Open up the server object and send the handle.
 const server = require('net').createServer();
 server.on('connection', (socket) => {
-  socket.end('handled by parent');
+socket.end('handled by parent');
 });
 server.listen(1337, () => {
-  subprocess.send('server', server);
+subprocess.send('server', server);
 });
 The child would then receive the server object as:
 
 process.on('message', (m, server) => {
-  if (m === 'server') {
-    server.on('connection', (socket) => {
-      socket.end('handled by child');
-    });
-  }
+if (m === 'server') {
+server.on('connection', (socket) => {
+socket.end('handled by child');
+});
+}
 });
 Once the server is now shared between the parent and child, some connections
 can be handled by the parent and some by the child.
@@ -1094,27 +1094,27 @@ const special = fork('subprocess.js', ['special']);
 const server = require('net').createServer({ pauseOnConnect: true });
 server.on('connection', (socket) => {
 
-  // If this is special priority...
-  if (socket.remoteAddress === '74.125.127.100') {
-    special.send('socket', socket);
-    return;
-  }
-  // This is normal priority.
-  normal.send('socket', socket);
+// If this is special priority...
+if (socket.remoteAddress === '74.125.127.100') {
+special.send('socket', socket);
+return;
+}
+// This is normal priority.
+normal.send('socket', socket);
 });
 server.listen(1337);
 The subprocess.js would receive the socket handle as the second argument
 passed to the event callback function:
 
 process.on('message', (m, socket) => {
-  if (m === 'socket') {
-    if (socket) {
-      // Check that the client socket exists.
-      // It is possible for the socket to be closed between the time it is
-      // sent and the time it is received in the child process.
-      socket.end(`Request handled with ${process.argv[2]} priority`);
-    }
-  }
+if (m === 'socket') {
+if (socket) {
+// Check that the client socket exists.
+// It is possible for the socket to be closed between the time it is
+// sent and the time it is received in the child process.
+socket.end(`Request handled with ${process.argv[2]} priority`);
+}
+}
 });
 Do not use .maxConnections on a socket that has been passed to a subprocess.
 The parent cannot track when the socket is destroyed.
@@ -1179,11 +1179,11 @@ const fs = require('fs');
 const child_process = require('child_process');
 
 const subprocess = child_process.spawn('ls', {
-  stdio: [
-    0, // Use parent's stdin for child.
-    'pipe', // Pipe child's stdout to parent.
-    fs.openSync('err.out', 'w') // Direct child's stderr to a file.
-  ]
+stdio: [
+0, // Use parent's stdin for child.
+'pipe', // Pipe child's stdout to parent.
+fs.openSync('err.out', 'w') // Direct child's stderr to a file.
+]
 });
 
 assert.strictEqual(subprocess.stdio[0], null);
@@ -1208,5 +1208,5 @@ const { spawn } = require('child_process');
 const subprocess = spawn('ls');
 
 subprocess.stdout.on('data', (data) => {
-  console.log(`Received chunk ${data}`);
+console.log(`Received chunk ${data}`);
 });

@@ -7,15 +7,15 @@ The function should return a boolean indicating if the sentence includes either 
 Can I write a function that accepts...?
 */
 function includesWords(sentence, word1, word2) {
-  const words = sentence.split(' ');
+  const words = sentence.split(" ");
   return words.includes(word1) || words.includes(word2);
 }
 
-console.log(includesWords('hello world!', 'world', 'ello')); // false
-console.log(includesWords('hello world!', 'world!', 'ello')); // true
-console.log(includesWords('hello world!', 'world!', 'hello')); // true
-console.log(includesWords('hello world!', 'whatever', '28')); // false
-console.log(includesWords('hello world!', 'orld', 'ello')); // false
+console.log(includesWords("hello world!", "world", "ello")); // false
+console.log(includesWords("hello world!", "world!", "ello")); // true
+console.log(includesWords("hello world!", "world!", "hello")); // true
+console.log(includesWords("hello world!", "whatever", "28")); // false
+console.log(includesWords("hello world!", "orld", "ello")); // false
 
 /*
 2. Identify a pair of mutually exclusive conditions

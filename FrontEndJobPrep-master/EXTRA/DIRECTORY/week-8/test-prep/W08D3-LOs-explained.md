@@ -12,45 +12,49 @@
     - Be missing a root node (don't have to have one node that connects to everything)
   - In a tree, we had an idea of children and parents, in a graph we have neighbors (no hierarchy)
 - Just like how we could represent trees in multiple ways, we can represent graphs many ways as well, with advantages/disadvantages to each:
+
   - Adjacency Matrix - 2D Array
+
     - Visually clear what's going on
     - One axis (outside array) has an entry (inner array) for each node in the graph. If one node is connected to another node in the graph, our entry in the inner array is set to true. Otherwise the entry is false.
-  
+
     ```javascript
     let matrix = [
-    /*          A       B       C       D       E       F   */
-    /*A*/    [true,  true,   true,   false,  true,   false],
-    /*B*/    [false, true,   false,  false,  false,  false],
-    /*C*/    [false, true,   true,   true,   false,  false],
-    /*D*/    [false, false,  false,  true,   false,  false],
-    /*E*/    [true,  false,  false,  false,  true,   false],
-    /*F*/    [false, false,  false,  false,  true,   true]
+      /*          A       B       C       D       E       F   */
+      /*A*/ [true, true, true, false, true, false],
+      /*B*/ [false, true, false, false, false, false],
+      /*C*/ [false, true, true, true, false, false],
+      /*D*/ [false, false, false, true, false, false],
+      /*E*/ [true, false, false, false, true, false],
+      /*F*/ [false, false, false, false, true, true],
     ];
     ```
-  
+
   - Adjacency List - POJO
+
     - Object where every value in the graph has a key
     - Value for the key is an array with each other node that it is connected to (neighbors)
     - Easy to iterate through
     - Doesn't take up as much space as an Adjacency Matrix or Node
     - Can refer to the entire graph by referencing the object
-  
+
     ```javascript
-      let list = {
-        a: ['b', 'c', 'e'],
-        b: [],
-        c: ['b', 'd'],
-        d: [],
-        e: ['a'],
-        f: ['e']
-      };
-      ```
-  
+    let list = {
+      a: ["b", "c", "e"],
+      b: [],
+      c: ["b", "d"],
+      d: [],
+      e: ["a"],
+      f: ["e"],
+    };
+    ```
+
   - Nodes
+
     - Similar to our linked list or tree implementations
     - Track the value and the neighbors array as instance variables on the node
     - We don't have a reference to the overall graph with this implementation
-  
+
     ```javascript
     class GraphNode {
       constructor(val) {
@@ -80,19 +84,19 @@
 // and our visited nodes should never have repeats.
 // We could have accomplished the same thing with a different data structure
 // (object, array, etc.), but a Set makes sense with what we are tracking.
-function depthFirstRecur(node, visited=new Set()) {
-    // if this node has already been visited, then return early
-    if (visited.has(node.val)) return;
+function depthFirstRecur(node, visited = new Set()) {
+  // if this node has already been visited, then return early
+  if (visited.has(node.val)) return;
 
-    // otherwise it hasn't yet been visited,
-    // so print it's val and mark it as visited.
-    console.log(node.val);
-    visited.add(node.val);
+  // otherwise it hasn't yet been visited,
+  // so print it's val and mark it as visited.
+  console.log(node.val);
+  visited.add(node.val);
 
-    // then explore each of its neighbors
-    node.neighbors.forEach(neighbor => {
-        depthFirstRecur(neighbor, visited);
-    });
+  // then explore each of its neighbors
+  node.neighbors.forEach((neighbor) => {
+    depthFirstRecur(neighbor, visited);
+  });
 }
 
 depthFirstRecur(f);
@@ -104,23 +108,23 @@ depthFirstRecur(f);
 // This is easy to swap to a breadth-first approach by using a queue instead of a stack!
 // Instead of popping from the top, we can shift from the front
 function depthFirstIter(node) {
-    let visited = new Set();
-    let stack = [ node ];
+  let visited = new Set();
+  let stack = [node];
 
-    while (stack.length) {
-        let node = stack.pop();
+  while (stack.length) {
+    let node = stack.pop();
 
-        // if this node has already been visited, then skip this node
-        if (visited.has(node.val)) continue;
+    // if this node has already been visited, then skip this node
+    if (visited.has(node.val)) continue;
 
-        // otherwise it hasn't yet been visited,
-        // so print it's val and mark it as visited.
-        console.log(node.val);
-        visited.add(node.val);
+    // otherwise it hasn't yet been visited,
+    // so print it's val and mark it as visited.
+    console.log(node.val);
+    visited.add(node.val);
 
-        // then add its neighbors to the stack to be explored
-        stack.push(...node.neighbors);
-    }
+    // then add its neighbors to the stack to be explored
+    stack.push(...node.neighbors);
+  }
 }
 
 depthFirstIter(f);
@@ -131,27 +135,27 @@ depthFirstIter(f);
 
 ```js
 function depthFirst(graph) {
-    let visited = new Set();
+  let visited = new Set();
 
-    // This loop allows us to access every node/vertex, even if it wasn't connected
-    // to where we started.
-    // If we only wanted to reach points from a starting location, we could take in
-    // that value as an argument and use it as the node directly with our helper
-    // function, no need to loop.
-    for (let node in graph) {
-        _depthFirstRecur(node, graph, visited);
-    }
+  // This loop allows us to access every node/vertex, even if it wasn't connected
+  // to where we started.
+  // If we only wanted to reach points from a starting location, we could take in
+  // that value as an argument and use it as the node directly with our helper
+  // function, no need to loop.
+  for (let node in graph) {
+    _depthFirstRecur(node, graph, visited);
+  }
 }
 
 function _depthFirstRecur(node, graph, visited) {
-    if (visited.has(node)) return;
+  if (visited.has(node)) return;
 
-    console.log(node);
-    visited.add(node);
+  console.log(node);
+  visited.add(node);
 
-    graph[node].forEach(neighbor => {
-        _depthFirstRecur(neighbor, graph, visited);
-    });
+  graph[node].forEach((neighbor) => {
+    _depthFirstRecur(neighbor, graph, visited);
+  });
 }
 
 depthFirst(graph);
@@ -170,7 +174,7 @@ function depthFirstIter(graph, startNode) {
   while (stack.length > 0) {
     let node = stack.pop();
     if (visited.has(node)) continue;
-    console.log(node)
+    console.log(node);
     visited.add(node);
     stack.push(...graph[node]);
   }
@@ -190,7 +194,7 @@ function depthFirstIter(graph) {
     while (stack.length > 0) {
       let node = stack.pop();
       if (visited.has(node)) continue;
-      console.log(node)
+      console.log(node);
       visited.add(node);
       stack.push(...graph[node]);
     }

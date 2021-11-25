@@ -5,15 +5,9 @@
  *       bottom of the file.
  */
 
-
-
-
-
-
-
 /* Do not change this export. The tests depend on it. */
 try {
   exports.app = app;
-} catch(e) {
+} catch (e) {
   exports.app = null;
 }

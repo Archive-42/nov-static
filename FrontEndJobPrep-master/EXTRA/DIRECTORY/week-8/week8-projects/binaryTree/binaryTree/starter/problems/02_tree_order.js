@@ -26,9 +26,8 @@ function postOrderArray(root) {
   return postOrderTree;
 }
 
-
 module.exports = {
   preOrderArray,
   inOrderArray,
-  postOrderArray
+  postOrderArray,
 };

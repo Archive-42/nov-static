@@ -1,4 +1,4 @@
-const { ALPHABET } = require('./util');
+const { ALPHABET } = require("./util");
 
 class Board {
   constructor(numRows, numCols, numShips) {
@@ -14,7 +14,7 @@ class Board {
   count() {
     let numShipsLeft = 0;
     this._forEach((space) => {
-      if (space === 's') numShipsLeft++;
+      if (space === "s") numShipsLeft++;
     });
     return numShipsLeft;
   }
@@ -30,7 +30,7 @@ class Board {
       while (grid[row][col]) {
         [row, col] = this._randomPos();
       }
-      grid[row][col] = 's';
+      grid[row][col] = "s";
       numShips--;
     }
 
@@ -40,13 +40,11 @@ class Board {
   isValidMove(pos) {
     const [row, col] = pos;
 
-    const isPositionOutOfBounds = row < 0
-      || row >= this._numRows
-      || col < 0
-      || col >= this._numCols;
+    const isPositionOutOfBounds =
+      row < 0 || row >= this._numRows || col < 0 || col >= this._numCols;
 
-    const isPreviouslyMadeMove = this.grid[row][col] === 'h'
-      || this.grid[row][col] === 'x';
+    const isPreviouslyMadeMove =
+      this.grid[row][col] === "h" || this.grid[row][col] === "x";
 
     if (isPositionOutOfBounds || isPreviouslyMadeMove) return false;
 
@@ -56,36 +54,36 @@ class Board {
   attack(pos) {
     const [row, col] = pos;
     const space = this.grid[row][col];
-    if (space === 's') {
-      this.grid[row][col] = 'h';
+    if (space === "s") {
+      this.grid[row][col] = "h";
     } else if (space === null) {
-      this.grid[row][col] = 'x';
+      this.grid[row][col] = "x";
     }
   }
 
   display() {
-    let printStr = '   ' + this.grid[0].map((_, col) => col).join(' ');
-    printStr += '\n';
-    printStr += '  ' + '--'.repeat(this._numCols) + '-';
-    printStr += '\n';
+    let printStr = "   " + this.grid[0].map((_, col) => col).join(" ");
+    printStr += "\n";
+    printStr += "  " + "--".repeat(this._numCols) + "-";
+    printStr += "\n";
 
-    let rowStr = '|';
+    let rowStr = "|";
 
     const forEachCol = (space) => {
-      if (space && space !== 's') {
+      if (space && space !== "s") {
         rowStr += space;
       } else {
-        rowStr += ' ';
+        rowStr += " ";
       }
-      rowStr += '|';
+      rowStr += "|";
     };
 
     const afterEachRow = (_, row) => {
-      printStr += ALPHABET[row] + ' ' + rowStr;
-      printStr += '\n';
-      printStr += '  ' + '--'.repeat(this._numCols) + '-';
-      printStr += '\n'
-      rowStr = '|';
+      printStr += ALPHABET[row] + " " + rowStr;
+      printStr += "\n";
+      printStr += "  " + "--".repeat(this._numCols) + "-";
+      printStr += "\n";
+      rowStr = "|";
     };
 
     this._forEach(forEachCol, afterEachRow);

@@ -240,10 +240,10 @@ You can put an object together in a single statement.
 
 ```js
 let myDog = {
-	name: "Fido",
-	type: "Doge",
-	age: 2,
-	favoriteToys: ["bone", "ball"],
+  name: "Fido",
+  type: "Doge",
+  age: 2,
+  favoriteToys: ["bone", "ball"],
 };
 ```
 
@@ -273,19 +273,19 @@ Because objects store _**unordered**_ key-value pairs, we do not rely on indices
 
 ```js
 for (let variable in object) {
-	statement;
+  statement;
 
-	let obj = { name: "Rose", cats: 2 };
-	for (let currentKey in obj) {
-		console.log(currentKey);
-		console.log(obj[currentKey]);
-	}
+  let obj = { name: "Rose", cats: 2 };
+  for (let currentKey in obj) {
+    console.log(currentKey);
+    console.log(obj[currentKey]);
+  }
 
-	// prints out:
-	// name
-	// cats
-	// Rose
-	// 2
+  // prints out:
+  // name
+  // cats
+  // Rose
+  // 2
 }
 ```
 
@@ -305,31 +305,31 @@ myObject["myFunc"] is a method of the object myObject
 
 ```js
 let dog = {
-	name: "Fido",
+  name: "Fido",
 };
 
 dog.bark = function () {
-	console.log("bark bark!");
+  console.log("bark bark!");
 };
 
 // this is the same thing as above just using Bracket Notation
 dog["speak"] = function (string) {
-	console.log("WOOF " + string + " WOOF!!!");
+  console.log("WOOF " + string + " WOOF!!!");
 };
 
 dog.bark(); // prints `bark bark!`
 dog.speak("pizza"); // prints `WOOF pizza WOOF!!!`
 
 let dog2 = {
-	name: "Rover",
+  name: "Rover",
 
-	bark: function () {
-		console.log("bork bork!");
-	},
+  bark: function () {
+    console.log("bork bork!");
+  },
 
-	speak: function (string) {
-		console.log("BORK " + string + " BORK!!!");
-	},
+  speak: function (string) {
+    console.log("BORK " + string + " BORK!!!");
+  },
 };
 // Notice that in the object above, we still separate the key-value pairs with commas.
 // `bark` and `speak` are just keys with functions as values.
@@ -440,7 +440,7 @@ let moreColors = { ...colors, ...colors2 };
 
 ```js
 function speak(verb, noun) {
-	return "I like to go " + verb + " with " + noun + ".";
+  return "I like to go " + verb + " with " + noun + ".";
 }
 
 const words = ["running", "Jet"];
@@ -508,21 +508,21 @@ console.log(newBanana); // "yellow"
 // the fname key is nested more than two levels deep
 // (within bootcamp.instructor.fullName)
 let bootcamp = {
-	name: "WebDevHub",
-	color: "red",
-	instructor: {
-		fullName: {
-			fname: "Rose",
-			lname: "K",
-		},
-	},
+  name: "WebDevHub",
+  color: "red",
+  instructor: {
+    fullName: {
+      fname: "Rose",
+      lname: "K",
+    },
+  },
 };
 
 // this is hard to follow:
 let {
-	instructor: {
-		fullName: { fname, lname },
-	},
+  instructor: {
+    fullName: { fname, lname },
+  },
 } = bootcamp;
 console.log(fname, lname);
 
@@ -564,7 +564,7 @@ let cat = { name: "Rupert", owner: "Curtis", weight: 10 };
 // This unpacks the *owner* key out of any incoming object argument and
 // assigns it to a owner parameter(variable)
 function ownerName({ owner }) {
-	console.log("This cat is owned by " + owner);
+  console.log("This cat is owned by " + owner);
 }
 
 ownerName(cat);
@@ -572,16 +572,16 @@ ownerName(cat);
 
 ```js
 let bigCat = {
-	name: "Jet",
-	owner: { name: "Rose" },
-	toys: ["ribbon"],
-	siblings: { name: "Freyja", color: "orange", toys: ["mouse", "string"] },
+  name: "Jet",
+  owner: { name: "Rose" },
+  toys: ["ribbon"],
+  siblings: { name: "Freyja", color: "orange", toys: ["mouse", "string"] },
 };
 
 // here we use *aliased* object destructuring to create a siblingToys variable
 function toyFinder({ toys, siblings: { toys: siblingToys } }) {
-	let allToys = toys.concat(siblingToys);
-	return allToys;
+  let allToys = toys.concat(siblingToys);
+  return allToys;
 }
 
 console.log(toyFinder(bigCat)); // => ["ribbon", "mouse", "string"]
@@ -652,8 +652,8 @@ console.log(Object.values(cars));
 let obj = { game: "call of duty", console: "PC duh?" };
 
 for (let keys in obj) {
-	let values = obj[keys];
-	console.log("Here are the key value pairs!", keys, "-", values);
+  let values = obj[keys];
+  console.log("Here are the key value pairs!", keys, "-", values);
 }
 ```
 
@@ -661,7 +661,7 @@ for (let keys in obj) {
 
 ```js
 let acceptEverything = function (...everything) {
-	console.log(everything);
+  console.log(everything);
 };
 
 acceptEverything("thing1", "thing2", "thing3");
@@ -703,17 +703,17 @@ console.log("num1 variable", num1, " num2 variable", num2);
 
 ```js
 let person = {
-	name: "Kelly",
-	getFaveColor: function () {
-		return "blue";
-	},
-	friends: {
-		name: "Ryan",
-	},
+  name: "Kelly",
+  getFaveColor: function () {
+    return "blue";
+  },
+  friends: {
+    name: "Ryan",
+  },
 };
 
 let {
-	friends: { name },
+  friends: { name },
 } = person;
 
 console.log("name", person.name);
@@ -725,16 +725,16 @@ console.log(name);
 
 ```js
 let myCounter = function (array) {
-	let myObj = {};
-	let count = 1;
-	array.forEach(function (char) {
-		if (myObj[char] === undefined) {
-			myObj[char] = count;
-		} else {
-			myObj[char]++;
-		}
-	});
-	return myObj;
+  let myObj = {};
+  let count = 1;
+  array.forEach(function (char) {
+    if (myObj[char] === undefined) {
+      myObj[char] = count;
+    } else {
+      myObj[char]++;
+    }
+  });
+  return myObj;
 };
 
 console.log(myCounter(["a", "a", "n", "c"]));
@@ -752,13 +752,13 @@ console.log(myCounter(["a", "a", "n", "c"]));
 
 ```js
 let foobar = function (callback) {
-	console.log("foo");
-	callback();
-	console.log("bar");
+  console.log("foo");
+  callback();
+  console.log("bar");
 };
 
 let sayHello = function () {
-	console.log("hello");
+  console.log("hello");
 };
 
 foobar(sayHello); // prints
@@ -771,13 +771,13 @@ foobar(sayHello); // prints
 
 ```js
 let foobar = function (callback) {
-	console.log("foo");
-	callback();
-	console.log("bar");
+  console.log("foo");
+  callback();
+  console.log("bar");
 };
 
 foobar(function () {
-	console.log("hello");
+  console.log("hello");
 }); // prints
 // foo
 // hello
@@ -791,13 +791,13 @@ foobar(function () {
 
 ```js
 let add = function (num1, num2, cb) {
-	let sum = num1 + num2;
-	let result = cb(sum);
-	return result;
+  let sum = num1 + num2;
+  let result = cb(sum);
+  return result;
 };
 
 let double = function (num) {
-	return num * 2;
+  return num * 2;
 };
 
 console.log(add(2, 3, double)); // 10
@@ -807,9 +807,9 @@ console.log(add(2, 3, double)); // 10
 
 ```js
 let add = function (num1, num2, cb) {
-	let sum = num1 + num2;
-	let result = cb(sum);
-	return result;
+  let sum = num1 + num2;
+  let result = cb(sum);
+  return result;
 };
 
 console.log(add(60, 4, Math.sqrt)); // 8
@@ -823,11 +823,11 @@ console.log(add(60, 4, Math.sqrt)); // 8
 
 ```js
 let add = function (num1, num2, cb) {
-	if (cb === undefined) {
-		return num1 + num2;
-	} else {
-		return cb(num1 + num2);
-	}
+  if (cb === undefined) {
+    return num1 + num2;
+  } else {
+    return cb(num1 + num2);
+  }
 };
 
 console.log(add(9, 40)); // 49
@@ -848,9 +848,9 @@ console.log(add(9, 40, Math.sqrt)); // 7
   - They can be returned in functions.
     ```js
     function foo() {
-    	return function () {
-    		return "I'm a cat";
-    	};
+      return function () {
+        return "I'm a cat";
+      };
     }
     ```
 
@@ -866,10 +866,10 @@ Interesting Interaction.
 
 ```js
 let foo = function () {
-	let bar = function () {
-		console.log("interesting");
-	};
-	return bar;
+  let bar = function () {
+    console.log("interesting");
+  };
+  return bar;
 };
 
 console.log(foo()); // [function: bar]
@@ -912,7 +912,7 @@ let name = "Fiona";
 
 // we aren't passing in or defining and variables
 function hungryHippo() {
-	console.log(name + " is hungry!");
+  console.log(name + " is hungry!");
 }
 
 hungryHippo(); // => "Fiona is hungry"
@@ -952,9 +952,9 @@ hungryHippo(); // => "Fiona is hungry"
 
 ```js
 function test() {
-	// var hoistedVar;
-	console.log(hoistedVar); // =>  undefined
-	var hoistedVar = 10;
+  // var hoistedVar;
+  console.log(hoistedVar); // =>  undefined
+  var hoistedVar = 10;
 }
 ```
 
@@ -1019,11 +1019,11 @@ Basic Closure Rules:
 
   ```js
   function isPalindrome(string) {
-  	function reverse() {
-  		return string.split("").reverse().join("");
-  	}
+    function reverse() {
+      return string.split("").reverse().join("");
+    }
 
-  	return string === reverse();
+    return string === reverse();
   }
   ```
 
@@ -1048,10 +1048,10 @@ Basic Closure Rules:
 
 ```js
 let dog = {
-	name: "Bowser",
-	changeName: function () {
-		this.name = "Layla";
-	},
+  name: "Bowser",
+  changeName: function () {
+    this.name = "Layla";
+  },
 };
 
 let change = dog.changeName;
@@ -1088,12 +1088,12 @@ We can run JS in strict mode by tagging `use strict` at the top of our program.
 
 ```js
 let cat = {
-	purr: function () {
-		console.log("meow");
-	},
-	purrMore: function () {
-		this.purr();
-	},
+  purr: function () {
+    console.log("meow");
+  },
+  purrMore: function () {
+    this.purr();
+  },
 };
 
 let sayMeow = cat.purrMore;
@@ -1114,7 +1114,7 @@ boundCat(); // prints "meow"
 
   ```js
   const sum = function (a, b) {
-  	return a + b;
+    return a + b;
   };
 
   const add3 = sum.bind(null, 3);
@@ -1124,7 +1124,7 @@ boundCat(); // prints "meow"
 
   ```js
   const multiply = function (a, b) {
-  	return a * b;
+    return a * b;
   };
 
   const double = multiply.bind(null, 2);
@@ -1144,13 +1144,13 @@ boundCat(); // prints "meow"
 
 ```js
 let average = function (num1, num2) {
-	let avg = (num1 + num2) / 2;
-	return avg;
+  let avg = (num1 + num2) / 2;
+  return avg;
 };
 
 let averageArrow = (num1, num2) => {
-	let avg = (num1 + num2) / 2;
-	return avg;
+  let avg = (num1 + num2) / 2;
+  return avg;
 };
 ```
 

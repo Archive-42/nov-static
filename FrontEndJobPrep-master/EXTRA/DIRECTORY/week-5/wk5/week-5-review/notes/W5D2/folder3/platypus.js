@@ -1,4 +1,4 @@
-const { Mammal } = require('../folder1/folder2/mammal');
+const { Mammal } = require("../folder1/folder2/mammal");
 
 class Platypus extends Mammal {
   constructor(habitat) {
@@ -12,4 +12,4 @@ class Platypus extends Mammal {
 }
 
 exports.Platypus = Platypus;
-exports.otherKey = 'hello world!';
+exports.otherKey = "hello world!";

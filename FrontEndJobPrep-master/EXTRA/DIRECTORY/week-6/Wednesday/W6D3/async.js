@@ -1,7 +1,7 @@
 function walkTheDog() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve('happy dog');
+      resolve("happy dog");
     }, 1000);
   });
 }
@@ -10,14 +10,15 @@ function walkTheDog() {
 // walkTheDog()
 //   .then(res => console.log('super', res));
 
-const myFunc = async () => { // myFunc returns a Promise
-  console.log('starting myFunc');
+const myFunc = async () => {
+  // myFunc returns a Promise
+  console.log("starting myFunc");
   const res = await walkTheDog(); // 'happy dog'
-  console.log('super', res); // 'super happy dog'
+  console.log("super", res); // 'super happy dog'
   const res2 = await walkTheDog(res); // 'happy dog'
-  console.log('not so', res2, 'meets super', res); // 'not so happy dog meets super happy dog'
+  console.log("not so", res2, "meets super", res); // 'not so happy dog meets super happy dog'
   const res3 = await new Promise((resolve, reject) => {
-    resolve('yay');
+    resolve("yay");
   });
   console.log(res3); // yay;
 };
@@ -27,8 +28,7 @@ const myFunc = async () => { // myFunc returns a Promise
 
 // console.log(myFunc()); // Promise pending
 
-myFunc()
-  .then(() => console.log('finished walking all dogs'));
+myFunc().then(() => console.log("finished walking all dogs"));
 
 // console.log('starting myFunc');
 // walkTheDog()
@@ -40,36 +40,25 @@ myFunc()
 //       });
 //   });
 
-
 function doChores() {
-  console.log('before walking the dog');
-  walkTheDog()
-    .then(res => {
-        console.log(res);
-        console.log('after walking the dog');
-    });
-  return 'done';
+  console.log("before walking the dog");
+  walkTheDog().then((res) => {
+    console.log(res);
+    console.log("after walking the dog");
+  });
+  return "done";
 }
 
 // console.log(doChores());
 
-
 async function doChoresAsync() {
-  console.log('before walking the dog');
+  console.log("before walking the dog");
   const res = await walkTheDog();
   console.log(res);
-  console.log('after walking the dog');
+  console.log("after walking the dog");
 }
 
 // doChoresAsync().then(result => console.log(result));
-
-
-
-
-
-
-
-
 
 // // Numbered Walkthrough
 
@@ -98,10 +87,6 @@ async function doChoresAsync() {
 
 // wrapper();
 
-
-
-
-
 // // Refactoring the Promise Chain
 
 // function wrapper() {
@@ -119,14 +104,12 @@ async function doChoresAsync() {
 //     });
 // }
 
-
 // async function wrapper() {
 //   console.log(await promise1);
 //   console.log(await promise2);
 //   console.log(await promise3);
 //   console.log(await promise4);
 // }
-
 
 // // Error Handling
 

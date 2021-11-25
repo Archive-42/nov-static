@@ -99,8 +99,7 @@ Type `\q` and hit Return to quit the PostgreSQL client.
 
 ## Installing Postbird
 
-Make sure that your Homebrew can find Postbird. Search for it using the `brew
-search` command.
+Make sure that your Homebrew can find Postbird. Search for it using the `brew search` command.
 
 ```shell
 brew search postbird
@@ -169,7 +168,7 @@ Postbird > "Quit Postbird" from the menu.
 You installed and configured PosgreSQL 12, a relational database management
 system, and tools to use it! Well done!
 
-[Postbird unidentified developer]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-SQL/assets/postbird-installation-unidentified-developer.png
-[Finder Applications shortcut]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-SQL/assets/finder-applications-shortcut.png
-[Postbird open confirmation]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-SQL/assets/postbird-installation-open-confirmation.png
+[postbird unidentified developer]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-SQL/assets/postbird-installation-unidentified-developer.png
+[finder applications shortcut]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-SQL/assets/finder-applications-shortcut.png
+[postbird open confirmation]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-SQL/assets/postbird-installation-open-confirmation.png
 ['issue' on github]: https://github.com/Paxa/postbird/issues/16

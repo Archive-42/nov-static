@@ -38,17 +38,16 @@ procedure post order array (node)
 end procedure post order array
 ```
 
-
 ## Instructions
 
-* Clone the project from
+- Clone the project from
   https://github.com/appacademy-starters/data-structures-binary-tree-starter.
-* `cd` into the project folder
-* `npm install` to install dependencies in the project root directory
-* `npm test` to run the specs
-* You can view the test cases in `test/test.js`. Your job is to write code in
-  * **lib/tree_node.js** to implement the `TreeNode` class
-  * **lib/tree_order.js** to implement the `inOrderArray` and `postOrderArray`
+- `cd` into the project folder
+- `npm install` to install dependencies in the project root directory
+- `npm test` to run the specs
+- You can view the test cases in `test/test.js`. Your job is to write code in
+  - **lib/tree_node.js** to implement the `TreeNode` class
+  - **lib/tree_order.js** to implement the `inOrderArray` and `postOrderArray`
     functions to traverse a tree
-  * **lib/leet_code_105.js** as a scratch pad to work on the LeetCode.com
+  - **lib/leet_code_105.js** as a scratch pad to work on the LeetCode.com
     problem at https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/

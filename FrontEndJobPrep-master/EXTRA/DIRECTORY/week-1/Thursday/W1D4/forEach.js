@@ -1,5 +1,4 @@
-let parks = ['Zion', 'Yellowstone', 'Acadia', "Yosemite"];
-
+let parks = ["Zion", "Yellowstone", "Acadia", "Yosemite"];
 
 // The Old Way:
 
@@ -10,7 +9,6 @@ let parks = ['Zion', 'Yellowstone', 'Acadia', "Yosemite"];
 //   console.log(parks);
 //   console.log("------------");
 // }
-
 
 // The New Way:
 
@@ -25,12 +23,12 @@ let parks = ['Zion', 'Yellowstone', 'Acadia', "Yosemite"];
 
 // --------------------------------------------
 
-// An example showing that the first argument to the 
+// An example showing that the first argument to the
 // forEach method is an actual function.
 
 let nums = [1, 20, 13, 7];
 
-function numLogger (num, i) {
+function numLogger(num, i) {
   console.log(num);
   console.log(i);
   console.log("-----");
@@ -38,8 +36,6 @@ function numLogger (num, i) {
 
 // console.log(numLogger);
 // nums.forEach(numLogger);
-
-
 
 // --------------------------------------------
 
@@ -56,15 +52,11 @@ function numLogger (num, i) {
 
 // nums.forEach(numLogger);
 
-
-
-
 // ------------------------------------------
 
 // ------   PITFALLS OF .forEach();   -------
 
 // ------------------------------------------
-
 
 // We CANNOT return inside of .forEach();
 
@@ -72,46 +64,35 @@ function numLogger (num, i) {
 
 // Good for simple iteration on an array
 
-
-
-
-
-
 // ---------------------------------------------
 
 // Bad use of using .forEach();
 
 let numbers = [1, 6, 3, 4];
 
-function findFirstEvenBad(numbers){
-
+function findFirstEvenBad(numbers) {
   numbers.forEach(evenIdx);
-  
+
   return null;
 }
 
-function evenIdx(num, idx){
+function evenIdx(num, idx) {
   if (num % 2 === 0) {
     console.log(num);
     console.log(idx);
-    console.log("-------")
+    console.log("-------");
     return idx;
   }
 }
 
 console.log(findFirstEvenBad(numbers));
 
-
-
-
-
 // ---------------------------------------------
 
 // Proper use of .forEach();
 
 function findFirstEvenGood(numbers) {
-
-  for(let i = 0; i < numbers.length; i++) {
+  for (let i = 0; i < numbers.length; i++) {
     if (number % 2 === 0) {
       return idx;
     }

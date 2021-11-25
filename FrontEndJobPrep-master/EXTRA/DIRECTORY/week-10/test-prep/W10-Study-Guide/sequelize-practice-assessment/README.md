@@ -8,8 +8,8 @@ to refer to.
 The tests will check that models are correctly named by making assumptions about
 how they're used. Remember:
 
-* Models are capitalized singular nouns
-* Tables are capitalized plural nouns
+- Models are capitalized singular nouns
+- Tables are capitalized plural nouns
 
 After each of the "modify migration file" or "modify seed data file" steps, you
 may want to run the associated Sequelize CLI commands, if applicable, to make
@@ -20,23 +20,22 @@ you'll create.
 The tests will expect that you have created seeder files to insert the provided
 data. Before tests, it will run the equivalence of, in order:
 
-* db:seed:undo:all
-* db:migrate:undo:all
-* db:migrate
-* db:seed:all
+- db:seed:undo:all
+- db:migrate:undo:all
+- db:migrate
+- db:seed:all
 
 You must run the tests with "npm test". It sets the proper environment variable
 for using the test database environment. The tests will use the "test" database
 that you will create.
 
-
 # Step 1: Set-up
 
 Using npm, install
 
-* sequelize
-* sequelize-cli
-* pg
+- sequelize
+- sequelize-cli
+- pg
 
 Create a database user named "enrollment_app" with password "86kRVBVnx92Fn5wG".
 
@@ -47,54 +46,50 @@ your model.
 Create a database named "enrollment_test" with the owner "enrollment_app". This
 is the database that the mocha tests will use.
 
-
 # Step 2: Person Model
 
 Use the Sequelize CLI to initialize your project. Begin by generating a `Person`
 model that has:
 
-* a `firstName` attribute that contains a string up to 50 characters long
-* a `lastName` attribute that contains a string up to 50 characters long
-* an `email` attribute that contains a string up to 255 characters long
+- a `firstName` attribute that contains a string up to 50 characters long
+- a `lastName` attribute that contains a string up to 50 characters long
+- an `email` attribute that contains a string up to 255 characters long
 
 Update the migration file to make the associated columns for those properties
 non-nullable.
 
 Update the migration file to make the `email` column have only unique values.
 
-
 # Step 3: Campus Model
 
 Use the Sequelize CLI to generate a `Campus` model that has
 
-* a `name` attribute that contains a string up to 255 characters long
+- a `name` attribute that contains a string up to 255 characters long
 
 Update the migration file to make the associated columns for those properties
 non-nullable.
 
 Update the migration file to make the `name` column have only unique values.
-
 
 # Step 4: Department Model
 
 Use the Sequelize CLI to generate a `Department` model that has
 
-* a `name` attribute that contains a string up to 50 characters long
+- a `name` attribute that contains a string up to 50 characters long
 
 Update the migration file to make the associated columns for those properties
 non-nullable.
 
 Update the migration file to make the `name` column have only unique values.
 
-
 # Step 5: Course Model
 
 Use the Sequelize CLI to generate a `Course` model that has
 
-* a `name` attribute that contains a string up to 50 characters long
-* a `level` attribute that contains an integer
-* a `campusId` attribute that contains an integer
-* a `departmentId` attribute that contains an integer
+- a `name` attribute that contains a string up to 50 characters long
+- a `level` attribute that contains an integer
+- a `campusId` attribute that contains an integer
+- a `departmentId` attribute that contains an integer
 
 Update the migration file to make the associated columns for those properties
 non-nullable.
@@ -104,18 +99,16 @@ Update the migration file so that `campusId` references the Campuses model.
 Update the migration file so that the `departmentId` references the Departments
 model.
 
-
 # Step 6: Enrollment Model
 
 Use the Sequelize CLI to generate an `Enrollment` model that has
 
-* a `personId` attribute that contains an integer
-* a `courseId` attribute that contains an integer
+- a `personId` attribute that contains an integer
+- a `courseId` attribute that contains an integer
 
 Update the migration file so that `personId` references the People model.
 
 Update the migration file so that the `courseId` references the Courses model.
-
 
 # Step 7: Seeding Data
 
@@ -127,21 +120,23 @@ delete all records replacing `TABLE_NAME` with the name of the table for the
 seeder file:
 
 ```js
-return queryInterface.bulkDelete('TABLE_NAME', {
-  id: { [Sequelize.Op.gt]: 0 }
+return queryInterface.bulkDelete("TABLE_NAME", {
+  id: { [Sequelize.Op.gt]: 0 },
 });
 ```
 
 Then, use the following data to generate seed data for each seeder file:
 
-* People data
+- People data
+
   ```js
   { firstName: 'Daniel', lastName: 'Hays', email: 'Cras.sed.leo@Vivamusmolestie.co.uk', createdAt: new Date(), updatedAt: new Date() },
   { firstName: 'Wade', lastName: 'Woodard', email: 'massa.Integer@lectus.ca', createdAt: new Date(), updatedAt: new Date() },
   { firstName: 'Frances', lastName: 'Rosales', email: 'ligula@velitduisemper.ca', createdAt: new Date(), updatedAt: new Date() },
   ```
 
-* Campuses data
+- Campuses data
+
   ```js
   { name: 'Valdivia', createdAt: new Date(), updatedAt: new Date() },
   { name: 'Bangor', createdAt: new Date(), updatedAt: new Date() },
@@ -149,14 +144,16 @@ Then, use the following data to generate seed data for each seeder file:
   { name: 'Filacciano', createdAt: new Date(), updatedAt: new Date() },
   ```
 
-* Departments data
+- Departments data
+
   ```js
   { name: 'Economics', createdAt: new Date(), updatedAt: new Date() },
   { name: 'Mathematics', createdAt: new Date(), updatedAt: new Date() },
   { name: 'Music', createdAt: new Date(), updatedAt: new Date() },
   ```
 
-* Courses data
+- Courses data
+
   ```js
   { name: 'Macro', level: 860, campusId: 2, departmentId: 1, createdAt: new Date(), updatedAt: new Date() },
   { name: 'Calculus', level: 830, campusId: 2, departmentId: 2, createdAt: new Date(), updatedAt: new Date() },
@@ -167,7 +164,7 @@ Then, use the following data to generate seed data for each seeder file:
   { name: 'Algebra', level: 300, campusId: 2, departmentId: 2, createdAt: new Date(), updatedAt: new Date() },
   ```
 
-* Enrollments data
+- Enrollments data
   ```js
   { personId: 3, courseId: 7, createdAt: new Date(), updatedAt: new Date() },
   { personId: 3, courseId: 1, createdAt: new Date(), updatedAt: new Date() },
@@ -178,7 +175,6 @@ Then, use the following data to generate seed data for each seeder file:
   { personId: 3, courseId: 5, createdAt: new Date(), updatedAt: new Date() },
   { personId: 2, courseId: 5, createdAt: new Date(), updatedAt: new Date() },
   ```
-
 
 # Step 8: Associations
 

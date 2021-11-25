@@ -30,10 +30,15 @@
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
  */
 
-
 // helper function to friendsOf()
 
-function friendsOfRecursion(name, adjacencyList, visited, maxDistance, currentDistance) {
+function friendsOfRecursion(
+  name,
+  adjacencyList,
+  visited,
+  maxDistance,
+  currentDistance
+) {
   // iterate until max distance is reached
   if (currentDistance >= maxDistance) return;
   // add name to our visted set
@@ -41,7 +46,13 @@ function friendsOfRecursion(name, adjacencyList, visited, maxDistance, currentDi
   // loop through the friend list @ adjacent list keyed into the name
   for (let friend of adjacencyList[name]) {
     // increment count to reach max distance for base case
-    friendsOfRecursion(friend, adjacencyList, visited, maxDistance,currentDistance + 1);
+    friendsOfRecursion(
+      friend,
+      adjacencyList,
+      visited,
+      maxDistance,
+      currentDistance + 1
+    );
   }
 }
 
@@ -63,10 +74,12 @@ function friendsOf(adjacencyList, name, distance) {
 }
 
 /******************************************************************************
-* Do not change code beneath this line.
-*/
+ * Do not change code beneath this line.
+ */
 try {
-exports.friendsOf = friendsOf;
+  exports.friendsOf = friendsOf;
 } catch (e) {
-exports.friendsOf = () => { throw new Error('Cannot export friendsOf.') };
+  exports.friendsOf = () => {
+    throw new Error("Cannot export friendsOf.");
+  };
 }

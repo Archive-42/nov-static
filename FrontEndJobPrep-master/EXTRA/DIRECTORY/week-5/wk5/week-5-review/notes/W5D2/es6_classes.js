@@ -12,7 +12,8 @@ class Animal {
     // };
   }
 
-  getAge() { // instance method
+  getAge() {
+    // instance method
     return this.age;
   }
 
@@ -20,20 +21,20 @@ class Animal {
     this.age = newAge;
   }
 
-  static getAllNames(...animals) { //static method
-    return animals.map(animal => animal.name);
+  static getAllNames(...animals) {
+    //static method
+    return animals.map((animal) => animal.name);
   }
 }
 
 // constructor-style invocation
-const digby = new Animal('Digby', 6);
-const sage = new Animal('Sage', 10);
+const digby = new Animal("Digby", 6);
+const sage = new Animal("Sage", 10);
 // console.log(Animal.getAllNames(sage, digby));
 
-Animal.prototype.hello = function() {
+Animal.prototype.hello = function () {
   return `${this.name} says hello`;
 };
-
 
 // remember the other styles?
 
@@ -55,9 +56,6 @@ Animal.prototype.hello = function() {
 // constructor-style invocation
 // new fn();
 
-
-
-
 // Inheritance
 class Cat extends Animal {
   constructor(name, age, color) {
@@ -77,8 +75,7 @@ class Cat extends Animal {
   }
 }
 
-
-const fluffy = new Cat("Fluffy", 4, 'orange');
+const fluffy = new Cat("Fluffy", 4, "orange");
 
 // fluffy.getAge will look to prototype of Cat first then prototype of Animal
 console.log(fluffy.getAge());
@@ -87,4 +84,3 @@ console.log(fluffy.getAge());
 const meow = fluffy.meow;
 // const meow = Cat.prototype.meow;
 console.log(meow.call(digby));
-

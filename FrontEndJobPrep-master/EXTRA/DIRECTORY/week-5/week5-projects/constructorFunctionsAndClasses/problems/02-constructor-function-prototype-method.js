@@ -1,4 +1,3 @@
-
 /***********************************************************************
 
 Let's create a constructor function to represent email messages that contains a
@@ -56,7 +55,7 @@ console.log(message2.getSubjectAndText());
 
 ***********************************************************************/
 
-function Email (recipient, sender, subject, text) {
+function Email(recipient, sender, subject, text) {
   this.recipient = recipient;
   this.sender = sender;
   this.subject = subject;
@@ -64,10 +63,8 @@ function Email (recipient, sender, subject, text) {
 }
 
 Email.prototype.getSubjectAndText = function (subject, text) {
-  return `${ this.subject }: ${ this.text }`;
+  return `${this.subject}: ${this.text}`;
 };
-
-
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

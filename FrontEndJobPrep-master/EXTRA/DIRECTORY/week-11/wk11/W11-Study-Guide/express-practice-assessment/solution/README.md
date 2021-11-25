@@ -7,9 +7,9 @@
 In this assessment, you are asked to create an Express application. You will
 create an Express application that
 
-* Has a page that shows a list of people
-* Has a page that allows you to add a person
-* Is protected from Cross-Site Request Forgeries
+- Has a page that shows a list of people
+- Has a page that allows you to add a person
+- Is protected from Cross-Site Request Forgeries
 
 There are screenshots in the **images** directory that show you what is
 expected from a _structure_ standpoint. They are meant to be guides. The tests
@@ -23,13 +23,13 @@ structure of the pages.
 Use the technologies you have used up to this point. They are all installed in
 the **package.json** for your convenience.
 
-* Express.js
-* "pg", Sequelize, and Sequelize CLI
-* CSURF middleware
-* Pug.js
-* cookie-parser middleware
-* body-parser middleware
-* nodemon (for development purposes)
+- Express.js
+- "pg", Sequelize, and Sequelize CLI
+- CSURF middleware
+- Pug.js
+- cookie-parser middleware
+- body-parser middleware
+- nodemon (for development purposes)
 
 A **package.json** file already exists with "mocha", "chai", and "supertest"
 as part of the dependencies. Please run `npm install` to install those before
@@ -70,20 +70,20 @@ Please use port 8081 for your Express.js server.
 
 ### The database
 
-* The login name that you must use is "express_practice_app"
-* The login password that you must use is "EzB5Dxo2dabnQBF8"
-* The login **must** have the "CREATEDB" permission for the tests to run
-* The database prefix for your databases must be "express_practice" so that you
+- The login name that you must use is "express_practice_app"
+- The login password that you must use is "EzB5Dxo2dabnQBF8"
+- The login **must** have the "CREATEDB" permission for the tests to run
+- The database prefix for your databases must be "express_practice" so that you
   will have in your Sequelize config file:
-  * "express_practice_development"
-  * "express_practice_test" (won't be used by the tests)
-  * "express_practice_production" (won't be used by the tests)
+  - "express_practice_development"
+  - "express_practice_test" (won't be used by the tests)
+  - "express_practice_production" (won't be used by the tests)
 
 You will need to store "people" data and "hair color" data. The people data
 should support:
 
 | Attribute name | Attribute type               | Constraints                       |
-|----------------|------------------------------|-----------------------------------|
+| -------------- | ---------------------------- | --------------------------------- |
 | First name     | Up to 50 characters of text  | Must always have a non-null value |
 | Last name      | Up to 50 characters of text  | Must always have a non-null value |
 | Age            | An integer                   | No constraint                     |
@@ -93,18 +93,18 @@ should support:
 The hair color data should have the
 
 | Attribute name | Attribute type              | Constraints                                       |
-|----------------|-----------------------------|---------------------------------------------------|
+| -------------- | --------------------------- | ------------------------------------------------- |
 | Color          | Up to 50 characters of text | Must always have a non-null value, must be unique |
 
 Moreover, the hair color data must have the following pre-defined data in it
 
-* Auburn
-* Black
-* Blonde
-* Brown
-* Other
-* Red
-* White
+- Auburn
+- Black
+- Blonde
+- Brown
+- Other
+- Red
+- White
 
 If you use Sequelize CLI seeders, don't forget to add the entry:
 
@@ -136,30 +136,30 @@ Set up your CSRF middleware to use cookies.
 When someone accesses your application, they should see a list of people that
 are stored in your database. The list should contain:
 
-* The person's first name
-* The person's last name
-* The person's age
-* A short biography
-* Their hair color
+- The person's first name
+- The person's last name
+- The person's age
+- A short biography
+- Their hair color
 
 ### The route "GET /new-person"
 
 This page shows a form in which a visitor can add a new person. The form must
 have
 
-* a method of "post"
-* an action of "/new-person"
+- a method of "post"
+- an action of "/new-person"
 
 In the form, you should have these inputs with the provided name:
 
 | Field HTML name | Field type       | Constraints | Default values                             |
-|-----------------|------------------|-------------|--------------------------------------------|
+| --------------- | ---------------- | ----------- | ------------------------------------------ |
 | firstName       | single-line text | required    |                                            |
 | lastName        | single-line text | required    |                                            |
 | age             | number           |             |                                            |
 | biography       | multi-line text  |             |                                            |
 | hairColorId     | dropdown         | required    | One of the pre-defined hair colors         |
-| _csrf           | hidden           |             | The value provided by the CSURF middleware |
+| \_csrf          | hidden           |             | The value provided by the CSURF middleware |
 
 You should also have a submit button.
 

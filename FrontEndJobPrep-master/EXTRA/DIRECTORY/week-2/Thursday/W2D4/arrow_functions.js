@@ -4,28 +4,22 @@
 
 function logger(title, body) {
   console.log("\x1b[31m%s\x1b[0m", title);
-  console.log('    ', body);
+  console.log("    ", body);
 }
 
 // Named Function
 function sayHelloNamed(name) {
-  return 'hello ' + name;
+  return "hello " + name;
 }
 
-logger('Named Function', sayHelloNamed('Justin'));
+logger("Named Function", sayHelloNamed("Justin"));
 
 // Unnamed Function
-const sayHelloUnnamed = function(name) {
-  return 'hello ' + name;
+const sayHelloUnnamed = function (name) {
+  return "hello " + name;
 };
 
-logger('Unnamed Function', sayHelloUnnamed('Soon-Mi'));
-
-
-
-
-
-
+logger("Unnamed Function", sayHelloUnnamed("Soon-Mi"));
 
 // Fat Arrow Function with EXPLICIT return
 // curly braces around body of fat arrow functions need explicit return keyword
@@ -34,27 +28,16 @@ logger('Unnamed Function', sayHelloUnnamed('Soon-Mi'));
 // };
 
 // No parentheses surrounding parameter needed if ONLY one parameter
-const sayHelloExplicit = name => {
-  return 'hello ' + name;
+const sayHelloExplicit = (name) => {
+  return "hello " + name;
 };
 
-logger('Fat Arrow Function with Explicit Return', sayHelloExplicit('Gordon'));
-
-
-
-
-
-
-
-
-
-
-
+logger("Fat Arrow Function with Explicit Return", sayHelloExplicit("Gordon"));
 
 // Fat Arrow Function with IMPLICIT return
 // Also called a One-Liner Fat Arrow function
 // should only use this when the function's body is NOT multi-line
-const sayHelloImplicit = (name) => 'hello' + name;
+const sayHelloImplicit = (name) => "hello" + name;
 
 // can use parentheses around function body as well
 // const sayHelloImplicit = (name) => ({
@@ -63,97 +46,74 @@ const sayHelloImplicit = (name) => 'hello' + name;
 
 // notice the semicolon ; at the end
 
-logger('Fat Arrow Function with Implicit Return', sayHelloImplicit('Angela'));
+logger("Fat Arrow Function with Implicit Return", sayHelloImplicit("Angela"));
 
-
-
-
-
-
-console.log('\n--------------\n');
-
-
-
+console.log("\n--------------\n");
 
 // Example using fat arrow functions
 const arr = [1, 2, 3];
 
-const newArr = arr.map(el => {
+const newArr = arr.map((el) => {
   return el + 2;
 });
 // const newArr = arr.map(function(el) {
 //   return el + 2;
 // });
 
-logger('Original Array, `arr`', arr);
-logger('New Mapped Array, `newArr`', newArr);
+logger("Original Array, `arr`", arr);
+logger("New Mapped Array, `newArr`", newArr);
 
-
-
-
-console.log('\n--------------\n');
-
-
-
-
-
+console.log("\n--------------\n");
 
 // Context using Fat Arrow functions
 const pony = {
-  name: 'Lucy',
-  wrappedSayName: function() {
+  name: "Lucy",
+  wrappedSayName: function () {
     console.log(this.name);
-    return function() {
+    return function () {
       console.log(this.name);
-      console.log('Hello my name is ' + this.name);
-    }
+      console.log("Hello my name is " + this.name);
+    };
   },
-  wrappedArrowSayName: function() {
+  wrappedArrowSayName: function () {
     console.log(this.name);
     return () => {
-      console.log('Hello my name is ' + this.name);
-    }
-  }
+      console.log("Hello my name is " + this.name);
+    };
+  },
 };
 
 pony.wrappedSayName = pony.wrappedSayName.bind(pony);
 let wrap = pony.wrappedSayName().bind(pony); // method-style invocation
 wrap(); // function-style invocation
 
-console.log('-----------');
+console.log("-----------");
 
 wrap = pony.wrappedArrowSayName(); // method-style invocation
-wrap(); 
+wrap();
 
-console.log('-----------');
+console.log("-----------");
 
 const arrowSayName = pony.wrappedArrowSayName; // not invoking
 wrap = arrowSayName(); // function-style invocation
 wrap();
 
-
-
 // bound to the context of wherever it's defined
 
-
-
-
-
-
-console.log('-----------');
+console.log("-----------");
 
 const zoomMeeting = {
-  students: ['Christian', 'Ronald','Wren'],
-  listStudent: function(studentName) {
+  students: ["Christian", "Ronald", "Wren"],
+  listStudent: function (studentName) {
     console.log(this.students);
     // console.log(studentName);
   },
-  listStudents: function() {
+  listStudents: function () {
     const listStudent = this.listStudent;
     listStudent(); // function-style
-    console.log('***');
+    console.log("***");
     this.students.forEach(listStudent);
-  }
+  },
 };
 
 zoomMeeting.listStudents();

@@ -15,6 +15,6 @@ function insertionSort(arr) {
   return arr;
 }
 
-let arr = [34, 765, 2341, 7654, 234, 0867, 324, 1234, 4565, 3425]
+let arr = [34, 765, 2341, 7654, 234, 0867, 324, 1234, 4565, 3425];
 
 console.log(insertionSort(arr));

@@ -1,4 +1,3 @@
-
 /***********************************************************************
 
 Let's add a static method to an ES2015 class!
@@ -60,14 +59,12 @@ class MMS {
     this.text = text;
     this.mimeType = mimeType;
   }
-  static getMessagesByMIMEType(messages, mimeType1){
-    return messages.filter(message => {
+  static getMessagesByMIMEType(messages, mimeType1) {
+    return messages.filter((message) => {
       return message.mimeType === mimeType1;
     });
   }
 }
-
-
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

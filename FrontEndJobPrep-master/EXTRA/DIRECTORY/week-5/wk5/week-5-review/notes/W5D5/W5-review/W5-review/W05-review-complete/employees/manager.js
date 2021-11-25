@@ -2,17 +2,17 @@
 // Have the Manager also take in the number of employees they manage as an argument
 // Add a teamSize method that prints "<<name>> manages <<numEmployees>> employees."
 
-const Employee = require('./employee');
+const Employee = require("./employee");
 
 class Manager extends Employee {
-	constructor(name, department, numEmployees) {
-		super(name, department);
-		this.numEmployees = numEmployees;
-	}
+  constructor(name, department, numEmployees) {
+    super(name, department);
+    this.numEmployees = numEmployees;
+  }
 
-	teamSize() {
-		console.log(`${this.name} manages ${this.numEmployees} employees.`);
-	}
+  teamSize() {
+    console.log(`${this.name} manages ${this.numEmployees} employees.`);
+  }
 }
 
 // Export the Manager class using CommonJS so that we don't have to destructure later on.

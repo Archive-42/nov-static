@@ -25,6 +25,7 @@
 3. Explain and implement a Binary Search Tree.
 
 Problems to consider:
+
 1. What are the requisite attributes of a Tree Node? Implement a Tree Node here:
 
 ```javascript
@@ -40,21 +41,22 @@ class TreeNode = {
 ```javascript
 class BST {
   constructor() {
-      this.root = null;
+    this.root = null;
   }
 
-  insert(val, currentNode=this.root) {
+  insert(val, currentNode = this.root) {
     // your code here
   }
 }
 ```
 
 3. Given a tree, be able to determine the order of each traversal type:
-  ![Number tree](./public/number-tree.png)
-  - Breadth First: ??
-  - Pre-order: ??
-  - In-order: ??
-  - Post-order: ??
+   ![Number tree](./public/number-tree.png)
+
+- Breadth First: ??
+- Pre-order: ??
+- In-order: ??
+- Post-order: ??
 
 ## Graphs (W8D3) - Learning Objectives
 
@@ -70,7 +72,7 @@ Problems to consider:
 
 ```javascript
 class GraphNode {
-  constructor(val){
+  constructor(val) {
     // your code here
   }
 }
@@ -80,16 +82,16 @@ class GraphNode {
 
 ```javascript
 const adjacencyList = {
-  'derek':['selam', 'dean'],
-  'joe':['selam'],
-  'selam': ['derek', 'joe', 'dean', 'jesse'],
-  'dean': ['derek', 'jesse'],
-  'sam': ['jen'],
-  'jesse': ['selam', 'evan'],
-  'jen':['sam'],
-  'javier':['jen'],
-  'chris':[],
-  'evan': ['jesse'],
+  derek: ["selam", "dean"],
+  joe: ["selam"],
+  selam: ["derek", "joe", "dean", "jesse"],
+  dean: ["derek", "jesse"],
+  sam: ["jen"],
+  jesse: ["selam", "evan"],
+  jen: ["sam"],
+  javier: ["jen"],
+  chris: [],
+  evan: ["jesse"],
 };
 ```
 

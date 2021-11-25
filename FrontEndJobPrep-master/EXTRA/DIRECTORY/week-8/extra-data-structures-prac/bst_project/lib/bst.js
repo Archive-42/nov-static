@@ -61,5 +61,5 @@ class BST {
 
 module.exports = {
   TreeNode,
-  BST
+  BST,
 };

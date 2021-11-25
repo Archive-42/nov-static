@@ -1,4 +1,3 @@
-
 /***********************************************************************
 
 Let's create instances of an ES2015 class!
@@ -22,15 +21,15 @@ class ServiceProvider {
   }
 }
 
-const verizon = new ServiceProvider('Verizon');
-const tmobile = new ServiceProvider('T-Mobile');
+const verizon = new ServiceProvider("Verizon");
+const tmobile = new ServiceProvider("T-Mobile");
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = {
     ServiceProvider,
     verizon,
-    tmobile
+    tmobile,
   };
 } catch {
   module.exports = null;

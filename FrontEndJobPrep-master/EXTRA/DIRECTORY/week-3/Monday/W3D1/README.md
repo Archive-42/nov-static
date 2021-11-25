@@ -41,6 +41,7 @@
 - **Multi-Threaded Execution**: **Multiple** commands can be processed at a time
 
 ### Kitchen Analogy
+
 ![Single vs Multi Threading Kitchen Analogy]
 
 - **JavaScript is a single-threaded language.** It can only execute one process at a time.
@@ -49,6 +50,7 @@
 ## Stacks and Queues
 
 - **Stack Data Structure**: pile of many items
+
   - new items must be placed on top of the pile (push)
   - only the very top of the pile can be removed (pop)
 
@@ -97,7 +99,7 @@
 // use terminal for input and output
 const rl = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
+  output: process.stdout,
 });
 ```
 
@@ -108,6 +110,7 @@ const rl = readline.createInterface({
 [EOD Lecture Notes]
 
 ## Learning Objectives
+
 1. Identify JavaScript as a language that utilizes an event loop model
 2. Identify JavaScript as a single threaded language
 3. Describe the difference between asynchronous and synchronous code
@@ -116,14 +119,14 @@ const rl = readline.createInterface({
 6. Use setInterval to have a function execute 10 times with a 1 second period. After the 10th cycle, clear the interval.
 7. Write a program that accepts user input using Node’s readline module
 
-[Sync vs Async Demo]: ./sync_vs_async.js
-[setTimeout Demo]: ./setTimeout.js
-[setInterval Demo]: ./setInterval.js
-[Threading Demo]: ./threading.js
-[Single vs Multi Threading Kitchen Analogy]: ./single_vs_multi_threading.png
-[Stack vs Queue]: ./stack_vs_queue.png
-[Call Stack Demo]: ./call_stack.js
-[Event Loop]: ./event_loop.js
-[User Input In Node]: ./user_input_in_node.js
-[`readline` Documentation]: https://nodejs.org/api/readline.html
-[EOD Lecture Notes]: ./eod.js
+[sync vs async demo]: ./sync_vs_async.js
+[settimeout demo]: ./setTimeout.js
+[setinterval demo]: ./setInterval.js
+[threading demo]: ./threading.js
+[single vs multi threading kitchen analogy]: ./single_vs_multi_threading.png
+[stack vs queue]: ./stack_vs_queue.png
+[call stack demo]: ./call_stack.js
+[event loop]: ./event_loop.js
+[user input in node]: ./user_input_in_node.js
+[`readline` documentation]: https://nodejs.org/api/readline.html
+[eod lecture notes]: ./eod.js

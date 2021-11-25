@@ -1,4 +1,3 @@
-
 /***********************************************************************
 
 Let's create a class hierarchy by updating an ES2015 class to inherit from
@@ -66,15 +65,19 @@ class Email extends Message {
     this.subject = subject;
   }
 }
-const message2 = new Email('sally@smith.com', 'john@smith.com', 
-  'Test Message Two', 'This is a test message.');
+const message2 = new Email(
+  "sally@smith.com",
+  "john@smith.com",
+  "Test Message Two",
+  "This is a test message."
+);
 console.log(message2);
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = {
     Message,
-    Email
+    Email,
   };
 } catch {
   module.exports = null;

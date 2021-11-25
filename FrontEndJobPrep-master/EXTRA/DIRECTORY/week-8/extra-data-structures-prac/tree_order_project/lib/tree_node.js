@@ -7,5 +7,5 @@ class TreeNode {
 }
 
 module.exports = {
-  TreeNode
+  TreeNode,
 };

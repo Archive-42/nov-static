@@ -1,6 +1,3 @@
-
-
-
 ## Examples
 
 Using Chai's `should`:
@@ -14,17 +11,17 @@ chai.should();
 chai.use(sinonChai);
 
 function hello(name, cb) {
-    cb("hello " + name);
+  cb("hello " + name);
 }
 
 describe("hello", function () {
-    it("should call callback with correct greeting", function () {
-        var cb = sinon.spy();
+  it("should call callback with correct greeting", function () {
+    var cb = sinon.spy();
 
-        hello("foo", cb);
+    hello("foo", cb);
 
-        cb.should.have.been.calledWith("hello foo");
-    });
+    cb.should.have.been.calledWith("hello foo");
+  });
 });
 ```
 
@@ -39,16 +36,16 @@ var expect = chai.expect;
 chai.use(sinonChai);
 
 function hello(name, cb) {
-    cb("hello " + name);
+  cb("hello " + name);
 }
 
 describe("hello", function () {
-    it("should call callback with correct greeting", function () {
-        var cb = sinon.spy();
+  it("should call callback with correct greeting", function () {
+    var cb = sinon.spy();
 
-        hello("foo", cb);
+    hello("foo", cb);
 
-        expect(cb).to.have.been.calledWith("hello foo");
-    });
+    expect(cb).to.have.been.calledWith("hello foo");
+  });
 });
 ```

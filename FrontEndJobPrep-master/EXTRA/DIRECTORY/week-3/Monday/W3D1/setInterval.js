@@ -1,42 +1,32 @@
 let count = 0;
 
 const foo = function (first, second) {
-  console.log('--------');
-  
+  console.log("--------");
+
   console.log(first);
   console.log(second);
-  console.log('time is up');
+  console.log("time is up");
   count++;
   if (count === 2) {
     clearInterval(fooInterval);
   }
-}
+};
 
-
-console.log('before setInterval');
+console.log("before setInterval");
 // foo();
 
-const fooInterval = setInterval(foo, 2000, 'first argument', 'second argument');
+const fooInterval = setInterval(foo, 2000, "first argument", "second argument");
 // console.log('setInterval result', fooInterval);
 
-console.log('after setInterval');
-
-
-
-
-
-
-
-
-
+console.log("after setInterval");
 
 // function intervalCountdown(count, delay, cb, ...args) {
 //   const interval = setInterval(function () {
 //     // HAS ACCESS to `cb`, `count`, or `delay` variables
 //     console.log('time is up');
-    
+
 //     cb(...args); // hello
-    
+
 //     count--;
 //     if (count === 0) {
 //       clearInterval(interval);
@@ -51,4 +41,4 @@ console.log('after setInterval');
 // }, 'first', 'second');
 
 // closures
-  // callback function to setInterval closes over `cb`, `count` and `delay` variables 
+// callback function to setInterval closes over `cb`, `count` and `delay` variables

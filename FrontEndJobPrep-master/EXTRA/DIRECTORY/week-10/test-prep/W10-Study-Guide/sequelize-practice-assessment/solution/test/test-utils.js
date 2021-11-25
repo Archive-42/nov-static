@@ -1,6 +1,6 @@
 try {
-  const { resolve } = require('path');
-  const models = require('../models');
+  const { resolve } = require("path");
+  const models = require("../models");
 
   exports.close = () => models.sequelize.close();
 
@@ -15,34 +15,33 @@ try {
   exports.migrationsConfig = {
     storage: "sequelize",
     storageOptions: {
-      sequelize: models.sequelize
+      sequelize: models.sequelize,
     },
     migrations: {
       params: [
         models.sequelize.getQueryInterface(),
-        models.sequelize.constructor
+        models.sequelize.constructor,
       ],
-      path: resolve(__dirname, '..', 'migrations'),
-      pattern: /\.js$/
-    }
+      path: resolve(__dirname, "..", "migrations"),
+      pattern: /\.js$/,
+    },
   };
 
   exports.seedsConfig = {
     storage: "sequelize",
     storageOptions: {
       sequelize: models.sequelize,
-      modelName: 'SequelizeData'
+      modelName: "SequelizeData",
     },
     migrations: {
       params: [
         models.sequelize.getQueryInterface(),
-        models.sequelize.constructor
+        models.sequelize.constructor,
       ],
-      path: resolve(__dirname, '..', 'seeders'),
-      pattern: /\.js$/
-    }
-  }
-
+      path: resolve(__dirname, "..", "seeders"),
+      pattern: /\.js$/,
+    },
+  };
 } catch (e) {
   console.error(e);
 }

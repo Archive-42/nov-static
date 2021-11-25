@@ -1,4 +1,3 @@
-
 # Constructor Functions and Classes Project
 
 Time to practice creating and using constructor functions and ES2015 classes.

@@ -1,8 +1,8 @@
 In this assessment, you will create:
 
-* A database user with a password
-* A database owned by that user
-* Some tables
+- A database user with a password
+- A database owned by that user
+- Some tables
 
 Then, you will write a SQL file that will insert data into the tables.
 
@@ -47,32 +47,32 @@ Do these in order.
 The "PK, NOT NULL" specification means it should be a primary key. The "FK" specification
 means it should be a foreign key. All columns will be "NOT NULL".
 
-* The "users" table
-| Column name | Column type  | Constraints  |
-|-------------|--------------|--------------|
-| id          | SERIAL       | PK, NOT NULL |
-| full_name   | VARCHAR(255) | NOT NULL     |
-| created_at  | TIMESTAMP    | NOT NULL     |
+- The "users" table
+  | Column name | Column type | Constraints |
+  |-------------|--------------|--------------|
+  | id | SERIAL | PK, NOT NULL |
+  | full_name | VARCHAR(255) | NOT NULL |
+  | created_at | TIMESTAMP | NOT NULL |
 
-* The "merchant_types" table
+- The "merchant_types" table
 
 | Column name | Column type | Constraints  |
-|-------------|-------------|--------------|
+| ----------- | ----------- | ------------ |
 | id          | SERIAL      | PK, NOT NULL |
 | type        | VARCHAR(20) | NOT NULL     |
 
-* The "countries" table
+- The "countries" table
 
 | Column name    | Column type  | Constraints  |
-|----------------|--------------|--------------|
+| -------------- | ------------ | ------------ |
 | id             | SERIAL       | PK, NOT NULL |
 | name           | VARCHAR(100) | NOT NULL     |
 | continent_name | VARCHAR(20)  | NOT NULL     |
 
-* The "merchants" table
+- The "merchants" table
 
 | Column name      | Column type  | Constraints                |
-|------------------|--------------|----------------------------|
+| ---------------- | ------------ | -------------------------- |
 | id               | SERIAL       | PK, NOT NULL               |
 | merchant_name    | VARCHAR(255) | NOT NULL                   |
 | country_id       | INTEGER      | FK, NOT NULL               |
@@ -82,7 +82,7 @@ means it should be a foreign key. All columns will be "NOT NULL".
 
 You can run just the table tests to make sure your CREATEs are correct.
 
-  npm test -- -g "when created"
+npm test -- -g "when created"
 
 # Step 4
 
@@ -90,33 +90,34 @@ Create INSERT statements for the four tables in each of the four files provided
 for you. Here is the data that you should include. Don't insert more data than
 what is here. Otherwise, the tests in the next section will fail.
 
-* The "users" table
+- The "users" table
 
 This is not going to be tested. The SQL that you write will. You'll need this
 data for your SQL statements to work correctly.
 
-| full_name              | created_at        |
-|------------------------|-------------------|
-| 'Zaphod Beeblebrox'    | CURRENT_TIMESTAMP |
-| 'Blart Versenwald III' **| CURRENT_TIMESTAMP |
-**
+| full_name                   | created_at        |
+| --------------------------- | ----------------- |
+| 'Zaphod Beeblebrox'         | CURRENT_TIMESTAMP |
+| 'Blart Versenwald III' \*\* | CURRENT_TIMESTAMP |
 
-* The "merchant_types" table
+\*\*
+
+- The "merchant_types" table
 
 | type        |
-|-------------|
+| ----------- |
 | 'Retail'    |
 | 'Wholesale' |
 
-* The "countries" table
+- The "countries" table
 
 | name     | continent_name  |
-|----------|-----------------|
+| -------- | --------------- |
 | 'Brazil' | 'South America' |
 | 'China'  | 'Asia'          |
 | 'USA'    | 'North America' |
 
-* The "merchants" table
+- The "merchants" table
 
 In this section, the foreign keys are not specified by numbers. They show, in
 parentheses, the unique value from a row in the seed data, above. Depending on
@@ -130,28 +131,28 @@ The tests will drop and recreate the tables on each test, so the values should
 be stable.
 
 | merchant_name           | country_id | created_at        | admin_id | merchant_type_id |
-|-------------------------|------------|-------------------|----------|------------------|
+| ----------------------- | ---------- | ----------------- | -------- | ---------------- |
 | 'Zingo'                 | (Brazil)   | CURRENT_TIMESTAMP | (Zaphod) | (Retail)         |
 | 'Widgets International' | (China)    | CURRENT_TIMESTAMP | (Blart)  | (Wholesale)      |
 | 'Snglrify'              | (USA)      | CURRENT_TIMESTAMP | (Zaphod) | (Retail)         |
 | 'Better Products 4 U'   | (USA)      | CURRENT_TIMESTAMP | (Zaphod) | (Wholesale)      |
 
-* Step 5
+- Step 5
 
 Write a SQL statement in joined-data-query.sql that returns the following data
 by JOINing the tables:
 
-* users.full_name
-* merchant_types.type
-* countries.name
-* merchants.merchant_name
+- users.full_name
+- merchant_types.type
+- countries.name
+- merchants.merchant_name
 
 Order the records on the merchant_name column.
 
 The result should look like this.
 
 | full_name            | type      | name   | merchant_name         |
-|----------------------|-----------|--------|-----------------------|
+| -------------------- | --------- | ------ | --------------------- |
 | Zaphod Beeblebrox    | Wholesale | USA    | Better Products 4 U   |
 | Zaphod Beeblebrox    | Retail    | USA    | Snglrify              |
 | Blart Versenwald III | Wholesale | China  | Widgets International |

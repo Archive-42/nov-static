@@ -2,7 +2,6 @@
 // The first argument is a function that returns the new accumulated value
 // The optional second argument is an initial value for the accumuator
 
-
 let nums = [3, 7, 5, 9, 2];
 
 let sum = nums.reduce(function (acc, num) {
@@ -17,7 +16,6 @@ let sum = nums.reduce(function (acc, num) {
 
 // console.log(sum);  // --> 26
 
-
 // -----------------------------------------------
 
 // Here we have an initial value of 100
@@ -29,14 +27,13 @@ let sumPlus100 = nums.reduce(function (acc, num) {
 
 // console.log(sumPlus100);  // --> 126
 
-
 // -----------------------------------------------
 
 // Finding the max value in an array
 
-let max = nums.reduce(function(acc, num) {
+let max = nums.reduce(function (acc, num) {
   // console.log(acc);
-  if (num > acc){
+  if (num > acc) {
     return num;
   } else {
     return acc;
@@ -44,7 +41,6 @@ let max = nums.reduce(function(acc, num) {
 });
 
 // console.log(max);
-
 
 // -----------------------------------------------
 
@@ -54,6 +50,6 @@ let words = ["This", "accumulates", "strings"];
 
 let sentence = words.reduce(function (acc, word) {
   return acc + " " + word;
-})
+});
 
-console.log(sentence);  // --> "This accumulates strings"
+console.log(sentence); // --> "This accumulates strings"

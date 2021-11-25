@@ -80,15 +80,15 @@ const regex = /pattern/gi;
 ```javascript
 const pattern = /pattern/;
 
-console.log(pattern.test('this pattern is plaid')); // true
-console.log(pattern.test('THIS PATTERN IS PLAID')); // false (case-sensitive)
+console.log(pattern.test("this pattern is plaid")); // true
+console.log(pattern.test("THIS PATTERN IS PLAID")); // false (case-sensitive)
 ```
 
 - We can use a string's `.replace()` method and pass in regex as the first argument in order to replace many instances of our matching pattern, no matter how complicated.
 
 ```javascript
-const s = 'An Advancing Aardvark';
-const replaced = s.replace(/a/gi, 'X');
+const s = "An Advancing Aardvark";
+const replaced = s.replace(/a/gi, "X");
 console.log(replaced); // Xn XdvXncing XXrdvXrk
 ```
 
@@ -96,7 +96,7 @@ console.log(replaced); // Xn XdvXncing XXrdvXrk
 
 ```javascript
 let index = 0;
-const s = 'An Advancing Aardvark';
+const s = "An Advancing Aardvark";
 const replaced = s.replace(/a/gi, (match) => {
   index += 1;
   return index;
@@ -107,7 +107,7 @@ console.log(replaced); // 1n 2dv3ncing 45rdv6rk
 - The `.search()` method of a string can take regex as an argument instead of a string, as well. It returns the starting index of the match
 
 ```javascript
-let test = ['this', 'that', 'the other', 'and this?'];
+let test = ["this", "that", "the other", "and this?"];
 let indices = test.map(function (e) {
   // search is returning the index that starts the match, or -1 if not found
   return e.search(/(this)|(that)/); // [0, 0, -1, 4]
@@ -166,12 +166,12 @@ const method = req.method;
   - If we want to manipulate the path, we can use the `path` library, as well. This can be useful if we want to check the extension name that is being requested.
 
   ```javascript
-  const path = require('path');
+  const path = require("path");
 
   const server = http.createServer(async (req, res) => {
     const ext = path.extname(req.url);
 
-    if (ext === '.jpg') {
+    if (ext === ".jpg") {
       // ...
     }
   });
@@ -195,9 +195,9 @@ const method = req.method;
   // bodyContent = 'my-input=In+this+box%3&another-input=Yes%2C+this+box%2C+here.'
 
   const keyValuePairs = bodyContent
-    .split('&') // ['my-input=In+this+box%3', 'another-input=Yes%2C+this+box%2C+here.']
-    .map((keyValuePair) => keyValuePair.split('=')) // [['my-input', 'In+this+box%3'], ['another-input', 'Yes%2C+this+box%2C+here.']]
-    .map(([key, value]) => [key, value.replace(/\+/g, ' ')]) // [['my-input', 'In this box%3'], ['another-input', 'Yes%2C this box%2C here.']]
+    .split("&") // ['my-input=In+this+box%3', 'another-input=Yes%2C+this+box%2C+here.']
+    .map((keyValuePair) => keyValuePair.split("=")) // [['my-input', 'In+this+box%3'], ['another-input', 'Yes%2C+this+box%2C+here.']]
+    .map(([key, value]) => [key, value.replace(/\+/g, " ")]) // [['my-input', 'In this box%3'], ['another-input', 'Yes%2C this box%2C here.']]
     .map(([key, value]) => [key, decodeURIComponent(value)]) // [['my-input', 'In this box?'], ['another-input', 'Yes, this box, here.']]
     .reduce((acc, [key, value]) => {
       acc[key] = value; // { 'my-input': 'In this box?', 'another-input': 'Yes, this box, here.' }
@@ -214,14 +214,14 @@ const method = req.method;
 ```javascript
 res.statusCode = 400; // We can set the statusCode directly through assignment
 res.statusMessage = "That password doesn't match"; // We can specify a custom status message if it differs from the default related to the code
-res.setHeader('Content-Type', 'text/plain'); // .setHeader(<<headerName>>, <<headerContent>>)
+res.setHeader("Content-Type", "text/plain"); // .setHeader(<<headerName>>, <<headerContent>>)
 ```
 
 - write the content of the body of the response
 
 ```javascript
 // If we have a single string to pass as the content we can give it as the argument directly to .end()
-res.end('NOT FOUND');
+res.end("NOT FOUND");
 
 // instead of using .end('message'), we can build up our response with .write('messagePart')
 for (let i = 1; i <= 10; i++) {
@@ -244,7 +244,7 @@ res.end();
 - In our `app.js`, we can require the express package and invoke it to create our server application:
 
 ```js
-const express = require('express');
+const express = require("express");
 
 // Create the Express app.
 const app = express();
@@ -268,8 +268,8 @@ app.listen(port, () => console.log(`Listening on port ${port}...`));
 - Now that the app is set up and we know how to create a route, responding with plain text is as easy as using the `res.send({text response})` method inside the route.
 
 ```js
-app.get('/', (req, res) => {
-  res.send('Hello from Express!');
+app.get("/", (req, res) => {
+  res.send("Hello from Express!");
 });
 ```
 
@@ -281,14 +281,14 @@ app.get('/', (req, res) => {
 
   ```js
   // Capturing a parameter
-  app.get('/product/:id', (req, res) => {
+  app.get("/product/:id", (req, res) => {
     res.send(`Product ID: ${req.params.id}`);
   });
 
   // Putting a restriction on the parameter
   // This route will only be used if what follows the /product/ is a series of numbers (the + allows for multiple characters)
   // We still capture it as a string, so it needs to be parsed into a number if it is going to be used as such in our function
-  app.get('/product/:id(\\d+)', (req, res) => {
+  app.get("/product/:id(\\d+)", (req, res) => {
     const productId = parseInt(req.params.id, 10);
     res.send(`Product ID: ${productId}`);
   });
@@ -302,8 +302,8 @@ app.get('/', (req, res) => {
   ```js
   // Within the string, we can use special characters to define patterns, similar to regex.
   // The pattern below can start will any base string (because of the `*`), then must have `prod`, has an optional `u`, must have a `c`, has at least one but possibly more `t` characters, then ends with an optional `s`.
-  app.get('/*produ?ct+s?', (req, res) => {
-    res.send('Products');
+  app.get("/*produ?ct+s?", (req, res) => {
+    res.send("Products");
   });
   ```
 
@@ -313,7 +313,7 @@ app.get('/', (req, res) => {
   // Regex allows us to be much more specific and complex with the patterns that we are matching.
   // Don't worry if this looks crazy! You would very rarely need to construct anything so complex, this is just showing the possibilities.
   app.get(/^\/((our-)?produ?ct{1,2}s?|productos)\/?$/i, (req, res) => {
-    res.send('Products');
+    res.send("Products");
   });
   ```
 
@@ -321,8 +321,8 @@ app.get('/', (req, res) => {
 
   ```js
   // Our array of options can have a mixture of the previous pattern definitions, as well as multiple options of each.
-  app.get([/^\/(our-)?produ?ct{1,2}s?\/?$/i, '/productos'], (req, res) => {
-    res.send('Products');
+  app.get([/^\/(our-)?produ?ct{1,2}s?\/?$/i, "/productos"], (req, res) => {
+    res.send("Products");
   });
   ```
 
@@ -332,7 +332,7 @@ app.get('/', (req, res) => {
 - With pug in our application, we can tell express to use it as the view engine:
 
 ```js
-app.set('view engine', 'pug');
+app.set("view engine", "pug");
 ```
 
 - Instead of rendering plain text with `send`, we can render a template by using `res.render({templateName})`.
@@ -340,11 +340,11 @@ app.set('view engine', 'pug');
 
 ```js
 // Define a route.
-app.all('*', (req, res) => {
+app.all("*", (req, res) => {
   console.log(`Request method: ${req.method}`);
   console.log(`Request path: ${req.path}`);
 
-  res.render('layout');
+  res.render("layout");
 });
 ```
 
@@ -366,11 +366,14 @@ html
 - The `render()` method on our `app` can also take in a second argument with an object definining variables to make available within our Pug templates.
 
 ```js
-app.all('*', (req, res) => {
+app.all("*", (req, res) => {
   console.log(`Request method: ${req.method}`);
   console.log(`Request path: ${req.path}`);
 
-  res.render('layout', { title: 'Pug Template Syntax Sandbox', heading: 'Welcome to the Sandbox!' });
+  res.render("layout", {
+    title: "Pug Template Syntax Sandbox",
+    heading: "Welcome to the Sandbox!",
+  });
 });
 ```
 
@@ -394,14 +397,14 @@ html
 
 ```js
 // In our main app.js file
-const express = require('express');
-const userRoutes = require('./routes/users.js'); // see following code block
-const tweetRoutes = require('./routes/tweets.js'); // see following code block
+const express = require("express");
+const userRoutes = require("./routes/users.js"); // see following code block
+const tweetRoutes = require("./routes/tweets.js"); // see following code block
 
 const app = express();
 
-app.use('/users', userRoutes);
-app.use('/tweets', tweetRoutes);
+app.use("/users", userRoutes);
+app.use("/tweets", tweetRoutes);
 
 const port = 4000;
 
@@ -489,10 +492,10 @@ if (time > 17)
 - It's important to distinguish this interpolation from JavaScript string interpolation. If we were to provide strings within this template that we needed to interpolate within, such as an href attribute, we are working with JavaScript at that point and would need to use our standard `${}` within backticks to interpolate those values:
 
 ```js
-res.render('layout', {
-  title: 'Pug demo page',
-  header: 'interpolation',
-  route: 'tweets',
+res.render("layout", {
+  title: "Pug demo page",
+  header: "interpolation",
+  route: "tweets",
 });
 ```
 
@@ -516,8 +519,8 @@ html
 
 ```js
 // app.js
-app.get('/pug', (req, res) => {
-  res.render('eod', { colors: ['blue', 'red', 'green'] });
+app.get("/pug", (req, res) => {
+  res.render("eod", { colors: ["blue", "red", "green"] });
 });
 ```
 
@@ -610,9 +613,9 @@ form(method="post" action="/users")
 - After we create our new record, we can redirect the user to another page. In this example, we are redirecting to our root page, but we could have redirected to a user page, an index, a welcome page, etc.
 
 ```js
-app.get('/create', csrfProtection, (req, res, next) => {
-  res.render('create', {
-    title: 'Create a user',
+app.get("/create", csrfProtection, (req, res, next) => {
+  res.render("create", {
+    title: "Create a user",
     errors: [],
     csrfToken: req.csrfToken(),
   });
@@ -625,7 +628,7 @@ app.post(`/users`, csrfProtection, checkFields, async (req, res) => {
   // If we had errors, we're rendering the 'create' form again, passing along the errors as well as the user data so that we can prepopulate those fields with the values that were originally submitted
   if (req.errors.length >= 1) {
     res.render(`create`, {
-      title: 'Create a user',
+      title: "Create a user",
       errors: req.errors,
       username,
       email,
@@ -676,39 +679,41 @@ app.use(
 - If anything is outside of our expectation, we can handle the request differently (rendering the form again, displaying errors, etc.) as opposed to if the information is valid (where we would typically want to redirect the user to a new page).
 
 ```js
-app.post('/create', csrfProtection, async (req, res) => {
+app.post("/create", csrfProtection, async (req, res) => {
   const { username, email, age, password, confirmedPassword } = req.body;
   const errors = [];
 
   if (!username) {
-    errors.push('Please provide a username.');
+    errors.push("Please provide a username.");
   }
 
   if (!email) {
-    errors.push('Please provide an email.');
+    errors.push("Please provide an email.");
   }
 
   if (!age) {
-    errors.push('Please provide an age.');
+    errors.push("Please provide an age.");
   }
 
   const ageAsNum = Number.parseInt(age, 10);
 
   if (age && (ageAsNum < 0 || ageAsNum > 120)) {
-    errors.push('Please provide an age between 0 and 120');
+    errors.push("Please provide an age between 0 and 120");
   }
 
   if (!password) {
-    errors.push('Please provide a password.');
+    errors.push("Please provide a password.");
   }
 
   if (password && password !== confirmedPassword) {
-    errors.push('The provided values for the password and password confirmation fields did not match.');
+    errors.push(
+      "The provided values for the password and password confirmation fields did not match."
+    );
   }
 
   if (errors.length > 0) {
-    res.render('create', {
-      title: 'Create a user',
+    res.render("create", {
+      title: "Create a user",
       username,
       email,
       age,
@@ -737,27 +742,29 @@ const validationMiddleware = (req, res, next) => {
   const errors = [];
 
   if (!username) {
-    errors.push('Please provide a username.');
+    errors.push("Please provide a username.");
   }
 
   if (!email) {
-    errors.push('Please provide an email.');
+    errors.push("Please provide an email.");
   }
 
   if (!age) {
-    errors.push('Please provide an age.');
+    errors.push("Please provide an age.");
   }
 
   if (age && (ageAsNum < 0 || ageAsNum > 120)) {
-    errors.push('Please provide an age between 0 and 120');
+    errors.push("Please provide an age between 0 and 120");
   }
 
   if (!password) {
-    errors.push('Please provide a password.');
+    errors.push("Please provide a password.");
   }
 
   if (password && password !== confirmedPassword) {
-    errors.push('The provided values for the password and password confirmation fields did not match.');
+    errors.push(
+      "The provided values for the password and password confirmation fields did not match."
+    );
   }
 
   req.errors = errors;
@@ -769,13 +776,13 @@ const validationMiddleware = (req, res, next) => {
 - With the validations being run, we can then interact with the `req.errors` array that our middleware created.
 
 ```js
-app.post('/create', csrfProtection, validationMiddleware, async (req, res) => {
+app.post("/create", csrfProtection, validationMiddleware, async (req, res) => {
   const { firstName, lastName, email, password, confirmedPassword } = req.body;
   const errors = req.errors;
 
   if (errors.length > 0) {
-    res.render('create', {
-      title: 'Create a user',
+    res.render("create", {
+      title: "Create a user",
       username,
       email,
       age,
@@ -786,7 +793,7 @@ app.post('/create', csrfProtection, validationMiddleware, async (req, res) => {
   }
 
   await User.create({ username, email, age, password });
-  res.redirect('/');
+  res.redirect("/");
 });
 ```
 
@@ -806,11 +813,11 @@ const csrfProtection = csrf({ cookie: true });
 - The middleware is also supplied to the 'POST' routes that respond to these submissions in order to check that the token was actually created by our application.
 
 ```js
-const express = require('express');
-const cookieParser = require('cookie-parser');
-const csrf = require('csurf');
+const express = require("express");
+const cookieParser = require("cookie-parser");
+const csrf = require("csurf");
 
-const { User } = require('./models');
+const { User } = require("./models");
 
 const app = express();
 
@@ -820,23 +827,23 @@ const csrfProtection = csrf({ cookie: true });
 
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
-app.set('view engine', 'pug');
+app.set("view engine", "pug");
 
-app.get('/create', csrfProtection, (req, res, next) => {
-  res.render('create', {
-    title: 'Create a user',
+app.get("/create", csrfProtection, (req, res, next) => {
+  res.render("create", {
+    title: "Create a user",
     messages: [],
     csrfToken: req.csrfToken(),
   });
 });
 
-app.post('/create', csrfProtection, validationMiddleware, async (req, res) => {
+app.post("/create", csrfProtection, validationMiddleware, async (req, res) => {
   const { username, email, password } = req.body;
   const errors = req.errors;
 
   if (errors.length > 0) {
-    res.render('create', {
-      title: 'Create a user',
+    res.render("create", {
+      title: "Create a user",
       username,
       email,
       age,
@@ -847,7 +854,7 @@ app.post('/create', csrfProtection, validationMiddleware, async (req, res) => {
   }
 
   await User.create({ username, email, age, password });
-  res.redirect('/');
+  res.redirect("/");
 });
 ```
 
@@ -888,7 +895,7 @@ form(action='/create' method='post')
 - Adding the `dotenv` package to our project gives us three ways to load environment variables.
   1. In our app, we can require the `dotenv` package and invoke its `configure` method. Any point after this configuration will have access to environment variables defined in `.env`:
   ```js
-  require('dotenv').config();
+  require("dotenv").config();
   ```
   2. When starting our application, either in the terminal directly or in a script, we can use `node` or `nodemon`'s `-r` flag to indicate we want to require a package at the very start. By requiring `dotenv/config`, we can omit the line above from our application code.
   - `"start": "nodemon -r dotenv/config app.js"`
@@ -907,7 +914,7 @@ form(action='/create' method='post')
 - Using our `try`/`catch` syntax:
 
 ```javascript
-app.get('*', async (req, res, next) => {
+app.get("*", async (req, res, next) => {
   // we specify an async function and capture the 'next' parameter
   try {
     const result = await someAsynchronousFunction();
@@ -922,7 +929,7 @@ app.get('*', async (req, res, next) => {
 - Using our Promise chains:
 
 ```js
-app.get('*', async (req, res, next) => {
+app.get("*", async (req, res, next) => {
   someAsyncFunction()
     .then(() => {
       // Assume some command is here that throws an error
@@ -948,11 +955,12 @@ app.get('*', async (req, res, next) => {
   // We are utilizing ES6 implicit returns of single-line => functions to shrink this to one line.
   // This can be a little confusing, so you'll still often see the above implementatin.
   // THIS IS THE SAME AS THE ABOVE FUNCTION! Just a different structure.
-  const asyncHandler = (handler) => (req, res, next) => handler(req, res, next).catch(next);
+  const asyncHandler = (handler) => (req, res, next) =>
+    handler(req, res, next).catch(next);
 
   // By wrapping our normal route handler in the custom asyncHandler that we created, we don't have to worry about writing try/catch blocks or chaining .catch onto promises for all of our different routes
   app.get(
-    '*',
+    "*",
     asyncHandler(async (req, res) => {
       // our asyncHandler is returning the function that invokes our handler defined here, with the addition of the catch method and invocation of next(err) if an error occurs
       const result = await someAsynchronousFunction();
@@ -966,8 +974,8 @@ app.get('*', async (req, res, next) => {
 - Adding the `morgan` package lets us log the requests that hit our server. The `dev` format specifies the HTTP method/verb, the path, status code, response time, and content length of the response.
 - `npm install morgan`
   ```javascript
-  const morgan = require('morgan');
-  app.use(morgan('dev'));
+  const morgan = require("morgan");
+  app.use(morgan("dev"));
   ```
 
 7. Add support for the Bootstrap front-end component library to a Pug layout template
@@ -1009,13 +1017,13 @@ app.get('*', async (req, res, next) => {
 - Creating a `.sequelizerc` file at the root of our app allows us to specify the paths to where our config file should be read from and where the directories for models, migrations, and seeds should be created:
 
   ```js
-  const path = require('path');
+  const path = require("path");
 
   module.exports = {
-    config: path.resolve('config', 'database.js'),
-    'models-path': path.resolve('db', 'models'),
-    'seeders-path': path.resolve('db', 'seeders'),
-    'migrations-path': path.resolve('db', 'migrations'),
+    config: path.resolve("config", "database.js"),
+    "models-path": path.resolve("db", "models"),
+    "seeders-path": path.resolve("db", "seeders"),
+    "migrations-path": path.resolve("db", "migrations"),
   };
   ```
 
@@ -1036,7 +1044,7 @@ app.get('*', async (req, res, next) => {
 - If we are using a config module, add these new variables in:
   ```javascript
   module.exports = {
-    environment: process.env.NODE_ENV || 'development',
+    environment: process.env.NODE_ENV || "development",
     port: process.env.PORT || 8080,
     db: {
       username: process.env.DB_USERNAME,
@@ -1049,7 +1057,7 @@ app.get('*', async (req, res, next) => {
 - In the config file generated by sequelize (we specified `./config/database.js` in our example), set up the configuration to point to these values for any environment that we need:
 
   ```javascript
-  const { username, password, database, host } = require('./index').db;
+  const { username, password, database, host } = require("./index").db;
 
   module.exports = {
     development: {
@@ -1057,8 +1065,8 @@ app.get('*', async (req, res, next) => {
       password,
       database,
       host,
-      dialect: 'postgres',
-      seederStorage: 'sequelize',
+      dialect: "postgres",
+      seederStorage: "sequelize",
     },
   };
   ```
@@ -1071,8 +1079,8 @@ app.get('*', async (req, res, next) => {
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE,
       host: process.env.DB_HOST,
-      dialect: 'postgres',
-      seederStorage: 'sequelize',
+      dialect: "postgres",
+      seederStorage: "sequelize",
     },
   };
   ```
@@ -1085,22 +1093,22 @@ app.get('*', async (req, res, next) => {
   #!/usr/bin/env node
   // This file is being run to kick off our server. The app is being imported separately. If these concerns were in the same file, the process of importing the db and invoking authenticate would remain the same.
 
-  const { port } = require('../config');
+  const { port } = require("../config");
 
-  const app = require('../app');
-  const db = require('../db/models');
+  const app = require("../app");
+  const db = require("../db/models");
 
   // Check the database connection before starting the app.
   db.sequelize
     .authenticate()
     .then(() => {
-      console.log('Database connection success! Sequelize is ready to use...');
+      console.log("Database connection success! Sequelize is ready to use...");
 
       // Start listening for connections.
       app.listen(port, () => console.log(`Listening on port ${port}...`));
     })
     .catch((err) => {
-      console.log('Database connection failure.');
+      console.log("Database connection failure.");
       console.error(err);
     });
   ```
@@ -1121,12 +1129,12 @@ app.get('*', async (req, res, next) => {
 - Now that we have our database created and seeded, we can proceed with making our routes.
 - In the file that we are creating our routes, require the models directory.
   ```js
-  const db = require('./db/models');
+  const db = require("./db/models");
   ```
 - If we have any routes that need to post data (creating, updating, destroying records), we need to provide csrf protection. Add the `csurf` and `cookie-parser` packages to our project. Within our app, indicate that we are using cookieParser and parsing our requests:
 
   ```js
-  const cookieParser = require('cookie-parser');
+  const cookieParser = require("cookie-parser");
 
   app.use(cookieParser());
   app.use(express.urlencoded({ extended: false }));
@@ -1137,7 +1145,7 @@ app.get('*', async (req, res, next) => {
 - Our routes need to have access to the csrfProtection middleware that comes from the `csurf` package we added.
 
   ```js
-  const csrf = require('csurf');
+  const csrf = require("csurf");
 
   const csrfProtection = csrf({ cookie: true });
   ```
@@ -1147,21 +1155,21 @@ app.get('*', async (req, res, next) => {
   - Getting an index of records
     ```javascript
     router.get(
-      '/',
+      "/",
       asyncHandler(async (req, res) => {
-        const books = await db.Book.findAll({ order: [['title', 'ASC']] });
-        res.render('book-list', { title: 'Books', books });
+        const books = await db.Book.findAll({ order: [["title", "ASC"]] });
+        res.render("book-list", { title: "Books", books });
       })
     );
     ```
   - Getting a single records
     ```javascript
     router.get(
-      '/book/:id(\\d+)',
+      "/book/:id(\\d+)",
       asyncHandler(async (req, res) => {
         const bookId = parseInt(req.params.id, 10); // converting the string into an integer
         const book = await db.Book.findByPk(bookId); // get a reference to our Book instance
-        res.render('book-display', { title: 'Book Display', book });
+        res.render("book-display", { title: "Book Display", book });
       })
     );
     ```
@@ -1169,7 +1177,7 @@ app.get('*', async (req, res, next) => {
 
     ```javascript
     router.post(
-      '/book/add',
+      "/book/add",
       csrfProtection,
       bookValidators,
       asyncHandler(async (req, res) => {
@@ -1189,11 +1197,11 @@ app.get('*', async (req, res, next) => {
 
         if (validatorErrors.isEmpty()) {
           await book.save();
-          res.redirect('/');
+          res.redirect("/");
         } else {
           const errors = validatorErrors.array().map((error) => error.msg);
-          res.render('book-add', {
-            title: 'Add Book',
+          res.render("book-add", {
+            title: "Add Book",
             book,
             errors,
             csrfToken: req.csrfToken(),
@@ -1207,7 +1215,7 @@ app.get('*', async (req, res, next) => {
 
     ```javascript
     router.post(
-      '/book/edit/:id(\\d+)',
+      "/book/edit/:id(\\d+)",
       csrfProtection,
       bookValidators,
       asyncHandler(async (req, res) => {
@@ -1232,14 +1240,14 @@ app.get('*', async (req, res, next) => {
         // This means that we can update the book and send the user back to the main page
         if (validatorErrors.isEmpty()) {
           await bookToUpdate.update(book);
-          res.redirect('/');
+          res.redirect("/");
           // If some fields did not pass the validator, we want to keep them on the form page
           // and display the message associated with each error
         } else {
           // Convert the error objects into just their message strings
           const errors = validatorErrors.array().map((error) => error.msg);
-          res.render('book-edit', {
-            title: 'Edit Book',
+          res.render("book-edit", {
+            title: "Edit Book",
             book: { ...book, bookId },
             errors,
             csrfToken: req.csrfToken(),
@@ -1253,7 +1261,7 @@ app.get('*', async (req, res, next) => {
 
     ```javascript
     router.post(
-      '/book/delete/:id(\\d+)',
+      "/book/delete/:id(\\d+)",
       csrfProtection,
       asyncHandler(async (req, res) => {
         // 1. Convert the id in the route from a string to an integer
@@ -1267,7 +1275,7 @@ app.get('*', async (req, res, next) => {
         // db.Book.destroy({ where: { id: bookId } })
 
         // Redirect to the main page
-        res.redirect('/');
+        res.redirect("/");
       })
     );
     ```
@@ -1279,21 +1287,21 @@ app.get('*', async (req, res, next) => {
   ```js
   module.exports = (sequelize, DataTypes) => {
     const Book = sequelize.define(
-      'Book',
+      "Book",
       {
         title: {
           type: DataTypes.STRING,
           allowNull: false,
           validate: {
             notNull: {
-              msg: 'Please provide a value for Title',
+              msg: "Please provide a value for Title",
             },
             notEmpty: {
-              msg: 'Please provide a value for Title',
+              msg: "Please provide a value for Title",
             },
             len: {
               args: [0, 255],
-              msg: 'Title must not be more than 255 characters long',
+              msg: "Title must not be more than 255 characters long",
             },
           },
         },
@@ -1302,14 +1310,14 @@ app.get('*', async (req, res, next) => {
           allowNull: false,
           validate: {
             notNull: {
-              msg: 'Please provide a value for Author',
+              msg: "Please provide a value for Author",
             },
             notEmpty: {
-              msg: 'Please provide a value for Author',
+              msg: "Please provide a value for Author",
             },
             len: {
               args: [0, 100],
-              msg: 'Author must not be more than 100 characters long',
+              msg: "Author must not be more than 100 characters long",
             },
           },
         },
@@ -1318,10 +1326,10 @@ app.get('*', async (req, res, next) => {
           allowNull: false,
           validate: {
             notNull: {
-              msg: 'Please provide a value for Release Date',
+              msg: "Please provide a value for Release Date",
             },
             isDate: {
-              msg: 'Please provide a valid date for Release Date',
+              msg: "Please provide a valid date for Release Date",
             },
           },
         },
@@ -1330,10 +1338,10 @@ app.get('*', async (req, res, next) => {
           allowNull: false,
           validate: {
             notNull: {
-              msg: 'Please provide a value for Page Count',
+              msg: "Please provide a value for Page Count",
             },
             isInt: {
-              msg: 'Please provide a valid integer for Page Count',
+              msg: "Please provide a valid integer for Page Count",
             },
           },
         },
@@ -1342,14 +1350,14 @@ app.get('*', async (req, res, next) => {
           allowNull: false,
           validate: {
             notNull: {
-              msg: 'Please provide a value for Publisher',
+              msg: "Please provide a value for Publisher",
             },
             notEmpty: {
-              msg: 'Please provide a value for Publisher',
+              msg: "Please provide a value for Publisher",
             },
             len: {
               args: [0, 100],
-              msg: 'Publisher must not be more than 100 characters long',
+              msg: "Publisher must not be more than 100 characters long",
             },
           },
         },
@@ -1366,7 +1374,7 @@ app.get('*', async (req, res, next) => {
 
   ```js
   router.post(
-    '/book/add',
+    "/book/add",
     csrfProtection,
     asyncHandler(async (req, res, next) => {
       const { title, author, releaseDate, pageCount, publisher } = req.body;
@@ -1381,12 +1389,12 @@ app.get('*', async (req, res, next) => {
 
       try {
         await book.save();
-        res.redirect('/');
+        res.redirect("/");
       } catch (err) {
-        if (err.name === 'SequelizeValidationError') {
+        if (err.name === "SequelizeValidationError") {
           const errors = err.errors.map((error) => error.message);
-          res.render('book-add', {
-            title: 'Add Book',
+          res.render("book-add", {
+            title: "Add Book",
             book,
             errors,
             csrfToken: req.csrfToken(),
@@ -1402,36 +1410,36 @@ app.get('*', async (req, res, next) => {
 - We can also implement validations using the `express-validator` package, which we can use as middleware in our routes.
 - We extract a reference to the `check` and `validationResult` functions from the `express-validator` library:
   ```js
-  const { check, validationResult } = require('express-validator');
+  const { check, validationResult } = require("express-validator");
   ```
 - We can set up a group of validations using an array. Each individual validation invokes `check` with the field that we are validating, then chains on the specific validations and messages we want to associate with that field:
   ```js
   const bookValidators = [
-    check('title')
+    check("title")
       .exists({ checkFalsy: true })
-      .withMessage('Please provide a value for Title')
+      .withMessage("Please provide a value for Title")
       .isLength({ max: 255 })
-      .withMessage('Title must not be more than 255 characters long'),
-    check('author')
+      .withMessage("Title must not be more than 255 characters long"),
+    check("author")
       .exists({ checkFalsy: true })
-      .withMessage('Please provide a value for Author')
+      .withMessage("Please provide a value for Author")
       .isLength({ max: 100 })
-      .withMessage('Author must not be more than 100 characters long'),
-    check('releaseDate')
+      .withMessage("Author must not be more than 100 characters long"),
+    check("releaseDate")
       .exists({ checkFalsy: true })
-      .withMessage('Please provide a value for Release Date')
+      .withMessage("Please provide a value for Release Date")
       .isISO8601()
-      .withMessage('Please provide a valid date for Release Date'),
-    check('pageCount')
+      .withMessage("Please provide a valid date for Release Date"),
+    check("pageCount")
       .exists({ checkFalsy: true })
-      .withMessage('Please provide a value for Page Count')
+      .withMessage("Please provide a value for Page Count")
       .isInt({ min: 0 })
-      .withMessage('Please provide a valid integer for Page Count'),
-    check('publisher')
+      .withMessage("Please provide a valid integer for Page Count"),
+    check("publisher")
       .exists({ checkFalsy: true })
-      .withMessage('Please provide a value for Publisher')
+      .withMessage("Please provide a value for Publisher")
       .isLength({ max: 100 })
-      .withMessage('Publisher must not be more than 100 characters long'),
+      .withMessage("Publisher must not be more than 100 characters long"),
   ];
   ```
 - With these validations set up, we can pass the array of middleware to any route that needs to validate the input. Inside the route we can invoke `validationResult` with the request object to get access to an array of any errors that occurred with the validations. From there, we can determine if we need to render the route as normal if the the array is empty, or if we need to display errors to the user because of the failed validations.
@@ -1440,7 +1448,7 @@ app.get('*', async (req, res, next) => {
   // This is the same route as above, repeated for convenience
   // Notice the bookValidators array passed in as middleware
   router.post(
-    '/book/add',
+    "/book/add",
     csrfProtection,
     bookValidators,
     asyncHandler(async (req, res) => {
@@ -1460,12 +1468,12 @@ app.get('*', async (req, res, next) => {
       if (validatorErrors.isEmpty()) {
         // No errors occurred, so save the new book
         await book.save();
-        res.redirect('/');
+        res.redirect("/");
       } else {
         // Validations failed. Extract the `msg` from each error and pass the array to the form template so that it can iterate over them and display them to the user
         const errors = validatorErrors.array().map((error) => error.msg);
-        res.render('book-add', {
-          title: 'Add Book',
+        res.render("book-add", {
+          title: "Add Book",
           book,
           errors,
           csrfToken: req.csrfToken(),
@@ -1495,10 +1503,10 @@ app.get('*', async (req, res, next) => {
 // Generic error handler.
 app.use((err, req, res, next) => {
   res.status(err.status || 500);
-  const isProduction = process.env.NODE_ENV === 'production';
-  res.render('error', {
-    title: 'Server Error',
-    message: isProduction ? 'An error occurred!' : err.message,
+  const isProduction = process.env.NODE_ENV === "production";
+  res.render("error", {
+    title: "Server Error",
+    message: isProduction ? "An error occurred!" : err.message,
     stack: isProduction ? null : err.stack,
   });
 });
@@ -1523,8 +1531,8 @@ app.use((err, req, res, next) => {
   app.use((err, req, res, next) => {
     if (err.status === 404) {
       res.status(404);
-      res.render('page-not-found', {
-        title: 'Page Not Found',
+      res.render("page-not-found", {
+        title: "Page Not Found",
       });
     } else {
       next(err);

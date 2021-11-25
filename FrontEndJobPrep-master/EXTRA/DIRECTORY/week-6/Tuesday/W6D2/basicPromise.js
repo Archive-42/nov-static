@@ -1,8 +1,7 @@
 const myPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    
     // resolve('hello world');
-    reject('error');
+    reject("error");
     console.log(myPromise);
   }, 2000);
 });
@@ -10,21 +9,24 @@ const myPromise = new Promise((resolve, reject) => {
 console.log(myPromise);
 
 myPromise
-  .then((helloWorld) => {
-    console.log('promise.then', helloWorld);
-    return 'return of first then'
-  }, (rejectedError) => {
-    console.log('promise.then', rejectedError);
-  })
+  .then(
+    (helloWorld) => {
+      console.log("promise.then", helloWorld);
+      return "return of first then";
+    },
+    (rejectedError) => {
+      console.log("promise.then", rejectedError);
+    }
+  )
   .then((returnOfFirstThen) => {
     console.log(returnOfFirstThen);
     return new Promise((resolve, reject) => {
-      reject('second then error');
-    })
+      reject("second then error");
+    });
   })
   .then((returnOfSecondThen) => console.log(returnOfSecondThen))
   .catch((error) => {
-    console.log('catch', error);
+    console.log("catch", error);
   });
 
 // myPromise
@@ -42,8 +44,3 @@ myPromise
 //   .catch((reason) => {
 //     console.log('catch rejected', reason);
 //   });
-
-
-
-
-

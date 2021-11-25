@@ -10,25 +10,22 @@ function Animal(name, age) {
 }
 
 // can't use arrow function otherwise context will be global
-Animal.prototype.getAge = function() {
+Animal.prototype.getAge = function () {
   return this.age;
 };
 
-Animal.prototype.setAge = function(newAge) {
+Animal.prototype.setAge = function (newAge) {
   this.age = newAge;
 };
 
-Animal.getAllNames = function(...animals) {
+Animal.getAllNames = function (...animals) {
   return animals.map((animal) => animal.name);
 };
 
 // constructor-style invocation
-const fluffy = new Animal('Fluffy', 4);
-
+const fluffy = new Animal("Fluffy", 4);
 
 // DON'T NEED TO KNOW ANYTHING AFTER THIS POINT FOR THE ASSESSMENT
-
-
 
 function Cat(name, age, color) {
   Animal.prototype.constructor.call(this, name, age);
@@ -37,8 +34,7 @@ function Cat(name, age, color) {
 
 Cat.prototype.meow = function () {
   return `${this.name} adorably meows at you.`;
-}
-
+};
 
 function Intermediate() {
   this.constructor = Cat;

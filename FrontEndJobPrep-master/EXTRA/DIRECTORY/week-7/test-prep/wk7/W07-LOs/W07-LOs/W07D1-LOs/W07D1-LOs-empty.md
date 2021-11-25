@@ -15,29 +15,27 @@
 ```
 
 1. Explain the complexity of and write functions that performs a binary search on a sorted array of numbers.
-    - Implement recursive binary search that returns true/false if the target number is present
 
-        - Code:
+   - Implement recursive binary search that returns true/false if the target number is present
 
-            ```javascript
-            function binarySearchRecursive(array) {
-            }
-            ```
+     - Code:
 
-    - Implement iterative binary search that returns true/false if the target number is present
+       ```javascript
+       function binarySearchRecursive(array) {}
+       ```
 
-        - Code:
+   - Implement iterative binary search that returns true/false if the target number is present
 
-            ```javascript
-            function binarySearchIterative(array) {
-            }
-            ```
+     - Code:
 
-    - Implement iterative binary search that returns the index or -1 if not found
+       ```javascript
+       function binarySearchIterative(array) {}
+       ```
 
-        - Code:
+   - Implement iterative binary search that returns the index or -1 if not found
 
-        ```javascript
-        function binarySearchIndexIterative(array) {
-        }
-        ```
+     - Code:
+
+     ```javascript
+     function binarySearchIndexIterative(array) {}
+     ```

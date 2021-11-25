@@ -17,25 +17,25 @@ class BST {
       return this;
     }
     if (val < root.val) {
-      if(!root.left) {
+      if (!root.left) {
         root.left = newNode;
       } else {
         this.insert(val, root.left);
       }
     } else {
-      if(!root.right) {
+      if (!root.right) {
         root.right = newNode;
       } else {
-        this.insert(val, root.right)
+        this.insert(val, root.right);
       }
     }
   }
   searchRecur(val, root = this.root) {
     if (!root) return false;
-    if(val < root.val) {
-      return this.searchRecur(val, root.left)
+    if (val < root.val) {
+      return this.searchRecur(val, root.left);
     } else if (val > root.val) {
-      return this.searchRecur(val, root.right)
+      return this.searchRecur(val, root.right);
     } else if (val === root.val) {
       return true;
     }
@@ -47,16 +47,13 @@ class BST {
     while (current && !found) {
       if (val < current.val) {
         current = current.left;
-      }
-      else if (val > current.val) {
+      } else if (val > current.val) {
         current = current.right;
-      }
-      else {
-        found = true
+      } else {
+        found = true;
       }
     }
     return found;
-
   }
 }
 
@@ -65,6 +62,5 @@ class BST {
 
 module.exports = {
   TreeNode,
-  BST
+  BST,
 };
-

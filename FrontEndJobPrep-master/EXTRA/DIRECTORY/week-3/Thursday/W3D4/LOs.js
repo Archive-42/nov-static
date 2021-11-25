@@ -6,7 +6,6 @@
 // * Visulaization of the call stack (written in Python)
 //      https://www.cs.usfca.edu/~galles/visualization/RecFact.html
 
-
 // Learning Objectives
 
 // 1. Given a recursive function, identify what is the base case and
@@ -15,7 +14,7 @@
 // 2.  Explain when a recursive solution is appropriate to solving a problem over
 //     an iterative solution.
 
-// 3. Write a recursive function that takes in a number, n, argument and 
+// 3. Write a recursive function that takes in a number, n, argument and
 //    calculates the n-th number of the Fibonacci sequence.
 
 function fibonacci(n) {
@@ -24,10 +23,9 @@ function fibonacci(n) {
   }
 
   return fibonacci(n - 1) + fibonacci(n - 2);
-};
+}
 
 fibonacci(4);
-
 
 // 4. Write a function that calculates a factorial recursively.
 
@@ -37,27 +35,25 @@ function factorial(num) {
   }
 
   return num * factorial(num - 1);
-};
+}
 
 // factorial(3);
 
 // 5. Write a function that calculates an exponent (positive and negative) recursively.
 
-
 function exponent(num, power) {
   if (power < 0) {
-    return (1 / exponent(num, Math.abs(power)));
+    return 1 / exponent(num, Math.abs(power));
   }
 
   if (power === 0) {
-    return 1
+    return 1;
   }
 
   return num * exponent(num, power - 1);
-};
+}
 
 exponent(3, 3);
-
 
 // 6. Write a function that sums all elements of an array recursively.
 
@@ -67,7 +63,7 @@ function sum(arr) {
   }
   let nextSum = sum(arr.slice(1));
   return arr[0] + nextSum;
-};
+}
 
 sum([1, 2, 3]);
 
@@ -85,7 +81,7 @@ function flatten(arr) {
   });
 
   return newArray;
-};
+}
 
 flatten([1, [2, [3]]]);
 
@@ -98,6 +94,6 @@ function buggySum(arr) {
   }
   let nextSum = buggySum(arr);
   return arr[0] + nextSum;
-};
+}
 
 // console.log(buggySum([1, 2, 3]));

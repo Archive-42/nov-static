@@ -20,22 +20,21 @@
 // Recrusive Step
 // if an element is an array, pass that element to flatten
 
-
 function flatten(array) {
-    const flattened = [];
+  const flattened = [];
 
-    array.forEach( el => {
-        console.log(flattened);
-        if(Array.isArray(el)){
-            flattened.push(...flatten(el));
-        } else {
-            flattened.push(el);
-        }
-    });
-
+  array.forEach((el) => {
     console.log(flattened);
-    console.log('\n-----------\n')
-    return flattened;
+    if (Array.isArray(el)) {
+      flattened.push(...flatten(el));
+    } else {
+      flattened.push(el);
+    }
+  });
+
+  console.log(flattened);
+  console.log("\n-----------\n");
+  return flattened;
 }
 
 let arr3 = [1, 5, [6, [8, 5]], 44];

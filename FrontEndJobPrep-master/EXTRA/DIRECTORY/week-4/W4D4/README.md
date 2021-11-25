@@ -40,5 +40,5 @@ Below is a complete list of the terminal learning objectives for this lesson. Wh
 
 [`localStorage` Demo]
 
-[JSON Demo]: ./json_demo.js
-[`localStorage` Demo]: ./localStorage_demo.js
+[json demo]: ./json_demo.js
+[`localstorage` demo]: ./localStorage_demo.js

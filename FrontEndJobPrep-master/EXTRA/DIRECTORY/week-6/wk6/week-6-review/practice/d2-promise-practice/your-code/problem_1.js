@@ -2,33 +2,28 @@
 // - should return a promise
 // - should console.log "done stretching" and fulfill the promise after 1 second
 
-
 function stretch() {
-    return new Promise((res,rej)=>{
-        setTimeout(() => {
-            console.log('done stretching')
-            res();
-        }, 1000);
-    })
-
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      console.log("done stretching");
+      res();
+    }, 1000);
+  });
 }
 // stretch()
-
 
 // - should return a promise
 // - should console.log "done running on treadmill" and fulfill the promise
 // after 0.5 seconds
 // TODO: write a function called runOnTreadmill
 
-
 function runOnTreadmill() {
-    return new Promise((res,rej) =>{
-        setTimeout(() => {
-            console.log('done running on treadmill')
-            res();
-        }, 500);
-    })
-
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      console.log("done running on treadmill");
+      res();
+    }, 500);
+  });
 }
 // runOnTreadmill()
 
@@ -37,14 +32,13 @@ function runOnTreadmill() {
 // - should console.log "done lifting weights" and fulfill the promise
 // after 2 seconds
 
-
 function liftWeights() {
-    return new Promise((res,rej) => {
-        setTimeout(() => {
-            console.log('done lifting weights')
-            res();
-        }, 2000);
-    })
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      console.log("done lifting weights");
+      res();
+    }, 2000);
+  });
 }
 // liftWeights()
 
@@ -53,21 +47,18 @@ function liftWeights() {
 // you begin liftWeights after you've finished running on the treadmill
 // and console.logs "done working out" after you've finished lifting weights
 
-
 function workout() {
-    stretch()
+  stretch()
     .then(runOnTreadmill())
     .then(liftWeights())
-    .then(() => console.log('done working out'))
+    .then(() => console.log("done working out"))
     .catch((err) => console.log(err));
-
 }
 
-workout()
+workout();
 
 // TESTING:
 // - run the file (node problem_1.js) to see if you get the expected output
-
 
 // workout();
 // done stretching

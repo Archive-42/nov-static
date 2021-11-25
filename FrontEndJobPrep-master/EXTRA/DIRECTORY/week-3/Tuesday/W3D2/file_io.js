@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require("fs");
 // console.log(fs); // see what's in the module
 
 // console.log('Started writing to file...');
@@ -9,22 +9,6 @@ const fs = require('fs');
 //   }
 //   console.log('Done writing to file!');
 // });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // fs.readFile('poem.txt', 'utf8', (err, data) => {
 //   // console.log(err); // null (if no error, FALSEY!)
@@ -46,31 +30,30 @@ const fs = require('fs');
 //   // });
 // });
 
-const contents = fs.readFileSync("poem.txt", 'utf8');
+const contents = fs.readFileSync("poem.txt", "utf8");
 console.log(contents);
 
-console.log('------')
-
+console.log("------");
 
 function replaceStrs(file, oldStr, newStr) {
-  const resultOfReadFile = fs.readFile(file, 'utf8', (err, data) => {
+  const resultOfReadFile = fs.readFile(file, "utf8", (err, data) => {
     console.log(data);
     if (err) {
       console.log(err);
     }
     let newData = data.split(oldStr).join(newStr);
-    writeContents('new_' + file, newData);
+    writeContents("new_" + file, newData);
   });
-  console.log('result', resultOfReadFile);
+  console.log("result", resultOfReadFile);
 }
 
 function writeContents(file, data) {
-  fs.writeFile(file, data, 'utf8', err => {
+  fs.writeFile(file, data, "utf8", (err) => {
     if (err) {
       console.log(err);
     }
-    console.log('done writing!');
+    console.log("done writing!");
   });
 }
 
-replaceStrs('poem.txt', 'roses', 'tulips');
+replaceStrs("poem.txt", "roses", "tulips");

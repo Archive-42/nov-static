@@ -3,7 +3,7 @@
 ```js
 1  function createCounter() {
 2      let counter = 0;
-3 
+3
 4      return function() {
 5         counter += 1;
 6         return counter;
@@ -23,7 +23,7 @@
 
 ```js
 {
-    counter: undefined
+  counter: undefined;
 }
 ```
 
@@ -59,7 +59,7 @@
         counter: 1,
         anon: [Function#2#anon]
         AFS: { // anonymousFunctionScope
-            
+
         }
     }
 }
@@ -75,7 +75,7 @@
         counter: 2,
         anon: [Function#2#anon],
         AFS: { // returned
-            
+
         },
         AFS2: { // anonymousFunctionScope
 
@@ -94,7 +94,7 @@
         counter: 2,
         anon: [Function#2#anon],
         AFS: { // returned
-            
+
         },
         AFS2: { // returned
 
@@ -118,7 +118,7 @@
         counter: 2,
         anon: [Function#2#anon],
         AFS: { // returned
-            
+
         },
         AFS2: { // returned
 
@@ -128,7 +128,7 @@
         counter: 1,
         anon: [Function#3#anon],
         AFS: { // anonymousFunctionScope
-            
+
         },
 	},
     counter2: [Function#3#anon]

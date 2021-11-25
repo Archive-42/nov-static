@@ -1,5 +1,5 @@
 // Pairs in Arrays
-let dogs = ['Fido', 'Digby', 'Fluffy'];
+let dogs = ["Fido", "Digby", "Fluffy"];
 
 for (let i = 0; i < dogs.length; i++) {
   // i is the first position
@@ -15,7 +15,7 @@ for (let i = 0; i < dogs.length; i++) {
   }
 }
 
-console.log('-----------------');
+console.log("-----------------");
 
 // let's put it in a function!
 // return an array of arrays of all the pairs of dogs
@@ -57,11 +57,10 @@ function dogPairs(dogs) {
 const pairs = dogPairs(dogs);
 console.log(pairs);
 
-console.log('-----------------');
-
+console.log("-----------------");
 
 // unique pairs in arrays
-let cats = ['Paprika', 'Whiskers', 'Garfield'];
+let cats = ["Paprika", "Whiskers", "Garfield"];
 
 for (let i = 0; i < cats.length - 1; i++) {
   let cat1 = cats[i];
@@ -88,10 +87,13 @@ into
 ]
 */
 
-function uniquePairs(cats) { // cats = ['Paprika', 'Whiskers', 'Garfield']
+function uniquePairs(cats) {
+  // cats = ['Paprika', 'Whiskers', 'Garfield']
   const pairs = [];
-  for (let i = 0; i < cats.length; i++) { // i = 2
-    for (let j = i + 1; j < cats.length; j++) { // j = 3
+  for (let i = 0; i < cats.length; i++) {
+    // i = 2
+    for (let j = i + 1; j < cats.length; j++) {
+      // j = 3
       const cat1 = cats[i]; // 'Whiskers'
       const cat2 = cats[j]; // 'Garfield'
       const pair = [cat1, cat2]; // ['Whiskers', 'Garfield']

@@ -18,12 +18,12 @@
 
 ## [Returning a Function in a Function Demo]
 
-[Day 1 Learning Objectives]: ./d1.md
-[Day 2 Learning Objectives]: ./d2.md
-[Day 3 Learning Objectives]: ./d3.md
-[Day 4 Learning Objectives]: ./d4.md
-[Day 5 Learning Objectives]: ./d5.md
-[Creating a new folder in VSCode]: ./add_folder.png
-[Empty Learning Objectives]: ./empty_learning_objectives.js
-[Mutability && Primitive && Reference Examples]: ./mutability.md
-[Returning a Function in a Function Demo]: ./returningFunctionDemo.js
+[day 1 learning objectives]: ./d1.md
+[day 2 learning objectives]: ./d2.md
+[day 3 learning objectives]: ./d3.md
+[day 4 learning objectives]: ./d4.md
+[day 5 learning objectives]: ./d5.md
+[creating a new folder in vscode]: ./add_folder.png
+[empty learning objectives]: ./empty_learning_objectives.js
+[mutability && primitive && reference examples]: ./mutability.md
+[returning a function in a function demo]: ./returningFunctionDemo.js

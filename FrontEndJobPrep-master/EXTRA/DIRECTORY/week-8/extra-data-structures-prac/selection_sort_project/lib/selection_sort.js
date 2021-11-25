@@ -18,5 +18,5 @@ function selectionSort(arr) {
 
 module.exports = {
   selectionSort,
-  swap
+  swap,
 };

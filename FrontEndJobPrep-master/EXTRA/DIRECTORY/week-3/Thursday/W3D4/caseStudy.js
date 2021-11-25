@@ -4,24 +4,18 @@
 // Cases:
 //    Base Case: What makes the function stop recursing
 //    Recursive Case: When our function will keep recursing
-//    These are mutually exclusive! 
+//    These are mutually exclusive!
 //    Many times we will only see one case in our code
 
 // Step:
 //    Recursive Step: What causes our function to keep recursing
 //    Where we recursively invoke our function
 
-
-
-
-
-
-
-
 function countDown(num) {
-  if (num === 0) {    // <-- THIS IS
-    return;           // <-- OUR
-  }                   // <-- BASE CASE
+  if (num === 0) {
+    // <-- THIS IS
+    return; // <-- OUR
+  } // <-- BASE CASE
 
   // If we don't meet our base case (i.e. num !== 0), that means we meet our
   // recursive case, and we run the code below
@@ -31,24 +25,17 @@ function countDown(num) {
 
 // countDown(-10);
 
-
-
-
-
-
-
-// Written below is a function countUpOrDown(num) that will log all numbers from 
+// Written below is a function countUpOrDown(num) that will log all numbers from
 //    that number to zero. This function can accept both positive and negative numbers.
 
-
 function countUpOrDown(num) {
-  if( num === 0){
+  if (num === 0) {
     return;
   }
 
   console.log(num);
 
-  if(num > 0){
+  if (num > 0) {
     countUpOrDown(num - 1);
   } else {
     countUpOrDown(num + 1);

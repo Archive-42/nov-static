@@ -13,18 +13,19 @@
 - Chrome has great JavaScript developer tools that we will be using throughout the bootcamp
 
 How to use the Repl:
+
 1. Right click on any Chrome browser and click inspect
 2. Click the `Console` tab on the interface that opens
 3. Right any JS code in the console
 
 ## NodeJS vs. Browser
 
-|                   NodeJS has...                   |                      Browser has...                     |
-|                    ---------                      |                        ---------                        |
-|- "global" object named `global`                   |- "global" object named `window`                         |
-|- NodeJS-specific objects like `process`           |- browser-specific objects like `location` and `document`|
-|- a `require` function to import another `.js` file|- **no** `require` function                              |
-|- access to `node_modules` like `readline`         |- **no** access to `node_modules`                        |
+| NodeJS has...                                       | Browser has...                                            |
+| --------------------------------------------------- | --------------------------------------------------------- |
+| - "global" object named `global`                    | - "global" object named `window`                          |
+| - NodeJS-specific objects like `process`            | - browser-specific objects like `location` and `document` |
+| - a `require` function to import another `.js` file | - **no** `require` function                               |
+| - access to `node_modules` like `readline`          | - **no** access to `node_modules`                         |
 
 ## File Input/Output in NodeJS
 
@@ -54,11 +55,12 @@ How to use the Repl:
 ### Commands
 
 `git init` - initializes a git repository in a folder
-  - creates a hidden folder, `.git`, can be seen by using command, `ls -a`
-  - **DO NOT** initialize a git repository on your Desktop or your root!
-  - **DO NOT** have a nested git repository!! (a folder with a git repo in a folder with a git repo)
-  - If you do any of the above, you can delete the hidden `.git` folder created with: `rm -rf .git` 
-    >> **PLEASE MAKE SURE TO WRITE THIS OUT EXACTLY BEFORE PRESSING ENTER!!!! IF YOU DON'T DO IT EXACTLY, YOU MAY DELETE OTHER THINGS OR THE ENTIRE CONTENTS OF THE FOLDER!!!! THEY CANNOT BE RECOVERED**
+
+- creates a hidden folder, `.git`, can be seen by using command, `ls -a`
+- **DO NOT** initialize a git repository on your Desktop or your root!
+- **DO NOT** have a nested git repository!! (a folder with a git repo in a folder with a git repo)
+- If you do any of the above, you can delete the hidden `.git` folder created with: `rm -rf .git`
+  > > **PLEASE MAKE SURE TO WRITE THIS OUT EXACTLY BEFORE PRESSING ENTER!!!! IF YOU DON'T DO IT EXACTLY, YOU MAY DELETE OTHER THINGS OR THE ENTIRE CONTENTS OF THE FOLDER!!!! THEY CANNOT BE RECOVERED**
 
 `git status` - checks if there is a git repository and the status of your git repository
 
@@ -71,7 +73,8 @@ How to use the Repl:
 `git log --oneline` - shortened version of the above command
 
 `git diff` - used to compare two versions, or points of time, in a git repository
-  - without arguments, will display the difference between the working directory and the last committed version
+
+- without arguments, will display the difference between the working directory and the last committed version
 
 `git diff --staged` - compare changes between staging area and last commited version
 
@@ -95,11 +98,13 @@ How to use the Repl:
 ### Mixed Reset
 
 `git reset --mixed {INSERT A COMMIT TO ROLLBACK TO HERE}` - will rollback changes to the commit specified **AND** will add the changes in the commits rolled back to the **WORKING DIRECTORY**
+
 - is the default reset (`git reset INSERT A COMMIT TO ROLLBACK TO HERE}` will do a mixed reset)
 
 ### Hard Reset
 
 `git reset --hard {INSERT A COMMIT TO ROLLBACK TO HERE}` - will rollback changes to the commit specified BUT will **REMOVE** all the changes in the commits rolled back
+
 - NO WAY TO GET ANY OF THE CHANGES BACK IN THE COMMITS REMOVED
 
 ## Pull Requests (PR)
@@ -130,6 +135,7 @@ How to use the Repl:
 ## `git merge`
 
 `git merge {other-branch}` - will take the other branch's commits and add it into teh current branch
+
 - If there is no merge conflict when running merging, then the new commits from the branch you are merging will be added to the master branch
 
 - After you resolve a merge conflict, it will create a new commit in your git history
@@ -161,10 +167,12 @@ How to use the Repl:
 If you want VSCode to be the editor that opens when changing commit messages, do `EDITOR="code --wait"` in your terminal.
 
 ## NodeJS Learning Objectives
+
 1. Define NodeJS as distinct from browser based JavaScript runtimes.
 2. Write a program that reads in a dictionary file using node's FS API and reads a line of text from the terminal input. The program should 'spell check' by putting asterisks around every word that is NOT found in the dictionary.
 
 ## Git Learning Objectives
+
 1. Use Git to initialize a repo
 2. Explain the difference between Git and GitHub
 3. Given 'adding to staging', 'committing', and 'pushing to remote', match attributes that apply to each.
@@ -178,8 +186,8 @@ If you want VSCode to be the editor that opens when changing commit messages, do
 11. Use git diff to compare a local 'staging' branch and 'master' branch.
 12. Use git checkout to check out a specific commit by commit id
 
-[File I/O Demo]: ./file_io.js
-[`fs` Documentation]: https://nodejs.org/api/fs.html
-[Git Directories]: ./git_directories.png
-[Git Branches]: ./git_branches.png
-[Git Rebase]: ./git_rebase.png
+[file i/o demo]: ./file_io.js
+[`fs` documentation]: https://nodejs.org/api/fs.html
+[git directories]: ./git_directories.png
+[git branches]: ./git_branches.png
+[git rebase]: ./git_rebase.png

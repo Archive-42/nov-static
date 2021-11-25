@@ -3,21 +3,21 @@
 // This is more efficient than the second implementation because we can push and
 // pop from an array in O(1) time since we don't have to reassign any indices.
 class StackArray {
-	constructor() {
-		this.stack = [];
-	}
+  constructor() {
+    this.stack = [];
+  }
 
-	push( value ) {
-		this.stack.push( value );
-	}
+  push(value) {
+    this.stack.push(value);
+  }
 
-	pop() {
-		return this.stack.pop();
-	}
+  pop() {
+    return this.stack.pop();
+  }
 
-	peek() {
-		return this.stack[ this.stack.length - 1 ];
-	}
+  peek() {
+    return this.stack[this.stack.length - 1];
+  }
 }
 
 // Using the first element of the array as the "top" of the stack
@@ -25,19 +25,19 @@ class StackArray {
 // reassign indices for a shift and unshift, but the user will see the same
 // functionality.
 class StackArray {
-	constructor() {
-		this.stack = [];
-	}
+  constructor() {
+    this.stack = [];
+  }
 
-	push( value ) {
-		this.stack.unshift( value );
-	}
+  push(value) {
+    this.stack.unshift(value);
+  }
 
-	pop() {
-		return this.stack.shift();
-	}
+  pop() {
+    return this.stack.shift();
+  }
 
-	peek() {
-		return this.stack[ 0 ];
-	}
+  peek() {
+    return this.stack[0];
+  }
 }

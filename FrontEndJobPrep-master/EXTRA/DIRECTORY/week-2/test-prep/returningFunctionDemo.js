@@ -1,19 +1,19 @@
-// Write a function called dynamicIsDivisble(divisor) 
-// that will take in a divisor (number) and return a function. 
+// Write a function called dynamicIsDivisble(divisor)
+// that will take in a divisor (number) and return a function.
 // The returned function will accept a number and
-// return a boolean value stating whether the number 
+// return a boolean value stating whether the number
 // is divisible by the divisor.
 
 // return anonymous function
-function dynamicIsDivisble(divisor){
-    return function(number){
-        return number % divisor === 0;
-    }
+function dynamicIsDivisble(divisor) {
+  return function (number) {
+    return number % divisor === 0;
+  };
 }
 
 // return arrow function
 function dynamicIsDivisble2(divisor) {
-    return number => number % divisor === 0;
+  return (number) => number % divisor === 0;
 }
 
 // The above functions do the same thing!
@@ -24,11 +24,10 @@ function dynamicIsDivisble2(divisor) {
 const divisibleBy5 = dynamicIsDivisble(5);
 
 // dynamicIsDivisble closes over the divisor parameter!
-// Even though the return function is invoked later, 
+// Even though the return function is invoked later,
 // it still has access to the divisor variable!
 
-// We finally get the number pararmeter when we invoke 
+// We finally get the number pararmeter when we invoke
 // the return function.
 console.log(divisibleBy5(15)); // true
 console.log(divisibleBy5(13)); // false
-

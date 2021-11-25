@@ -12,23 +12,22 @@ problem.
 
 ## Instructions
 
-* Clone the project from
+- Clone the project from
   https://github.com/appacademy-starters/data-structures-graph-starter.
-* `cd` into the project folder
-* `npm install` to install dependencies in the project root directory
-* `npm test` to run the specs
-* You can view the test cases in `test/test.js`. Your job is to write code in
-  * **lib/breadth_first_search.js** to implement the `breadthFirstSearch`
+- `cd` into the project folder
+- `npm install` to install dependencies in the project root directory
+- `npm test` to run the specs
+- You can view the test cases in `test/test.js`. Your job is to write code in
+  - **lib/breadth_first_search.js** to implement the `breadthFirstSearch`
     function for graphs
-  * **lib/max_value.js** to implement the `maxValue` function for graphs
-  * **lib/num_regions.js** to implement the `numRegions` function for graphs
-  * **lib/friends-of.js** to implement `friendsOf` and `friendsOfRecursion` to
+  - **lib/max_value.js** to implement the `maxValue` function for graphs
+  - **lib/num_regions.js** to implement the `numRegions` function for graphs
+  - **lib/friends-of.js** to implement `friendsOf` and `friendsOfRecursion` to
     find connected nodes in a graph less than or equal to a specified distance
     away from the start node (please see the explanation after these
     instructions)
-  * **lib/leet_code_207.js** to implement the `canFinish` function located
+  - **lib/leet_code_207.js** to implement the `canFinish` function located
     at https://leetcode.com/problems/course-schedule/
-
 
 ## Friends of
 
@@ -45,7 +44,7 @@ from a person. It will take as parameters
 The following table interprets the distance parameter:
 
 | Distance | Meaning                                                                      |
-|:--------:|------------------------------------------------------------------------------|
+| :------: | ---------------------------------------------------------------------------- |
 |    1     | Immediate friends                                                            |
 |    2     | Immediate friends and friends of friends                                     |
 |    3     | Immediate friends, friends of friends, and the friends of friends of friends |
@@ -55,14 +54,14 @@ For example, say you had the following dependency graph.
 
 ```js
 const graph = {
-  'carrie':  ['humza', 'jun'],
-  'farrah':  ['humza'],
-  'humza':   ['carrie', 'farrah', 'jun', 'silla'],
-  'jun':     ['carrie', 'silla'],
-  'ophelia': ['travis'],
-  'silla':   ['humza', 'yervand'],
-  'travis':  ['ophelia'],
-  'yervand': ['silla'],
+  carrie: ["humza", "jun"],
+  farrah: ["humza"],
+  humza: ["carrie", "farrah", "jun", "silla"],
+  jun: ["carrie", "silla"],
+  ophelia: ["travis"],
+  silla: ["humza", "yervand"],
+  travis: ["ophelia"],
+  yervand: ["silla"],
 };
 ```
 
@@ -70,7 +69,7 @@ Then, the following table shows the expected results for the person **jun** at
 different distances.
 
 | Distance | List of people returned by `friendsOf` |
-|:--------:|----------------------------------------|
+| :------: | -------------------------------------- |
 |    1     | carrie and silla                       |
 |    2     | carrie, silla, humza, yervand          |
 |    3     | carrie, silla, humza, yervand, farrah  |

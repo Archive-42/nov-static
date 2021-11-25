@@ -1,21 +1,21 @@
 function merge(array1, array2) {
-	let merged = [];
+  let merged = [];
 
-	while (array1.length || array2.length) {
-		let ele1 = array1.length ? array1[0] : Infinity;
-		let ele2 = array2.length ? array2[0] : Infinity;
+  while (array1.length || array2.length) {
+    let ele1 = array1.length ? array1[0] : Infinity;
+    let ele2 = array2.length ? array2[0] : Infinity;
 
-		let next;
-		if (ele1 < ele2) {
-			next = array1.shift();
-		} else {
-			next = array2.shift();
-		}
+    let next;
+    if (ele1 < ele2) {
+      next = array1.shift();
+    } else {
+      next = array2.shift();
+    }
 
-		merged.push(next);
-	}
+    merged.push(next);
+  }
 
-	return merged;
+  return merged;
 }
 
 function mergeSort(array) {
@@ -33,6 +33,6 @@ function mergeSort(array) {
   return merge(sortedLeft, sortedRight);
 }
 
-let arr = [432, 432, 761234, 543, 3565, 46, 4563, 634, 5654, 84]
+let arr = [432, 432, 761234, 543, 3565, 46, 4563, 634, 5654, 84];
 
-console.log(mergeSort(arr))
+console.log(mergeSort(arr));

@@ -24,7 +24,6 @@
 //   }, 750)
 // }
 
-
 // // Callback craziness
 // grindTheBeans(() => {
 //   heatTheWater(() => {
@@ -38,21 +37,10 @@
 //   .then(addBeansToWater)
 //   .then(enjoy);
 
-
-
-
-
-
-
-
-
-
-
-
 function grindTheBeans(nextTask) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log('Done grinding the coffee beans');
+      console.log("Done grinding the coffee beans");
       resolve();
     }, 1000);
   });
@@ -61,27 +49,27 @@ function grindTheBeans(nextTask) {
 function heatTheWater(nextTask) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log('Done heating the water');
-      resolve('hello');
+      console.log("Done heating the water");
+      resolve("hello");
     }, 2000);
   });
 }
 
 function addBeansToWater(nextTask) {
   setTimeout(() => {
-    console.log('Done adding beans to the water');
+    console.log("Done adding beans to the water");
     nextTask();
   }, 500);
 }
 
 function enjoy() {
   setTimeout(() => {
-    console.log('Enjoying the coffee!');
+    console.log("Enjoying the coffee!");
   }, 750);
 }
 
 grindTheBeans()
   .then(heatTheWater)
   .then(() => {
-    addBeansToWater(enjoy)
+    addBeansToWater(enjoy);
   });

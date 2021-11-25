@@ -10,7 +10,7 @@ In order to prevent blocking behavior, the browser environment has many Web APIs
 
 As a JavaScript developer, you need to know how to work with asynchronous Web APIs and handle the response or error of those operations. In this article, you will learn about the event loop, the original way of dealing with asynchronous behavior through callbacks, the updated [ECMAScript 2015](http://www.ecma-international.org/ecma-262/6.0/) addition of promises, and the modern practice of using `async/await`.
 
-**Note:** This article is focused on client-side JavaScript in the browser environment. The same concepts are generally true in the [Node.js](https://nodejs.org/) environment, however Node.js uses its own [C++ APIs](https://nodejs.org/api/) as opposed to the browser’s [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API). For more information on asynchronous programming in Node.js, check out [How To Write Asynchronous Code in Node.js](https://www.digitalocean.com/community/tutorials/how-to-write-asynchronous-code-in-node-js).  
+**Note:** This article is focused on client-side JavaScript in the browser environment. The same concepts are generally true in the [Node.js](https://nodejs.org/) environment, however Node.js uses its own [C++ APIs](https://nodejs.org/api/) as opposed to the browser’s [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API). For more information on asynchronous programming in Node.js, check out [How To Write Asynchronous Code in Node.js](https://www.digitalocean.com/community/tutorials/how-to-write-asynchronous-code-in-node-js).
 
 ## The Event Loop
 
@@ -54,18 +54,18 @@ The _stack_, or call stack, holds the state of what function is currently runnin
 
 For the example only containing synchronous code, the browser handles the execution in the following order:
 
--   Add `first()` to the stack, run `first()` which logs `1` to the console, remove `first()` from the stack.
--   Add `second()` to the stack, run `second()` which logs `2` to the console, remove `second()` from the stack.
--   Add `third()` to the stack, run `third()` which logs `3` to the console, remove `third()` from the stack.
+- Add `first()` to the stack, run `first()` which logs `1` to the console, remove `first()` from the stack.
+- Add `second()` to the stack, run `second()` which logs `2` to the console, remove `second()` from the stack.
+- Add `third()` to the stack, run `third()` which logs `3` to the console, remove `third()` from the stack.
 
 The second example with `setTimout` looks like this:
 
--   Add `first()` to the stack, run `first()` which logs `1` to the console, remove `first()` from the stack.
--   Add `second()` to the stack, run `second()`.
-    -   Add `setTimeout()` to the stack, run the `setTimeout()` Web API which starts a timer and adds the anonymous function to the _queue_, remove `setTimeout()` from the stack.
--   Remove `second()` from the stack.
--   Add `third()` to the stack, run `third()` which logs `3` to the console, remove `third()` from the stack.
--   The event loop checks the queue for any pending messages and finds the anonymous function from `setTimeout()`, adds the function to the stack which logs `2` to the console, then removes it from the stack.
+- Add `first()` to the stack, run `first()` which logs `1` to the console, remove `first()` from the stack.
+- Add `second()` to the stack, run `second()`.
+  - Add `setTimeout()` to the stack, run the `setTimeout()` Web API which starts a timer and adds the anonymous function to the _queue_, remove `setTimeout()` from the stack.
+- Remove `second()` from the stack.
+- Add `third()` to the stack, run `third()` which logs `3` to the console, remove `third()` from the stack.
+- The event loop checks the queue for any pending messages and finds the anonymous function from `setTimeout()`, adds the function to the stack which logs `2` to the console, then removes it from the stack.
 
 Using `setTimeout`, an asynchronous Web API, introduces the concept of the _queue_, which this tutorial will cover next.
 
@@ -75,7 +75,7 @@ The _queue_, also referred to as message queue or task queue, is a waiting area 
 
 In the `setTimeout` example, the anonymous function runs immediately after the rest of the top-level execution, since the timer was set to `0` seconds. It’s important to remember that the timer does not mean that the code will execute in exactly `0` seconds or whatever the specified time is, but that it will add the anonymous function to the queue in that amount of time. This queue system exists because if the timer were to add the anonymous function directly to the stack when the timer finishes, it would interrupt whatever function is currently running, which could have unintended and unpredictable effects.
 
-**Note:** There is also another queue called the _job queue_ or _microtask queue_ that handles promises. Microtasks like promises are handled at a higher priority than macrotasks like `setTimeout`.  
+**Note:** There is also another queue called the _job queue_ or _microtask queue_ that handles promises. Microtasks like promises are handled at a higher priority than macrotasks like `setTimeout`.
 
 Now you know how the event loop uses the stack and queue to handle the execution order of code. The next task is to figure out how to control the order of execution in your code. To do this, you will first learn about the original way to ensure asynchronous code is handled correctly by the event loop: callback functions.
 
@@ -183,9 +183,9 @@ As stated in the beginning of this section, a promise is an object that may retu
 
 A promise can have three possible states: pending, fulfilled, and rejected.
 
--   **Pending** - Initial state before being resolved or rejected
--   **Fulfilled** - Successful operation, promise has resolved
--   **Rejected** - Failed operation, promise has rejected
+- **Pending** - Initial state before being resolved or rejected
+- **Fulfilled** - Successful operation, promise has resolved
+- **Rejected** - Failed operation, promise has rejected
 
 After being fulfilled or rejected, a promise is settled.
 
@@ -346,7 +346,7 @@ followers: 3203
 ...
 ```
 
-**Note:** In many environments, `async` is necessary to use `await`—however, some new versions of browsers and Node allow using top-level `await`, which allows you to bypass creating an async function to wrap the `await` in.  
+**Note:** In many environments, `async` is necessary to use `await`—however, some new versions of browsers and Node allow using top-level `await`, which allows you to bypass creating an async function to wrap the `await` in.
 
 Finally, since you are handling the fulfilled promise within the asynchronous function, you can also handle the error within the function. Instead of using the `catch` method with `then`, you will use the [`try`/`catch`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) pattern to handle the exception.
 
@@ -356,7 +356,7 @@ The program will now skip to the `catch` block if it receives an error and log t
 
 Modern asynchronous JavaScript code is most often handled with `async`/`await` syntax, but it is important to have a working knowledge of how promises work, especially as promises are capable of additional features that cannot be handled with `async`/`await`, like combining promises with [`Promise.all()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all).
 
-**Note:** `async`/`await` can be reproduced by using [generators combined with promises](https://www.digitalocean.com/community/tutorials/understanding-generators-in-javascript#asyncawait-with-generators) to add more flexibility to your code. To learn more, check out our [Understanding Generators in JavaScript](https://www.digitalocean.com/community/tutorials/understanding-generators-in-javascript) tutorial.  
+**Note:** `async`/`await` can be reproduced by using [generators combined with promises](https://www.digitalocean.com/community/tutorials/understanding-generators-in-javascript#asyncawait-with-generators) to add more flexibility to your code. To learn more, check out our [Understanding Generators in JavaScript](https://www.digitalocean.com/community/tutorials/understanding-generators-in-javascript) tutorial.
 
 ## Conclusion
 

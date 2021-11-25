@@ -1,9 +1,8 @@
 // Here, we are using a function we previosuly defined to help with the logic of another function.
 // This is a VERY common pattern and will become more and more relevant as we progress in the curriculum.
 // NOTE:
-  // When we define a function, that does not execute the logic we wrote.
-  // The logic inside the functin will run when we invoke the function.
-
+// When we define a function, that does not execute the logic we wrote.
+// The logic inside the functin will run when we invoke the function.
 
 let isEven = function (num) {
   return num % 2 === 0;
@@ -27,18 +26,17 @@ let evensArr = [3, 5, 4, 7, 8];
 console.log(extractEvens(evensArr));
 
 let b = function () {
-  console.log('starting b')
-  console.log('ending b')
-}
+  console.log("starting b");
+  console.log("ending b");
+};
 
 let a = function () {
-  console.log('starting a')
+  console.log("starting a");
   b();
-  console.log('ending a')
-}
+  console.log("ending a");
+};
 
 // a();
-
 
 let isPrime = function (num) {
   if (num < 2) {
@@ -52,7 +50,7 @@ let isPrime = function (num) {
   }
 
   return true;
-}
+};
 
 let pickPrimes = function (nums) {
   let primes = [];
@@ -66,7 +64,7 @@ let pickPrimes = function (nums) {
   }
 
   return primes;
-}
+};
 
 // console.log(pickPrimes([4, 7, 5, 12]));
 // console.log(pickPrimes([31, 25, 9, 16]));

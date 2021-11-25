@@ -8,29 +8,21 @@
 // foo(); // synchronous
 // console.log('three');
 
-// // output: 
+// // output:
 //   // one
 //   // two
 //   // three
 
-
 // console.log('----------------------');
-
-
-
-
-
-
-
 
 // Example of Asynchronous code
 
-console.log('start');
+console.log("start");
 
 // asynchronous
-setTimeout(function() {
-  console.log('time is up');
-  console.log('let\'s get back to work!'); // synchronous with 'time is up'
+setTimeout(function () {
+  console.log("time is up");
+  console.log("let's get back to work!"); // synchronous with 'time is up'
 }, 3000);
 
-console.log('end'); // synchronous with 'start'
+console.log("end"); // synchronous with 'start'

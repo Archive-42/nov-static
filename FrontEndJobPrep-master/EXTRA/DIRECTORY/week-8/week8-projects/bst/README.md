@@ -9,14 +9,14 @@ Keep making the top-most test pass until all tests pass.
 
 ## Instructions
 
-* Clone the project from
+- Clone the project from
   https://github.com/appacademy-starters/data-structures-binary-search-tree-starter.
-* `cd` into the project folder
-* `npm install` to install dependencies in the project root directory
-* `npm test` to run the specs
-* You can view the test cases in `test/test.js`. Your job is to write code in
-  * **lib/bst.js** to implement the `BST` class
-  * **lib/leet_code_108.js** as a scratch pad to work on the LeetCode.com
+- `cd` into the project folder
+- `npm install` to install dependencies in the project root directory
+- `npm test` to run the specs
+- You can view the test cases in `test/test.js`. Your job is to write code in
+  - **lib/bst.js** to implement the `BST` class
+  - **lib/leet_code_108.js** as a scratch pad to work on the LeetCode.com
     problem at https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
-  * **lib/leet_code_110.js** as a scratch pad to work on the LeetCode.com
+  - **lib/leet_code_110.js** as a scratch pad to work on the LeetCode.com
     problem at https://leetcode.com/problems/balanced-binary-tree/

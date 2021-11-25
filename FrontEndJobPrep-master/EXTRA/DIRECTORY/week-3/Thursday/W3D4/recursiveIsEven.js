@@ -2,7 +2,6 @@
 //    and returns true if num is even, false otherwise.
 //  This problem must be solved recursively.
 
-
 // Repeating pattern
 //      not recursive: num % 2 === 0
 // mod(%) shows us remainders from division
@@ -22,19 +21,19 @@
 // if (num > 2) then recuresiveIsEven( num - 2)
 // if(num < 2) then recuresiveIsEven( num + 2)
 
-
 function recursiveIsEven(num) {
-    if(num < 0){                        // if num is negative
-        num = num * -1;
-    }
+  if (num < 0) {
+    // if num is negative
+    num = num * -1;
+  }
 
-    if (num < 2) {                      // base case
-        return num === 0;
-    }
+  if (num < 2) {
+    // base case
+    return num === 0;
+  }
 
-    return recursiveIsEven(num - 2)     // recursive step
+  return recursiveIsEven(num - 2); // recursive step
 }
-
 
 console.log(recursiveIsEven(-9));
 

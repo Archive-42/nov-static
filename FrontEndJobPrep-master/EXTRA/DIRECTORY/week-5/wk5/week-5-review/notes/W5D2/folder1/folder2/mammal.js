@@ -13,7 +13,7 @@ class Mammal {
 }
 
 const obj = {
-  Mammal: Mammal
-}
+  Mammal: Mammal,
+};
 
 module.exports = obj;

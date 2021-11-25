@@ -1,10 +1,12 @@
 # Browser Basics
 
 ## DOM - Document Object Model
+
 - A heirarchy of objects in the **document object**, which includes HTML objects
-- the webpage 
+- the webpage
 
 ## BOM - Browser Object Model
+
 - A heirarchy of objects in the **browser object**, which includes the document object and the **window**
 - The browser interface (which contains the webpage)
 
@@ -50,11 +52,10 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <script type="text/javascript" src="entry.js"></script>
-</head>
-<body>
-</body>
+  <head>
+    <script type="text/javascript" src="entry.js"></script>
+  </head>
+  <body></body>
 </html>
 ```
 
@@ -94,7 +95,7 @@
 
 ```javascript
 window.onload = () => {
-  console.log('this is printed only after all the HTML elements are displayed');
+  console.log("this is printed only after all the HTML elements are displayed");
 };
 ```
 
@@ -103,8 +104,8 @@ window.onload = () => {
 - will execute code in the callback function to the `eventListener` on `DOMContentLoaded` or when all the HTML elements, or the document has been loaded (doesn't wait for CSS or images)
 
 ```javascript
-window.addEventListener('DOMContentLoaded', () => {
-  console.log('this is printed only after all the HTML elements are displayed');
+window.addEventListener("DOMContentLoaded", () => {
+  console.log("this is printed only after all the HTML elements are displayed");
 });
 ```
 
@@ -113,12 +114,12 @@ window.addEventListener('DOMContentLoaded', () => {
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  </head>
-  <body>
-  </body>
+  <head> </head>
+  <body></body>
   <script async>
-    console.log('this is printed only after all the HTML elements are displayed');
+    console.log(
+      "this is printed only after all the HTML elements are displayed"
+    );
   </script>
 </html>
 ```
@@ -131,8 +132,7 @@ window.addEventListener('DOMContentLoaded', () => {
   <head>
     <script defer type="text/javascript" src="entry.js"></script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -158,9 +158,9 @@ window.addEventListener('DOMContentLoaded', () => {
 9. Given several detractors - identify which real-world situations could be implemented with the Web Storage API (shopping cart, forms saving inputs etc.)
 10. Given a website to visit that depends on cookies (like Amazon), students should be able to go to that site add something to their cart and then delete that cookie using the Chrome Developer tools in order to empty their cart.
 
-[Browser Layers]: ./browser_layers.png
-[Request/Response Cycle]: ./request_response_cycle.png
-[No Async or Defer]: ./no_async_defer.png
-[Async]: ./async.png
-[Defer]: ./defer.png
-[Google Developers Remove Render-Blocking JavaScript]: https://developers.google.com/speed/docs/insights/BlockingJS
+[browser layers]: ./browser_layers.png
+[request/response cycle]: ./request_response_cycle.png
+[no async or defer]: ./no_async_defer.png
+[async]: ./async.png
+[defer]: ./defer.png
+[google developers remove render-blocking javascript]: https://developers.google.com/speed/docs/insights/BlockingJS

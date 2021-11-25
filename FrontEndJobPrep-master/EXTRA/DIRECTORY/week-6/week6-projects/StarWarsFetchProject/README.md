@@ -21,23 +21,21 @@ Look at the example on the SWAPI website. You can see it gives us a URL like thi
 This API responds with JSON by default and these are all `GET` requests so we can use plain 'ol fetch with the defaults like this:
 
 ```js
-fetch('https://swapi.dev/api/people/1');
+fetch("https://swapi.dev/api/people/1");
 ```
 
 As we know, fetch returns a promise, so next we would need to call `.then()` and then parse the `json` from the response.
 
 ```js
-fetch('https://swapi.dev/api/people/1')
-    .then(response => response.json())
+fetch("https://swapi.dev/api/people/1").then((response) => response.json());
 ```
 
 Remember, this short arrow function syntax is the same as this:
 
 ```js
-fetch('https://swapi.dev/api/people/1')
-    .then((response) => {
-        return response.json()
-    })
+fetch("https://swapi.dev/api/people/1").then((response) => {
+  return response.json();
+});
 ```
 
 But since we are only doing one thing, we can shorten it into one line.
@@ -45,13 +43,13 @@ But since we are only doing one thing, we can shorten it into one line.
 The point here is `response.json()` returns another promise, so this means we can chain another `.then()` call and that should get the resolved information from the JSON promise. Which should be the object representing a character from Star Wars.
 
 ```js
-    fetch('https://swapi.dev/api/people/1')
-    .then((response) => {
-        return response.json()
-    })
-    .then(personObject => {
-        console.log(personOnject);
-    });
+fetch("https://swapi.dev/api/people/1")
+  .then((response) => {
+    return response.json();
+  })
+  .then((personObject) => {
+    console.log(personOnject);
+  });
 ```
 
 If you console.log the person object you'll see it looks like this:
@@ -88,16 +86,16 @@ If you console.log the person object you'll see it looks like this:
 }
 ```
 
-You'll notice this has URLs in various places.  **See if you can make more fetch calls to get the homeworld of the character.**
+You'll notice this has URLs in various places. **See if you can make more fetch calls to get the homeworld of the character.**
 
-After you are getting both the person and the homeworld, **try getting all of the films for the person**. You'll notice they are stored as an array of film URLs.  You _perhaps_ could use `Promise.all` to make a bunch of fetch calls for those URLs and then after they are finished you should have a complete list of the films as objects.
+After you are getting both the person and the homeworld, **try getting all of the films for the person**. You'll notice they are stored as an array of film URLs. You _perhaps_ could use `Promise.all` to make a bunch of fetch calls for those URLs and then after they are finished you should have a complete list of the films as objects.
 
 Once you've got your person, their homeworld and the list of films, we will use the `fs` module's `promises` version to write this info out to a file.
 
 To use the promise version of `fs` you simple import it like this:
 
 ```js
-const fs = require('fs').promises;
+const fs = require("fs").promises;
 ```
 
 The documentation for the promises version of `fs` is [here](https://nodejs.org/dist/latest-v12.x/docs/api/fs.html#fs_fs_promises_api).
@@ -128,4 +126,3 @@ I starred in the following films: A New Hope, The Empire Strikes Back, Return of
 ```
 
 Once you've finished this, see if you can refactor your code into multiple helper functions that each do one thing per the Single Responsibility principle.
-

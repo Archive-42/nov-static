@@ -5,6 +5,7 @@
 - Each instance has a different state from the next instance
 
 ## Defining a Class
+
 - The name of the class
   - TitleCase
 - Constructor function:
@@ -13,7 +14,7 @@
 - Instance variables:
   - The state of the thing or created object
   - `this.camelCaseName` to get and set the value
-- Instance methods: 
+- Instance methods:
   - how the world interacts with the thing or created object
   - camelCase
   - Types of instance methods:
@@ -29,9 +30,7 @@
 We can make a child class of another class, parent class, by using the `extend` keyword
 
 ```javascript
-class Cat extends Animal {
-
-}
+class Cat extends Animal {}
 ```
 
 ## ES5 Class Syntax
@@ -47,7 +46,7 @@ class Cat extends Animal {
 - can just specifiy in the `require` function the string of the module name
 
 ```javascript
-const mocha = require('mocha');
+const mocha = require("mocha");
 ```
 
 ### Exporting modules from your own code
@@ -59,10 +58,10 @@ const mocha = require('mocha');
 class Person {
   // ...
 }
-const hello = 'hello';
+const hello = "hello";
 module.exports = {
   Person,
-  hello
+  hello,
 };
 ```
 
@@ -72,7 +71,7 @@ is the same as:
 exports.Person = class Person {
   // ...
 };
-exports.hello = 'hello';
+exports.hello = "hello";
 ```
 
 ### Importing modules from your own code
@@ -80,26 +79,28 @@ exports.hello = 'hello';
 - need to specify the relative path in a string passed into the `require` function (don't need to append the `.js` file extension)
 
 ```javascript
-const tax = require('../util/tax'); // will look into the util folder for tax.js
+const tax = require("../util/tax"); // will look into the util folder for tax.js
 ```
 
 - can destructure objects when importing if you are importing an object:
 
 in the file `../util/people.js`:
+
 ```javascript
 class Person {
   // ...
 }
-const hello = 'hello';
+const hello = "hello";
 module.exports = {
   Person,
-  hello
+  hello,
 };
 ```
 
 can import `Person` into `./index.js` by:
+
 ```javascript
-const { Person } = require('../util/people.js');
+const { Person } = require("../util/people.js");
 ```
 
 ## JavaScript Classes Learning Objectives
@@ -114,6 +115,6 @@ const { Person } = require('../util/people.js');
 8. Utilize the `super` keyword in a child class to inherit from a parent class.
 9. Utilize `module.exports` and `require` to import and export functions and class from one file to another.
 
-[ES5 Class]: ./es5_classes.js
-[ES6 Class]: ./es6_classes.js
-[Importing and Exporting Demo]: ./index.js
+[es5 class]: ./es5_classes.js
+[es6 class]: ./es6_classes.js
+[importing and exporting demo]: ./index.js

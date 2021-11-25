@@ -26,25 +26,25 @@ the link for PostgreSQL 12 for Windows x86-64.
 Once that installer downloads, run it. You need to go through the normal steps
 of installing software.
 
-* Yes, Windows, let the installer make changes to _my_ device.
-* Thanks for the welcome. Next.
-* Yeah, that's a good place to install it. Next.
-* I don't want that pgAdmin nor the Stack Builder things. Uncheck. Uncheck.
+- Yes, Windows, let the installer make changes to _my_ device.
+- Thanks for the welcome. Next.
+- Yeah, that's a good place to install it. Next.
+- I don't want that pgAdmin nor the Stack Builder things. Uncheck. Uncheck.
   Next.
 
   ![Deselect pgAdmin 4 and Stack Builder components]
 
-* Also, great looking directory. Thanks. Next.
-* Oooh! A password! I'll enter ********. I sure won't forget that because, if I
+- Also, great looking directory. Thanks. Next.
+- Oooh! A password! I'll enter **\*\*\*\***. I sure won't forget that because, if I
   do, I'll have to uninstall and reinstall PostgreSQL and lose all of my hard
   work. **Seriously, write down this password or use one you will not forget.**
   Next.
-* Sure. 5432. Good to go. Next.
-* Not even sure what that means. Default! Next.
-* Yep. Looks good. Next.
-* Geez. Really? Thanks. Next.
-* _Time to get a tea._
-* All right! All done. Finish!
+- Sure. 5432. Good to go. Next.
+- Not even sure what that means. Default! Next.
+- Yep. Looks good. Next.
+- Geez. Really? Thanks. Next.
+- _Time to get a tea._
+- All right! All done. Finish!
 
 ## Installing PostgreSQL Client Tools on Ubuntu
 
@@ -110,8 +110,7 @@ its startup file.
 Make sure you're in your Ubuntu home directory. You can do that by typing `cd`
 and hitting enter. Use `ls` to find out if you have a `.bash_profile` file. Type
 `ls .bash_profile`. If it shows you that one exists, that's the one you will add
-the alias to. If it tells you that there is no file named that, then type `ls
-.profile`. If it shows you that one exists, that's the one you will add the
+the alias to. If it tells you that there is no file named that, then type `ls .profile`. If it shows you that one exists, that's the one you will add the
 alias to. If it shows you that it does not exist, then use the file name
 `.bash_profile` in the following section.
 
@@ -170,7 +169,7 @@ code ~/.pgpass
 ```
 
 In that file, you will add this line, which tells it that on localhost for port
-5432 (where PostgreSQL is running), for all databases (*), use your Ubuntu user
+5432 (where PostgreSQL is running), for all databases (\*), use your Ubuntu user
 name and the password that you just created for that user with the `psql`
 command you just typed. (If you have forgotten your Ubuntu user name, type
 `whoami` on the command line.) Your entry in the file should have this format.
@@ -196,8 +195,7 @@ command.
 chmod go-rw ~/.pgpass
 ```
 
-You can confirm that only you have read/write permission by typing `ls -al
-~/.pgpass`. That should return output that looks like this, with your Ubuntu
+You can confirm that only you have read/write permission by typing `ls -al ~/.pgpass`. That should return output that looks like this, with your Ubuntu
 user name instead of "appacademy".
 
 ```shell
@@ -246,9 +244,9 @@ launch it from there or your Start Menu at any time.
 You installed and configured PosgreSQL 12, a relational database management
 system, and tools to use it! Well done!
 
-[Download PostgreSQL]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-SQL/assets/download-postgresql.png
-[Deselect pgAdmin 4 and Stack Builder components]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-SQL/assets/postgresql-installation-uncheck-components.png
-[Download Postbird]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-SQL/assets/download-postbird.png
-[Postbird installation warning]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-SQL/assets/postbird-installation-warning.png
-[Postbird run anyway]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-SQL/assets/postbird-installation-run-anyway.png
+[download postgresql]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-SQL/assets/download-postgresql.png
+[deselect pgadmin 4 and stack builder components]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-SQL/assets/postgresql-installation-uncheck-components.png
+[download postbird]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-SQL/assets/download-postbird.png
+[postbird installation warning]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-SQL/assets/postbird-installation-warning.png
+[postbird run anyway]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-SQL/assets/postbird-installation-run-anyway.png
 [pgpass file]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-SQL/assets/windows-pgpass-configuration.png

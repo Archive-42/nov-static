@@ -3,4 +3,3 @@ A secondary learning objective will be parsing documentation. This will be a lar
 Another secondary leraning objective is going over basic css properties with our events.
 
 We will be writing our events with students, not going over prewritten code.
-

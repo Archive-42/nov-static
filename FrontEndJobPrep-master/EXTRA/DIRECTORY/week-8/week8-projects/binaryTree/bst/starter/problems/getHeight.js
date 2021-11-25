@@ -4,7 +4,7 @@ function getHeight(root) {
   let currentLeft = root.left;
   let rightHeight = 0;
   let leftHeight = 0;
-// find height of l.subtree
+  // find height of l.subtree
   // finde height of r.subtree
   // compare the two subtree height
   while (currentLeft) {
@@ -16,11 +16,10 @@ function getHeight(root) {
     rightHeight++;
   }
   if (leftHeight === rightHeight) return leftHeight;
-  if (leftHeight > rightHeight) return leftHeight +=1;
-  if(leftHeight < rightHeight) return rightHeight+=1
+  if (leftHeight > rightHeight) return (leftHeight += 1);
+  if (leftHeight < rightHeight) return (rightHeight += 1);
 }
 
-
 module.exports = {
-  getHeight
+  getHeight,
 };

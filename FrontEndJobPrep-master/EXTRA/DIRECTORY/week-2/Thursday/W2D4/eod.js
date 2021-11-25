@@ -1,8 +1,8 @@
 const obj = {
-  name: 'Example Object',
-  unnamedFunc: function() {
+  name: "Example Object",
+  unnamedFunc: function () {
     console.log(this.name);
-  }
+  },
 };
 
 // Method-style invocation
@@ -12,36 +12,18 @@ obj.unnamedFunc(); // 'Example Object'
 const unnamedFunc = obj.unnamedFunc;
 unnamedFunc(); // `undefined` because Global context
 
-
-
-
-
-console.log('-------------------');
-
-
-
-
-
+console.log("-------------------");
 
 // Unnamed Func
 const dog = {
-  name: 'Digby'
+  name: "Digby",
 };
 
 const boundFunc = obj.unnamedFunc.bind(dog);
 boundFunc(); // Digby
 obj.unnamedFunc(); // Example Object
 
-
-
-
-
-
-
-console.log('-------------------');
-
-
-
+console.log("-------------------");
 
 // Bind Time and Call Time Arguments
 // bind time arguments passed in first, then call time arguments
@@ -49,7 +31,7 @@ function printAge(...args) {
   const age = args[0];
   const year = args[1];
   console.log(args);
-  console.log(this.name + ' is ' + age + ' years old. Born in ' + year);
+  console.log(this.name + " is " + age + " years old. Born in " + year);
 }
 
 const otherArgs = [2005];

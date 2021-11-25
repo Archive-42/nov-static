@@ -67,11 +67,11 @@ class Trie {
   wordsWithPrefix(prefix, root = this.root) {
     if (!prefix.length) {
       let res = [];
-      if (root.isTerminal) res.push('');
+      if (root.isTerminal) res.push("");
       for (let letter in root.children) {
         let child = root.children[letter];
         let suffixes = this.wordsWithPrefix(prefix, child);
-        let words = suffixes.map(suffix => letter + suffix);
+        let words = suffixes.map((suffix) => letter + suffix);
         res.push(...words);
       }
       return res;
@@ -82,7 +82,7 @@ class Trie {
         return [];
       } else {
         let suffixes = this.wordsWithPrefix(prefix.slice(1), child);
-        let words = suffixes.map(suffix => letter + suffix);
+        let words = suffixes.map((suffix) => letter + suffix);
         return words;
       }
     }
@@ -91,5 +91,5 @@ class Trie {
 
 module.exports = {
   Node,
-  Trie
+  Trie,
 };

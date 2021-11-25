@@ -16,11 +16,7 @@ try {
 
 console.log("hello"); // prints hello
 
-
-
-
-
-// Syntax Errors 
+// Syntax Errors
 
 // funtion broken() { // Uncaught SyntaxError: Unexpected identifier
 //   console.log("I'm broke")
@@ -29,10 +25,6 @@ console.log("hello"); // prints hello
 // function broken() { // Uncaught SyntaxError: Unexpected identifier
 //   console.log("I'm broke")
 // }} // Uncaught SyntaxError: Unexpected token '}'
-
-
-
-
 
 // Refernce Errors
 
@@ -43,18 +35,11 @@ console.log("hello"); // prints hello
 
 // callPuppy(); // ReferenceError: pupy is not defined
 
-
-
 // function callPuppy() {
 //   const puppy = "puppy";
 // }
 
 // console.log(puppy); // ReferenceError: puppy is not defined
-
-
-
-
-
 
 // Type Error
 
@@ -64,13 +49,7 @@ console.log("hello"); // prints hello
 // ";
 // puppy = "apple"; // TypeError: Assignment to constant variable.
 
-
-
-
-
-
 // Custom Errors
-
 
 // const first = Error("I am an error object!");
 // const second = new Error("I am too an error object!");

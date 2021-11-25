@@ -13,13 +13,12 @@ class Mammal {
 }
 
 class Platypus extends Mammal {
-  constructor(habitat){
+  constructor(habitat) {
     super(habitat);
     this.liveBirth = false;
   }
 
-  attack(){
-      console.log("Playpus attakced with venomous claws!");
+  attack() {
+    console.log("Playpus attakced with venomous claws!");
   }
 }
-

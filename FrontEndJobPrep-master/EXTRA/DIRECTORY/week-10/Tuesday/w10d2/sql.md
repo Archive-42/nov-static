@@ -8,7 +8,7 @@ delete require record exists
 
 Select last, first dob
 from person
-where dob = 
+where dob =
 
 DELETE from person
 
@@ -28,7 +28,6 @@ Index
 represents sorted values
 can be unique or allow dupes
 
-
 Normalization
 Based off OOP. What are the entities we are talking. Classes. Look at things. Abstracting those things to represent in database.
 
@@ -39,4 +38,3 @@ Second normal form. Nothing on this table is dependant on the key.
 Many to many relationships.
 
 :: type cast
-
