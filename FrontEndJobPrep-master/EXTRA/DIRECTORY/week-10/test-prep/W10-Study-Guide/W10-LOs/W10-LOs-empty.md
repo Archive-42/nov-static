@@ -26,7 +26,7 @@
 ### Portfolio Quality (Not directly assessed)
 1. Recall the items recruiters are most interested in
 2. Explain aspects of a good looking Web application
-3. Identify App Academy's expectations of your projects for after you graduate
+3. Identify WebDevHub's expectations of your projects for after you graduate
 4. Practice good code hygiene when making projects live
 
 ### RDBMS and Database Entities

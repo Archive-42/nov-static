@@ -36,7 +36,7 @@ It is not a programming language like JavaScript. JavaScript, as you well know, 
 # Naming a table
 Names of tables should not create spaces or dashes. They should contain only lower case letters, numbers, and underscores.
 
-Conventionally, many software developers name their database table names as the plural form of the data that it holds. More importantly, many software libraries known as ORMs (which you will cover, this week) use the plural naming convention. You should use the plural naming convention while here at App Academy.
+Conventionally, many software developers name their database table names as the plural form of the data that it holds. More importantly, many software libraries known as ORMs (which you will cover, this week) use the plural naming convention. You should use the plural naming convention while here at WebDevHub.
 
 # Writing the SQL
 Creating a table with SQL has this general syntax.

@@ -508,7 +508,7 @@ console.log(newBanana); // "yellow"
 // the fname key is nested more than two levels deep
 // (within bootcamp.instructor.fullName)
 let bootcamp = {
-	name: "App Academy",
+	name: "WebDevHub",
 	color: "red",
 	instructor: {
 		fullName: {

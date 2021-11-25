@@ -51,7 +51,7 @@
   - Making sure page elements feel interactive, such as changing background colors or cursors on hover
   - etc.
 
-3. Identify App Academy's expectations of your projects for after you graduate
+3. Identify WebDevHub's expectations of your projects for after you graduate
 - There are some core features that should be part of each of your projects that you use in your portfolio.
 - These features allow for recruiters to easily navigate your site and provide a base level of functionality and professionalism.
   - Have plenty of seed data. Make your project look as though it is an actively used application. The barebones functionality is not as impressive if someone looking at it cannot imagine what it would actually look like in practice.
@@ -59,7 +59,7 @@
   - Provide a demo login. Recruiters generally will not want to have to use their own credentials to create an account on your site. A button to simulate a demo user logging in is an easy way for them to see the application and gives you an opportunity to seed your site with more content for the user to interact with.
   - Remove any console output. Logging the internal state of the application may be helpful during your development, but when it is time to showcase your work a clean console free of logs and error messages is a sign of professionalism.
   - Include personal links. The intent of these projects is for recruiters and other developers to see them, be impressed, and want to have you join their team. Include your personal links such as GitHub, LinkedIn, a personal portfolio site, etc., so that they can take the next step and connect with you!
-  - Include a scorecard! We'll get more into the specifics of this process as we start producing projects, but scorecards are a way for App Academy to be able to provide you feedback on your projects. It's an easy format for you to be able to see ways that you could improve the project and for instructors and career coaches to be able to provide that feedback. This will only be seen by you and the a/A team, but it'll help you get your project in its most presentable form!
+  - Include a scorecard! We'll get more into the specifics of this process as we start producing projects, but scorecards are a way for WebDevHub to be able to provide you feedback on your projects. It's an easy format for you to be able to see ways that you could improve the project and for instructors and career coaches to be able to provide that feedback. This will only be seen by you and the a/A team, but it'll help you get your project in its most presentable form!
 
 4. Practice good code hygiene when making projects live
 - Making your application as polished as possible means developers (and potential future coworkers) will want to take a look at how you got it working. This means we should try to make our code as presentable as our actual applications!

@@ -405,7 +405,7 @@ console.log(newBanana); // "yellow"
 // the fname key is nested more than two levels deep
 // (within bootcamp.instructor.fullName)
 let bootcamp = {
-  name: "App Academy",
+  name: "WebDevHub",
   color: "red",
   instructor: {
     fullName: {
@@ -520,14 +520,14 @@ console.log(toyFinder(bigCat)); // => ["ribbon", "mouse", "string"]
 
 ---
 
-## **App Academy Pair Programming Approach**
+## **WebDevHub Pair Programming Approach**
 
 **A 5-Step Process**
 
 - **`Partner Up`** : Get your pal.
 - **`Check-In`** : Get to know eachother, discuss time constraints, goals, etc.
 - **`Start Coding`** : Drivers code, Navigators Guide.
-- **`Hand Off`** : App Academy employs a 15 min. interval.
+- **`Hand Off`** : WebDevHub employs a 15 min. interval.
 - **`Follow-Up`** : The last check in, this is a good time wrap up and review your code. This step helps commit your progress to memory.
 
 ---

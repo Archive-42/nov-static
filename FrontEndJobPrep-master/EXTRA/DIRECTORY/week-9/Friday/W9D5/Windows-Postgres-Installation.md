@@ -227,7 +227,7 @@ the command line.
 You should get used to seeing this because many open-source applications aren't
 signed with the Microsoft Store for monetary and philosophical reasons.
 
-Otherwise, if you trust Paxa like App Academy and tens of thousands of other
+Otherwise, if you trust Paxa like WebDevHub and tens of thousands of other
 developers do, then click the link that reads "More info" and the "Run anyway"
 button.
 

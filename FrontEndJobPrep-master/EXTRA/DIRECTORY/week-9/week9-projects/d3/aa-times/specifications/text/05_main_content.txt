@@ -1,7 +1,7 @@
-How App Academy Students Change Their Lives
+How WebDevHub Students Change Their Lives
 
-App Academy Instructors on React & Redux
-By APP ACADEMY INSTRUCTIONAL TEAM
+WebDevHub Instructors on React & Redux
+By WebDevHub INSTRUCTIONAL TEAM
 
 It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger.
 
@@ -14,12 +14,12 @@ The only way to change the state tree is to emit an action, an object describing
 Warning: This video will make you want to change your career
 
 Where Are They Now?
-By APP ACADEMY ALUMNI
-First hand stories from App Academy graduates about transitioning to engineering positions at top tech companies in San Francisco.
+By WebDevHub ALUMNI
+First hand stories from WebDevHub graduates about transitioning to engineering positions at top tech companies in San Francisco.
 
 Cat Academy
-By APP ACADEMY DIRECTOR OF PRODUCTS
- App Academy's latest product targets those interested in owning the popular feline companion by providing a curated cat care curriculum. Breakfast, Markov, Curie, Jet, and Freyja are all modern day celebrities due to their App Academy example fame.
+By WebDevHub DIRECTOR OF PRODUCTS
+ WebDevHub's latest product targets those interested in owning the popular feline companion by providing a curated cat care curriculum. Breakfast, Markov, Curie, Jet, and Freyja are all modern day celebrities due to their WebDevHub example fame.
     
 Opinions
     
@@ -29,7 +29,7 @@ JavaScript continues to advance with the newly released EcmaScript8 but it still
 299 Comments
 
 Operations
-App Academy New York Has A Brand New Office
+WebDevHub New York Has A Brand New Office
 By NY OPERATIONS
 
 The new space features hardwood floors and brick walls for a modern technology space with an aura for learning.

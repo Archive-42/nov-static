@@ -5,13 +5,13 @@ key is not inside the object.
 
 Examples:
 
-let obj1 = {bootcamp: 'App Academy', course: 'Bootcamp Prep'}
+let obj1 = {bootcamp: 'WebDevHub', course: 'Bootcamp Prep'}
 doesKeyExist(obj1, 'course'); // => true
 doesKeyExist(obj1, 'name'); // => false
 ***********************************************************************/
 
 function doesKeyExist(obj, key) {
-  return obj[key] !== undefined;
+    return obj[key] !== undefined;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

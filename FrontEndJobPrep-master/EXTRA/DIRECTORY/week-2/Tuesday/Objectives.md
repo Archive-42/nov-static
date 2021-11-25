@@ -135,7 +135,7 @@
   - **`Partner Up`** : Get your pal.
   - **`Check-In`** : Get to know eachother, discuss time constraints, goals, etc.
   - **`Start Coding`** : Drivers code, Navigators Guide.
-  - **`Hand Off`** : App Academy employs a 15 min. interval.
+  - **`Hand Off`** : WebDevHub employs a 15 min. interval.
   - **`Follow-Up`** : The last check in, this is a good time wrap up and review your code. This step helps commit your progress to memory.
 
 - **Describe the importance of pair programming competency while interviewing for jobs.**
