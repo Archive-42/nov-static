@@ -4,7 +4,8 @@ Could you manage to implement your own one?
 
 Here is an example to illustrate
 
-***
+---
+
 const arr = [1, [2], [3, [4]]];
 
 flat(arr)
@@ -15,14 +16,15 @@ flat(arr, 1)
 
 flat(arr, 2)
 // [1, 2, 3, 4]
-***
 
+---
 
 **Follow up**
 
 **Are you able to solve it both recursively and iteratively?**
 
 1. Recursively
+
 ```Javascript
 
 /**
@@ -45,6 +47,7 @@ function flat(arr, depth = 1) {
 ```
 
 2. Iteratively
+
 ```Javascript
 /**
  * @param {Array} arr
@@ -54,7 +57,7 @@ function flat(arr, depth = 1) {
 function flat(arr, depth = 1) {
   const result = []
   const stack = [...arr.map(item => ([item, depth]))]
-  
+
   while (stack.length > 0) {
     const [top, depth] = stack.pop()
     if (Array.isArray(top) && depth > 0) {
@@ -63,7 +66,7 @@ function flat(arr, depth = 1) {
       result.push(top)
     }
   }
-  
+
   return result.reverse()
 }
 ```

@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 
 const Header = () => {
-  const [text, setText] = useState("");
-  const dispatch = useDispatch();
+  const [text, setText] = useState('')
+  const dispatch = useDispatch()
 
-  const handleChange = (e) => setText(e.target.value); //const setText: (value: React.SetStateAction<string>) =>
+  const handleChange = (e) => setText(e.target.value) //const setText: (value: React.SetStateAction<string>) =>
 
   const handleKeyDown = (e) => {
     // If the user pressed the Enter key:
-    const trimmedText = text.trim();
+    const trimmedText = text.trim()
     if (e.which === 13 && trimmedText) {
       // Dispatch the "todo added" action with this text
-      dispatch({ type: "todos/todoAdded", payload: trimmedText });
+      dispatch({ type: 'todos/todoAdded', payload: trimmedText })
       // And clear out the text input
-      setText("");
+      setText('')
     }
-  };
+  }
 
   return (
     <header className="header">
@@ -28,7 +28,7 @@ const Header = () => {
         onKeyDown={handleKeyDown}
       />
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

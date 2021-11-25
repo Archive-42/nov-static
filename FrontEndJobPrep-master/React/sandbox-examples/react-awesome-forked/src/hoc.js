@@ -9,7 +9,7 @@ class HocComponent extends React.Component {
 
 export { HocComponent };
 
-export const toUpperCaseHoc = function(WrappedCompoent) {
+export const toUpperCaseHoc = function (WrappedCompoent) {
   return class Hoc extends React.Component {
     render() {
       const { text } = this.props;

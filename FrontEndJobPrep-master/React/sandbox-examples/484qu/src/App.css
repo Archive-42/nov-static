@@ -13,8 +13,8 @@
 }
 
 .app .sider h1 {
-  position: relative;;
-  
+  position: relative;
+
   background-color: #f0f0f0;
   padding: 10px 0 10px 28px;
   height: 80px;
@@ -43,7 +43,6 @@
   margin-top: 5px;
   color: #666;
   margin-left: 10px;
-
 }
 .app .sider .scroll-container {
   position: absolute;
@@ -71,8 +70,8 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
-
-.app .sider ul, .app .sider li {
+.app .sider ul,
+.app .sider li {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -89,7 +88,6 @@
 
 .app .sider li a.active {
   color: #f90;
-
 }
 
 .app .sider .social {
@@ -98,10 +96,8 @@
   line-height: 40px;
 }
 
-
 .app .example-container {
   padding: 40px;
-
 }
 
 .app .example-container h1 {
@@ -110,13 +106,12 @@
   margin-bottom: 15px;
 }
 
-
 .app .example-container .ant-form {
   width: 600px;
 }
 
 .example-description {
-  color:#777;
+  color: #777;
   font-size: 14px;
   margin: 10px 0 0 0;
   line-height: 150%;

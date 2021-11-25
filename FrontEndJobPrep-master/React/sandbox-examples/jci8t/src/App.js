@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 
-import Header from "./features/header/Header";
-import TodoList from "./features/todos/TodoList";
-import Footer from "./features/footer/Footer";
+import Header from './features/header/Header'
+import TodoList from './features/todos/TodoList'
+import Footer from './features/footer/Footer'
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
         </section>
       </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

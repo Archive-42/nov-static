@@ -1,271 +1,571 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>README</title>
-  <style>
-    html {
-      line-height: 1.5;
-      font-family: Georgia, serif;
-      font-size: 20px;
-      color: #1a1a1a;
-      background-color: #fdfdfd;
-    }
-    body {
-      margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 1em;
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>README</title>
+    <style>
+      html {
+        line-height: 1.5;
+        font-family: Georgia, serif;
+        font-size: 20px;
+        color: #1a1a1a;
+        background-color: #fdfdfd;
       }
-    }
-    @media print {
       body {
+        margin: 0 auto;
+        max-width: 36em;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        hyphens: auto;
+        overflow-wrap: break-word;
+        text-rendering: optimizeLegibility;
+        font-kerning: normal;
+      }
+      @media (max-width: 600px) {
+        body {
+          font-size: 0.9em;
+          padding: 1em;
+        }
+      }
+      @media print {
+        body {
+          background-color: transparent;
+          color: black;
+          font-size: 12pt;
+        }
+        p,
+        h2,
+        h3 {
+          orphans: 3;
+          widows: 3;
+        }
+        h2,
+        h3,
+        h4 {
+          page-break-after: avoid;
+        }
+      }
+      p {
+        margin: 1em 0;
+      }
+      a {
+        color: #1a1a1a;
+      }
+      a:visited {
+        color: #1a1a1a;
+      }
+      img {
+        max-width: 100%;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-top: 1.4em;
+      }
+      h5,
+      h6 {
+        font-size: 1em;
+        font-style: italic;
+      }
+      h6 {
+        font-weight: normal;
+      }
+      ol,
+      ul {
+        padding-left: 1.7em;
+        margin-top: 1em;
+      }
+      li > ol,
+      li > ul {
+        margin-top: 0;
+      }
+      blockquote {
+        margin: 1em 0 1em 1.7em;
+        padding-left: 1em;
+        border-left: 2px solid #e6e6e6;
+        color: #606060;
+      }
+      code {
+        font-family: Menlo, Monaco, "Lucida Console", Consolas, monospace;
+        font-size: 85%;
+        margin: 0;
+      }
+      pre {
+        margin: 1em 0;
+        overflow: auto;
+      }
+      pre code {
+        padding: 0;
+        overflow: visible;
+        overflow-wrap: normal;
+      }
+      .sourceCode {
         background-color: transparent;
-        color: black;
-        font-size: 12pt;
+        overflow: visible;
       }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
+      hr {
+        background-color: #1a1a1a;
+        border: none;
+        height: 1px;
+        margin: 1em 0;
       }
-      h2, h3, h4 {
-        page-break-after: avoid;
+      table {
+        margin: 1em 0;
+        border-collapse: collapse;
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+        font-variant-numeric: lining-nums tabular-nums;
       }
-    }
-    p {
-      margin: 1em 0;
-    }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
-    }
-    img {
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
-      font-size: 85%;
-      margin: 0;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      background-color: #1a1a1a;
-      border: none;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
-</head>
-<body>
-<h1 id="frontendcollection-keep-updating-hopefully">FrontEndCollection (Keep updating, hopefully…)</h1>
-<h2 id="web-development-basics">Web Development Basics</h2>
-<h3 id="html">HTML</h3>
-<p><a href="https://github.com/bgoonz/FrontEndJobPrep/issues/2">1. What happens when you type in a URL</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/4">2. GET vs POST</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/5">3. What can we do to improve a website’s performance?</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/6">4. HTML5 offline storage mechanism</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/9">5. Common time and space-complexity</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/11">6. What has been deprecated, and what is new on HTML5?</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/18">7. How the DOM really works?</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/27">8. Inline elements, Block elements, and what are the differences?</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/28">9. Several ways to call a function</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/29">10. A brief introduction of the differences between “src” and “href”</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/30">11. A brief introduction of Call, Apply, Bind</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/9">12. Time and space complexity for common sorting algorithm</a></p>
-<h3 id="css">CSS</h3>
-<p><a href="https://github.com/bgoonz/FrontEndJobPrep/issues/37">1. What is the difference between display:none and visibility:hidden style?</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/38">2. What is BFC(Block Formatting Context)</a></p>
-<h2 id="demo">Demo</h2>
-<p><a href="https://github.com/bgoonz/FrontEndJobPrep/issues/17">1. Accordion 🪗</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/23">2. ModalBox 💬</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/tree/main/JS-Day/DrumKit">3. Drum Kit 🥁</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/tree/main/JS-Day/Mini%20Clock">4. Mini Clock 🕑</a><br />
-<a href="https://github.com/siyuan25/FrontEndCollection/tree/main/JS-Day/Playing%20with%20Variables">5. Playing with Variables 🎩</a></p>
-<h2 id="deep-dive-in-javascript">Deep Dive in Javascript</h2>
-<p><a href="https://bigfrontend.dev/"><em>Learn More on BFE.dev</em></a></p>
-<p><a href="https://github.com/bgoonz/FrontEndJobPrep/issues/33">1. Implement Curry()</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Core/implement%20Array.prototype.flat().md">2. implement Array.prototype.flat()</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Core/implement%20curry()%20with%20placeholder%20support.md">3. Implement curry() with placeholder support</a></p>
-<h2 id="data-structures-algorithm-part-in-javascript">Data Structures &amp; Algorithm Part in JavaScript</h2>
-<h3 id="array">Array</h3>
-<h4 id="section">⭐</h4>
-<p><a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Two%20Sum.md">Two Sum</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/25">Binary Search</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/26">Search Insert Position</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/31">Squares of a Sorted Array</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/34">Move Zeros</a> <a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Last%20and%20Second%20Last.md">Last and Second Last</a><br />
-#### ⭐⭐ <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/24">Reverse Linked List</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/32">Rotate Array</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Meeting%20Rooms%20II.md">Meeting Rooms II</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/36">Intersection of Two Arrays II</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Remove%20Nth%20Node%20From%20End%20of%20List.md">Remove Nth Node From End of List</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/K%20Closest%20Points%20to%20Origin.md">K Closest Points to Origin</a></p>
-<h4 id="section-1">⭐⭐⭐</h4>
-<p><a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Container%20With%20Most%20Water.md">Container With Most Water</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Trapping%20Rain%20Water.md">Trapping Rain Water</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/1">Product of Array Except Self</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/3">Merge Intervals</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/7">Longest Consecutive Sequence</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/13">Coin Change</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/15">Gas Station</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/19">Top K Frequent Elements</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/20">3 Sum</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Count%20Binary%20Substrings.md">Count Binary Substrings</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Word%20Search.md">Word Search</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Subarray%20Sum%20Equals%20K.md">Subarray Sum Equals K</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Subdomain%20Visit%20Count.md">Subdomain Visit Count</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Next%20Permutation.md">Next Permutation</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Expressive%20Words.md">Expressive Words</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Search%20in%20Rotated%20Sorted%20Array.md">Search in Rotated Sorted Array</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Verifying%20an%20Alien%20Dictionary.md">Verifying an Alien Dictionary</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/4Sum.md">4Sum(nSum universal solution)</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/3Sum%20Closest.md">3Sum Closest</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Jump%20Game.md">Jump Game</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Jump%20Game%20II.md">Jump Game II</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Minimum%20Size%20Subarray%20Sum.md">Minimum Size Subarray Sum</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Matrix%20Summation.md">Matrix Summation</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Counting%20Analogous%20Arrays.md">Counting Analogous Arrays</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Custom%20Sorted%20Array.md">Custom Sorted Array</a></p>
-<h3 id="string">String</h3>
-<h4 id="section-2">⭐⭐</h4>
-<p><a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Valid%20Parentheses.md">Valid Parentheses</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Longest%20Common%20Prefix.md">Longest Common Prefix</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Valid%20Palindrome%20II.md">Valid Palindrome II</a></p>
-<h4 id="section-3">⭐⭐⭐</h4>
-<p><a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Longest%20Substring%20Without%20Repeating%20Characters.md">Longest Substring Without Repeating Characters</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Letter%20Combinations%20of%20a%20Phone%20Number.md">Letter Combinations of a Phone Number</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Minimum%20Remove%20to%20Make%20Valid%20Parentheses.md">Minimum Remove to Make Valid Parentheses</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Generate%20Parentheses.md">Generate Parentheses</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Decode%20String.md">Decode String</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Longest%20Palindromic%20Substring.md">Longest Palindromic Substring</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Time%20Based%20Key-Value%20Store.md">Time Based Key-Value Store</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Roman%20to%20Integer.md">Roman to Integer</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Longest%20String%20Chain.md">Longest String Chain</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Robot%20Bounded%20In%20Circle.md">Robot Bounded In Circle</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Word%20Break.md">Word Break</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Minimum%20Number%20of%20Steps%20to%20Make%20Two%20Strings%20Anagram.md">Minimum Number of Steps to Make Two Strings Anagram</a></p>
-<h3 id="linked-list">Linked-List</h3>
-<h4 id="section-4">⭐</h4>
-<p><a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Linked%20List%20Cycle.md">Linked List Cycle</a></p>
-<h4 id="section-5">⭐⭐</h4>
-<p><a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Linked%20List%20Cycle%20II.md">Linked List Cycle II</a></p>
-<h4 id="section-6">⭐⭐⭐</h4>
-<p><a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Add%20Two%20Numbers.md">Add Two Numbers</a></p>
-<h3 id="tree">Tree</h3>
-<h4 id="section-7">⭐</h4>
-<p><a href="https://github.com/bgoonz/FrontEndJobPrep/issues/21">Binary Tree Preorder Traversal</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/22">Binary Tree Inorder Traversal</a></p>
-<h4 id="section-8">⭐⭐</h4>
-<p><a href="https://github.com/bgoonz/FrontEndJobPrep/issues/8">Construct Binary Tree from Preorder and Inorder Traversal</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Invert%20Binary%20Tree.md">Invert Binary Tree</a></p>
-<h3 id="fullstack">Fullstack</h3>
-<h4 id="dbms">DBMS</h4>
-<p><a href="https://github.com/bgoonz/FrontEndJobPrep/issues/45">Unit 2 Exploring Databases and SQL</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/14">ER diagram, Relational Algebra, SQL / NOSQL</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/43">Unit 3: Data Storage</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/35">Unit 4: Data Indexing</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/39">Unit 5: Transactions and Recovery</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/40">Unit 6: Concurrency</a><br />
-<a href="https://github.com/bgoonz/FrontEndJobPrep/issues/47">Unit 1 - 6 Practice Questions Solutions</a></p>
-<hr />
-<p>
-<em>🤯 If you find errors in the content of this project, don’t hesitate to submit issues or pull requests on GitHub for corrections, I really, really appreciate it</em>
-</p>
-<p>
-<em>🤯如果你发现本项目有任何内容上的错误，欢迎在 GitHub 提交 issues 或者 pull requests 进行打脸</em>
-</p>
-</body>
+      table caption {
+        margin-bottom: 0.75em;
+      }
+      tbody {
+        margin-top: 0.5em;
+        border-top: 1px solid #1a1a1a;
+        border-bottom: 1px solid #1a1a1a;
+      }
+      th {
+        border-top: 1px solid #1a1a1a;
+        padding: 0.25em 0.5em 0.25em 0.5em;
+      }
+      td {
+        padding: 0.125em 0.5em 0.25em 0.5em;
+      }
+      header {
+        margin-bottom: 4em;
+        text-align: center;
+      }
+      #TOC li {
+        list-style: none;
+      }
+      #TOC a:not(:hover) {
+        text-decoration: none;
+      }
+      code {
+        white-space: pre-wrap;
+      }
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+      span.underline {
+        text-decoration: underline;
+      }
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+      div.hanging-indent {
+        margin-left: 1.5em;
+        text-indent: -1.5em;
+      }
+      ul.task-list {
+        list-style: none;
+      }
+      .display.math {
+        display: block;
+        text-align: center;
+        margin: 0.5rem auto;
+      }
+    </style>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <h1 id="frontendcollection-keep-updating-hopefully">
+      FrontEndCollection (Keep updating, hopefully…)
+    </h1>
+    <h2 id="web-development-basics">Web Development Basics</h2>
+    <h3 id="html">HTML</h3>
+    <p>
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/2"
+        >1. What happens when you type in a URL</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/4"
+        >2. GET vs POST</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/5"
+        >3. What can we do to improve a website’s performance?</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/6"
+        >4. HTML5 offline storage mechanism</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/9"
+        >5. Common time and space-complexity</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/11"
+        >6. What has been deprecated, and what is new on HTML5?</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/18"
+        >7. How the DOM really works?</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/27"
+        >8. Inline elements, Block elements, and what are the differences?</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/28"
+        >9. Several ways to call a function</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/29"
+        >10. A brief introduction of the differences between “src” and “href”</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/30"
+        >11. A brief introduction of Call, Apply, Bind</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/9"
+        >12. Time and space complexity for common sorting algorithm</a
+      >
+    </p>
+    <h3 id="css">CSS</h3>
+    <p>
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/37"
+        >1. What is the difference between display:none and visibility:hidden
+        style?</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/38"
+        >2. What is BFC(Block Formatting Context)</a
+      >
+    </p>
+    <h2 id="demo">Demo</h2>
+    <p>
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/17"
+        >1. Accordion 🪗</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/23"
+        >2. ModalBox 💬</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/tree/main/JS-Day/DrumKit"
+        >3. Drum Kit 🥁</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/tree/main/JS-Day/Mini%20Clock"
+        >4. Mini Clock 🕑</a
+      ><br />
+      <a
+        href="https://github.com/siyuan25/FrontEndCollection/tree/main/JS-Day/Playing%20with%20Variables"
+        >5. Playing with Variables 🎩</a
+      >
+    </p>
+    <h2 id="deep-dive-in-javascript">Deep Dive in Javascript</h2>
+    <p>
+      <a href="https://bigfrontend.dev/"><em>Learn More on BFE.dev</em></a>
+    </p>
+    <p>
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/33"
+        >1. Implement Curry()</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Core/implement%20Array.prototype.flat().md"
+        >2. implement Array.prototype.flat()</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Core/implement%20curry()%20with%20placeholder%20support.md"
+        >3. Implement curry() with placeholder support</a
+      >
+    </p>
+    <h2 id="data-structures-algorithm-part-in-javascript">
+      Data Structures &amp; Algorithm Part in JavaScript
+    </h2>
+    <h3 id="array">Array</h3>
+    <h4 id="section">⭐</h4>
+    <p>
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Two%20Sum.md"
+        >Two Sum</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/25"
+        >Binary Search</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/26"
+        >Search Insert Position</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/31"
+        >Squares of a Sorted Array</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/34"
+        >Move Zeros</a
+      >
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Last%20and%20Second%20Last.md"
+        >Last and Second Last</a
+      ><br />
+      #### ⭐⭐
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/24"
+        >Reverse Linked List</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/32"
+        >Rotate Array</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Meeting%20Rooms%20II.md"
+        >Meeting Rooms II</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/36"
+        >Intersection of Two Arrays II</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Remove%20Nth%20Node%20From%20End%20of%20List.md"
+        >Remove Nth Node From End of List</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/K%20Closest%20Points%20to%20Origin.md"
+        >K Closest Points to Origin</a
+      >
+    </p>
+    <h4 id="section-1">⭐⭐⭐</h4>
+    <p>
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Container%20With%20Most%20Water.md"
+        >Container With Most Water</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Trapping%20Rain%20Water.md"
+        >Trapping Rain Water</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/1"
+        >Product of Array Except Self</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/3"
+        >Merge Intervals</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/7"
+        >Longest Consecutive Sequence</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/13"
+        >Coin Change</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/15"
+        >Gas Station</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/19"
+        >Top K Frequent Elements</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/20">3 Sum</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Count%20Binary%20Substrings.md"
+        >Count Binary Substrings</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Word%20Search.md"
+        >Word Search</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Subarray%20Sum%20Equals%20K.md"
+        >Subarray Sum Equals K</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Subdomain%20Visit%20Count.md"
+        >Subdomain Visit Count</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Next%20Permutation.md"
+        >Next Permutation</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Expressive%20Words.md"
+        >Expressive Words</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Search%20in%20Rotated%20Sorted%20Array.md"
+        >Search in Rotated Sorted Array</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Verifying%20an%20Alien%20Dictionary.md"
+        >Verifying an Alien Dictionary</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/4Sum.md"
+        >4Sum(nSum universal solution)</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/3Sum%20Closest.md"
+        >3Sum Closest</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Jump%20Game.md"
+        >Jump Game</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Jump%20Game%20II.md"
+        >Jump Game II</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Minimum%20Size%20Subarray%20Sum.md"
+        >Minimum Size Subarray Sum</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Matrix%20Summation.md"
+        >Matrix Summation</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Counting%20Analogous%20Arrays.md"
+        >Counting Analogous Arrays</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Custom%20Sorted%20Array.md"
+        >Custom Sorted Array</a
+      >
+    </p>
+    <h3 id="string">String</h3>
+    <h4 id="section-2">⭐⭐</h4>
+    <p>
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Valid%20Parentheses.md"
+        >Valid Parentheses</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Longest%20Common%20Prefix.md"
+        >Longest Common Prefix</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Valid%20Palindrome%20II.md"
+        >Valid Palindrome II</a
+      >
+    </p>
+    <h4 id="section-3">⭐⭐⭐</h4>
+    <p>
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Longest%20Substring%20Without%20Repeating%20Characters.md"
+        >Longest Substring Without Repeating Characters</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Letter%20Combinations%20of%20a%20Phone%20Number.md"
+        >Letter Combinations of a Phone Number</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Minimum%20Remove%20to%20Make%20Valid%20Parentheses.md"
+        >Minimum Remove to Make Valid Parentheses</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Generate%20Parentheses.md"
+        >Generate Parentheses</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Decode%20String.md"
+        >Decode String</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Longest%20Palindromic%20Substring.md"
+        >Longest Palindromic Substring</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Time%20Based%20Key-Value%20Store.md"
+        >Time Based Key-Value Store</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Roman%20to%20Integer.md"
+        >Roman to Integer</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Longest%20String%20Chain.md"
+        >Longest String Chain</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Robot%20Bounded%20In%20Circle.md"
+        >Robot Bounded In Circle</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Word%20Break.md"
+        >Word Break</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Minimum%20Number%20of%20Steps%20to%20Make%20Two%20Strings%20Anagram.md"
+        >Minimum Number of Steps to Make Two Strings Anagram</a
+      >
+    </p>
+    <h3 id="linked-list">Linked-List</h3>
+    <h4 id="section-4">⭐</h4>
+    <p>
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Linked%20List%20Cycle.md"
+        >Linked List Cycle</a
+      >
+    </p>
+    <h4 id="section-5">⭐⭐</h4>
+    <p>
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Linked%20List%20Cycle%20II.md"
+        >Linked List Cycle II</a
+      >
+    </p>
+    <h4 id="section-6">⭐⭐⭐</h4>
+    <p>
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Add%20Two%20Numbers.md"
+        >Add Two Numbers</a
+      >
+    </p>
+    <h3 id="tree">Tree</h3>
+    <h4 id="section-7">⭐</h4>
+    <p>
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/21"
+        >Binary Tree Preorder Traversal</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/22"
+        >Binary Tree Inorder Traversal</a
+      >
+    </p>
+    <h4 id="section-8">⭐⭐</h4>
+    <p>
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/8"
+        >Construct Binary Tree from Preorder and Inorder Traversal</a
+      ><br />
+      <a
+        href="https://github.com/bgoonz/FrontEndJobPrep/blob/main/JS-Algo/Invert%20Binary%20Tree.md"
+        >Invert Binary Tree</a
+      >
+    </p>
+    <h3 id="fullstack">Fullstack</h3>
+    <h4 id="dbms">DBMS</h4>
+    <p>
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/45"
+        >Unit 2 Exploring Databases and SQL</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/14"
+        >ER diagram, Relational Algebra, SQL / NOSQL</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/43"
+        >Unit 3: Data Storage</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/35"
+        >Unit 4: Data Indexing</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/39"
+        >Unit 5: Transactions and Recovery</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/40"
+        >Unit 6: Concurrency</a
+      ><br />
+      <a href="https://github.com/bgoonz/FrontEndJobPrep/issues/47"
+        >Unit 1 - 6 Practice Questions Solutions</a
+      >
+    </p>
+    <hr />
+    <p>
+      <em
+        >🤯 If you find errors in the content of this project, don’t hesitate to
+        submit issues or pull requests on GitHub for corrections, I really,
+        really appreciate it</em
+      >
+    </p>
+    <p>
+      <em
+        >🤯如果你发现本项目有任何内容上的错误，欢迎在 GitHub 提交 issues 或者
+        pull requests 进行打脸</em
+      >
+    </p>
+  </body>
 </html>

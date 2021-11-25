@@ -1,5 +1,4 @@
-Given an array of meeting time intervals **intervals** where **intervals[i] = [starti, endi]**, *return the minimum number of conference rooms required.*
-
+Given an array of meeting time intervals **intervals** where **intervals[i] = [starti, endi]**, _return the minimum number of conference rooms required._
 
 <img width="561" alt="Screen Shot 2021-09-14 at 4 45 53 PM" src="https://user-images.githubusercontent.com/37787994/133348201-da9580af-24c6-4718-a516-23e142c16d14.png">
 
@@ -16,7 +15,7 @@ var minMeetingRooms = function(intervals) {
     let end = 0;
     let starts = intervals.map(a => a[0]).sort((a, b) => a - b);
     let ends = intervals.map(a => a[1]).sort((a, b) => a - b);
-    
+
     for(let i = 0; i < intervals.length; i++) {
         if(starts[i] < ends[end]) {
             rooms++;

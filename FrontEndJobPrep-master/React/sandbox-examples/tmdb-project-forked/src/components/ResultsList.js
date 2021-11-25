@@ -16,7 +16,7 @@ const colors = [
   "cyan",
   "blue",
   "geekblue",
-  "purple"
+  "purple",
 ];
 
 const ResultsList = ({ data, genres }) => (
@@ -25,7 +25,7 @@ const ResultsList = ({ data, genres }) => (
     size="large"
     pagination={{ pageSize: 5 }}
     dataSource={data}
-    renderItem={movie => {
+    renderItem={(movie) => {
       return (
         <List.Item
           key={movie.id}
@@ -40,7 +40,7 @@ const ResultsList = ({ data, genres }) => (
               text={movie.vote_count}
               key="list-vertical-like-o"
             />,
-            <IconText type="message" text="2" key="list-vertical-message" />
+            <IconText type="message" text="2" key="list-vertical-message" />,
           ]}
           extra={
             <img
@@ -66,9 +66,9 @@ const ResultsList = ({ data, genres }) => (
           <br />
           <br />
           <div>
-            {movie.genre_ids.map(genre_id => (
+            {movie.genre_ids.map((genre_id) => (
               <Tag color={colors[genre_id % 11]}>
-                {genres.find(genre => genre.id === genre_id).name}
+                {genres.find((genre) => genre.id === genre_id).name}
               </Tag>
             ))}
           </div>

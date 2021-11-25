@@ -1,12 +1,10 @@
-
-
 NC03_Search Element Location
 
 ## 描述
 
 在数组 arr 中，查找值与 item 相等的元素出现的所有位置
 
-## 示例1
+## 示例 1
 
 输入：
 
@@ -20,7 +18,7 @@ NC03_Search Element Location
 [0, 6]
 ```
 
-***The useage of array.forEach*** Based on MDN
+**_The useage of array.forEach_** Based on MDN
 
 ```
 // Arrow function
@@ -28,10 +26,6 @@ forEach((element) => { ... } )
 forEach((element, index) => { ... } )
 forEach((element, index, array) => { ... } )
 ```
-
-
-
-
 
 ```
 function findAllOccurrences(arr, target) {
@@ -42,4 +36,3 @@ function findAllOccurrences(arr, target) {
     return list;
 }
 ```
-

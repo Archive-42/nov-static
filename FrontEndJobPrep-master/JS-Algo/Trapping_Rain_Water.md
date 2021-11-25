@@ -1,8 +1,6 @@
-
-### Given *n* non-negative integers representing an elevation map where the width of each bar is *1*, compute how much water it can trap after raining.
+### Given _n_ non-negative integers representing an elevation map where the width of each bar is _1_, compute how much water it can trap after raining.
 
 <img width="647" alt="Screen Shot 2021-09-16 at 11 57 41 PM" src="https://user-images.githubusercontent.com/37787994/133738506-de90c1a7-63c2-45bf-ac74-964809fe0111.png">
-
 
 ```Javascript
 /**
@@ -11,7 +9,7 @@
  */
  /*
  Time complexity: O(n)O(n). Single iteration of O(n)O(n).
-Space complexity: O(1)O(1) extra space. 
+Space complexity: O(1)O(1) extra space.
  */
 function trap(height) {
   if (!height.length) return 0;

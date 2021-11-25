@@ -12,8 +12,8 @@ body {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -24,7 +24,7 @@ div#root {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
@@ -147,7 +147,7 @@ button:disabled:hover {
   position: absolute;
   top: 0;
   left: 0;
-  content: "";
+  content: '';
 }
 
 .loader:after {
@@ -155,7 +155,7 @@ button:disabled:hover {
   width: 75%;
   height: 75%;
   border-radius: 50%;
-  content: "";
+  content: '';
   margin: auto;
   position: absolute;
   top: 0;
@@ -363,13 +363,13 @@ ul.todo-list {
 		Firefox requires `#` to be escaped - https://bugzilla.mozilla.org/show_bug.cgi?id=922433
 		IE and Edge requires *everything* to be escaped to render, so we do that instead of just the `#` - https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/7157459/
 	*/
-  background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23ededed%22%20stroke-width%3D%223%22/%3E%3C/svg%3E");
+  background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23ededed%22%20stroke-width%3D%223%22/%3E%3C/svg%3E');
   background-repeat: no-repeat;
   background-position: center left;
 }
 
 .todo-list li .toggle:checked + .todo-text {
-  background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23bddad5%22%20stroke-width%3D%223%22/%3E%3Cpath%20fill%3D%22%235dc2af%22%20d%3D%22M72%2025L42%2071%2027%2056l-4%204%2020%2020%2034-52z%22/%3E%3C/svg%3E");
+  background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23bddad5%22%20stroke-width%3D%223%22/%3E%3Cpath%20fill%3D%22%235dc2af%22%20d%3D%22M72%2025L42%2071%2027%2056l-4%204%2020%2020%2034-52z%22/%3E%3C/svg%3E');
 }
 
 .todo-list li .todo-text {
@@ -402,23 +402,23 @@ ul.todo-list {
   font-weight: 700;
 }
 
-.todo-list li select.colorPicker option[value="green"] {
+.todo-list li select.colorPicker option[value='green'] {
   color: green;
 }
 
-.todo-list li select.colorPicker option[value="blue"] {
+.todo-list li select.colorPicker option[value='blue'] {
   color: blue;
 }
 
-.todo-list li select.colorPicker option[value="orange"] {
+.todo-list li select.colorPicker option[value='orange'] {
   color: orange;
 }
 
-.todo-list li select.colorPicker option[value="purple"] {
+.todo-list li select.colorPicker option[value='purple'] {
   color: purple;
 }
 
-.todo-list li select.colorPicker option[value="red"] {
+.todo-list li select.colorPicker option[value='red'] {
   color: red;
 }
 
@@ -583,6 +583,6 @@ form.colorSelection label {
   margin: 0;
 }
 
-form.colorSelection input[type="checkbox"] {
+form.colorSelection input[type='checkbox'] {
   margin-right: 5px;
 }

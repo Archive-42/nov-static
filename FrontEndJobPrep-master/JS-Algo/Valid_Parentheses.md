@@ -1,6 +1,3 @@
-
-
-
 ```JS
 /**
  * @param {string} s
@@ -8,7 +5,7 @@
  */
 var isValid = function(s) {
       const stack = [];
-    
+
     for (let i = 0 ; i < s.length ; i++) {
         let c = s.charAt(i);
         switch(c) {
@@ -24,7 +21,7 @@ var isValid = function(s) {
                 }
         }
     }
-    
+
     return stack.length === 0;
 };
 ```

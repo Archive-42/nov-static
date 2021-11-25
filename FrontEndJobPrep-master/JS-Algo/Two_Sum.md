@@ -1,4 +1,4 @@
-#### Given an array of integers `nums` and an integer `target`, return *indices of the two numbers such* that they add up to `target`.
+#### Given an array of integers `nums` and an integer `target`, return _indices of the two numbers such_ that they add up to `target`.
 
 #### You may assume that each input would have **exactly one solution**, and you may not use the same element twice.
 
@@ -6,8 +6,8 @@
 
 <img width="445" alt="Screen Shot 2021-10-25 at 1 18 24 AM" src="https://user-images.githubusercontent.com/37787994/138659774-8fd1b20d-e798-431d-8771-870584e41d05.png">
 
-
 1. Very straightforward O(n^2) solution
+
 ```JS
 /**
  * @param {number[]} nums
@@ -23,8 +23,7 @@ var twoSum = function(nums, target) {
         }
     }
 };
-``` 
-
+```
 
 2. Hashmap O(n) solution
 
@@ -48,4 +47,4 @@ var twoSum = function(nums, target) {
     }
     return [];
 }
-``` 
+```

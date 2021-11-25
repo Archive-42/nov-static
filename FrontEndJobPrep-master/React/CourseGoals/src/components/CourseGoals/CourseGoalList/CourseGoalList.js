@@ -6,7 +6,7 @@ const CourseGoalList = (props) => {
     <ul className={"goal-list"}>
       {/* */}
       {props.items.map((goal) => (
-        // item 
+        // item
         <CourseGoalItem
           key={goal.id}
           id={goal.id}

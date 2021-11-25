@@ -11,7 +11,7 @@ const NavBar = () => {
   const match = useRouteMatch();
 
   useEffect(() => {
-    setMenuPosition(menuItems.find(item => item.path === match.path).key);
+    setMenuPosition(menuItems.find((item) => item.path === match.path).key);
   }, [match.path]);
 
   console.log(match);
@@ -25,7 +25,7 @@ const NavBar = () => {
           defaultSelectedKeys={[menuPosition]}
           style={{ lineHeight: "48px" }}
         >
-          {menuItems.map(item => (
+          {menuItems.map((item) => (
             <Menu.Item key={item.key}>
               <Link to={item.path}>
                 <Icon type={item.icon} />

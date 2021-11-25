@@ -1,22 +1,21 @@
-
 .accordion-item {
-    width: 300px;
+  width: 300px;
 }
 
 .accordion-item-heading {
-    cursor: pointer;
-    margin: 0;
-    background-color: #dddddd;
-    width: inherit;
+  cursor: pointer;
+  margin: 0;
+  background-color: #dddddd;
+  width: inherit;
 }
 .closed .accordion-item-content {
-    width: inherit;
-    visibility: hidden;
-    height: 0;
+  width: inherit;
+  visibility: hidden;
+  height: 0;
 }
 .open .accordion-item-content {
-    width: inherit;
+  width: inherit;
 }
 .open .accordion-item-heading {
-    margin: 0;
+  margin: 0;
 }

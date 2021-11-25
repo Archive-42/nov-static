@@ -1,12 +1,10 @@
-
-
 NC02_Delete First Element In Array
 
 ## 描述
 
 删除数组 arr 第一元素。不要直接修改数组 arr，结果返回新的数组
 
-## 示例1
+## 示例 1
 
 输入：
 
@@ -25,4 +23,3 @@ function curtail(arr) {
   return arr.slice(1);
 }
 ```
-

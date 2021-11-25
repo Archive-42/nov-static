@@ -1,6 +1,6 @@
 **Give a binary string s, return the number of non-empty substrings that have the same number of 0's and 1's, and all the 0's and all the 1's in these substrings are grouped consecutively.**
 
-*Substrings that occur multiple times are counted the number of times they occur.*
+_Substrings that occur multiple times are counted the number of times they occur._
 
 <img width="650" alt="Screen Shot 2021-09-13 at 9 59 12 PM" src="https://user-images.githubusercontent.com/37787994/133197556-02fec2d8-4d69-47af-b398-3f4d6ff02c7e.png">
 

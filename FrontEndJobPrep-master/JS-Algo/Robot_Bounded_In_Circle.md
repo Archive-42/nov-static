@@ -1,10 +1,12 @@
 #### On an infinite plane, a robot initially stands at (0, 0) and faces north. The robot can receive one of three instructions:
+
 - "G": go straight 1 unit;
 - "L": turn 90 degrees to the left;
 - "R": turn 90 degrees to the right.
 
 #### The robot performs the _instructions_ given in order, and repeats them forever.
-#### Return *true* if and only if there exists a circle in the plane such that the robot never leaves the circle.
+
+#### Return _true_ if and only if there exists a circle in the plane such that the robot never leaves the circle.
 
 <img width="441" alt="Screen Shot 2021-10-20 at 6 08 13 PM" src="https://user-images.githubusercontent.com/37787994/138193204-9be37c9b-0cb1-4874-912a-ee6e620bcfdd.png">
 
@@ -16,7 +18,7 @@
 
  // T.C: O(N)
  // S.C: O(1)
-var isRobotBounded = function(instructions) { 
+var isRobotBounded = function(instructions) {
     let x = 0, y = 0;
     // Up(north), right, down(south), left
     const dirs = [[0, 1], [1, 0], [0, -1], [-1, 0]];

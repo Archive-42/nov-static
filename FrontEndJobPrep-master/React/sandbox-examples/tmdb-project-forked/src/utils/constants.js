@@ -7,5 +7,5 @@ export const URLS = {
   searchMovie: "https://api.themoviedb.org/3/search/movie",
   placeholder:
     "https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png",
-  discoverMovie: "https://api.themoviedb.org/3/discover/movie"
+  discoverMovie: "https://api.themoviedb.org/3/discover/movie",
 };

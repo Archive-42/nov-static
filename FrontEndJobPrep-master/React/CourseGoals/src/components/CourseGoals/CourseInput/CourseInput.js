@@ -29,8 +29,8 @@ const FormControl = styled.div`
     border-color: #8b005d;
   }
 `;
-// placeholder 
-//2.  prop 
+// placeholder
+//2.  prop
 const CourseInput = (props) => {
   //4. goalInputChangeHandler hook
   const [enteredValue, setEnteredValue] = useState("");
@@ -43,15 +43,15 @@ const CourseInput = (props) => {
     setEnteredValue(event.target.value);
   };
 
-  //5. form call props, App 
-  // props function 
+  //5. form call props, App
+  // props function
   const formSubmitHandler = (event) => {
     event.preventDefault();
     if (enteredValue.trim().length === 0) {
       setIsValid(false);
       return;
     }
-    //6. onAddGoal APP , App 
+    //6. onAddGoal APP , App
     props.onAddGoal(enteredValue);
     setEnteredValue("");
   };

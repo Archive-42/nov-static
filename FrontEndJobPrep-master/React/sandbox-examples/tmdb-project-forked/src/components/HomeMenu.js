@@ -18,10 +18,10 @@ const HomeMenu = ({ handleClick, current, setCurrent, setQueryParams }) => {
       style={{
         backgroundColor: "#232323",
         textAlign: "right",
-        paddingRight: "1rem"
+        paddingRight: "1rem",
       }}
     >
-      {subMenuItems.map(subMenu => (
+      {subMenuItems.map((subMenu) => (
         <Menu.SubMenu
           key={subMenu.key}
           title={
@@ -35,7 +35,7 @@ const HomeMenu = ({ handleClick, current, setCurrent, setQueryParams }) => {
             </span>
           }
         >
-          {subMenu.data.map(item => (
+          {subMenu.data.map((item) => (
             <Menu.Item
               key={`${subMenu.key}:${item.key}`}
               queryparams={item.queryParams}

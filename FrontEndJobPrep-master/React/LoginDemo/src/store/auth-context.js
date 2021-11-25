@@ -18,7 +18,7 @@ export const AuthContextProvider = (props) => {
     // We should of course check email and password
     // But it's just a dummy/ demo anyways
 
-    // localstorage 
+    // localstorage
     localStorage.setItem("isLoggedIn", "1");
     setIsLoggedIn(true);
   };

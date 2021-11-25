@@ -1,4 +1,4 @@
-.indicator-container{
+.indicator-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,21 +6,20 @@
   position: absolute;
   width: 100%;
   bottom: 10px;
-  
-  .indicator-box{
+
+  .indicator-box {
     padding: 1px;
     transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
-    &.active{
+    &.active {
       border-width: 1px;
       border-color: var(--color);
       border-style: solid;
     }
-    .indicator{
+    .indicator {
       width: 10px;
       height: 10px;
       background-color: var(--color);
       margin: 2px;
     }
   }
-
 }

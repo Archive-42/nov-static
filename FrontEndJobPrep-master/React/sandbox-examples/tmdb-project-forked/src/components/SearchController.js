@@ -11,7 +11,7 @@ const SearchController = () => (
       background: "#fff",
       padding: "6rem 24px",
       minHeight: "calc(100vh - 64px - 53px - 69px)",
-      textAlign: "center"
+      textAlign: "center",
     }}
   >
     <Title level={2}>Search movies</Title>

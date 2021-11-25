@@ -16,9 +16,7 @@ const MovieModal = ({ setModalShown, movie, modalShown }) => (
     style={
       movie.backdrop_path
         ? {
-            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(${
-              URLS.image
-            }/original${movie.backdrop_path})`
+            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(${URLS.image}/original${movie.backdrop_path})`,
           }
         : {}
     }
@@ -51,7 +49,7 @@ const MovieModal = ({ setModalShown, movie, modalShown }) => (
         prefix={movie.revenue ? "$" : null}
         value={movie.revenue || "Unknown"}
         style={{
-          margin: "0 32px"
+          margin: "0 32px",
         }}
       />
     </Row>

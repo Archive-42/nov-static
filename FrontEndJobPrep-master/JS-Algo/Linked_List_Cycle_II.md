@@ -5,7 +5,7 @@
 <img width="558" alt="Screen Shot 2021-09-26 at 9 48 56 PM" src="https://user-images.githubusercontent.com/37787994/134846952-f1d9086e-266c-4824-924f-a4c8bbaaeef9.png">
 
 Time complexity : O(n)  
-Space complexity : O(1)  
+Space complexity : O(1)
 
 ```JS
 /**

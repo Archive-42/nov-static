@@ -1,7 +1,7 @@
 import "./CourseGoalItem.css";
 
 const courseGoalItem = (props) => {
-  // item 
+  // item
   const deleteHandler = () => {
     props.onDelete(props.id);
   };

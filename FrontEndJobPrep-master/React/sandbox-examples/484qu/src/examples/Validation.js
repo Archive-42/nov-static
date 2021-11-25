@@ -1,24 +1,24 @@
-import React, { useCallback } from 'react'
-import { Form, Button } from 'antd'
-import FormBuilder from 'antd-form-builder'
+import React, { useCallback } from "react";
+import { Form, Button } from "antd";
+import FormBuilder from "antd-form-builder";
 
 const MOCK_USERNAMES = {
   nate: true,
   bood: true,
   kevin: true,
-}
+};
 
 export default () => {
-  const [form] = Form.useForm()
-  const handleSubmit = useCallback(values => {
-    console.log('Submit: ', values)
-  })
+  const [form] = Form.useForm();
+  const handleSubmit = useCallback((values) => {
+    console.log("Submit: ", values);
+  });
 
   const meta = [
     {
-      key: 'username',
-      label: 'Username',
-      extra: 'Note: username nate, bood or kevin already exist',
+      key: "username",
+      label: "Username",
+      extra: "Note: username nate, bood or kevin already exist",
       hasFeedback: true, // Show validation status icon in the right
       required: true, // this adds an entry to rules: [{ required: true, message: 'Username is required' }]
       rules: [
@@ -29,53 +29,53 @@ export default () => {
             return new Promise((resolve, reject) => {
               setTimeout(() => {
                 if (MOCK_USERNAMES[value]) {
-                  reject(new Error(`Username "${value}" already exists.`))
+                  reject(new Error(`Username "${value}" already exists.`));
                 } else {
-                  resolve()
+                  resolve();
                 }
-              }, 1000)
-            })
+              }, 1000);
+            });
           },
         },
       ],
     },
     {
-      key: 'password',
-      label: 'Password',
-      widget: 'password',
+      key: "password",
+      label: "Password",
+      widget: "password",
       onChange: () => {
-        if (form.isFieldTouched('confirmPassword')) {
-          form.validateFields(['confirmPassword'])
+        if (form.isFieldTouched("confirmPassword")) {
+          form.validateFields(["confirmPassword"]);
         }
       },
       rules: [
         // This is equivalent with "required: true"
         {
           required: true,
-          message: 'Password is required',
+          message: "Password is required",
         },
       ],
     },
     {
-      key: 'confirmPassword',
-      label: 'Confirm Passowrd',
-      widget: 'password',
+      key: "confirmPassword",
+      label: "Confirm Passowrd",
+      widget: "password",
       required: true,
       rules: [
         {
           validator: (rule, value, callback) => {
             return new Promise((resolve, reject) => {
-              if (value !== form.getFieldValue('password')) {
-                reject(new Error('Two passwords are inconsistent.'))
+              if (value !== form.getFieldValue("password")) {
+                reject(new Error("Two passwords are inconsistent."));
               } else {
-                resolve()
+                resolve();
               }
-            })
+            });
           },
         },
       ],
     },
-  ]
+  ];
 
   return (
     <Form form={form} onSubmit={handleSubmit}>
@@ -86,5 +86,5 @@ export default () => {
         </Button>
       </Form.Item>
     </Form>
-  )
-}
+  );
+};

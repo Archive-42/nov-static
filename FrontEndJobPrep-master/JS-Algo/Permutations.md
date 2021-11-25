@@ -1,7 +1,6 @@
-### Given an array *nums* of distinct integers, return all the *possible permutations*. You can return the answer in *any order*.
+### Given an array _nums_ of distinct integers, return all the _possible permutations_. You can return the answer in _any order_.
 
 <img width="585" alt="Screen Shot 2021-09-17 at 2 33 05 PM" src="https://user-images.githubusercontent.com/37787994/133855859-af45ae95-abb5-4297-b909-3d1d5a597e4b.png">
-
 
 ```Javascript
 /**

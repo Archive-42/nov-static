@@ -5,7 +5,7 @@ import {
   Link,
   Switch,
   useRouteMatch,
-  useParams
+  useParams,
 } from "react-router-dom";
 
 import { paramsToString } from "./functions";
@@ -51,9 +51,9 @@ class CollectionsGrid extends Component {
         colBestScifi,
         colBiggestBoxOfficeFlops,
         colLargestGrossing,
-        colMostPopularOnes
+        colMostPopularOnes,
       },
-      collections
+      collections,
     };
   }
 
@@ -62,7 +62,7 @@ class CollectionsGrid extends Component {
       <div
         style={{
           background: "#fff",
-          padding: "2rem"
+          padding: "2rem",
         }}
       >
         <Title level={2}>Collections</Title>
@@ -71,10 +71,10 @@ class CollectionsGrid extends Component {
             gutter: 16,
             xs: 1,
             sm: 2,
-            lg: 4
+            lg: 4,
           }}
           dataSource={this.state.collections}
-          renderItem={collection => (
+          renderItem={(collection) => (
             <List.Item>
               <CollectionItem
                 collection={collection}

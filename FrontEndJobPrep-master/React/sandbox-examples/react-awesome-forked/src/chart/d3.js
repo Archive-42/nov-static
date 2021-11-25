@@ -15,7 +15,7 @@ class Line extends React.Component {
     return {
       stroke: "blue",
       fill: "none",
-      strokeWidth: 1
+      strokeWidth: 1,
     };
   }
 
@@ -41,7 +41,7 @@ class DataSeries extends React.Component {
       data: [],
       interpolationType: "cardinal",
       // colors: d3.scale.category10()
-      colors: d3.scaleOrdinal(d3.schemeCategory10)
+      colors: d3.scaleOrdinal(d3.schemeCategory10),
     };
   }
 
@@ -50,10 +50,10 @@ class DataSeries extends React.Component {
 
     let line = d3
       .line()
-      .x(d => {
+      .x((d) => {
         return xScale(d.x);
       })
-      .y(d => {
+      .y((d) => {
         return yScale(d.y);
       });
     // .curve(interpolationType);
@@ -82,7 +82,7 @@ class LineChart extends React.Component {
   getDefaultProps() {
     return {
       width: 600,
-      height: 300
+      height: 300,
     };
   }
 

@@ -23,14 +23,14 @@ const images = {
   colBestScifi,
   colBiggestBoxOfficeFlops,
   colLargestGrossing,
-  colMostPopularOnes
+  colMostPopularOnes,
 };
 
 const CollectionsGrid = () => (
   <div
     style={{
       background: "#fff",
-      padding: "2rem"
+      padding: "2rem",
     }}
   >
     <Title level={2}>Collections</Title>
@@ -39,10 +39,10 @@ const CollectionsGrid = () => (
         gutter: 16,
         xs: 1,
         sm: 2,
-        lg: 4
+        lg: 4,
       }}
       dataSource={collections}
-      renderItem={collection => (
+      renderItem={(collection) => (
         <List.Item>
           <CollectionItem
             collection={collection}

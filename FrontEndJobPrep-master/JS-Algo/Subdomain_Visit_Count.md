@@ -1,7 +1,6 @@
-### A website domain *"discuss.leetcode.com"* consists of various subdomains. At the top level, we have *"com"*, at the next level, we have *"leetcode.com"* and at the lowest level, *"discuss.leetcode.com".* When we visit a domain like *"discuss.leetcode.com"*, we will also visit the parent domains "leetcode.com" and "com" implicitly.
+### A website domain _"discuss.leetcode.com"_ consists of various subdomains. At the top level, we have _"com"_, at the next level, we have _"leetcode.com"_ and at the lowest level, _"discuss.leetcode.com"._ When we visit a domain like _"discuss.leetcode.com"_, we will also visit the parent domains "leetcode.com" and "com" implicitly.
 
 <img width="640" alt="Screen Shot 2021-09-17 at 6 55 06 PM" src="https://user-images.githubusercontent.com/37787994/133868454-d88ba542-2728-4c1b-9710-4ba6d854841a.png">
-
 
 ```Javascript
 /**
@@ -18,7 +17,7 @@ visitCounts  = {
 
 so, visitCounts.key is google.mail.com, yahoo.com... value is 900, 50 .....
 
-Object is not Array, they work in a totally different way. 
+Object is not Array, they work in a totally different way.
 visitCount[subdomain] means to add subdomain in visitCount object
 
 */

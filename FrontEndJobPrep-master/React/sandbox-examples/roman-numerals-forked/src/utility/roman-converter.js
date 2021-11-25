@@ -1,4 +1,4 @@
-const romanConverter = numString => {
+const romanConverter = (numString) => {
   var nums = {
     1000: "M",
     900: "CM",
@@ -12,7 +12,7 @@ const romanConverter = numString => {
     9: "IX",
     5: "V",
     4: "IV",
-    1: "I"
+    1: "I",
   };
   var result = "";
   var keys = Object.keys(nums);

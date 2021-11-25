@@ -11,7 +11,7 @@ function AddExpense(props) {
   const saveFilteredDate = (selectedDate) => {
     setSelectedDate(selectedDate);
   };
-  // 
+  //
   const filteredYear = expenses.filter((expense) => {
     return expense.date.getFullYear().toString() === selectedDate;
   });

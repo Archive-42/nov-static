@@ -1,30 +1,30 @@
-import React, { useCallback } from 'react'
-import { Form, Button } from 'antd'
-import FormBuilder from 'antd-form-builder'
+import React, { useCallback } from "react";
+import { Form, Button } from "antd";
+import FormBuilder from "antd-form-builder";
 
 export default () => {
-  const [form] = Form.useForm()
-  const forceUpdate = FormBuilder.useForceUpdate()
-  const handleFinish = useCallback(values => {
-    console.log('Submit: ', values)
-  })
+  const [form] = Form.useForm();
+  const forceUpdate = FormBuilder.useForceUpdate();
+  const handleFinish = useCallback((values) => {
+    console.log("Submit: ", values);
+  });
 
   const meta = [
     {
-      key: 'favoriteFruit',
-      label: 'Favorite Fruit',
-      widget: 'radio-group',
-      options: ['Apple', 'Orange', 'Other'],
-      initialValue: 'Apple',
+      key: "favoriteFruit",
+      label: "Favorite Fruit",
+      widget: "radio-group",
+      options: ["Apple", "Orange", "Other"],
+      initialValue: "Apple",
     },
-  ]
+  ];
 
   // Push other input if choose others
-  if (form.getFieldValue('favoriteFruit') === 'Other') {
+  if (form.getFieldValue("favoriteFruit") === "Other") {
     meta.push({
-      key: 'otherFruit',
-      label: 'Other',
-    })
+      key: "otherFruit",
+      label: "Other",
+    });
   }
 
   return (
@@ -36,5 +36,5 @@ export default () => {
         </Button>
       </Form.Item>
     </Form>
-  )
-}
+  );
+};

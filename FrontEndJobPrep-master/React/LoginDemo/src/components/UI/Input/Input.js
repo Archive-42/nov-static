@@ -2,7 +2,7 @@ import classes from "./Input.module.css";
 import { useRef, useEffect, useImperativeHandle } from "react";
 import React from "react";
 
-// ref Login.js 
+// ref Login.js
 const Input = React.forwardRef((props, ref) => {
   const inputRef = useRef();
   const activate = () => {

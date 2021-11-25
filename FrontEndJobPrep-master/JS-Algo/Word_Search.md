@@ -1,12 +1,10 @@
-Given an *m x n* grid of characters *board* and a string word, return *true* if *word* exists in the *grid*.
+Given an _m x n_ grid of characters _board_ and a string word, return _true_ if _word_ exists in the _grid_.
 
 The word can be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.
 
 <img width="652" alt="Screen Shot 2021-09-14 at 8 34 50 PM" src="https://user-images.githubusercontent.com/37787994/133366357-1fe35372-3f09-4469-8896-623228f9a933.png">
 
-
 <img width="635" alt="Screen Shot 2021-09-14 at 8 35 12 PM" src="https://user-images.githubusercontent.com/37787994/133366399-9bf14c7f-ed33-4024-a26b-94dd247eca8a.png">
-
 
 ```Javascript
 /**
@@ -20,7 +18,7 @@ var exist = function(board, word) {
     let v = board[0].length;
     //move up, right, down, left
     const dirs = [[-1, 0], [0, 1], [1, 0], [0, -1]];
-    
+
     const explore = (x, y, k) => {
         //if current cell is not corresponding to the work, break the recursive call immediately
         if(board[x][y] !== word[k]) return false;
@@ -40,7 +38,7 @@ var exist = function(board, word) {
         board[x][y] = word[k];
         return false;
     }
-    
+
     //traverse the entire matrix, and call explore function
     for(let i = 0; i < h; i++) {
         for(let j = 0; j < v; j++) {

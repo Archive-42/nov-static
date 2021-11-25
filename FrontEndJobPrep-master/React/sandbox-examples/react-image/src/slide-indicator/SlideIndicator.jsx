@@ -9,7 +9,7 @@ function SlideIndicator({ count, active, onSelect, color }) {
       <div
         className="indicator-container"
         style={{
-          "--color": color
+          "--color": color,
         }}
       >
         {indicators.map((item, idx) => {

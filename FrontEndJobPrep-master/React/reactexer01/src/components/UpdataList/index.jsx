@@ -16,7 +16,7 @@ const UpdateList = (props) => {
   };
 
   const updateUser = (e) => {
-    // if username   id   
+    // if username   id
     // else   id
     if (usernames.trim() === "") {
       alert(" ");

@@ -10,12 +10,12 @@ import { paramsToString } from "../utils/helpers";
 
 const CollectionMovies = () => {
   const [collection, setCollection] = useState({
-    queryString: {}
+    queryString: {},
   });
   let { colId } = useParams();
 
   useEffect(() => {
-    setCollection(collections.find(collection => collection.id === colId));
+    setCollection(collections.find((collection) => collection.id === colId));
   }, [colId]);
 
   return (

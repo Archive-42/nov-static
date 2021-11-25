@@ -14,12 +14,12 @@ const SearchAutoComplete = () => {
     getGenres();
   }, []);
 
-  const getMovies = value => {
+  const getMovies = (value) => {
     let dataSource = [];
     if (value.length > 0) {
       fetch(`${URLS.searchMovie}?api_key=${API_KEY}&query=${value}`)
-        .then(response => response.json())
-        .then(data => setDataSource(data.results));
+        .then((response) => response.json())
+        .then((data) => setDataSource(data.results));
     } else {
       setDataSource(dataSource);
     }
@@ -27,11 +27,11 @@ const SearchAutoComplete = () => {
 
   const getGenres = () => {
     fetch(`${URLS.genres}?api_key=${API_KEY}`)
-      .then(response => response.json())
-      .then(data => setGenres(data.genres));
+      .then((response) => response.json())
+      .then((data) => setGenres(data.genres));
   };
 
-  const onChange = value => {
+  const onChange = (value) => {
     getMovies(value);
     setValue(value);
   };
@@ -40,12 +40,12 @@ const SearchAutoComplete = () => {
     let movies = [];
     if (dataSource !== undefined && dataSource !== []) {
       return dataSource
-        .filter(item => {
+        .filter((item) => {
           if (movies.includes(item.title)) return false;
           movies.push(item.title);
           return true;
         })
-        .map(opt => (
+        .map((opt) => (
           <AutoComplete.Option key={opt.id} value={opt.id.toString()}>
             {opt.title}
           </AutoComplete.Option>

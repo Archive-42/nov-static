@@ -4,7 +4,6 @@ Given the **head** of a linked list, remove the **nth** node from the end of the
 
 <img width="652" alt="Screen Shot 2021-09-13 at 11 45 22 PM" src="https://user-images.githubusercontent.com/37787994/133208553-6c8007e5-f8b6-49e4-a9fc-24f8c0332cd7.png">
 
-
 ```Javascript
 var removeNthFromEnd = function(head, n) {
     let fast = head, slow = head;

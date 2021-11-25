@@ -6,7 +6,7 @@ import "./index.css";
 class ReactSlickDemo extends React.Component {
   render() {
     var settings = {
-      dots: true
+      dots: true,
     };
     return (
       <div className="container">

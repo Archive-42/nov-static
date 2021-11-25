@@ -10,7 +10,7 @@ const Home = () => {
   const [current, setCurrent] = useState("");
   const [queryParams, setQueryParams] = useState({});
 
-  const handleClick = e => {
+  const handleClick = (e) => {
     setCurrent(e.key);
     setQueryParams(e.item.props.queryparams);
   };

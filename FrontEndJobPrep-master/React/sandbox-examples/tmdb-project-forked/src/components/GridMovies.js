@@ -18,8 +18,8 @@ const GridMovies = ({ title, url }) => {
 
   const loadMovies = () => {
     fetch(`${url}&api_key=${API_KEY}`)
-      .then(response => response.json())
-      .then(data => setMovies(data.results));
+      .then((response) => response.json())
+      .then((data) => setMovies(data.results));
   };
 
   useEffect(() => {
@@ -28,8 +28,8 @@ const GridMovies = ({ title, url }) => {
 
   const loadMovie = () => {
     fetch(`${URLS.movie}/${modalMovieId}?api_key=${API_KEY}`)
-      .then(response => response.json())
-      .then(movie => setModalMovie(movie));
+      .then((response) => response.json())
+      .then((movie) => setModalMovie(movie));
   };
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const GridMovies = ({ title, url }) => {
     loadMovie();
   }, [modalMovieId]);
 
-  const showModal = movieId => {
+  const showModal = (movieId) => {
     setModalMovieId(movieId);
     setModalShown(true);
   };
@@ -50,7 +50,7 @@ const GridMovies = ({ title, url }) => {
       style={{
         background: "#fff",
         padding: "2rem",
-        minHeight: "calc(100vh - 64px - 53px - 69px)"
+        minHeight: "calc(100vh - 64px - 53px - 69px)",
       }}
     >
       {title ? <Title level={2}>Movies</Title> : ""}
@@ -60,10 +60,10 @@ const GridMovies = ({ title, url }) => {
           xs: 1,
           sm: 2,
           md: 4,
-          lg: 8
+          lg: 8,
         }}
         dataSource={movies}
-        renderItem={movie => (
+        renderItem={(movie) => (
           <List.Item>
             <Card
               cover={

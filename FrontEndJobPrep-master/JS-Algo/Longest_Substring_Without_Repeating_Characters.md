@@ -2,7 +2,6 @@ Given a string _s_, find the length of the **longest substring** without repeati
 
 <img width="544" alt="Screen Shot 2021-09-23 at 8 13 14 PM" src="https://user-images.githubusercontent.com/37787994/134612616-3601f1c9-73e8-46b6-ad1d-481965ce89c8.png">
 
-
 ```JS
 /**
  * @param {string} s

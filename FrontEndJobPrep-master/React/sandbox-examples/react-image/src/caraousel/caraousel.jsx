@@ -29,7 +29,7 @@ export default function Caraousel(props) {
   //   setCurrent(newVal);
   // };
 
-  const increment = current => {
+  const increment = (current) => {
     let newVal = current + 1;
     if (newVal >= 20) {
       newVal = newVal - total;
@@ -57,7 +57,7 @@ export default function Caraousel(props) {
         style={{
           "--slider-height": props.sliderHeightInpx
             ? props.sliderHeightInpx + "px"
-            : "400px"
+            : "400px",
         }}
       >
         {data.map((item, idx) => {
@@ -71,7 +71,7 @@ export default function Caraousel(props) {
               className={`slide ${selected}`}
               key={idx}
               style={{
-                left: newPostion
+                left: newPostion,
               }}
               onClick={() => {
                 window.open(item.target);
@@ -91,7 +91,7 @@ export default function Caraousel(props) {
           <SlideIndicator
             count={total}
             active={current}
-            onSelect={newCurrent => {
+            onSelect={(newCurrent) => {
               setAutoPlay(false);
               setCurrent(newCurrent);
               /**
@@ -133,20 +133,20 @@ Caraousel.propTypes = {
       image: PropTypes.string.isRequired,
       target: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
-      excerpt: PropTypes.string.isRequired
+      excerpt: PropTypes.string.isRequired,
     })
   ),
   titleVisible: PropTypes.bool.isRequired,
   excerptVisible: PropTypes.bool.isRequired,
   indicatorVisible: PropTypes.bool.isRequired,
   sliderHeightInpx: PropTypes.number.isRequired,
-  imageCaptionstyle: PropTypes.object
+  imageCaptionstyle: PropTypes.object,
 };
 
 Caraousel.defaultProps = {
   autoplay: true,
   indicatorColor: "white",
-  data: (function() {
+  data: (function () {
     let data = new Array(20).fill(0);
     data = data.map((image, index) => {
       return {
@@ -155,7 +155,7 @@ Caraousel.defaultProps = {
         title: "This is Sample Title",
         excerpt:
           "This is a sample excerpt.This is a sample excerpt.This is a sample excerpt.This is a sample excerpt.",
-        target: `http://${index}.com`
+        target: `http://${index}.com`,
       };
     });
     return data;
@@ -165,5 +165,5 @@ Caraousel.defaultProps = {
   indicatorVisible: true,
   sliderHeightInpx: 400,
   slideshowDelay: 3000,
-  imageCaptionstyle: {}
+  imageCaptionstyle: {},
 };

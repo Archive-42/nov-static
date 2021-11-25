@@ -16,18 +16,18 @@ import createReactClass from "create-react-class";
 const propsMixin = {
   getDefaultProps: () => {
     return {
-      name: "foo"
+      name: "foo",
     };
-  }
+  },
 };
 
 const propsMixin2 = {
   getDefaultProps: () => {
     return {
       // name: "foo2"   // Invariant Violation, Tried to merge two objects with the same key
-      title: "ftile"
+      title: "ftile",
     };
-  }
+  },
 };
 
 const FooComponent = createReactClass({
@@ -37,15 +37,15 @@ const FooComponent = createReactClass({
   //     name: "thom"
   //   };
   // },
-  render: function() {
+  render: function () {
     return <h1>Hello props, {this.props.name}</h1>;
-  }
+  },
 });
 
 export { FooComponent };
 
 // implement mixin with js
-const mixinjs = function(obj, mixins) {
+const mixinjs = function (obj, mixins) {
   const newObj = obj;
   if (obj == null || obj.prototype == null) {
     return newObj;
@@ -61,12 +61,12 @@ const mixinjs = function(obj, mixins) {
 };
 
 const manMixins = {
-  speak: function() {
+  speak: function () {
     console.log("I'm " + this.name);
-  }
+  },
 };
 
-const Man = function() {
+const Man = function () {
   this.name = "wang";
 };
 

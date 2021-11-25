@@ -25,7 +25,7 @@
 - [https://bryan-guner.gitbook.io/job-search/Postings:](https://bryan-guner.gitbook.io/job-search/Postings:)
 - [https://bryan-guner.gitbook.io/job-search/Resources](https://bryan-guner.gitbook.io/job-search/Resources)
 - [https://bryan-guner.gitbook.io/job-search/Job-Search-Guide](https://bryan-guner.gitbook.io/job-search/Job-Search-Guide)
-- [https://bryan-guner.gitbook.io/job-search/Developer-Advocate-(Remote)](https://bryan-guner.gitbook.io/job-search/Developer-Advocate-(Remote))
+- [https://bryan-guner.gitbook.io/job-search/Developer-Advocate-(Remote)](<https://bryan-guner.gitbook.io/job-search/Developer-Advocate-(Remote)>)
 - [https://bryan-guner.gitbook.io/job-search/Home](https://bryan-guner.gitbook.io/job-search/Home)
 - [https://bryan-guner.gitbook.io/job-search/Git-Repo](https://bryan-guner.gitbook.io/job-search/Git-Repo)
 - [https://bryan-guner.gitbook.io/job-search/Links](https://bryan-guner.gitbook.io/job-search/Links)

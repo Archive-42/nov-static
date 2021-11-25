@@ -5,7 +5,7 @@ import { useState } from "react";
 import CourseGoalList from "./components/CourseGoals/CourseGoalList/CourseGoalList";
 
 const App = () => {
-  //1. courseGoalList 
+  //1. courseGoalList
   // state object
   const [courseGoals, setCourseGoals] = useState([
     { text: "Do All Work", id: "g1" },
@@ -14,7 +14,7 @@ const App = () => {
 
   // list
   const addGoalHandler = (enteredText) => {
-    // 
+    //
     setCourseGoals((prevState) => {
       const updateGoals = [...prevState];
       updateGoals.unshift({ text: enteredText, id: Math.random().toString() });
@@ -22,7 +22,7 @@ const App = () => {
     });
   };
 
-  //3. add   list 
+  //3. add   list
   let content = <p style={{ textAlign: "center" }}>No goals. Maybe add one?</p>;
 
   //4.  delete

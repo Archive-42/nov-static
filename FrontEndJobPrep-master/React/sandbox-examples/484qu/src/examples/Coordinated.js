@@ -1,29 +1,29 @@
-import React, { useCallback } from 'react'
-import { Form, Button } from 'antd'
-import FormBuilder from 'antd-form-builder'
+import React, { useCallback } from "react";
+import { Form, Button } from "antd";
+import FormBuilder from "antd-form-builder";
 
 export default () => {
-  const [form] = Form.useForm()
-  const handleFinish = useCallback(values => {
-    console.log('Submit: ', values)
-  })
+  const [form] = Form.useForm();
+  const handleFinish = useCallback((values) => {
+    console.log("Submit: ", values);
+  });
 
   const meta = [
     {
-      key: 'gender',
-      label: 'Gender',
-      widget: 'radio-group',
-      options: ['Male', 'Female'],
-      onChange: evt => {
-        if (evt.target.value === 'Male') {
-          form.setFieldsValue({ note: 'Hi, man!' })
+      key: "gender",
+      label: "Gender",
+      widget: "radio-group",
+      options: ["Male", "Female"],
+      onChange: (evt) => {
+        if (evt.target.value === "Male") {
+          form.setFieldsValue({ note: "Hi, man!" });
         } else {
-          form.setFieldsValue({ note: 'Hi, lady!' })
+          form.setFieldsValue({ note: "Hi, lady!" });
         }
       },
     },
-    { key: 'note', label: 'Note' },
-  ]
+    { key: "note", label: "Note" },
+  ];
 
   return (
     <Form onFinish={handleFinish} form={form}>
@@ -34,5 +34,5 @@ export default () => {
         </Button>
       </Form.Item>
     </Form>
-  )
-}
+  );
+};

@@ -26,9 +26,9 @@ CarouselImage.propTypes = {
     image: PropTypes.string.isRequired,
     target: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    excerpt: PropTypes.string.isRequired
+    excerpt: PropTypes.string.isRequired,
   }),
   titleVisible: PropTypes.bool.isRequired,
   excerptVisible: PropTypes.bool.isRequired,
-  imageCaptionStyle: PropTypes.object
+  imageCaptionStyle: PropTypes.object,
 };

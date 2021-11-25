@@ -2,8 +2,6 @@
 
 <img width="550" alt="Screen Shot 2021-09-29 at 12 23 53 AM" src="https://user-images.githubusercontent.com/37787994/135222000-bb169d28-6b94-4a2f-9a17-c0beec55302c.png">
 
-
-
 Time complexity : O(n^2). Since expanding a palindrome around its center could take O(n) time, the overall complexity is O(n^2). Space complexity : O(1)
 
 ```JS
@@ -30,7 +28,7 @@ var longestPalindrome = function(s) {
         const longerPalindrome = type1.length > type2.length ? type1 : type2;
         if (longerPalindrome.length > longest.length) {
             longest = longerPalindrome;
-        } 
+        }
     }
     return longest;
 };

@@ -3,10 +3,10 @@ import "./Chart.css";
 
 const Chart = (props) => {
   // expenseChart props.dataPoints
-  //map transform from object to numbers 
+  //map transform from object to numbers
   //  expenseChart.js dataPoints object
   const dataPointsValues = props.dataPoints.map((dataPoint) => dataPoint.value);
-  //max 
+  //max
   const totalMaximum = Math.max(...dataPointsValues);
 
   return (

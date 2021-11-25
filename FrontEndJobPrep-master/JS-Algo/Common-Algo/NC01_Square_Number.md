@@ -1,12 +1,10 @@
-
-
 NC01_Square Number
 
 ## 描述
 
 为数组 arr 中的每元素求二次方。不要直接修改数组 arr，结果返回新的数组
 
-## 示例1
+## 示例 1
 
 输入：
 
@@ -22,9 +20,6 @@ NC01_Square Number
 [1, 4, 9, 16]
 ```
 
-
-
 ```javascript
-const square = arr => arr.map(num => num * num);
+const square = (arr) => arr.map((num) => num * num);
 ```
-

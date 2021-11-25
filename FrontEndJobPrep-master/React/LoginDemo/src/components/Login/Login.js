@@ -21,7 +21,7 @@ const Login = () => {
         return { value: action.val, isValid: action.val.includes("@") };
       }
       if (action.type === "INPUT_BLUR") {
-        //React  state 
+        //React  state
         return { value: state.value, isValid: state.value.includes("@") };
       }
     },
@@ -49,10 +49,10 @@ const Login = () => {
   const authCtx = useContext(AuthContext);
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
-  // isValid valid 
+  // isValid valid
   const { isValid: emailIsValid } = emailState;
   const { isValid: passIsValid } = passState;
-  //clear the last timer before setting a new one clearTimeOut 
+  //clear the last timer before setting a new one clearTimeOut
   useEffect(() => {
     const identifier = setTimeout(() => {
       console.log("check");
@@ -81,14 +81,14 @@ const Login = () => {
     dispatchPass({ type: "PASS_BLUR" });
   };
 
-  // 
+  //
   const submitHandler = (event) => {
     event.preventDefault();
     if (formIsValid) {
       authCtx.onLogin(emailState.value, passState.value);
     } else if (!emailIsValid) {
       emailInputRef.current.focus();
-      // email password 
+      // email password
     } else {
       passwordInputRef.current.focus();
     }

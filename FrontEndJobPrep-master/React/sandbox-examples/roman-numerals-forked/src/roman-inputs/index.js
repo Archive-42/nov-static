@@ -7,7 +7,7 @@ import {
   Result,
   ButtonsRow,
   CustomBtn,
-  ErrorMessage
+  ErrorMessage,
 } from "./style.css";
 
 const RomanInputs = () => {
@@ -66,7 +66,7 @@ const RomanInputs = () => {
               placeholder="Enter first number"
               value={firstValue}
               type="number"
-              onChange={e =>
+              onChange={(e) =>
                 handleValueChange(
                   "firstNumber",
                   +e.target.value,
@@ -92,7 +92,7 @@ const RomanInputs = () => {
               placeholder="Enter second number"
               value={secondValue}
               type="number"
-              onChange={e =>
+              onChange={(e) =>
                 handleValueChange(
                   "secondNumber",
                   +e.target.value,

@@ -1,8 +1,4 @@
-
-
 NC06_Precision Problem
-
-
 
 ```
 描述
@@ -16,14 +12,14 @@ NC06_Precision Problem
 
 ```
 
-
-
 ```js
 function multiply(a, b) {
-   let a1 = a.toString(); //3
-   let b1 = b.toString(); //0.1
-    let len = Math.max(a1.length - 1 - a1.indexOf("."), b1.length - 1 - b1.indexOf("."))
-    return parseFloat(a * b).toFixed(len);
+  let a1 = a.toString(); //3
+  let b1 = b.toString(); //0.1
+  let len = Math.max(
+    a1.length - 1 - a1.indexOf("."),
+    b1.length - 1 - b1.indexOf(".")
+  );
+  return parseFloat(a * b).toFixed(len);
 }
 ```
-
