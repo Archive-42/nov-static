@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>CSS Questions</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">CSS Questions</h1>
+</header>
+<ul>
+<li>What is CSS selector specificity and how does it work?</li>
+<li>What’s the difference between “resetting” and “normalizing” CSS? Which would you choose, and why?</li>
+<li>Describe Floats and how they work.</li>
+<li>Describe z-index and how stacking context is formed.</li>
+<li>Describe BFC (Block Formatting Context) and how it works.</li>
+<li>What are the various clearing techniques and which is appropriate for what context?</li>
+<li>How would you approach fixing browser-specific styling issues?</li>
+<li>How do you serve your pages for feature-constrained browsers?
+<ul>
+<li>What techniques/processes do you use?</li>
+</ul></li>
+<li>What are the different ways to visually hide content (and make it available only for screen readers)?</li>
+<li>Have you ever used a grid system, and if so, what do you prefer?</li>
+<li>Have you used or implemented media queries or mobile specific layouts/CSS?</li>
+<li>Are you familiar with styling SVG?</li>
+<li>Can you give an example of an <code>@media</code> property other than <code>screen</code>?</li>
+<li>What are some of the “gotchas” for writing efficient CSS?</li>
+<li>What are the advantages/disadvantages of using CSS preprocessors?
+<ul>
+<li>Describe what you like and dislike about the CSS preprocessors you have used.</li>
+</ul></li>
+<li>How would you implement a web design comp that uses non-standard fonts?</li>
+<li>Explain how a browser determines what elements match a CSS selector.</li>
+<li>Describe pseudo-elements and discuss what they are used for.</li>
+<li>Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.</li>
+<li>What does <code>* { box-sizing: border-box; }</code> do? What are its advantages?</li>
+<li>What is the CSS <code>display</code> property and can you give a few examples of its use?</li>
+<li>What’s the difference between inline and inline-block?</li>
+<li>What’s the difference between the “nth-of-type()” and “nth-child()” selectors?</li>
+<li>What’s the difference between a relative, fixed, absolute and statically positioned element?</li>
+<li>What existing CSS frameworks have you used locally, or in production? How would you change/improve them?</li>
+<li>Have you used CSS Grid?</li>
+<li>Can you explain the difference between coding a web site to be responsive versus using a mobile-first strategy?</li>
+<li>Have you ever worked with retina graphics? If so, when and what techniques did you use?</li>
+<li>Is there any reason you’d want to use <code>translate()</code> instead of <em>absolute positioning</em>, or vice-versa? And why?</li>
+<li>How is clearfix css property useful?</li>
+<li>Can you explain the difference between px, em and rem as they relate to font sizing?</li>
+<li>Can you give an example of a pseudo class? Can you provide an example use case for a pseudo class?</li>
+<li>What is the difference between a block level element and an inline element. Can you provide examples of each type of element?</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/188/branches/release-1-Jun-2011/tests
+END
+test_base.js
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/188/branches/release-1-Jun-2011/tests/test_base.js
+END
+prettify_test.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/188/branches/release-1-Jun-2011/tests/prettify_test.html
+END
+prettify_test_2.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/188/branches/release-1-Jun-2011/tests/prettify_test_2.html
+END
+test_styles.css
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/188/branches/release-1-Jun-2011/tests/test_styles.css
+END
+large_input_test.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/188/branches/release-1-Jun-2011/tests/large_input_test.html
+END
+ie-newline-copy-paste.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/188/branches/release-1-Jun-2011/tests/ie-newline-copy-paste.html
+END
