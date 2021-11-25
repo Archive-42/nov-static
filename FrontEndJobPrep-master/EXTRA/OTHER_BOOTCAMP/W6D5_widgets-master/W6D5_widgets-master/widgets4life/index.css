@@ -1,0 +1,15 @@
+.clock {
+    font-family: 'Dokdo', cursive;
+    font-size: 100px;
+    border: 15px solid green;
+    background-image: url(https://www.wideopeneats.com/wp-content/uploads/2017/08/watermelon-facts.png);
+    /* background-repeat: no-repeat; */
+    
+    height: 200px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
