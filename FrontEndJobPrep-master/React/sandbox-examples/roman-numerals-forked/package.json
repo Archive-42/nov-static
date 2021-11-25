@@ -1,0 +1,35 @@
+{
+  "name": "roman-numerals",
+  "version": "1.0.0",
+  "description": "react application to make a simple calculator for Roman-Numeral",
+  "keywords": [
+    "react",
+    "roman-numeral",
+    "react-hooks",
+    "calculator"
+  ],
+  "main": "src/index.js",
+  "dependencies": {
+    "bootstrap": "4.4.1",
+    "react": "16.12.0",
+    "react-bootstrap": "1.0.0-beta.16",
+    "react-dom": "16.12.0",
+    "react-scripts": "3.0.1",
+    "styled-components": "5.0.1"
+  },
+  "devDependencies": {
+    "typescript": "3.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "react-slick",
+  "version": "1.0.0",
+  "description": "Playground starter",
+  "keywords": [
+    "react",
+    "carousel"
+  ],
+  "homepage": "https://codesandbox.io/s/zzloxr09mp",
+  "main": "index.js",
+  "dependencies": {
+    "react-slick": "latest",
+    "react-dom": "16.5.2",
+    "react": "16.5.2"
+  }
+}

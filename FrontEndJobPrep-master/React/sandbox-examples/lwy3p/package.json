@@ -1,0 +1,25 @@
+{
+  "name": "lwy3p",
+  "version": "0.0.4",
+  "description": "Playground starter",
+  "keywords": [
+    "react",
+    "carousel"
+  ],
+  "homepage": "https://codesandbox.io/s/zzloxr09mp",
+  "main": "index.js",
+  "dependencies": {
+    "react-slick": "latest",
+    "react-dom": "16.5.2",
+    "react": "16.5.2"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
