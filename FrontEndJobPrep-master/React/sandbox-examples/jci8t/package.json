@@ -3,19 +3,19 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "classnames": "^2.2.6",
-    "faker": "^4.1.0",
-    "miragejs": "^0.1.35",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-redux": "^7.2.1",
+    "@testing-library/jest-dom": "4.2.4",
+    "@testing-library/react": "9.5.0",
+    "@testing-library/user-event": "7.2.1",
+    "classnames": "2.3.1",
+    "faker": "4.1.0",
+    "miragejs": "0.1.42",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "react-redux": "7.2.6",
     "react-scripts": "3.4.3",
-    "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.8",
-    "seedrandom": "^3.0.5"
+    "redux": "4.1.2",
+    "redux-devtools-extension": "2.13.9",
+    "seedrandom": "3.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,7 +39,7 @@
     ]
   },
   "devDependencies": {
-    "prettier": "^2.0.2"
+    "prettier": "2.5.0"
   },
   "keywords": [],
   "description": ""
