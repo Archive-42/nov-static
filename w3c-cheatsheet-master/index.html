@@ -1,0 +1,421 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" manifest="cheatsheet.manifest" xml:lang="en" lang="en">
+<head>
+<title>W3C cheatsheet</title>
+<meta http-equiv='content-type' content='text/html;charset=utf-8' />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@w3c">
+<meta name="twitter:creator" content="@dontcallmedom">
+<meta name="twitter:title" content="W3C Cheatsheet">
+<meta name="twitter:description" content="The W3C Cheat Sheet is an open source tool available for Web developers. It provides easy access to useful information from W3C specifications, including HTML5, CSS, SVG, DOM and XPath"/>
+<meta name="twitter:image" content="http://www.w3.org/2009/cheatsheet/icons/72x.png"/>
+<link rel="stylesheet" href="style/all.css" />
+<link rel="shortcut icon" href="icons/16x.png" type="image/png" />
+<link rel="search" type="application/opensearchdescription+xml" title="Cheatsheet search" href="opensearch.xml">
+<script type="text/javascript" src="js/all.js"></script>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="apple-touch-icon" href="icons/48x.png" />
+<link rel="apple-touch-startup-image" href="images/loading.png" />
+<meta name="viewport" content="width=device-width" />
+</head>
+<body>
+<div id="content">
+<ul>
+<li id="first-tab"><a accesskey="1" href="#autocomplete"><span>Search</span></a></li>
+<li><a accesskey="4" href="#wcag2"><span>Accessibility</span></a></li>
+<li><a accesskey="3" href="#i18n"><span>I18N</span></a></li>
+<li><a accesskey="5" href="#typo"><span>Typography</span></a></li>
+</ul>
+<div class="tab" id="autocomplete">
+<noscript>
+<p><strong>This look-up system only works with Javascript activated</strong>. You can do a manual look up in the <a href="@@@">complete list of keywords (TBD)</a>.</p>
+</noscript>
+<p class="tip">Lookup  in HTML, JavaScript, CSS, SVG, XPath:</p>
+
+<p><input id="search" name="query" tabindex="1" /></p>
+<div id="details">
+</div>
+<script type="text/mustache" id="details-template">
+{{#keywords}}
+<div class="context">
+ <h2><span class="infoset">{{infoset}}</span> <code>{{keyword}}</code>{{#marker}} <span class="attribute {{.}}" title="{{.}} in HTML"> {{marker}} in HTML5</span>{{/marker}}</h2>
+ <div>
+ {{#contexts}}
+   <div>
+     {{#title}}<h3><span class='infoset'>{{infoset}}</span> {{#kw}}<code>{{name}}</code>{{^last}}, {{/last}}{{/kw}}{{#marker}} <span class="attribute {{marker}}" title="{{marker}} in HTML5"> {{marker}} in HTML5</span>{{/marker}}</h3>{{/title}}
+     <dl>
+      {{#properties}}
+       <dt>{{#link}}<a href="{{link}}" {{#internal}}class="internal"{{/internal}}>{{/link}}{{name}}{{#link}}</a>{{/link}}</dt>
+       {{#inlineDisplay}}
+       <dd>{{#values}}{{#subvalues}}{{#class}}<span class="{{class}}">{{/class}}{{#link}}<a href="{{link}}" {{#internal}}class="internal"{{/internal}}>{{/link}}{{name}}{{#link}}{{#marker}} <span class="attribute {{marker}}" title="{{marker}} in HTML5"> {{marker}}</span>{{/marker}}</a>{{/link}}{{#class}}</span>{{/class}}{{/subvalues}} {{/values}}</dd>
+       {{/inlineDisplay}}
+       {{^inlineDisplay}}
+       <dd><ul>{{#values}}<li>{{#subvalues}}{{#link}}<a href="{{link}}" {{#internal}}class="internal"{{/internal}}>{{/link}}{{name}}{{#link}}</a>{{/link}}{{#marker}} <span class="attribute {{marker}}" title="{{marker}} in HTML5"> {{marker}} in HTML5</span>{{/marker}}{{/subvalues}}</li>{{/values}}</dd>
+<!--       <dd><ul><li><a>for</a><span class="attribute"> new in HTML5</span></a></li></ul></dd>-->
+       {{/inlineDisplay}}
+      {{/properties}}
+     </dl>
+   </div>
+ {{/contexts}}
+ </div>
+</div>
+{{/keywords}}
+</script>
+</div>
+
+<div class="tab"  id="wcag2">
+<h2>Accessibility: WCAG2 at a Glance</h2>
+<p><strong>Perceivable</strong></p>
+<ul class="show_items">
+  <li>Provide <a href="http://www.w3.org/WAI/WCAG20/quickref/#text-equiv">text alternatives</a> for non-text content.</li>
+
+  <li>Provide <a href="http://www.w3.org/WAI/WCAG20/quickref/#media-equiv">captions and alternatives</a> for
+    audio and video content.</li>
+  <li>Make content <a href="http://www.w3.org/WAI/WCAG20/quickref/#content-structure-separation">adaptable</a>; and make it <strong>available</strong> to assistive
+    technologies.<br />
+  </li>
+
+  <li>Use <a href="http://www.w3.org/WAI/WCAG20/quickref/#visual-audio-contrast">sufficient contrast</a> to make things easy to see and
+    hear.</li>
+</ul>
+
+<p class="listintro"><strong>Operable</strong></p>
+<ul class="show_items">
+  <li>Make all functionality <a href="http://www.w3.org/WAI/WCAG20/quickref/#keyboard-operation">keyboard accessible</a>.</li>
+  <li>Give users <a href="http://www.w3.org/WAI/WCAG20/quickref/#time-limits">enough time</a> to read and use content.</li>
+
+  <li>Do not use content that causes <a href="http://www.w3.org/WAI/WCAG20/quickref/#seizure">seizures</a>.</li>
+  <li>Help users <a href="http://www.w3.org/WAI/WCAG20/quickref/#navigation-mechanisms">navigate and find</a> content.</li>
+</ul>
+
+<p class="listintro"><strong>Understandable</strong></p>
+<ul class="show_items">
+  <li>Make text <a href="http://www.w3.org/WAI/WCAG20/quickref/#meaning">readable and understandable</a>.</li>
+
+  <li>Make content appear and operate in <a href="http://www.w3.org/WAI/WCAG20/quickref/#consistent-behavior">predictable</a>
+  ways.</li>
+  <li>Help users <a href="http://www.w3.org/WAI/WCAG20/quickref/#minimize-error">avoid and correct mistakes</a>.</li>
+</ul>
+
+<p class="listintro"><strong>Robust</strong></p>
+<ul class="show_items">
+
+  <li>Maximize <a href="http://www.w3.org/WAI/WCAG20/quickref/#ensure-compat">compatibility</a> with current and future
+    technologies.</li>
+</ul>
+
+<p>See <a href="http://www.w3.org/WAI/intro/wcag.php">WCAG Overview</a>.</p>
+
+</div>
+<div class="tab"  id="i18n">
+<div class="accordion">
+   <h2>Internationalization Quicktips</h2>
+   <div>
+      <h3>
+         <a href="#encoding">Use Unicode wherever possible for content, databases, etc. Always declare the encoding of content.</a>
+      </h3>
+      <div id="encoding">
+         <p>The character encoding you choose determines how bytes are mapped to characters in your text.</p>
+         <p>Normally character encodings limit you to a particular script or set of languages. Unicode allows you to deal simply with almost
+						all scripts and languages in use around the world. In this way Unicode simplifies the handling of content in multiple languages, whether within a
+						single page or across one or more sites. Unicode is particularly useful when used in forms, scripts and databases, where you often need to support
+					multiple languages. Unicode also makes it very straightforward to add new languages to your content.</p>
+         <p>Unless you appropriately declare which character encoding you are using your users may be unable to read your content. This is
+					because incorrect assumptions may be made by the application interpreting your text about how the bytes map to characters.</p>
+         <dl>
+            <dt> Give me more background</dt>
+            <dd>
+               <a href="http://www.w3.org/International/questions/qa-what-is-encoding">Character encodings for beginners</a> explains some of the basic concepts about character encodings, and why you should care. <a href="http://www.w3.org/International/getting-started/characters">Introducing Character sets and Encodings</a> gives an gentle introduction to various aspects of the topic.</dd>
+            <dt> So, how do I do this?</dt>
+            <dd>
+               <a href="http://www.w3.org/International/techniques/authoring-html#charset">HTML &amp; CSS authors</a> • <a href="http://www.w3.org/International/techniques/developing-specs#characters">Spec developers</a>• <a href="http://www.w3.org/International/techniques/server-setup#charset">Server setup</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div>
+      <h3>
+         <a href="#escapes">Use characters rather than escapes (e.g.
+				&amp;#xE1; &amp;#225; or &amp;aacute;) whenever you can. </a>
+      </h3>
+      <div id="escapes">
+         <p>Escapes such as Numeric Character References (NCRs), and entities are ways of representing any Unicode character in markup using
+					only ASCII characters. For example, you can represent the character á in X/HTML as &amp;#xE1; or &amp;#225; or &amp;aacute;.</p>
+         <p>Such escapes are useful for clearly representing ambiguous or invisible characters, and to prevent problems with syntax characters
+						such as ampersands and angle brackets. They may also be useful on occasion to represent characters not supported by your character encoding or
+					unavailable from your keyboard. Otherwise you should always use characters rather than escapes.</p>
+         <dl>
+            <dt>Give me more background</dt>
+            <dd>
+               <a href="http://www.w3.org/International/questions/qa-escapes">Using character entities and NCRs</a> provides  additional information about
+						the use of escapes in markup languages. In particular, note that entities (such as &amp;aacute;) should be used with caution. </dd>
+            <dt>So, how do I do this?</dt>
+            <dd>
+               <a href="http://www.w3.org/International/techniques/authoring-html#escapes">HTML &amp; CSS authors</a> • <a href="http://www.w3.org/International/techniques/developing-specs#escapes">Spec developers</a> • <a href="http://www.w3.org/International/techniques/authoring-svg#escapes">SVG authors</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div>
+      <h3>
+         <a href="#language">Declare the  language
+				of documents and indicate  internal language changes.</a>
+      </h3>
+      <div id="language">
+         <p>Information about the (human) language of content is already important for accessibility, styling, searching, editing, and other
+						reasons. As more and more content is tagged and tagged correctly, applications that can detect language information will become more and more useful
+					and pervasive.</p>
+         <p>When declaring language, you may need to express information about a specific range of content in a different way from metadata about the document as a whole. It is important to understand this distinction.</p>
+         <dl>
+            <dt>Give me more background</dt>
+            <dd>
+               <a href="http://www.w3.org/International/getting-started/language">Language on the Web</a> gives an gentle introduction to various aspects of the topic.</dd>
+            <dt> So, how do I do this?</dt>
+            <dd>
+               <a href="http://www.w3.org/International/techniques/authoring-html#language">HTML &amp; CSS authors</a> • <a href="http://www.w3.org/International/techniques/authoring-svg#language">SVG authors</a> • <a href="http://www.w3.org/International/techniques/authoring-xml#language">XML authors</a> • <a href="http://www.w3.org/International/techniques/developing-schemas#language">Schema developers</a>  •  <a href="http://www.w3.org/International/techniques/server-setup#language">Server setup</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div>
+      <h3>
+         <a href="#presentation">Use
+				style sheets for presentational information. Restrict markup to semantics.</a>
+      </h3>
+      <div id="presentation">
+         <p>It is an important principle of Web design to keep the way content is styled or presented separate from the actual text itself.
+						This makes it simple to apply alternative styling for the same text, for example in order to display the same content on both a conventional browser
+					and a small hand-held device.</p>
+         <p>This principle is particularly useful for localization, since different scripts have different typographic needs. For example, due
+						to the complexity of Japanese characters, it may be preferable to show emphasis in Japanese X/HTML pages in other ways than bolding or italicisation.
+						It is much easier to apply such changes if the presentation is described using CSS, and markup is much cleaner and more manageable if text is
+					correctly and unambiguously labelled as 'emphasised' rather than just 'bold'.</p>
+         <p>It can save considerable time and effort during localization to work with CSS files rather than have to change the markup, because
+					any needed changes can be made in a single location for all pages, and the translator can focus on the content rather than the presentation.</p>
+         <dl>
+            <dt>Give me more background</dt>
+            <dd> Read the talks slides from the 2007 @media conference presentation "<a href="http://www.w3.org/2007/Talks/0706-atmedia/slides/Slide0350.html"
+                 >Designing for International Users: Practical Tips</a>". </dd>
+         </dl>
+      </div>
+   </div>
+   <div>
+      <h3>
+         <a href="#images">Check for translatability and inappropriate cultural bias in images, animations &amp; examples.</a>
+      </h3>
+      <div id="images">
+         <p>If you want your content to really communicate with people, you need to speak their language, not only through the text, but also
+						through local imagery, color, objects and preoccupations. It is easy to overlook the culture-specific nature of symbolism, behaviour, concepts, body
+					language, humor, etc. You should get feedback on the suitability and relevance of your images, video-clips, and examples from in-country users.</p>
+         <p>You should also take care when incorporating text in graphics when content is translated. Text on complex backgrounds or in
+						restricted spaces can cause considerable trouble for the translator. You should provide graphics to the localization group that have text on a
+					separate layer, and you should bear in mind that text in languages such as English and Chinese will almost certainly expand in translation.</p>
+         <dl>
+            <dt>Give me more background</dt>
+            <dd> Read the talks slides from the 2007 @media conference presentation "<a href="http://www.w3.org/2007/Talks/0706-atmedia/slides/Slide0440.html"
+                 >Designing for International Users: Practical Tips</a>". </dd>
+         </dl>
+      </div>
+   </div>
+   <div>
+      <h3>
+         <a href="#forms">Use an appropriate encoding on both form and
+				server. Support local formats of names/addresses, times/dates, etc.</a>
+      </h3>
+      <div id="forms">
+         <p>The encoding used for an HTML page that contains a form should support all the characters needed to enter data into that form. This
+					is particularly important if users are likely to enter information in multiple languages.</p>
+         <p>Databases and scripts that receive data from forms on pages in multiple languages must also be able to support the characters for
+					all those languages simultaneously.</p>
+         <p>The simplest way to enable this is to use Unicode for both pages containing forms and all back-end processing and storage. In such
+					a scenario the user can fill in data in whatever language and script they need to.</p>
+         <p>You should also try to avoid making assumptions that things such as the user's name and address will follow the same formatting
+						rules as your own. Ask yourself how much detail you really need to break out into separate fields for things such as addresses. Bear in mind that in
+						some cultures there are no street names, in others the house number follows the street name, some people need more than one line for the part of the
+						address that precedes the town or city name, etc. In fact in some places an address runs top down from the general to the specific, which implies a
+						very different layout strategy. Be very careful about building into validation routines incorrect assumptions about area codes or telephone number
+						lengths. Recognize that careful labelling is required for how to enter numeric dates, since there are different conventions for ordering of day,
+					month and year.</p>
+         <p>If you are gathering information from people in more than one country, it is important to develop a strategy for addressing the
+						different formats people will expect to be able to use. Not only is this important for the design of the forms you create, but it also has an impact
+					on how you will store such information in databases.</p>
+         <dl>
+            <dt>So, how do I do this?</dt>
+            <dd>
+               <a href="http://www.w3.org/International/techniques/authoring-html#forms"
+                 >HTML &amp; CSS authors</a> • <a href="http://www.w3.org/International/techniques/authoring-html#cultural"
+                 >HTML &amp; CSS authors</a> • <a href="http://www.w3.org/International/techniques/developing-specs#time">Spec developers</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div>
+      <h3>
+         <a href="#authoring">Use simple, concise text.
+				Use care when composing sentences from multiple strings.</a>
+      </h3>
+      <div id="authoring">
+         <p>Simple, concise text is easier to translate. It is also easier for people to read if the text they are reading is not in their
+					first language.</p>
+         <p>You should take considerable care when composing messages from multiple substrings, or when inserting variable text into strings.
+						For example, suppose your site uses JSP scripting, and you decide to compose certain messages on the fly. You may create messages by concatenating
+						separate substrings, such as 'Only' or 'Don't', ' return results in ', and 'any format' or 'HTML'. Because the order of text in sentences of other
+					languages can be very different, translating this may present major difficulties.</p>
+         <p>Similarly, it is important to avoid fixing the positions of variables in text such as "Page 1 of 10". The syntax of other languages
+						may require the numbers to be reversed to make sense. If you use PHP, this would mean using a formatting string such as "Page %1\$d of %2\$d.",
+					rather than the more simple "Page %d of %d.". The latter is untranslatable in some languages.</p>
+         <dl>
+            <dt>So, how do I do this?</dt>
+            <dd>
+               <a href="http://www.w3.org/International/techniques/authoring-html#strings"
+                 >HTML &amp; CSS authors</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div>
+      <h3>
+         <a href="#navigating">On each page include clearly
+				visible navigation to localized pages or sites, using the target language.</a>
+      </h3>
+      <div id="navigating">
+         <p>Where you have versions of a page or site in a different language, or for a different country or region, you should provide a way
+					for the user to view the version they prefer. This should be available from any page on your site where an alternative exists.</p>
+         <p>When providing links to pages in other languages, use the name of the target language <em>in the native language and script</em>.
+						Don't assume that the user can read English. For example, in a link to a French page, 'French' would be written 'français'. This also applies if you
+					are guiding the user to a country- or region-specific page or site, eg. 'Germany' would be 'Deutschland'.</p>
+         <dl>
+            <dt>So, how do I do this?</dt>
+            <dd>
+               <a href="http://www.w3.org/International/techniques/authoring-html#navigation"
+                 >HTML &amp; CSS authors</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div>
+      <h3>
+         <a href="#rtl">For XHTML, add <code>dir="rtl"</code> to the <code>html</code> tag for right-to-left text.
+				Only re-use it to change the base direction.</a>
+      </h3>
+      <div id="rtl">
+         <p>Text in languages such as Arabic, Hebrew, Persian and Urdu is read from right to left. This reading order typically leads to
+						right-aligned text and mirror-imaging of things like page and table layout. You can set the default alignment and ordering of page content to right
+					to left by simply including dir="rtl" in the html tag.</p>
+         <p>The direction set in the html tag sets a base direction for the document which cascades down through all the elements on the page. It is not necessary to repeat the attribute
+					on lower level elements unless you want to explicitly change the directional flow.</p>
+         <p>Embedded text in, for example, Latin script still runs left to right within the overall right to left flow. So do numbers. If you
+						are working with right to left languages, you should become familiar with the basics of the Unicode bidirectional algorithm. This algorithm takes
+						care of much of this bidirectional text without the need for intervention from the author. There are some circumstances, however, where markup or
+					Unicode control characters are needed to ensure the correct effect.</p>
+         <dl>
+            <dt>Give me more background</dt>
+            <dd>
+               <a href="http://www.w3.org/International/tutorials/bidi-xhtml/">Creating (X)HTML Pages in Arabic &amp; Hebrew</a> provides a gentle introduction to the basics of handling right-to-left text in  HTML. The principles are similar for other markup languages. </dd>
+            <dd>
+               <a href="http://www.w3.org/International/articles/inline-bidi-markup/">What you need to know about the bidi algorithm and inline markup</a> provides a gentle introduction to the basics of handling inline
+						bidirectional text. </dd>
+            <dt> So, how do I do this?</dt>
+            <dd>
+               <a href="http://www.w3.org/International/techniques/authoring-html#direction">HTML &amp; CSS authors</a> • <a href="http://www.w3.org/International/techniques/authoring-svg#direction">SVG authors</a> • <a href="http://www.w3.org/International/techniques/authoring-xml#direction">XML authors</a> • <a href="http://www.w3.org/International/techniques/developing-schemas#direction">Schema developers</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div>
+      <h3><span class='text'>Validate! Use techniques, tutorials, and
+				articles at <code><a href="http://www.w3.org/International/">http://www.w3.org/International/</a></code></span> </h3>
+   </div>
+</div>
+</div>
+<div class="tab"  id="typo">
+<h2>English Typography</h2>
+<p>Use the proper English characters instead of their misused equivalents.</p>
+<dl class="characters">
+<dt>Quotes</dt>
+<dd><strong>“</strong> (<code>&amp;#8220;</code>) opening quote (instead of ")</dd>
+<dd><strong>”</strong> (<code>&amp;#8221;</code>) closing quote (instead of ")</dd>
+<dt>Apostrophe</dt>
+<dd><strong>’</strong> (<code>&amp;#8217;</code>) apostrophe (instead of ')</dd>
+<dt>Dashes and Hyphens</dt>
+<dd><strong>–</strong> (<code>&amp;#8211;</code> or <code>&amp;ndash;</code>) en dash, used for ranges, e.g. “13–15 November” (instead of -)</dd>
+<dd><strong>—</strong> (<code>&amp;#8212;</code> or <code>&amp;mdash;</code>) em dash, used for change of thought, e.g. “Star Wars is—as everyone knows—amazing.” (instead of -, or --)</dd>
+<dt>Ellipsis</dt>
+<dd><strong>…</strong> (<code>&amp;#8230;</code> or <code>&amp;hellip;</code>) horizontal ellipsis, used to indicate an omission or a pause (instead of ...)</dd>
+</dl>
+</div>
+</div>
+<div id="about">
+<p><button id='closeabout2'>Close</button></p>
+<h2>About the W3C Cheat Sheet</h2>
+<p>The W3C Cheat Sheet is an <a href="https://github.com/dontcallmedom/w3c-cheatsheet/">open source tool</a> freely available for Web developers. It provides quick access to useful information from a variety of specifications  
+published by W3C, the leading international Web standards community. It also incorporates data from the <a href="http://dom.spec.whatwg.org/">WHATWG DOM specification</a>. Please send bugs reports and enhancements suggestions to <code>&lt;<a href="mailto:dom@w3.org">dom@w3.org</a>&gt;</code>.</p>
+<p>Please consider making a donation to support the Cheat Sheet and other  
+free tools W3C makes available to the community.</p>
+<p class="donation">Your donation will be  
+used exclusively for the maintenance, hosting and development of our  
+free validation tools and similar open source projects. Thank you!</p>
+
+<fieldset id="donate-individual" class="tabset_content front">
+
+        <legend class="tabset_label">Donate with PayPal</legend>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+          <p id="donation_typeamount">
+            <input type="hidden"  name="cmd" value="_donations" id="cmd_donation"  />
+            <label id="amount_label">Amount:</label>
+            <input type="hidden" name="business" value="&#x76;&#x61;&#x6C;&#x69;&#x64;&#x61;&#x74;&#x6F;&#x72;&#x2D;&#x64;&#x6f;&#x6e;&#x61;&#x74;&#x65;&#x40;w3.org" />
+
+            <input type="hidden" name="item_name" value="W3C Validators Supporter's donation" />
+            <input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHosted" />
+	    <input type="radio" name="amountOption" id="input_amount_1" onclick="this.form.amount.value=5;" value="5" /><label id="amount_1">5 &#8364;</label>
+	    <input type="radio" name="amountOption" id="input_amount_2" onclick="this.form.amount.value=10;" value="10" checked="checked" /><label id="amount_2">10 &#8364;</label>
+	    <input type="radio" name="amountOption" id="input_amount_3" onclick="this.form.amount.value=25;" value="25" /><label id="amount_3">25 &#8364;</label>
+	    <br /><label><input type="radio" name="amountOption" id="input_amount_other" value="Other" />or a different amount/currency</label> <label id="amount_other" title="Specify amount"><input type="text" name="amountEntered" id="amountGiven" size="8" onfocus="this.form.input_amount_other.checked=true;" onchange="this.form.amount.value=this.form.amountEntered.value;"/></label>
+<!-- default is 10 Euros -->
+           <input type="hidden" id="amount" name="amount" value="10" />
+	   <label title="Specify currency">
+            <select name="currency_code" id="input_currency_code" size="1">
+              <option value="EUR">EUR - €</option>
+              <option value="">- - </option>
+              <option value="USD">USD - $</option>
+              <option value="GBP">GBP - £</option>
+              <option value="EUR">EUR - €</option>
+
+              <option value="AUD">AUD - $</option>
+              <option value="CAD">CAD - $</option>
+              <option value="CHF">CHF</option>
+              <option value="CZK">CZK - Kč</option>
+              <option value="DKK">DKK - kr</option>
+              <option value="EUR">EUR - €</option>
+
+              <option value="HKD">HKD - HK$</option>
+              <option value="HUF">HUF - Ft</option>
+              <option value="GBP">GBP - £</option>
+              <option value="JPY">JPY - ¥</option>
+              <option value="NZD">NZD - NZ$</option>
+              <option value="NOK">NOK - kr</option>
+
+              <option value="PLN">PLN - zł</option>
+              <option value="SGD">SGD - S$</option>
+              <option value="SEK">SEK - kr</option>
+              <option value="ILS">ILS - ₪</option>
+            </select></label>
+            <input type="hidden" name="no_shipping" value="1" />
+            <input type="hidden" name="no_note" value="0" />
+
+            <input type="hidden" name="tax" value="0" />
+          </p>
+            <p class="submit_button"><input title="Send your donation now" type="submit" value="Donate Now!" /></p>
+            <p class="instructions">PayPal recipient will be GEIE ERCIM, which is the W3C host organisation handling the donations.</p>
+
+          </form>          
+        </fieldset>
+<p><button id='closeabout'>Close</button></p>
+</div>
+<div id="footer">
+        <h1><a href="" class="offscreen">W3C Cheatsheet</a></h1>
+        <p class="copyright">Copyright &copy; 2009-2017 W3C </p>
+<p class="about"><a id='openabout' href="#about">About the W3C Cheat Sheet</a></p>
+    </div>
+</body>
+</html>
