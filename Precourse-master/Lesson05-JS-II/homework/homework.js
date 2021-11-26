@@ -47,8 +47,6 @@ function isPrime(num) {
   // note: 0 and 1 are NOT considered prime numbers
 }
 
-
-
 // Do not modify code below this line.
 // --------------------------------
 
