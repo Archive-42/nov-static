@@ -1,0 +1,14 @@
+extends layout.pug
+include includes/utils.pug
+
+block content
+    link(rel='stylesheet' type='text/css' href='/styles/index.css')
+    script(defer type="module" src="js/index.js")
+    div.mainBody.loggedIn.hidden
+        include feed.pug
+    div.mainBody.loggedOut.hidden
+        include splash.pug
+    div.mainBody.signInFormDiv.hidden
+        include log-in.pug
+    div.mainBody.signUpFormDiv.hidden
+        include sign-up.pug

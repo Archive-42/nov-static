@@ -1,0 +1,8 @@
+extends profile
+include includes/utils
+
+block userTabContent
+  ul.profileFeed
+    h2.tabTitle #{user.firstName} #{user.lastName}'s Stories
+    each story in userStories
+      li.card: +storyCardFull(story)

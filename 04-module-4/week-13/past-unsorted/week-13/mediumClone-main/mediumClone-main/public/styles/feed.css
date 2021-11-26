@@ -1,0 +1,429 @@
+/* @import '../../assets/icons'; */
+
+/* {
+    /* box-sizing: border-box; */
+    /* letter-spacing: 1px; */
+    /* color: black; */
+/* } */
+
+/* .feedBody {
+    display: grid;
+    position: relative;
+    height: 100%;
+    width: 95%;
+    border: 3px solid black;
+    border-radius: 18px;
+    margin: 40px auto;
+} */
+
+.feedContainer {
+    display: grid;
+    grid-template-rows: repeat(1fr, auto);
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+        'feed bookmark'
+    ;
+    position: relative;
+    height: fit-content;
+    width: 70%;
+    /* border: 2px solid blue;
+    border-radius: 18px; */
+    align-self: center;
+    justify-self: flex-start;
+    /* top: 150px; */
+    padding-top: 5em;
+    /* right: 15%; */
+}
+
+.bookmarkFeedContainer {
+    display: grid;
+    gap: 1em;
+    padding: 0.5em;
+    height: fit-content;
+    width: 100%;
+    grid-area: bookmark;
+    /* border: 2px solid pink; */
+    border-radius: 18px;
+    position: sticky;
+    top: 1.85%;
+    background-color: rgb(240, 244, 250);
+}
+
+.bookmarkSection {
+    display: grid;
+    grid-template-columns: repeat(1fr, auto);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        'title'
+        'author'
+    ;
+    gap: .6em;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    border: 2px dotted indigo;
+    border-radius: 18px;
+    padding: 1em;
+}
+.bookmarkTitle {
+    grid-area: title;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 1px solid orange;
+    border-radius: 18px;
+}
+.bookmarkAuthor {
+    grid-area: author;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /* border: 1px solid greenyellow;
+    border-radius: 18px; */
+}
+
+.noBookmarksForAuthor {
+    display: grid;
+    grid-template-columns: repeat(1fr, auto);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    'bookmarkMessage'
+    'bookmarkInstructions'
+    ;
+    gap: .6em;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /* border: 2px dotted indigo; */
+    border-radius: 18px;
+    padding: .9em;
+}
+
+
+.noBookmarksForAuthor.hidden {
+    display: none;
+}
+.bookmarkMessage {
+    grid-area: bookmarkMessage;
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    /* border: 1px solid greenyellow;
+    border-radius: 18px; */
+    font-size: 600;
+    font-weight: 600;
+    align-self: center;
+}
+.bookmarkMessage::after {
+    content: '';
+    background-image: url(/icons/bookmark.svg);
+    height: fit-content;
+    width: fit-content;
+    padding-left: .92em;
+    margin-left: 1em;
+}
+.bookmarkInstructions {
+    grid-area: bookmarkInstructions;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /* border: 1px solid greenyellow;
+    border-radius: 18px; */
+    color: gray;
+}
+
+
+
+.storyContainer {
+    display: grid;
+    grid-area: feed;
+    grid-template-rows: repeat(1fr, auto);
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        'story'
+    ;
+    gap: 2.5em 2.5em;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* border: 2px solid hotpink;
+    border-radius: 18px; */
+    padding: 1rem;
+    /* background-color: lightgrey; */
+}
+.storyAuthorName,
+.storyLink,
+.storyCreatedAt{
+    /* padding: 5px; */
+    /* border: 1px dotted black; */
+    width: fit-content;
+    /* height: 100%; */
+    /* min-width: 100%; */
+} 
+/* .storyCreatedAt::before {
+    content: 'Published: ';
+    font-weight: bolder;
+    font-style: italic;
+} */
+
+.storySection {
+    display: grid;
+    grid-template-rows: .5fr 1.5fr .5fr;
+    grid-template-columns: 2.5fr 1.5fr;
+    grid-template-areas: 
+        'info pic'
+        'info pic'
+        'info pic';
+    gap: 1em 1em;
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    /* border: 2px solid purple;
+    border-radius: 18px; */
+    padding: 1em;
+    /* margin: 1em; */
+    top: 1em;
+    /* background-color: whitesmoke; */
+}
+.storyInfoDiv {
+    display: grid;
+    grid-area: info;
+    grid-template-columns: 1fr .25;
+    grid-template-rows: .5fr 1.5fr .5fr;
+    grid-template-areas: 
+        'name name'
+        'title title'
+        'created bookmark'
+    ;
+    /* gap: 1em 1em; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* width: fit-content; */
+}
+.storyAuthorName {
+    grid-area: name;
+    justify-self: end;
+    font-size: xx-small;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+
+.storyLink {
+    grid-area: title;
+    align-self: center;
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    /* width: 90%;
+    max-width: 90%; */
+}
+
+.storyCreatedAt {
+    grid-area: created;
+    align-self: center;
+    color: #666;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.createBookmarkButtonFeed {
+    grid-area: bookmark;
+    /* display: grid; */
+    height: 100%;
+    width: 100%;
+    /* content: relative; */
+}
+
+/* .createBookmarkButtonFeed {
+content: '';
+position: absolute;
+padding-left: 1em;
+grid-area: bookmark;
+align-self: center;
+justify-self: center;
+
+    
+
+} */
+
+.storyPicDiv {
+    grid-area: pic;
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    content: fill;
+}
+.storyImgDiv {
+    position: relative;
+    object-fit: contain;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    /* justify-self: stretch; */
+    /* align-self: stretch; */
+    /* width: fit-content;
+    height: fit-content; */
+    /* background-size: fit-content; */
+}
+.storyImgDiv > img {
+  height: 100%;
+  
+}
+
+.bookmarkButtonFeed::before {
+    content: '';
+    background-image: url(/icons/icon-bookmark-red-gray.png);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    /* margin-right: 1em; */
+    padding-right: 1.1em;
+}
+.bookmarkButtonFeed.clicked::before {
+    /* content: ''; */
+    background-image: url(/icons/icon-bookmark-red.png);
+    /* background-size: cover; */
+    /* height: 100%; */
+    /* width: 100%; */
+    /* margin-right: 1em; */
+    /* padding-right: 1.1em; */
+}
+
+/* .storyLink > a {
+    font-size: large;
+} */
+
+
+/* .feedContainer {
+
+}
+.storyContainer {
+
+}
+a {
+
+} 
+.storyTitle {
+
+} 
+.storyAuthor {
+
+} 
+.storyDate {
+
+} */
+/* .trendingStory {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-
+} */
+
+.trendingStory {
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: 0.25fr, 1fr, 1fr;
+    grid-template-areas: 
+        'title title title'
+        'trendPost trendPost trendPost'
+        'trendPost trendPost trendPost'
+    ;
+    gap: 1em;
+    height: fit-content;
+    width: 70%;
+    position: relative;
+    /* margin-right: 1rem; */
+    margin-top: 1rem;
+    padding: 2rem 0;
+}
+
+.trendingHeaderContainer {
+    position: relative;
+    grid-area: title;
+    grid-template-areas: 'headTitle ... ...';
+    /* gap: 1em; */
+    display: grid;
+    content: fit-content;
+    /* left: 3em; */
+    height: 100%;
+    width: fit-content;
+    /* border: 1px dotted blue; */
+}
+
+.trendingSectionHeaderTitle {
+    grid-area: headTitle;
+    position: relative;
+    height: fit-content;
+    padding: 1em;
+    font-size: small;
+    left: .23em;
+}
+
+.trendingSectionHeaderTitle::before {
+    content: '';
+    background-image: url(/icons/Bear_of_California_glow.svg);
+    height: 100%;
+    width: 100%;
+    padding-right: 1.85rem;
+    letter-spacing: 1.4px;
+    margin-right: 2.2em;
+}
+
+.trendingPostBlock {
+    /* grid-area: trendPost; */
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: .2fr .4fr .2fr;
+    grid-template-areas: 
+        'tPostRating tPostTitle'
+        '...         tPostDate'
+        '...         tPostName'
+    ;
+    column-gap: 1em;
+    position: relative;
+    height: min-content;
+    width: 100%;
+    border-right: 1px lightgrey solid;
+    padding: 0.5rem;
+    /* border: 2px dotted lime; */
+}
+
+.trendingPostNumberSection {
+    grid-area: tPostRating;
+    color: lightgrey;
+    font-weight: 600;
+    font-size: xx-large;
+    align-self: center;
+    justify-self: center;
+    height: fit-content;
+    width: fit-content;
+    /* padding-right: 1em; */
+    /* text-shadow: black; */
+}
+.trendingPostAuthor {
+    grid-area: tPostName;
+    align-self: flex-end;
+    justify-self: flex-start;
+    height: fit-content;
+    width: fit-content;
+    margin-left: -1rem;
+}
+
+.trendingPostTitle {
+    grid-area: tPostTitle;
+    align-self: flex-start;
+    justify-self: flex-start;
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.trendingPostDate {
+    grid-area: tPostDate;
+}

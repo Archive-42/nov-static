@@ -1,0 +1,13 @@
+extends layout.pug
+
+include includes/utils.pug
+
+block content
+    script(defer type="module" src="/js/create.js")
+    link(rel='stylesheet' type='text/css' href='/styles/create.css')
+    .mainBody
+        .form-container
+            form(class="create-story-form" method='post')
+                input(type='hidden' name='_csrf' value=csrfToken)
+                input#createTitle(name='title' class=createTitle type=text placeholder='Title')
+                textarea#createBody(name="body" placeholder="Tell your story...")

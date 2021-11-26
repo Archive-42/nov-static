@@ -1,0 +1,79 @@
+include includes/utils
+
+//- .feedBody
+//- script(defer type="module" src="js/feed.js")
+link(rel='stylesheet' type='text/css' href='/styles/feed.css')
+
+block feedBlock
+
+  //- p(style="color: lightgrey; margin: 2rem;") Woah Woah Woah Woah Woah Woah Woah Woah Woah Woah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah
+
+  //- p(style="color: lightgrey; margin: 2rem;") Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah WoahWoah Woah Woah Woah Woah Woah Woah Woah Woah
+  //- .bookmarkTitle
+  //- .bookmarkAuthor
+  //- .curiosityContainer
+  //-     .recommendedPostsContainer
+  //-         .bigRecommendedStorySection
+  //-         .smallRecommendedStorySection
+  //-     .usersToFollowContainer
+  //-         .authorsToFollowSection
+
+  //- hr.divider
+  .trendingStory
+    .trendingHeaderContainer: .trendingSectionHeaderTitle   DISCOVER ON MEDAYUM
+    if isEnoughBookmarks
+      each bookmark in bookmarkedStories
+        .trendingPostBlock
+          .trendingPostNumberSection 0#{bookmark.rank}
+          h2.trendingPostTitle: a(href=`/stories/${bookmark.Story.id}`)= bookmark.Story.title
+          .trendingPostAuthor: +authorBlurb(bookmark.Story.Author)
+          .trendingPostDate.cardCreatedDate= bookmark.Story.createdAt
+    else
+      each story in trendingStories
+        .trendingPostBlock
+          .trendingPostNumberSection 0#{story.rank}
+          h2.trendingPostTitle: a(href=`/stories/${story.id}`)= story.title
+          .trendingPostAuthor: +authorBlurb(story.Author)
+          .trendingPostDate.cardCreatedDate= story.createdAt
+  hr.divider
+
+  //- MIRA I'm messing around and breaking stuff, ignore this for now.
+  //- .feedContainer
+  //-   .storyContainer
+  //-     each story in stories
+  //-       .storySection
+  //-         .storyInfoDiv
+  //-           +authorBlurb(story.Author)
+  //-           //- .storyAuthorName: a(href=`${ api }/users/${story.authorId}`) #{story.Author.firstName} #{story.Author.lastName}
+  //-           //-   img(src=`/assets/av/${story.authorId}.jpg` alt=`${story.Author.firstName} ${story.Author.lastName}`).authorAv
+  //-           h2.storyLink: a(href=`/stories/${story.id}`).cardTitle #{story.title}
+  //-           .storyCreatedAt #{story.createdAt}
+  //-           //- .createBookmarkButtonFeed: a(data-storyid=story.storyId).bookmarkButtonFeed
+  //-         .storyPicDiv
+  //-           .storyImgDiv
+  //-         +storyIcons(story)
+  .feedContainer
+    .storyContainer
+      each story in stories
+        .storySection
+          .storyInfoDiv
+            .storyAuthorName: +authorBlurb(story.Author)
+            a(href=`/stories/${story.id}`).storyLink #{story.title}
+            .storyCreatedAt= story.createdAt
+            +storyIcons(story)
+            //- .createBookmarkButtonFeed: a(data-storyid=story.storyId).bookmarkButtonFeed
+          .storyPicDiv
+            .storyImgDiv
+              img(src=`/assets/stories/${story.id}-1.jpg`)
+    .bookmarkFeedContainer
+      .noBookmarksForAuthor
+        .bookmarkMessage        Bookmark stories for later
+        .bookmarkInstructions   Start saving stories by clicking the bookmark icon and you’ll find them all here.
+      //- .bookmarkSection
+      //-     .bookmarkTitle
+      //-     .bookmarkAuthor
+      //- .bookmarkTitle #{bookmark.title}
+      //- .bookmarkAuthor #{bookmark.authorId}
+
+
+//-  each bookmark in bookmarks

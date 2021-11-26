@@ -1,0 +1,13 @@
+extends profile
+include includes/utils
+
+block userTabContent
+  ul.profileFeed
+    h2.tabTitle #{user.firstName} #{user.lastName}'s Comments
+    each comment in userComments
+      li.commentCard.card
+        +storyCardMini(comment.Story)
+        p.cardCreatedDate= comment.createdAt
+        p.commentBody "#{comment.body}"
+          
+        +authorBlurb(user)

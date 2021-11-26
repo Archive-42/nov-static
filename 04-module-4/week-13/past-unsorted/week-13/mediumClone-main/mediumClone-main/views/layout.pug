@@ -1,0 +1,45 @@
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title= title
+    link(rel='stylesheet' type='text/css' href='/styles/globalStyle.css')
+    link(rel='stylesheet' type='text/css' href='/styles/navStyle.css')
+    link(rel='stylesheet' type='text/css' href='/styles/footer.css')
+    script(defer type="module" src="/js/layout.js")
+  body#top
+    header.navHeader.navHeaderStyles
+      nav.topnav.navbar-default.topNavStyles
+        .leftNav
+          h1.logo: a(href="/") MeDaYum
+          p.greetingTag
+        ul.main-nav
+          li.demoLogIn.hidden: a.button.demo#demoLink Demo Login
+          li.signInButton: a.button#signInButton.signInBanner Login
+          li.signUpButton: a.button#signUpButton.signUpBanner Sign up
+          li.publishStory.hidden: a.button#publishStoryButton Publish
+          //- p.greetingTag
+          li.dropdown
+
+            .dropdown-container.button.dropdown-toggle
+              a.button.dropdown-toggle: .navAv
+                img(src=`/icons/avatar (1)_blue.svg`)
+              ul#dropdown-menu.dropdown-menu
+                li: a.button#profileButton Profile
+                li: a.button#createStoryButton Write
+                li: a.button#logoutButton Log out
+
+    block content
+
+    footer.mainFooter.splashFooter.hidden
+      h2.logo: a(href="/").footerLogo M
+      p The place to get the latest Yum. We can put credits and stuff here for icons, pictures, ourselves, and what have yous.
+      small © 2020 Warren Tamagri, Cinthia Spence, Clayton Reinhardt, Mira Kim
+
+      nav: ul.footerNavList
+        li: a(href="#top").footerLink Top
+        li: a(href="#top").footerLink About
+        li: a(href="#top").footerLink Contact Us
+        li: a(href="/").footerLink.signUpBanner Get Started
+        li: a.footerLink.signInBanner Sign In

@@ -1,0 +1,37 @@
+extends layout.pug
+include includes/utils.pug
+
+block content
+  script(defer type="module" src="/js/profile.js")
+  link(rel="stylesheet" type="text/css" href="/styles/profile.css")
+
+  article
+    heading.pr-userInfo
+      #userContainer 
+        h2#profileName #{user.firstName} #{user.lastName}
+        button.btnFollow.btnBig.btnIconic Follow
+        span.followCount
+          a(href=`/users/${user.id}/follows#content`) Following
+          span.followCount | 
+          a(href=`/users/${user.id}/followers#content`) Followers
+      //- span.user-description #{user.description}
+      p#joinDate MeDaYum member since #{user.createdAt}.
+
+      #userAvContainer
+        img(src=`/assets/av/1.jpg` alt=`${user.firstName} ${user.lastName}`).userAv
+
+      .follows 
+      //- #{userFollows.length} Following | #{userFollowers.length} Followers
+      //- button Edit Profile
+
+    nav.userCollections
+      ul.profileTabs
+        li.storyTab: a(href=`/users/${user.id}`) Stories
+        li.bookmarkTab: a(href=`/users/${user.id}/bookmarks`) Bookmarks
+        li.likeTab: a(href=`/users/${user.id}/likes`) Likes
+        li.commentTab: a(href=`/users/${user.id}/comments`) Comments
+        li.followTab: a(href=`/users/${user.id}/follows`) Follows
+        li.followerTab: a(href=`/users/${user.id}/followers`) Followers
+
+    #content
+    block userTabContent

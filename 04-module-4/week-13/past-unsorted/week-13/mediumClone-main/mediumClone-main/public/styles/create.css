@@ -1,0 +1,47 @@
+
+body, html {
+    height:100%
+}
+main{
+    height: 100%;
+}
+.mainBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    bottom:0;
+    height:100%
+}
+.form-container {
+    margin: .5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.create-story-form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+#createTitle {
+    border-style: hidden;
+    outline: none;
+    font-size: 3rem;
+    background-color: #F4FAFF;
+}
+#createBody {
+    border-style: hidden;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    font-size: 1.5rem;
+    background-color: #F4FAFF;
+}
