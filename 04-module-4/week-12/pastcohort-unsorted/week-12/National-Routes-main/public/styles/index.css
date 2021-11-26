@@ -1,0 +1,16 @@
+@import "header.css";
+@import "main.css";
+@import "park-list.css";
+@import "my-routes.css";
+@import "create-route-form.css";
+@import "park-page.css";
+
+@font-face {
+  font-family: Park;
+  src: url(park-font.otf);
+}
+
+@font-face {
+  font-family: Park-Thin;
+  src: url(park-font-thin.otf);
+}

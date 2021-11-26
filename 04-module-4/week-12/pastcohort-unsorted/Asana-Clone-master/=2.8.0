@@ -1,0 +1,9 @@
++ acorn@6.4.1
++ typescript@3.9.5
+added 2 packages from 59 contributors, updated 1 package and audited 1999 packages in 26.871s
+
+73 packages are looking for funding
+  run `npm fund` for details
+
+found 1 low severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
