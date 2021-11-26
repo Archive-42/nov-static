@@ -1,0 +1,7 @@
+h1= title
+p= message
+pre= stack
+//- Handle if there's an array of errors in addition to the main errors
+each error in errors
+    h2= error.title
+    p= error.message
