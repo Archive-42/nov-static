@@ -1,0 +1,68 @@
+// PROBLEM 1
+const blueButton = document.getElementById("make-circle-blue");
+const blueCircle = document.getElementById("blue-circumference-circle");
+blueButton.addEventListener("click", e => {
+  blueCircle.classList.add("blue");
+});
+
+
+// PROBLEM 2
+const removeButton = document.getElementById("remove-content-from-apples");
+const apples = document.getElementById("apples-div");
+removeButton.addEventListener("click", e => {
+  apples.innerHTML = '';
+});
+
+
+// PROBLEM 3
+const addImgButton = document.getElementById("add-image-btn");
+const frame = document.getElementById("add-image");
+addImgButton.addEventListener("click", e => {
+  if (frame.innerHTML === "") {
+    const image = document.createElement("img");
+    image.setAttribute("src", "./images/logo-emblem-black.svg");
+    frame.appendChild(image);
+  }
+});
+
+
+// PROBLEM 4
+const innerInput = document.getElementById("bubble-friend");
+innerInput.addEventListener("keydown", e => {
+  e.stopPropagation();
+});
+
+
+// PROBLEM 5
+const multiplyButton = document.getElementById("multiply");
+const addButton = document.getElementById("add-two");
+const resetButton = document.getElementById("reset-total");
+const totalDisplay = document.getElementById("total-value");
+multiplyButton.addEventListener("click", e => {
+  total *= 2;
+  totalDisplay.innerHTML = total;
+});
+addButton.addEventListener("click", e => {
+  total += 2;
+  totalDisplay.innerHTML = total;
+});
+resetButton.addEventListener("click", e => {
+  total = 1;
+  totalDisplay.innerHTML = total;
+});
+
+
+// PROBLEM 6
+const favFlavor = document.getElementById("fav-flavor");
+const storeFlavor = document.getElementById("store-flavor");
+favFlavor.value = localStorage.getItem("fav-flavor");
+storeFlavor.addEventListener("click", e => {
+  localStorage.setItem("fav-flavor", favFlavor.value);
+});
+
+
+// PROBLEM 7
+const noCheck = document.getElementById("will-not-check");
+noCheck.addEventListener("click", e => {
+  e.preventDefault();
+});
