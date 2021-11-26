@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "6c260fb1-2d02-4cf0-8e02-2ae3cc0905b9",
+    "name": "Full-Stack Objectives",
+    "repo": "Modular-Curriculum",
+    "path": "content/express/objectives/reading-data-driven-websites-objectives.md",
+    "type": "Reading",
+    "timeEstimate": 0,
+    "urls": [
+      "full-stack-objectives"
+    ],
+    "topic": "Homework for Thursday",
+    "subtopic": "Learning Objectives",
+    "body": "# Data-Driven Web Sites Objectives\n\nThis is where it all comes together: databases, HTTP servers, HTML, CSS, request\nand response, JavaScript powering it all. This is **full-stack**. At the end of\nthis content, you should be able to:\n\n1. Use environment variables to specify configuration of or provide sensitive\n   information for your code\n2. Use the `dotenv` npm package to load environment variables defined in an\n   `.env` file\n3. Recall that Express cannot process unhandled Promise rejections from\n   within route handler (or middleware) functions;\n4. Use a Promise `catch` block or a `try`/`catch` statement with `async`/`await`\n   to properly handle errors thrown from within an asynchronous route handler\n   (or middleware) function\n5. Write a wrapper function to simplify catching errors thrown within\n   asynchronous route handler (or middleware) functions\n6. Use the `morgan` npm package to log requests to the terminal window to assist\n   with auditing and debugging\n7. Add support for the Bootstrap front-end component library to a Pug layout\n   template\n8. Install and configure Sequelize within an Express application.\n9. Use Sequelize to test the connection to a database before starting the HTTP\n   server on application startup\n10. Define a collection of routes (and views) that perform CRUD operations\n    against a single resource using Sequelize\n11. Handle Sequelize validation errors when users are attempting to create or\n    update data and display error messages to the user so that they can resolve\n    any data quality issues\n12. Describe how an Express.js error handler function differs from middleware\n    and route handler functions\n13. Define a global Express.js error-handling function to catch and process\n    unhandled errors\n14. Define a middleware function to handle requests for unknown routes by\n    returning a 404 NOT FOUND error\n"
+  },
+  "success": true
+}

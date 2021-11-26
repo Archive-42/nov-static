@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "cf3c4be5-9cf3-4527-b175-40eed8bd7360",
+    "name": "Regex One",
+    "repo": "Modular-Curriculum",
+    "path": "content/javascript/topics/regex/readings/reading-regexone-re.md",
+    "type": "Reading",
+    "timeEstimate": 3600,
+    "urls": [
+      "regex-one"
+    ],
+    "topic": "Monday - Node HTTP Servers",
+    "subtopic": "Practices",
+    "body": "# RegexOne\n\nJust like with Flexbox Froggy and CSS Grid Garden, there are Web sites on the\nInternet that really stand out as excellent resources from which to learn.\n[RegexOne] is one of those resources.\n\nIt is a set of simple interactive exercises to help you practice your new-found\nknowledge of regular expressions. Do all of the 15 exercises and eight problems.\n\n![RegexOne home page]\n\n[RegexOne]: https://regexone.com/\n[RegexOne home page]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-JavaScript/regex/regexone-screenshot.png\n"
+  },
+  "success": true
+}

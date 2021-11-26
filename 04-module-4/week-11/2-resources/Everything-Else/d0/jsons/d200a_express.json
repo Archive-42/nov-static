@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "344be523-501f-41f8-9caa-5744bc119ddf",
+    "name": "Express Learning Objectives",
+    "repo": "Modular-Curriculum",
+    "path": "content/express/objectives/reading-express-objectives-js.md",
+    "type": "Reading",
+    "timeEstimate": 0,
+    "urls": [
+      "express-objectives"
+    ],
+    "topic": "Homework for Tuesday",
+    "subtopic": "Learning Objectives",
+    "body": "# Express Objectives\n\nExpress is the _de facto_ standard for building HTTP applications with Node.js.\nWhen you complete this lesson, you should be able to\n\n* Send plain text responses for any HTTP request\n* Use pattern matching to match HTTP request paths to route handlers\n* Use the Pug template engine to generate HTML from Pug templates to send to the\n  browser\n* Pass data to Pug templates to generate dynamic content\n* Use the `Router` class to modularize the definition of routes\n"
+  },
+  "success": true
+}

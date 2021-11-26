@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "73264194-f4b3-4a78-a57a-3c5dde9af274",
+    "name": "Node HTTP Learning Objectives",
+    "repo": "Modular-Curriculum",
+    "path": "content/purely-web/objectives/reading-http-fullstack-objectives.md",
+    "type": "Reading",
+    "timeEstimate": 0,
+    "urls": [
+      "node-http-objectives"
+    ],
+    "topic": "Monday - Node HTTP Servers",
+    "subtopic": "Learning Objectives",
+    "body": "# HTTP Full-Stack Objectives\n\nUnderstanding how Node.js handles incoming HTTP requests using the\n`IncomingMessage` and `ServerResponse` objects provide a strong foundation of\nbeing able to predict problems when you use frameworks to ease the burden of\nwriting Web applications. When you complete the associated material for this\nlesson, you should be able to:\n\n* Identify the five parts of a URL\n* Identify at least three protocols handled by the browser\n* Use an `IncomingMessage` object to\n  * access the headers sent by a client (like a Web browser) as part of the HTTP\n    request\n  * access the HTTP method of the request\n  * access the path of the request\n  * access and read the stream of content for requests that have a body\n* Use a `ServerResponse` object to\n  * write the status code, message, and headers for an HTTP response\n  * write the content of the body of the response\n  * properly end the response to indicate to the client (like a Web browser)\n    that all content has been written\n"
+  },
+  "success": true
+}
