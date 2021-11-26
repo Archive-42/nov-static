@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script async defer>
+      var sidebarTOCBtn = document.getElementById( 'sidebar-toc-btn' )
+      sidebarTOCBtn.addEventListener( 'click', function ( event ) {
+        event.stopPropagation()
+        if ( document.body.hasAttribute( 'html-show-sidebar-toc' ) ) {
+          document.body.removeAttribute( 'html-show-sidebar-toc' )
+        } else {
+          document.body.setAttribute( 'html-show-sidebar-toc', true )
+        }
+      } )
+    </script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.4.0/build/styles/default.min.css">
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.4.0/build/highlight.min.js"></script>
+  <!-- <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <title>Week-10</title>
+
+  <!--
+
+   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet">
+  <!-- Custom & Default Styles -->
+<link rel="stylesheet" href="./../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="./../../css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="./../../css/animate.css">
+
+</head>
+
+<!-------------------------END-OF-HEADER-------------------------->
+
+
+<body>
+
+  <div id="home-link"> <a href="./../../index.html">HOME</a></div>
+  <iframe src="https://quizlet.com/535158481/match/embed?x=1jj1" height="500" width="100%" style="border:0"></iframe>
+
+  <iframe height="400px" width="100%" src="https://repl.it/@bgoonz/a-A-Student-Resources-Website-Prototype?lite=true"
+    scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true"
+    sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+  <center>
+    <div id="DB-primer"> <a href="./week-10/Database+Primer.html">Data Base Primer</a></div>
+  </center>
+
+
+
+
+    <title>sequelize_cheatsheet (1)</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+      href="file:///c:\Users\bryan\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.13\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+
+<link rel="stylesheet" href="./week-10//week-10.css">
+
+
+
+
+
+
+
+
+</head>
+
+<!-------------------------END-OF-HEADER-------------------------->
+
+
+  <body for="html-export">
+    <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="sequelize-cheatsheet">Sequelize Cheatsheet</h1>
+
+      <h2 class="mume-header" id="command-line">Command Line</h2>
+
+      <p>Sequelize provides utilities for generating migrations, models, and seed files. They are exposed through the
+        <code>sequelize-cli</code> command.</p>
+      <h3 class="mume-header" id="init-project">Init Project</h3>
+
+      <pre data-role="codeBlock" data-info="bash" class="language-bash">$ npx sequelize-cli init
+</pre>
+      <p>You must create a database user, and update the <code>config/config.json</code> file to match your database
+        settings to complete the initialization process.</p>
+      <h3 class="mume-header" id="create-database">Create Database</h3>
+
+      <pre data-role="codeBlock" data-info="bash" class="language-bash">$ npx sequelize-cli db:create
+</pre>
+      <h3 class="mume-header" id="generate-a-model-and-its-migration">Generate a model and its migration</h3>
+
+      <pre data-role="codeBlock" data-info="bash" class="language-bash">$ npx sequelize-cli model:generate --name <span class="token operator">&lt;</span>ModelName<span class="token operator">&gt;</span> --attributes <span class="token operator">&lt;</span>column1<span class="token operator">&gt;</span>:<span class="token operator">&lt;</span>type<span class="token operator">&gt;</span>,<span class="token operator">&lt;</span>column2<span class="token operator">&gt;</span>:<span class="token operator">&lt;</span>type<span class="token operator">&gt;</span>,<span class="token punctuation">..</span>.
+</pre>
+      <h3 class="mume-header" id="run-pending-migrations">Run pending migrations</h3>
+
+      <pre data-role="codeBlock" data-info="bash" class="language-bash">$ npx sequelize-cli db:migrate
+</pre>
+      <h3 class="mume-header" id="rollback-one-migration">Rollback one migration</h3>
+
+      <pre data-role="codeBlock" data-info="bash" class="language-bash">$ npx sequelize-cli db:migrate:undo
+</pre>
+      <h3 class="mume-header" id="rollback-all-migrations">Rollback all migrations</h3>
+
+      <pre data-role="codeBlock" data-info="bash" class="language-bash">$ npx sequelize-cli db:migrate:undo:all
+</pre>
+      <h3 class="mume-header" id="generate-a-new-seed-file">Generate a new seed file</h3>
+
+      <pre data-role="codeBlock" data-info="bash" class="language-bash">$ npx sequelize-cli seed:generate --name <span class="token operator">&lt;</span>descriptiveName<span class="token operator">&gt;</span>
+</pre>
+      <h3 class="mume-header" id="run-all-pending-seeds">Run all pending seeds</h3>
+
+      <pre data-role="codeBlock" data-info="bash" class="language-bash">$ npx sequelize-cli db:seed:all
+</pre>
+      <h3 class="mume-header" id="rollback-one-seed">Rollback one seed</h3>
+
+      <pre data-role="codeBlock" data-info="bash" class="language-bash">$ npx sequelize-cli db:seed:undo
+</pre>
+      <h3 class="mume-header" id="rollback-all-seeds">Rollback all seeds</h3>
+
+      <pre data-role="codeBlock" data-info="bash" class="language-bash">$ npx sequelize-cli db:seed:undo:all
+</pre>
+      <h2 class="mume-header" id="migrations">Migrations</h2>
+
+      <h3 class="mume-header" id="column-attribute-keywords">Column Attribute Keywords</h3>
+
+      <pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token operator">&lt;</span>columnName<span class="token operator">&gt;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    type<span class="token punctuation">:</span> Sequelize<span class="token punctuation">.</span><span class="token operator">&lt;</span>type<span class="token operator">&gt;</span><span class="token punctuation">,</span>
+    allowNull<span class="token punctuation">:</span> <span class="token operator">&lt;</span><span class="token boolean">true</span><span class="token operator">|</span><span class="token boolean">false</span><span class="token operator">&gt;</span><span class="token punctuation">,</span>
+    unique<span class="token punctuation">:</span> <span class="token operator">&lt;</span><span class="token boolean">true</span><span class="token operator">|</span><span class="token boolean">false</span><span class="token operator">&gt;</span><span class="token punctuation">,</span>
+    references<span class="token punctuation">:</span> <span class="token punctuation">{</span> model<span class="token punctuation">:</span> <span class="token operator">&lt;</span>TableName<span class="token operator">&gt;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// This is the plural table name that the column references.</span>
+<span class="token punctuation">}</span>
+</pre>
+      <h2 class="mume-header" id="model-associations">Model Associations</h2>
+
+      <h3 class="mume-header" id="one-to-one-between-student-and-scholarship">One to One between Student and Scholarship
+      </h3>
+
+      <p><code>student.js</code></p>
+      <pre data-role="codeBlock" data-info="js" class="language-javascript">    Student<span class="token punctuation">.</span><span class="token function">hasOne</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Scholarship<span class="token punctuation">,</span> <span class="token punctuation">{</span> foreignKey<span class="token punctuation">:</span> <span class="token string">&apos;studentId&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+      <p><code>scholarship.js</code></p>
+      <pre data-role="codeBlock" data-info="js" class="language-javascript">    Scholarship<span class="token punctuation">.</span><span class="token function">belongsTo</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Student<span class="token punctuation">,</span> <span class="token punctuation">{</span> foreignKey<span class="token punctuation">:</span> <span class="token string">&apos;studentId&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+      <h3 class="mume-header" id="one-to-many-between-student-and-class">One to Many between Student and Class</h3>
+
+      <p><code>student.js</code></p>
+      <pre data-role="codeBlock" data-info="js" class="language-javascript">    Student<span class="token punctuation">.</span><span class="token function">belongsTo</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Class<span class="token punctuation">,</span> <span class="token punctuation">{</span> foreignKey<span class="token punctuation">:</span> <span class="token string">&apos;classId&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+      <p><code>class.js</code></p>
+      <pre data-role="codeBlock" data-info="js" class="language-javascript">    Class<span class="token punctuation">.</span><span class="token function">hasMany</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Student<span class="token punctuation">,</span> <span class="token punctuation">{</span> foreignKey<span class="token punctuation">:</span> <span class="token string">&apos;classId&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+      <h3 class="mume-header" id="many-to-many-between-student-and-lesson-through-studentlessons-table">Many to Many
+        between Student and Lesson through StudentLessons table</h3>
+
+      <p><code>student.js</code></p>
+      <pre data-role="codeBlock" data-info="js" class="language-javascript">    <span class="token keyword">const</span> columnMapping <span class="token operator">=</span> <span class="token punctuation">{</span>
+        through<span class="token punctuation">:</span> <span class="token string">&apos;StudentLesson&apos;</span><span class="token punctuation">,</span> <span class="token comment">// This is the model name referencing the join table.</span>
+        otherKey<span class="token punctuation">:</span> <span class="token string">&apos;lessonId&apos;</span><span class="token punctuation">,</span>
+        foreignKey<span class="token punctuation">:</span> <span class="token string">&apos;studentId&apos;</span>
+    <span class="token punctuation">}</span>
+
+    Student<span class="token punctuation">.</span><span class="token function">belongsToMany</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Lesson<span class="token punctuation">,</span> columnMapping<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+      <p><code>lesson.js</code></p>
+      <pre data-role="codeBlock" data-info="js" class="language-javascript">    <span class="token keyword">const</span> columnMapping <span class="token operator">=</span> <span class="token punctuation">{</span>
+        through<span class="token punctuation">:</span> <span class="token string">&apos;StudentLesson&apos;</span><span class="token punctuation">,</span> <span class="token comment">// This is the model name referencing the join table.</span>
+        otherKey<span class="token punctuation">:</span> <span class="token string">&apos;studentId&apos;</span><span class="token punctuation">,</span>
+        foreignKey<span class="token punctuation">:</span> <span class="token string">&apos;lessonId&apos;</span>
+    <span class="token punctuation">}</span>
+
+    Lesson<span class="token punctuation">.</span><span class="token function">belongsToMany</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Student<span class="token punctuation">,</span> columnMapping<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+      <h2 class="mume-header" id="query-format">Query Format</h2>
+
+      <h3 class="mume-header" id="findone">findOne</h3>
+
+      <pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token operator">&lt;</span>Model<span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  where<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  	<span class="token operator">&lt;</span>column<span class="token operator">&gt;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  		<span class="token punctuation">[</span>Op<span class="token punctuation">.</span><span class="token operator">&lt;</span>operator<span class="token operator">&gt;</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token operator">&lt;</span>value<span class="token operator">&gt;</span>
+  	<span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+      <h3 class="mume-header" id="findall">findAll</h3>
+
+      <pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token operator">&lt;</span>Model<span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  where<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token operator">&lt;</span>column<span class="token operator">&gt;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    	<span class="token punctuation">[</span>Op<span class="token punctuation">.</span><span class="token operator">&lt;</span>operator<span class="token operator">&gt;</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token operator">&lt;</span>value<span class="token operator">&gt;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  include<span class="token punctuation">:</span> <span class="token operator">&lt;</span>include_specifier<span class="token operator">&gt;</span><span class="token punctuation">,</span>
+  offset<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+  limit<span class="token punctuation">:</span> <span class="token number">2</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+      <h3 class="mume-header" id="findbypk">findByPk</h3>
+
+      <pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token operator">&lt;</span>Model<span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token function">findByPk</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>primary_key<span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+	include<span class="token punctuation">:</span> <span class="token operator">&lt;</span>include_specifier<span class="token operator">&gt;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+      <h3 class="mume-header" id="common-where-operators">Common Where Operators</h3>
+
+      <pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">const</span> Op <span class="token operator">=</span> Sequelize<span class="token punctuation">.</span>Op
+
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>and<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>a<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>b<span class="token punctuation">:</span> <span class="token number">6</span><span class="token punctuation">}</span><span class="token punctuation">]</span> <span class="token comment">// (a = 5) AND (b = 6)</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>or<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>a<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>a<span class="token punctuation">:</span> <span class="token number">6</span><span class="token punctuation">}</span><span class="token punctuation">]</span>  <span class="token comment">// (a = 5 OR a = 6)</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>gt<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">6</span><span class="token punctuation">,</span>                <span class="token comment">// &gt; 6</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>gte<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">6</span><span class="token punctuation">,</span>               <span class="token comment">// &gt;= 6</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>lt<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>               <span class="token comment">// &lt; 10</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>lte<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>              <span class="token comment">// &lt;= 10</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>ne<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">,</span>               <span class="token comment">// != 20</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>eq<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>                <span class="token comment">// = 3</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>is<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token keyword">null</span>              <span class="token comment">// IS NULL</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>not<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>            <span class="token comment">// IS NOT TRUE</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>between<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span>     <span class="token comment">// BETWEEN 6 AND 10</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>notBetween<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// NOT BETWEEN 11 AND 15</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span><span class="token keyword">in</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>           <span class="token comment">// IN [1, 2]</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>notIn<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>        <span class="token comment">// NOT IN [1, 2]</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>like<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">&apos;%hat&apos;</span><span class="token punctuation">,</span>         <span class="token comment">// LIKE &apos;%hat&apos;</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>notLike<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">&apos;%hat&apos;</span>       <span class="token comment">// NOT LIKE &apos;%hat&apos;</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>iLike<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">&apos;%hat&apos;</span>         <span class="token comment">// ILIKE &apos;%hat&apos; (case insensitive) (PG only)</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>notILike<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">&apos;%hat&apos;</span>      <span class="token comment">// NOT ILIKE &apos;%hat&apos;  (PG only)</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>startsWith<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">&apos;hat&apos;</span>     <span class="token comment">// LIKE &apos;hat%&apos;</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>endsWith<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">&apos;hat&apos;</span>       <span class="token comment">// LIKE &apos;%hat&apos;</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>substring<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">&apos;hat&apos;</span>      <span class="token comment">// LIKE &apos;%hat%&apos;</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>regexp<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">&apos;^[h|a|t]&apos;</span>    <span class="token comment">// REGEXP/~ &apos;^[h|a|t]&apos; (MySQL/PG only)</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>notRegexp<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">&apos;^[h|a|t]&apos;</span> <span class="token comment">// NOT REGEXP/!~ &apos;^[h|a|t]&apos; (MySQL/PG only)</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>iRegexp<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">&apos;^[h|a|t]&apos;</span>    <span class="token comment">// ~* &apos;^[h|a|t]&apos; (PG only)</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>notIRegexp<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">&apos;^[h|a|t]&apos;</span> <span class="token comment">// !~* &apos;^[h|a|t]&apos; (PG only)</span>
+<span class="token punctuation">[</span>Op<span class="token punctuation">.</span>like<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>any<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;cat&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;hat&apos;</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+</pre>
+    </div>
+    <div class="md-sidebar-toc">
+      <ul>
+        <li><a href="#sequelize-cheatsheet">Sequelize Cheatsheet</a>
+          <ul>
+            <li><a href="#command-line">Command Line</a>
+              <ul>
+                <li><a href="#init-project">Init Project</a></li>
+                <li><a href="#create-database">Create Database</a></li>
+                <li><a href="#generate-a-model-and-its-migration">Generate a model and its migration</a></li>
+                <li><a href="#run-pending-migrations">Run pending migrations</a></li>
+                <li><a href="#rollback-one-migration">Rollback one migration</a></li>
+                <li><a href="#rollback-all-migrations">Rollback all migrations</a></li>
+                <li><a href="#generate-a-new-seed-file">Generate a new seed file</a></li>
+                <li><a href="#run-all-pending-seeds">Run all pending seeds</a></li>
+                <li><a href="#rollback-one-seed">Rollback one seed</a></li>
+                <li><a href="#rollback-all-seeds">Rollback all seeds</a></li>
+              </ul>
+            </li>
+            <li><a href="#migrations">Migrations</a>
+              <ul>
+                <li><a href="#column-attribute-keywords">Column Attribute Keywords</a></li>
+              </ul>
+            </li>
+            <li><a href="#model-associations">Model Associations</a>
+              <ul>
+                <li><a href="#one-to-one-between-student-and-scholarship">One to One between Student and Scholarship</a>
+                </li>
+                <li><a href="#one-to-many-between-student-and-class">One to Many between Student and Class</a></li>
+                <li><a href="#many-to-many-between-student-and-lesson-through-studentlessons-table">Many to Many between
+                    Student and Lesson through StudentLessons table</a></li>
+              </ul>
+            </li>
+            <li><a href="#query-format">Query Format</a>
+              <ul>
+                <li><a href="#findone">findOne</a></li>
+                <li><a href="#findall">findAll</a></li>
+                <li><a href="#findbypk">findByPk</a></li>
+                <li><a href="#common-where-operators">Common Where Operators</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <a id="sidebar-toc-btn">&#x2261;</a>
+
+
+ <div class="mume markdown-preview  ">
+      <p>===========================</p>
+<h2 class="mume-header" id="postgresql-commands">PostgreSQL commands</h2>
+
+<p>===========================</p>
+<table>
+<thead>
+<tr>
+<th colspan="2"></th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Access the PostgreSQL server from <strong>psql</strong> with a specific user: <code>psql -U [username];</code></td>
+<td>Connect to a specific database:<code>\c database_name;</code></td>
+</tr>
+<tr>
+<td>To quit the psql:<code>\q</code></td>
+<td><a href="https://www.postgresqltutorial.com/postgresql-show-databases/">List all databases</a> in the PostgreSQL database server<code>\l</code></td>
+</tr>
+<tr>
+<td>List all schemas:<code>\dn</code></td>
+<td>List all <a href="https://www.postgresqltutorial.com/postgresql-stored-procedures/">stored procedures</a> and functions:<code>\df</code></td>
+</tr>
+<tr>
+<td>List all <a href="https://www.postgresqltutorial.com/postgresql-views/">views</a>:<code>\dv</code></td>
+<td><a href="https://www.postgresqltutorial.com/postgresql-show-tables/">Lists all tables</a> in a current database.<code>\dt</code></td>
+</tr>
+<tr>
+<td>Or to get more information on tables in the current database:<code>\dt+</code></td>
+<td>Get detailed information on a table.<code>\d+ table_name</code></td>
+</tr>
+<tr>
+<td>Show query output in the pretty-format:<code>\x</code></td>
+<td>List all users:<code>\du</code></td>
+</tr>
+</tbody>
+</table>
+<p>Create a new <a href="https://www.postgresqltutorial.com/postgresql-roles/">role</a>:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>CREATE ROLE role_name;
+</code></pre><p>Create a new role with a <code>username</code> and <code>password</code>:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>CREATE ROLE username NOINHERIT LOGIN PASSWORD password;
+</code></pre><p>Change role for the current session to the <code>new_role</code>:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>SET ROLE new_role;
+</code></pre><p>Allow <code>role_1</code> to set its role as <code>role_2:</code></p>
+<pre data-role="codeBlock" data-info class="language-"><code>GRANT role_2 TO role_1;
+</code></pre><p>===========================</p>
+<h2 class="mume-header" id="managing-databases">Managing databases</h2>
+
+<p>===========================<br>
+<a href="https://www.postgresqltutorial.com/postgresql-create-database/">Create a new database</a>:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>CREATE DATABASE [IF NOT EXISTS] db_name;
+</code></pre><p><a href="https://www.postgresqltutorial.com/postgresql-drop-database/">Delete a database permanently</a>:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>DROP DATABASE [IF EXISTS] db_name;
+</code></pre><p>===========================</p>
+<h2 class="mume-header" id="managing-tables">Managing tables</h2>
+
+<p>===========================<br>
+<a href="https://www.postgresqltutorial.com/postgresql-create-table/">Create a new table</a> or a <a href="https://www.postgresqltutorial.com/postgresql-temporary-table/">temporary table</a></p>
+<pre data-role="codeBlock" data-info class="language-"><code>CREATE [TEMP] TABLE [IF NOT EXISTS] table_name(
+       pk SERIAL PRIMARY KEY,
+   c1 type(size) NOT NULL,
+   c2 type(size) NULL,
+   ...
+);
+</code></pre><p><a href="https://www.postgresqltutorial.com/postgresql-add-column/">Add a new column</a> to a table:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>ALTER TABLE table_name ADD COLUMN new_column_name TYPE;
+</code></pre><p><a href="https://www.postgresqltutorial.com/postgresql-drop-column/">Drop a column</a> in a table:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>ALTER TABLE table_name DROP COLUMN column_name;
+</code></pre><p><a href="https://www.postgresqltutorial.com/postgresql-rename-column/">Rename a column</a>:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>ALTER TABLE table_name RENAME column_name TO new_column_name;
+</code></pre><p>Set or remove a default value for a column:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>ALTER TABLE table_name ALTER COLUMN [SET DEFAULT value | DROP DEFAULT]
+</code></pre><p>Add a <a href="https://www.postgresqltutorial.com/postgresql-primary-key/">primary key </a>to a table.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>ALTER TABLE table_name ADD PRIMARY KEY (column,...);
+</code></pre><p>Remove the primary key from a table.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>ALTER TABLE table_name
+DROP CONSTRAINT primary_key_constraint_name;
+</code></pre><p><a href="https://www.postgresqltutorial.com/postgresql-rename-table/">Rename a table</a>.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>ALTER TABLE table_name RENAME TO new_table_name;
+</code></pre><p><a href="https://www.postgresqltutorial.com/postgresql-drop-table/">Drop a table</a> and its dependent objects:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>DROP TABLE [IF EXISTS] table_name CASCADE;
+</code></pre><p>===========================</p>
+<h2 class="mume-header" id="managing-views">Managing views</h2>
+
+<p>===========================<br>
+<a href="https://www.postgresqltutorial.com/managing-postgresql-views/">Create a view</a>:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>CREATE OR REPLACE view_name AS
+query;
+</code></pre><p><a href="https://www.postgresqltutorial.com/postgresql-recursive-view/">Create a recursive view</a>:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>CREATE RECURSIVE VIEW view_name(column_list) AS
+SELECT column_list;
+</code></pre><p><a href="https://www.postgresqltutorial.com/postgresql-materialized-views/">Create a materialized view</a>:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>CREATE MATERIALIZED VIEW view_name
+AS
+query
+WITH [NO] DATA;
+</code></pre><p>Refresh a materialized view:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>REFRESH MATERIALIZED VIEW CONCURRENTLY view_name;
+</code></pre><p>Drop a view:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>DROP VIEW [ IF EXISTS ] view_name;
+</code></pre><p>Drop a materialized view:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>DROP MATERIALIZED VIEW view_name;
+</code></pre><p>Rename a view:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>ALTER VIEW view_name RENAME TO new_name;
+</code></pre><p>===========================</p>
+<h2 class="mume-header" id="managing-indexes">Managing indexes</h2>
+
+<p>===========================<br>
+Creating an index with the specified name on a table</p>
+<pre data-role="codeBlock" data-info class="language-"><code>CREATE [UNIQUE] INDEX index_name
+ON table (column,...)
+</code></pre><p>Removing a specified index from a table</p>
+<pre data-role="codeBlock" data-info class="language-"><code>DROP INDEX index_name;
+</code></pre><p>===========================</p>
+<h2 class="mume-header" id="querying-data-from-tables">Querying data from tables</h2>
+
+<p>===========================<br>
+Query all data from a table:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>SELECT * FROM table_name;
+</code></pre><p>Query data from specified columns of all rows in a table:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>SELECT column_list
+FROM table;
+</code></pre><p>Query data and select only unique rows:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>SELECT DISTINCT (column)
+FROM table;
+</code></pre><p>Query data from a table with a filter:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>SELECT *
+FROM table
+WHERE condition;
+</code></pre><p>Assign an <a href="https://www.postgresqltutorial.com/postgresql-alias/">alias</a> to a column in the result set:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>SELECT column_1 AS new_column_1, ...
+FROM table;
+</code></pre><p>Query data using the <code><a href="https://www.postgresqltutorial.com/postgresql-like/">LIKE</a></code> operator:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>SELECT * FROM table_name
+WHERE column LIKE &apos;%value%&apos;
+</code></pre><p>Query data using the <code><a href="https://www.postgresqltutorial.com/postgresql-between/">BETWEEN</a> </code>operator:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>SELECT * FROM table_name
+WHERE column BETWEEN low AND high;
+</code></pre><p>Query data using the <code><a href="https://www.postgresqltutorial.com/postgresql-in/">IN</a> </code>operator:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>SELECT * FROM table_name
+WHERE column IN (value1, value2,...);
+</code></pre><p>Constrain the returned rows with the <code><a href="https://www.postgresqltutorial.com/postgresql-limit/">LIMIT</a></code> clause:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>SELECT * FROM table_name
+LIMIT limit OFFSET offset
+ORDER BY column_name;
+</code></pre><p>Query data from multiple using the <a href="https://www.postgresqltutorial.com/postgresql-inner-join/">inner join</a>, <a href="https://www.postgresqltutorial.com/postgresql-left-join/">left join</a>, <a href="https://www.postgresqltutorial.com/postgresql-full-outer-join/">full outer join</a>, <a href="https://www.postgresqltutorial.com/postgresql-cross-join/">cross join</a> and <a href="https://www.postgresqltutorial.com/postgresql-natural-join/">natural join</a>:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>SELECT *
+FROM table1
+INNER JOIN table2 ON conditions
+SELECT *
+FROM table1
+LEFT JOIN table2 ON conditions
+SELECT *
+FROM table1
+FULL OUTER JOIN table2 ON conditions
+SELECT *
+FROM table1
+CROSS JOIN table2;
+SELECT *
+FROM table1
+NATURAL JOIN table2;
+</code></pre><p>Return the number of rows of a table.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>SELECT COUNT (*)
+FROM table_name;
+</code></pre><p>Sort rows in ascending or descending order:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>SELECT select_list
+FROM table
+ORDER BY column ASC [DESC], column2 ASC [DESC],...;
+</code></pre><p>Group rows using <code><a href="https://www.postgresqltutorial.com/postgresql-group-by/">GROUP BY</a></code> clause.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>SELECT *
+FROM table
+GROUP BY column_1, column_2, ...;
+</code></pre><p>Filter groups using the <code><a href="https://www.postgresqltutorial.com/postgresql-having/">HAVING</a></code> clause.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>SELECT *
+FROM table
+GROUP BY column_1
+HAVING condition;
+</code></pre><p>===========================</p>
+<h2 class="mume-header" id="set-operations">Set operations</h2>
+
+<p>===========================<br>
+Combine the result set of two or more queries with <code><a href="https://www.postgresqltutorial.com/postgresql-union/">UNION</a></code> operator:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>SELECT * FROM table1
+UNION
+SELECT * FROM table2;
+</code></pre><p>Minus a result set using <code><a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-except/">EXCEPT</a></code> operator:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>SELECT * FROM table1
+EXCEPT
+SELECT * FROM table2;
+</code></pre><p>Get intersection of the result sets of two queries:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>SELECT * FROM table1
+INTERSECT
+SELECT * FROM table2;
+</code></pre><p>===========================</p>
+<h2 class="mume-header" id="modifying-data">Modifying data</h2>
+
+<p>===========================<br>
+<a href="https://www.postgresqltutorial.com/postgresql-insert/">Insert a new row into a table</a>:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>INSERT INTO table(column1,column2,...)
+VALUES(value_1,value_2,...);
+</code></pre><p>Insert multiple rows into a table:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>INSERT INTO table_name(column1,column2,...)
+VALUES(value_1,value_2,...),
+      (value_1,value_2,...),
+      (value_1,value_2,...)...
+</code></pre><p><a href="https://www.postgresqltutorial.com/postgresql-update/">Update</a> data for all rows:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>UPDATE table_name
+SET column_1 = value_1,
+    ...;
+</code></pre><p>Update data for a set of rows specified by a condition in the <code>WHERE</code> clause.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>UPDATE table
+SET column_1 = value_1,
+    ...
+WHERE condition;
+</code></pre><p><a href="https://www.postgresqltutorial.com/postgresql-delete/">Delete all rows</a> of a table:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>DELETE FROM table_name;
+</code></pre><p>Delete specific rows based on a condition:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>DELETE FROM table_name
+WHERE condition;
+</code></pre><h2 class="mume-header" id="performance">Performance</h2>
+
+<p>Show the query plan for a query:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>EXPLAIN query;
+</code></pre><p>Show and execute the query plan for a query:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>EXPLAIN ANALYZE query;
+</code></pre><p>Collect statistics:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>ANALYZE table_name;
+</code></pre>
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#postgresql-commands">PostgreSQL commands</a></li>
+<li><a href="#managing-databases">Managing databases</a></li>
+<li><a href="#managing-tables">Managing tables</a></li>
+<li><a href="#managing-views">Managing views</a></li>
+<li><a href="#managing-indexes">Managing indexes</a></li>
+<li><a href="#querying-data-from-tables">Querying data from tables</a></li>
+<li><a href="#set-operations">Set operations</a></li>
+<li><a href="#modifying-data">Modifying data</a></li>
+<li><a href="#performance">Performance</a></li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="home-link2"> <a href="./../../index.html">HOME</a>
+  </div>
+</body>
+
+</html>
