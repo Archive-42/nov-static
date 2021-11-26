@@ -1,0 +1,17 @@
+//- extends index.pug
+include includes/utils.pug
+
+block logIn
+  .form-container
+    .logHeader
+      a.button.closeForm X
+    h2.log-in-h2 Log In
+    .errors-container
+    form(class="logInForm").modalForm
+      input(type="hidden" name="_csrf" value=csrfToken)
+      input(name='email' class='emailLogIn' type='email' placeholder='Enter Email' required).modalInput
+      input(name='password' class='passwordLogIn' type='password' placeholder='Enter Password' required).modalInput
+      button.btn.btn-primary(type='submit').modalInput Log In
+    //- button.demo.btn.btn-primary(type='submit') Demo Login
+    p Don't have an account?
+      a.swapToSignUp  Sign up here.

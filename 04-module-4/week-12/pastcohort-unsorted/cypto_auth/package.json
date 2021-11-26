@@ -1,0 +1,16 @@
+{
+  "name": "d2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bcrypt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "argon2": "^0.27.0",
+    "bcryptjs": "^2.4.3"
+  }
+}

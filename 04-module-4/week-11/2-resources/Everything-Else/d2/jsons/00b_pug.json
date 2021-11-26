@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "a8e46f08-d6e3-49ef-87ea-e62e32f32ced",
+    "name": "Pug Learning Objectives",
+    "repo": "Modular-Curriculum",
+    "path": "content/express/objectives/reading-pug-objectives-js.md",
+    "type": "Reading",
+    "timeEstimate": 0,
+    "urls": [
+      "pug-objectives"
+    ],
+    "topic": "Homework for Tuesday",
+    "subtopic": "Learning Objectives",
+    "body": "# Pug Template Objectives\n\nUsing Pug.js helps reduce the overall creation and maintenance of source code\nfor HTML generation. It is one of many template engines supported by Express.js\nand remains one of the most popular. At the end of this lesson, you will be able\nto effectively use Pug.js to\n\n* Declare HTML tags and their associated ids, classes, attributes, and content\n* Use conditional statements to determine whether or not to render a block\n* Use interpolation to mix static text and dynamic values in content and\n  attributes\n* Use iteration to generate multiple blocks of HTML based on data provided to\n  the template\n"
+  },
+  "success": true
+}

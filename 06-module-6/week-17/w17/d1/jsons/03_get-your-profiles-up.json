@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "c0ec0619-5c8b-493a-b2e8-7612a85973b7",
+    "name": "Get Your Profile Up!",
+    "repo": "Modular-Curriculum",
+    "path": "content/career/topics/networking-online/projects/README.md",
+    "type": "Reading",
+    "timeEstimate": 3600,
+    "urls": [
+      "get-your-profile-up-"
+    ],
+    "topic": "Monday",
+    "subtopic": "Lecture",
+    "body": "# Get Your Profiles Up!\n\nNow that you know about [LinkedIn][1] and [AngelList][2], go set up your\nprofiles!\n\nGo to each of those sites and create accounts (if they don't exist). Then,\nfor LinkedIn, fill out you\n\n* **Title or headline**: use keywords:  i.e. Full Stack Software Engineer, Ruby,\n  Rails, React, JavaScript, GraphQL\n* **About me** with keywords and personality\n* **Experience** - with bullets mirroring your resume\n* **Education**\n* **Skills and endorsements**: Make sure your friends are endorsing you and move\n  tech skills to the top\n\nOnce you have that, send connect requests to all of your cohort mates and your\ninstructors.\n\nThen, head over to AngelList and fill out your\n\n* Mini-resume\n* \"What I Do\"\n* Achievements\n* Skills\n\nThen, follow all of your cohort mates and your instructors (if they have an\nAngelList profile).\n\n[1]: https://linkedin.com\n[2]: https://angel.co\n"
+  },
+  "success": true
+}

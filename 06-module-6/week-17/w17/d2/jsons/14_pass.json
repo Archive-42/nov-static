@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "a769c0a7-b296-4bce-8a02-e098423066d7",
+    "name": "pass",
+    "repo": "Modular-Curriculum",
+    "path": "content/python/topics/expressions/readings/reading-the-pass-keyword-py.md",
+    "type": "Reading",
+    "timeEstimate": 300,
+    "urls": [
+      "pass"
+    ],
+    "topic": "Homework for Tuesday",
+    "subtopic": "Homework",
+    "body": "# The pass keyword\n\nIn JavaScript, you can just declare an empty code block like this.\n\n```js\nif (true) {\n}\n```\n\nThere's nothing in the curly braces. This is not reasonable code, you wouldn't\nnormally do that. However, it is possible. Every code block defined with\ncurly-braces can be empty. Here's a fun little JavaScript snippet to make an\ninfinite loop.\n\n```js\nwhile (true) {}\n```\n\nBecause Python is whitespace-aware and uses indentations for its blocks, the\ndesigner of the language decided that there needs to be a special indicator to\nshow that the clause of a code block is empty. Hence, the `pass` keyword has\nbeen part of the language since the beginning.\n\nThe two code blocks above look like this in Python.\n\n```python\nif True:\n  pass\n```\n\n```python\nwhile True:\n  pass\n```\n\nYou must use `pass` to have syntactically correct code. For example, the\nfollowing code will fail with an `IndentationError` and the message\n\"expected an indented block\".\n\n```python\n# THIS CODE WILL RESULT IN AN IndentationError\nprint(\"Hello\")\n\nif True:\n\nprint(\"Good-bye\")\n```\n\nFor all statements that have a colon at the end of them, you _must_ signify that\nthey're empty by using the `pass` keyword if you do not provide a clause for\nthem. That includes `if`, `while`, `def`, and all the other \":\" blocks that you\nwill encounter.\n"
+  },
+  "success": true
+}

@@ -1,0 +1,395 @@
+/* GENERAL STYLINGS FOR THE MAIN HIDDEN BODIES */
+.mainBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* STYLING FOR THE FORMS */
+.form-container {
+  margin: 6em auto;
+  padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	background-color: #f4f4f4;
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+  border-radius: 5px;
+  width: 20em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logInForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h2.sign-up-h2,
+h2.log-in-h2 {
+  font-size: xx-large;
+  text-shadow: 0 0 1rem #0496FF;
+  opacity: 80%;
+  color: black;
+}
+
+/* STYLING FOR THE SPLASH */
+#signUpBanner {
+  margin: .5em;
+  font-weight: 300;
+  font-size: 24px;
+  border-radius: .3em;
+  text-align: center;
+  padding: 8px 16px;
+  border-color: #0496FF;
+  border: solid;
+  border-width: 2px;
+  color: white;
+  background-color: rgba(4, 150, 255, .8);
+  height: 3rem;
+  width: 10rem;
+}
+#signUpBanner:hover {
+  background-color: #0496FF;;
+}
+.splashBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.headlineOne {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+.headlineTwo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.headlineThree {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  /* margin-top: 2em; */
+  margin-bottom: 2em;
+  justify-content: space-around;
+}
+.healineOneSpan {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 1em;
+}
+.mainLayoutDiv {
+  width: 80%;
+}
+.splashSubHeadGroup {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 4em;
+}
+.headlineOneTag {
+  margin-top: .5em;
+  padding: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+.splashTextOne {
+  align-self: flex-end;
+/* make it prettier */
+}
+/* STYLING FOR THE FEED */
+
+/* CATCH ANY UNHIDDEN ELEMENTS */
+.hidden {
+  display: none;
+}
+
+.btn-primary {
+  margin: .5em;
+  font-weight: 700;
+  border-radius: .3em;
+  text-align: center;
+  padding: .3em;
+  border-color: rgba(4, 150, 255, 50%);
+  border-width: .14rem;
+  color: white;
+  opacity: 90%;
+  background-color: rgba(4, 150, 255, 50%);
+}
+.btn-primary:hover {
+  background-color: #0496FF;
+  color: white;
+  opacity: 100%;
+}
+.emailLogIn {
+  font-weight: 700;
+  border-radius: .3em;
+  text-align: center;
+  /* border-color: #0496FF; */
+  border-width: .1em;
+  padding: .3em;
+  margin: .1em;
+}
+.signUpInput:hover,
+input.modalInput:hover {
+  border: .2rem solid #0496FF;
+}
+.emailLogIn::placeholder{
+  color: lightgrey;
+}
+.passwordLogIn {
+  font-weight: 700;
+  border-radius: .3em;
+  text-align: center;
+  border-color: lightgrey;
+  border-width: .1em;
+  padding: .3em;
+  margin: .1em;
+}
+.passwordLogIn::placeholder{
+  color: lightgrey;
+}
+.signUpInput {
+  font-weight: 700;
+  border-radius: .3em;
+  text-align: center;
+  border-color: lightgrey;
+  border-width: .1em;
+  padding: .3em;
+  margin: .1em;
+}
+.signUpInput::placeholder {
+  color: lightgrey;
+}
+/* .signUpInput::placeholder.activeInput {
+  color: #0496FF;
+} */
+a.swapToSignUp {
+  color: #0496FF
+}
+a.swapToLogIn {
+  color: #0496FF
+}
+.form-container{
+  padding: .3em;
+}
+.alert-danger {
+  background-color: rgba(249, 57, 67, .2);
+  text-align: center;
+  border-style: solid;
+  border-color: #F93943;
+  font-weight: 700;
+  border-radius: .3em;
+  border-width: .1em;
+  padding: .3em;
+  margin: .2em;
+}
+
+
+/* Testing Modul stuff */
+.signInFormDiv {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom:0;
+  margin: 0 auto;
+  background-color: rgba(244, 244, 244, .95);
+}
+.signUpFormDiv {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom:0;
+  margin: 0 auto;
+  background-color: rgba(244, 244, 244, .95);
+}
+.opaqueBackground {
+  background-color: rgba(244, 244, 244, .95);
+}
+.logHeader {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 99%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.closeForm {
+  align-self: flex-end;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+/* grid of buttons */
+.gridOfButtons {
+  margin-top: 2em;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(1fr, auto);
+  grid-template-rows: repeat(1fr, auto);
+  justify-content: center;
+  align-content: center;
+  gap: 1em 1em;
+  grid-template-areas:
+  '. button1 button2 button3 button4 button5 button6 button7 .'
+  '. . button8 button9 button10 button11 button12 . .'
+  '. . . button13 button14 button15 . . .';
+}
+.bearButton1{
+  grid-area: button1;
+}
+.bearButton2 {
+  grid-area: button2;
+}
+.bearButton3{
+  grid-area: button3;
+}
+.bearButton4 {
+  grid-area: button4;
+}
+.bearButton5{
+  grid-area: button5;
+}
+.bearButton6 {
+  grid-area: button6;
+}
+.bearButton7{
+  grid-area: button7;
+}
+.bearButton8 {
+  grid-area: button8;
+}
+.bearButton9{
+  grid-area: button9;
+}
+.bearButton10 {
+  grid-area: button10;
+}
+.bearButton11{
+  grid-area: button11;
+}
+.bearButton12 {
+  grid-area: button12;
+}
+.bearButton13{
+  grid-area: button13;
+}
+.bearButton14 {
+  grid-area: button14;
+}
+.bearButton15 {
+  grid-area: button15;
+}
+.bearButtonContainer {
+  padding: 0.5em;
+  border-radius: 99em;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: rgba(242, 242, 242, 1);
+  color: rgba(117, 117, 117, 1);
+  cursor: pointer;
+}
+.bearButtonContainerHover:hover {
+      background-color: rgba(200, 200, 200, 1);
+}
+.clickedBearButton {
+  background-color: rgba(4, 150, 255, .8);
+}
+.clickedBearButton > .bearButtonText {
+  color: black;
+}
+.bearButtonText {
+  padding-left: .5em;
+  cursor: pointer;
+}
+.leftHThreediv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.splashText {
+  text-align: center;
+}
+.slideShowContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 25em;
+  width: 50em;
+  background-color: rgba(4, 150, 255, .4);
+  border-radius: 2px;
+}
+.slideShowText {
+  text-align: center;
+  font-size: 1.5em;
+}
+.slideShowImgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  margin-top: 1em;
+}
+.slideImg {
+  width: 100;
+  height: 100%;
+  border-radius: 2px;
+}
+.slideShowNavigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.slideShowButton {
+  width: 1em;
+  height: 1em;
+  border: 1px solid black;
+  border-radius: 99em;
+  margin: 4px 4px;
+  cursor: pointer;
+}
+.slideShowButton:hover {
+  background-color: #F4FAFF;
+  border: none;
+}
+.currentSlideButton {
+  background-color: #0496FF;
+}
+.splashPageText {
+  font-family: Cambria, Gabriola, serif;
+  text-align: center;
+}
+.headlineTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.modalInput {
+  font-size: 1.2em;
+  margin: .5em;
+}
+.hidden {
+  display: none;
+}

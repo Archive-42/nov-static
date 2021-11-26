@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "143eff03-1808-4e26-aa7e-3be6adde40ab",
+    "name": "Knight's Travails Phase 3",
+    "repo": "Modular-Curriculum",
+    "path": "content/python/topics/classes/projects/knights-travail/README-03-build-move-tree-py.md",
+    "type": "Reading",
+    "timeEstimate": 7200,
+    "urls": [
+      "phase-3"
+    ],
+    "topic": "Friday",
+    "subtopic": "Knights Travail",
+    "body": "# Knight's Travails Part 3\n\nNow, you're going to use the tree nodes that you created in the last section to\nbuild a \"move tree\" that allows you to search for the shortest path that a Chess\nKnight can take from a start position to an end position.\n\nCreate a method named `build_move_tree()`. The root node, right now, has the\nvalue of the starting position. Starting with that value, use the\n`new_move_positions(pos)` method to give you the moves that can occur from the\nposition in the root node. Add each of those positions as children. Continue\nbuilding the tree in a **breadth-first** manner. Take inspiration from your\n`breadth_search` method in the `Node` class.\n\nWhen you have completed and take a moment to manually test your\n`build_move_tree()` method. Initialize an instance of the `KnightPathFinder`\nclass and call the `build_move_tree()` method. Then print the collection of\nchildren nodes associated with the instance's \"_root\" node.\n\n```python\nfinder = KnightPathFinder((0, 0))\nfinder.build_move_tree()\nprint(finder._root.children)\n```\n\nYou should see a collection of child nodes. For example:\n\n```sh\n[<tree.Node object at 0x108fc6520>, <tree.Node object at 0x108fc6850>]\n```\n\nThink of some edge cases and test your code. After testing your code, get a\nreview from an instructor. Then, you can complete the project!\n"
+  },
+  "success": true
+}

@@ -1,0 +1,16 @@
+extends layout.pug
+include utils.pug
+
+block content
+    //- script(src="js/edit-profile.js")
+    h2 Edit Profile
+    p #{message}
+
+    form(method="post" action="/edit-profile")
+        //- input(name="_csrf" type="hidden" value=csrfToken)
+        +input("First Name", "firstName", "text", "First Name")
+        +input("Last Name", "lastName", "text", "Last Name")
+        include includes/login-fields.pug
+        +input("Confirm New Password", "confirmPassword", "password", "Confirm Password")
+        +btn("Delete Account", "btn-delete", "deleteBtn")
+        +btn("Save Changes", "btn-primary", "saveBtn")

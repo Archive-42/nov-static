@@ -1,0 +1,60 @@
+mixin navLink(route, text)
+  a(href=route)= text
+
+mixin input(labelText, fieldName, fieldType, placeholder)
+  .form-group
+    label(for=fieldName)= labelText
+    input(name=fieldName class=fieldName type=fieldType placeholder=placeholder)
+
+mixin btn(btnTxt, className, idName)
+  button(type="submit" class=className id=idName)= btnTxt
+
+mixin splashTag(icon, title, storyId)
+  a(href="/" class="splash-tag")
+    .splashTag
+      img(src=icon alt=title)
+      span=title
+
+
+//- MIRA Mixins
+mixin userCard(user)
+  .userCard
+    img(src=`/assets/av/${user.id}.jpg` alt=`${user.firstName} ${user.lastName}`).userCardAv
+    .userCardInfo
+      h3.userName #{user.firstName} #{user.lastName}
+      button.btnIconic.btnFollow Follow
+
+
+mixin storyCardFull(story)
+  a(href=`/stories/${story.id}`)
+    h3.cardTitle= story.title
+    p.cardCreatedDate= story.createdAt
+    //- p story.hook
+  +authorBlurb(story.Author)
+  img(src=`/assets/stories/${story.id}-1.jpg` href=`${story.title}`).cardBanner
+  +storyIcons(story)
+
+mixin storyIcons(story)
+  .icons
+    button(name="like").btnLike
+      div.storyIcon.likeIcon
+      span.iconLabel #{story.Likes.length} Likes
+    button(name="comments").btnComment
+      span.storyIcon.commentIcon
+      span.iconLabel #{story.Comments.length} Comments
+    button(name="bookmark")
+      div.storyIcon.bookmarkIcon
+
+mixin storyCardMini(story)
+  .storyCardMini
+    h4.cardTitleMini= story.title
+    +authorBlurb(story.Author)
+    br
+    +storyIcons(story)
+
+mixin authorBlurb(author)
+  .authorBlurb
+    img(src=`/assets/av/${author.id}.jpg` alt=`${author.firstName} ${author.lastName}`).authorAv
+    .authorInfo
+      button.btnIconic.btnFollow Follow
+      a(href=`/users/${author.id}`).authorName #{author.firstName} #{author.lastName}

@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "661fe452-7cf7-4599-a62f-30140ef936fe",
+    "name": "Phase 4",
+    "repo": "Modular-Curriculum",
+    "path": "content/python/topics/classes/projects/knights-travail/README-04-find-path-py.md",
+    "type": "Reading",
+    "timeEstimate": 7200,
+    "urls": [
+      "phase-4"
+    ],
+    "topic": "Friday",
+    "subtopic": "Knights Travail",
+    "body": "# Knight's Travails Part 4\n\nNow that you have created your internal data structure (the move tree stored in\n`self._root`), you can traverse it to find the shortest path to any position on\nthe board from the original position.\n\nCreate an instance method named `find_path(end_position)` to search for the\n`end_position` in the move tree. You can use either the `depth_search(value)` or\n`breadth_search(value)` method on the `Node` object stored in `self._root`. This\nshould return the tree node containing the value passed in through\n`end_position`.\n\nNow that you have a node, you can build a path from it. Add an instance method\nnamed `trace_to_root(end_node)` to the `KnightPathFinder` class. This method\nshould take an instance of the `Node` class and create a list of the values from\nthat node back to the root node using the `parent` property on each `Node`\ninstance. The `trace_to_root(end_node)` should return the values in order from\nthe start position to the end position.\n\nUse `trace_to_root(end_node)` to finish the `find_path(end_position)` method.\n\nHere are some example paths that you can use for testing purposes. Your paths\nmight not be exactly the same, but should be the same number of steps.\n\n```python\nfinder = KnightPathFinder((0, 0))\nfinder.build_move_tree()\nprint(finder.find_path((2, 1))) # => [(0, 0), (2, 1)]\nprint(finder.find_path((3, 3))) # => [(0, 0), (2, 1), (3, 3)]\nprint(finder.find_path((6, 2))) # => [(0, 0), (1, 2), (2, 4), (4, 3), (6, 2)]\nprint(finder.find_path((7, 6))) # => [(0, 0), (1, 2), (2, 4), (4, 3), (5, 5), (7, 6)]\n```\n"
+  },
+  "success": true
+}

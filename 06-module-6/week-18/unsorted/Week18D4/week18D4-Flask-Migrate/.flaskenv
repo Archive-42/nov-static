@@ -1,0 +1,3 @@
+FLASK_APP=flask_migrate_test.py
+FLASK_ENV=development
+DATABASE_URL=postgresql://flask_migrate_test:flask_migrate_test@localhost/flask_migrate_test

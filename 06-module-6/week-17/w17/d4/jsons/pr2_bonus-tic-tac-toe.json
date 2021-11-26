@@ -1,0 +1,19 @@
+{
+  "template": {
+    "taskId": "16bc3efc-452f-4ef1-b649-e02cee4b985a",
+    "name": "Bonus: Tic-Tac-Toe",
+    "repo": "Modular-Curriculum",
+    "path": "content/python/topics/structures/projects/tic-tac-toe/README.md",
+    "type": "Project",
+    "timeEstimate": 0,
+    "urls": [
+      "bonus--tic-tac-toe"
+    ],
+    "topic": "Friday",
+    "subtopic": "Knights Travail",
+    "download": "",
+    "solution": "",
+    "body": "# Command Line Tic-Tac-Toe\n\nIn this project, you will write an interactive Python program that plays\nTic-Tac-Toe. You will use the following ideas that you have learned so far:\n\n* using variables\n* using lists\n* using tuples\n* using functions to organize your code\n* using `print` to print information to the terminal\n* using `input()` to get input from the player\n* using loops\n* converting strings to integers\n* using `if` statements\n\n## The game\n\nIn case you have forgotten how Tic-Tac-Toe is played, here's the [Wikipedia\narticle on Tic-Tac-Toe][1].\n\n## Set Up\n\nMake sure that you're running a variation of Python 3.8 in your terminal. Type\n`python --version` and make sure the version begins with \"3.8\".\n\nClone the starter repository from\nhttps://github.com/appacademy-starters/python-tic-tac-toe.\n\nChange the working directory into your cloned repository. Open it with Visual\nStudio Code and do your work in the **tic_tac_toe.py** file.\n\nTo run the file, type `python tic_tac_toe.py` in your terminal.\n\n## The starter file\n\nThe file **tic_tac_toe.py** already has some fully-written functions in there\nfor you, so that you don't have to do things like print the board. The rest of\nthe file contains stubbed-out functions for you to complete so that the game\nwill work.\n\nMake sure you do good validation of player input so that they can't enter\nsomething meaningless or wrong.\n\nYour job is to complete the functions based on the comments in the functions to\nget the game play to work. The comments in the functions comply with the\nspecifications in [PEP 257 - Docstring Conventions][2]. You'll see lots of that\ntype of documentation in your Python career, so it's good to start, now!\n\n## Functions to complete\n\nBelow is the recommended order to finish the stubbed-out functions. As you\nfinish writing each function, think about how you could test that the function\nis working as expected.\n\n### Grid space value\n\nBegin by rendering numbers in the Tic-Tac-Toe grid. Complete the  `space_value`\nfunction and take a moment to figure out its expected behavior by observing how\nit is used in the `draw_board` function.\n\n### Get game move\n\nThen go through and complete the `get_player_move`, `get_random_move`, and\n`is_board_full` functions. To generate random moves, think about how to use the\n[`shuffle`][3] method from the `random` module.\n\nNote that you can make use of the `is_space_free` function to verify whether a\nuser's move in `get_player_move` or the computer's move in `get_random_move` is\nvalid. You can also use the `is_space_free` function to check whether the game\nboard is full in the `is_board_full` function.\n\n### End of game\n\nGo through and finish the `is_winner` function to determine whether the the\nspecified letter is a winner. Lastly, finish the `play_again` function to take\nin user input and determine if the player wants to play again.\n\nCongratulations! You have written an interactive Python program to play\nTic-Tac-Toe with a simple AI in the command line!\n\n\n[1]: https://en.wikipedia.org/wiki/Tic-tac-toe#Game_play\n[2]: https://www.python.org/dev/peps/pep-0257/\n[3]: https://docs.python.org/3/library/random.html?highlight=shuffle#random.shuffle\n"
+  },
+  "success": true
+}

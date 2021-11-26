@@ -1,0 +1,10 @@
+main {
+  display: flex;
+  /* flex-direction: row-reverse; */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: linear-gradient(to bottom right, #8e9473, #e4fa78);
+}

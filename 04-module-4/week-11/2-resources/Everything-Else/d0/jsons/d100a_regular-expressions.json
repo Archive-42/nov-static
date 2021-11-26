@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "2a296441-c32e-4057-929f-67fc0836231e",
+    "name": "Regular Expression Learning Objectives",
+    "repo": "Modular-Curriculum",
+    "path": "content/javascript/objectives/reading-regex-objectives.md",
+    "type": "Reading",
+    "timeEstimate": 0,
+    "urls": [
+      "regular-expression-objectives"
+    ],
+    "topic": "Monday - Node HTTP Servers",
+    "subtopic": "Learning Objectives",
+    "body": "# Regular Expressions Objectives\n\nRegular expressions are a delight and a nightmare. They please and they\nconfound. They are an important part of every developer's toolbox. By the time\nyou finish this, you should be able to\n\n* Define the effect of the * operator and use it in a regular expression\n* Define the effect of the ? operator and use it in a regular expression\n* Define the effect of the + operator and use it in a regular expression\n* Define the effect of the . operator and use it in a regular expression\n* Define the effect of the ^ operator and use it in a regular expression\n* Define the effect of the $ operator and use it in a regular expression\n* Define the effect of the [] bracket expression and use it in a regular\n  expression\n* Define the effect of the - inside brackets and use it in a regular expression\n* Define the effect of the ^ inside brackets and use it in a regular expression\n"
+  },
+  "success": true
+}

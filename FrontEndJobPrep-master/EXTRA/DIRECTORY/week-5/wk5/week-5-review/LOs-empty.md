@@ -54,8 +54,7 @@
 
 2. The SOLID principles
 
-
-    - What does each letter stand for?
-    - We talked about the S and L in more depth; know how to apply them and what they mean for us in JavaScript
+   - What does each letter stand for?
+   - We talked about the S and L in more depth; know how to apply them and what they mean for us in JavaScript
 
 3. How to apply the Law of Demeter

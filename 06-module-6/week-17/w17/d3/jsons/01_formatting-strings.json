@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "ae66c4de-a202-4ed4-9b60-168663162d9a",
+    "name": "Formatting Strings",
+    "repo": "Modular-Curriculum",
+    "path": "content/python/topics/structures/readings/reading-printf-py.md",
+    "type": "Reading",
+    "timeEstimate": 600,
+    "urls": [
+      "formatting-strings"
+    ],
+    "topic": "Homework for Wednesday",
+    "subtopic": "Homework",
+    "body": "# Formatted Strings\n\nOften a simple print statement will be enough to track a script's progress.\nHowever, sometimes you want a more elaborate output for debugging. Or maybe\nyou need a formatted string for the user interface.\n\nWhen you complete this lesson, you should be able to\n- Generate formatted output using `join` and `format`\n\n## Join\n\nA common request is to take a list and `join` them together into\na single string. Often a separator is needed to make the data look pretty.\nOften this is a space, comma, line break; or perhaps a dash in the case of\nzip codes and phone numbers.\n\nIn Javascript the `join` function was available on arrays. In Python, however,\nthis is flipped around. The `join` function is actually on strings.\n\nThis means that `''.join(sequence)` connects the elements in the sequence using\nthe character inside the single quotes is between each element.\n\n```python\nshopping_list = ['bread','milk','eggs']\nprint(','.join(shopping_list))\n```\n\n```plaintext\nbread, milk, eggs\n```\n\n## Formatting printing\n\nPython has a very powerful formatting engine for making exactly the strings\nyou need. The `format` function is one way to apply these options. Like `join`,\n`format` is applied to strings.\n\n### Comma as thousands separator\n\n```python\nprint('{:,}'.format(1234567890))\n```\n\n```plaintext\n'1,234,567,890'\n```\n\n### Date and Time\n\n```python\nd = datetime.datetime(2020, 7, 4, 12, 15, 58)\nprint('{:%Y-%m-%d %H:%M:%S}'.format(d))\n```\n\n```plaintext\n'2020-07-04 12:15:58'\n```\n\n### Percentage\n\n```python\npoints = 190\ntotal = 220\nprint('Correct answers: {:.2%}'.format(points/total))\n```\n\n```plaintext\nCorrect answers: 86.36%\n```\n\n### Data Table\n\n```python\nwidth=8\nprint(' decimal      hex   binary')\nprint('-'*27)\nfor num in range(1,16):\n    for base in 'dXb':\n        print('{0:{width}{base}}'.format(num, base=base, width=width), end=' ')\n    print()\n```\n\n```plaintext\n decimal      hex   binary\n---------------------------\n       1        1        1\n       2        2       10\n       3        3       11\n       4        4      100\n       5        5      101\n       6        6      110\n       7        7      111\n       8        8     1000\n       9        9     1001\n      10        A     1010\n      11        B     1011\n      12        C     1100\n      13        D     1101\n      14        E     1110\n      15        F     1111\n```\n\n## Reference\n\nHere is a [PDF version of this lesson] if you'd like to print it for future use.\n\nThere are many more examples of [formatted output] in the\nofficial Python documentation. That is a good resource to bookmark.\n\n## What you've learned\n\n- Generate formatted output using `join` and `format`\n\n\n[PDF version of this lesson]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Modular-Curriculum/content/python/topics/structures/assets/python-format-reference.pdf\n[formatted output]: https://docs.python.org/3/library/string.html#formatspec\n"
+  },
+  "success": true
+}

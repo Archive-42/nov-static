@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "5b38802e-ff56-4e1e-ae02-3202880b76d2",
+    "name": "HTML Form Learning Objectives",
+    "repo": "Modular-Curriculum",
+    "path": "content/express/objectives/reading-html-forms-objectives.md",
+    "type": "Reading",
+    "timeEstimate": 0,
+    "urls": [
+      "html-form-objectives"
+    ],
+    "topic": "Homework for Wednesday",
+    "subtopic": "Learning Objectives",
+    "body": "# HTML Forms Objectives\n\nHTML forms are the way that you collect data from a user to power your Web\napplication. Using forms is a vital building block for your Web application\nknowledge. After this lesson, you should be able to:\n\n1. Describe the interaction between the client and server when an HTML form is\n   loaded into the browser, the user submits it, and the server processes it\n2. Create an HTML form using the Pug template engine\n3. Use express to handle a form's POST request\n4. Use the built-in `express.urlencoded()` middleware function to parse incoming\n   request body form data\n5. Explain what data validation is and why it's necessary for the server to\n   validate incoming data\n6. Validate user-provided data from within an Express route handler function\n7. Write a custom middleware function that validates user-provided data\n8. Use the `csurf` middleware to embed a token value in forms to protect against\n   Cross-Site Request Forgery exploits\n"
+  },
+  "success": true
+}

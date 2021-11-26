@@ -1,0 +1,15 @@
+form(action="/sign-up" method="POST" id="sign-up-form" class="register-new-user")
+  div.errors
+  div
+    h2 CREATE A NEW ACCOUNT
+    input(type="hidden" name="_csrf" value=token)
+    br
+    input(type="text" name="username" placeholder="User Name")
+    br
+    input(type="email" name="email" placeholder="Email")
+    br
+    input(type="password" name="password" placeholder="Password")
+    br
+    input(type="password" name="confirmPassword" placeholder="Confirm Password")
+    br
+    button(type="submit" class="sign-up-button") SIGN UP

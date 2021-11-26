@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "0d818197-b129-4bc0-a44d-c274f21a8ff6",
+    "name": "Scripts Vs. Programs",
+    "repo": "Modular-Curriculum",
+    "path": "content/python/topics/modules/readings/reading-scripts-py.md",
+    "type": "Reading",
+    "timeEstimate": 300,
+    "urls": [
+      "scripts-vs--programs"
+    ],
+    "topic": "Homework for Wednesday",
+    "subtopic": "Homework",
+    "body": "# Scripts vs. Programs\n\nWhen you finish this article you will be able to\n- Explain the difference between scripts and programs\n- Recall common use cases for Python\n\n## Scripts\n\nPython can be used for many development tasks. The simplest is a script.\nScripts accomplish a straightforward (although probably complex) task from\nstart to finish.\n\nA programming script can be thought of as a set of code that runs in a linear \norder. Some scripts have no structure; although many scripts will use functions \nso they are easier to write and maintain. The most complex scripts will use \nsplit the code into multiple files. While Python calls these files modules, \nthey are really just for convenience and don't include much structure.\n\nMost scripts will either run without user interaction or with simple parameters \npassed in through the invocation or prompts to the user during execution. This\nis one way to identify a script as different from a program.\n\nYou will begin your Python journey writing scripts.\n\n## Programs\n\nThe biggest difference between scripts and programs is level of complexity and\npurpose. Programs are often significantly more complex than scripts. Often \nprograms include multiple user interfaces (UIs). Programs will likely\nuse design patterns such as Object Oriented Programming (OOP), model-view\narchitectures and much more.\n\nMany programs will include multiple modules and packages -\nboth from third-parties and custom-built. Python programs very often include\nunit testing, package management and environment configuration for easier \ndeployments.\n\nPrograms and scripts are on a spectrum. There's no clear line between them, but\nit's helpful to think of a few examples of programs you are likely to work on \nin your career.\n\n### Web applications\n\nYou are already familiar with web applications in JavaScript. Python can produce\nHTML, JavaScript and CSS to display in web browsers as web pages. These are web \napplications.\n\n### APIs\n\nAdditionally, Python can perform as an interpreter between your front end, for\nexample React, and a database (or collection of databases) or other services.\nThe name for this interpreter is an **Application Programming Interface** \n(or API).\n\nYou already used JavaScript (NodeJS) as an API. Later in this course you will\nalso use Python. Each language has it's own advantages which you'll learn\nmore about as this course continues. \n\n## What you've learned\n\n- Explain the difference between scripts and programs\n- Recall common use cases for Python\n"
+  },
+  "success": true
+}

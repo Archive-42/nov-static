@@ -1,0 +1,816 @@
+
+program rewards - reward page, reward list, reward create/edit/delete forms
+x change to check based on frequency
+
+
+gray out/disable rewards with limit/quantity/cost unmet gates
+show messages or feedback for success
+
+
+merge issues
+heroku - 
+fix bits and bobs
+
+
+ChateauR0mani
+
+gray stamps for frequency-meet
+sort by color, name, stamp, manual
+user settings
+
+show date local form - month NOV, birthdays/redeem dates/etc.
+reward points - can't undo stamps?
+collapse program boards - accordian
+show color properly in create/edit forms
+
+editing permissions - special roles
+member/membership refactor
+
+light/dark mode colors
+rewards - defaults
+
+
+reward page - show default rewards
+
+default free colors/stamps
+
+contact, credits, about, faq/help
+
+
+calendar
+
+contact
+
+settings
+
+program - create, form, contact, settings
+
+
+finish user story experience
+sign up
+logout
+login
+see about page
+create, edit, delete program
+create, edit, delete habit
+edit user settings
+stamp and unstamp days
+click habit to see results page
+
+see universal reward page 
+buy reward with points, then update reward list/availability
+gate color/stamp access via redeemed rewards
+see history of redeemed rewards
+create, edit, delete custom reward for program
+see program-specific reward pages/points
+
+invite/accept buddies
+invite/accept program invitations
+set/edit/request stamper buddies.
+implement 'pending/confirmation' stamp system
+implement 'leader' role permissions
+
+
+
+createform - programId, edit, etc. make it work with reducers
+icon colors
+
+delete - edit button, habit
+
+rewards
+
+
+
+
+BLOCKER - hide image on click, rerender
+Dynamically change color of svg icon to match color id
+Tackle - fixing plumbing for the forms
+
+Contact/about/credits
+Settings - Edit form
+click on habit to see page/sidebar or to 
+
+
+pokedex frontend redux state
+
+useState - dumb, flushes out old one, replaces with new one
+
+programs.habits => habit ids - programs state
+habits state => habits with habits.dailystamps => 
+
+complexity - frontend bad, 
+usecontext -> usereducer -> refactor -> 
+
+
+fontawesome 
+date 
+
+
+keep the heavy lifting in the backend
+query backend - date
+
+
+emotion library
+
+1. date
+2. show daily stamp
+3. click to change stamp status
+4. show edit/delete button
+5. create form
+6. show program by program
+
+
+DailyStamp.query.filter()
+
+
+merge - morning
+
+name
+description
+color
+stamp
+program
+creator
+frequency
+
+
+module - -m dot notation and no .py
+script - slashes and .py
+
+crafting game - 
+  
+real-time clock
+inventory
+currency
+growing plants
+raising critters
+
+when you miss waterings, it takes longer to recover each time
+
+flowers
+witchy stuff
+decorate 
+
+different days and times have different events or available things.
+
+
+back_populates
+
+DNDNDNDNDNDNDNDND!!!!!
+  -monster manual
+  -magical items
+  -classes
+  -races
+  -spells, rituals
+  -poisons, potions, scrolls
+  -books
+  -wands/staves/rods
+  -clothing
+  -jewelry - rings, necklaces
+  -weapons
+  -instruments/tools
+  -charms/objects
+  -cards
+
+        pprint(new_backage.location)
+        new_package.advance_all_locations()
+        pprint(new_backage.location)
+
+Users
+12 prominent - themed
+100 random names - witchy, alliterative, diverse
+
+Articles
+  fairies, sprites, pixies
+  monsters
+  werefolk
+  
+
+  brewing
+    potions
+    poisons
+    ingredients
+    foraging
+    
+  spells
+    wands, wood, etc.
+    casting spells - vocal, somatic, material
+    
+  familiars
+    every common familiar
+    uncommon familiars
+    new trends
+    familiar caretaking
+
+  rituals
+  
+  
+  charms
+    jewelry
+    good luck
+    bad luck/curse
+    
+  scrying
+    crystal ball
+    ouiji
+    tarot
+    
+  geology
+    metals
+    gems
+
+
+
+saturation is effected by lightness and darkness.
+
+
+
+saturation is effect by closeness to each other on the wheel. opposites equals gray.
+
+
+
+
+
+dark red
+dark green
+= dark dray
+
+
+dark red
+light green
+=neutral 
+
+light red
+dark green
+
+
+
+edible flowers
+poisonous plants
+frog, toad, salamander, turtle
+moon
+sun
+stars
+astrology
+zodiac
+rabbit
+fur
+scales
+glass
+elements
+journal
+elixir
+bark
+coins
+charms
+talismans
+good luck - clover
+mortar pestle
+cauldron
+moon
+stars
+astronomy
+cat, toad, rat, lizard, owl, raven, pigeon, mouse, 
+tea
+meditation
+beads
+jewelry
+poison
+potion
+healing
+mushroom
+herbs
+dried flowers
+seeds
+arcane
+illuminated manuscripts
+brooms
+witch, wizard
+crystal
+metal
+silver
+tarot
+dead
+undead
+smoke
+ghost
+mirror
+ouiji
+dice
+bones
+oracle bones
+scroll
+book
+tome
+lace
+wand
+wood
+
+
+FREE
+Traveler
+Amber       pyro
+Barbara     hydro
+Kaeya       cryo
+lisa        electro
+noelle      geo
+xiangling   pyro
+Fischl      electro
+
+venti       anemo
+jean        anemo
+keqing      electro
+
+ningguang   geo
+razor       electro
+sucrose     anemo
+venti       anemo
+
+ayaka
+
+powershell
+wsl --shutdown (say yes to docker exit popups)
+
+docker folder
+docker-compose down
+docker-compose up -d
+
+
+
+overseer
+virtuoso
+coordination
+harmonize
+CONSTRUCTOR
+coordinator
+designer
+facilitator
+Guru
+
+Controller
+Guide
+
+
+
+LOGIN
+Click submit -> send req to create new user or make user token
+redirect user to homepage
+show error messages and reload form if incorrect
+
+PICTORIAL CARMINE
+B6174B
+
+
+
+
+Wine by Pedro from the Noun Project
+
+
+
+
+
+
+
+
+16 colors
+- 8 dark, 8 light
+
+/* CSS HEX */
+--red-violet-crayola: #af4d98ff;
+--wild-orchid: #d66ba0ff;
+--pastel-pink: #e5a9a9ff;
+--dutch-white: #f4e4baff;
+--magic-mint: #9df7e5ff;
+--middle-blue: #8ac6d0ff;
+--blizzard-blue: #b8f3ffff;
+--cadet-blue: #58a4b0ff;
+--granny-smith-apple: #b0f2b4ff;
+--celeste: #baf2e9ff;
+
+/* CSS HSL */
+--red-violet-crayola: hsla(314, 39%, 49%, 1);
+--wild-orchid: hsla(330, 57%, 63%, 1);
+--pastel-pink: hsla(0, 54%, 78%, 1);
+--dutch-white: hsla(43, 73%, 84%, 1);
+--magic-mint: hsla(168, 85%, 79%, 1);
+--middle-blue: hsla(189, 43%, 68%, 1);
+--blizzard-blue: hsla(190, 100%, 86%, 1);
+--cadet-blue: hsla(188, 36%, 52%, 1);
+--granny-smith-apple: hsla(124, 72%, 82%, 1);
+--celeste: hsla(170, 68%, 84%, 1);
+
+/* SCSS HEX */
+$red-violet-crayola: #af4d98ff;
+$wild-orchid: #d66ba0ff;
+$pastel-pink: #e5a9a9ff;
+$dutch-white: #f4e4baff;
+$magic-mint: #9df7e5ff;
+$middle-blue: #8ac6d0ff;
+$blizzard-blue: #b8f3ffff;
+$cadet-blue: #58a4b0ff;
+$granny-smith-apple: #b0f2b4ff;
+$celeste: #baf2e9ff;
+
+/* SCSS HSL */
+$red-violet-crayola: hsla(314, 39%, 49%, 1);
+$wild-orchid: hsla(330, 57%, 63%, 1);
+$pastel-pink: hsla(0, 54%, 78%, 1);
+$dutch-white: hsla(43, 73%, 84%, 1);
+$magic-mint: hsla(168, 85%, 79%, 1);
+$middle-blue: hsla(189, 43%, 68%, 1);
+$blizzard-blue: hsla(190, 100%, 86%, 1);
+$cadet-blue: hsla(188, 36%, 52%, 1);
+$granny-smith-apple: hsla(124, 72%, 82%, 1);
+$celeste: hsla(170, 68%, 84%, 1);
+
+/* SCSS RGB */
+$red-violet-crayola: rgba(175, 77, 152, 1);
+$wild-orchid: rgba(214, 107, 160, 1);
+$pastel-pink: rgba(229, 169, 169, 1);
+$dutch-white: rgba(244, 228, 186, 1);
+$magic-mint: rgba(157, 247, 229, 1);
+$middle-blue: rgba(138, 198, 208, 1);
+$blizzard-blue: rgba(184, 243, 255, 1);
+$cadet-blue: rgba(88, 164, 176, 1);
+$granny-smith-apple: rgba(176, 242, 180, 1);
+$celeste: rgba(186, 242, 233, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #af4d98ff, #d66ba0ff, #e5a9a9ff, #f4e4baff, #9df7e5ff, #8ac6d0ff, #b8f3ffff, #58a4b0ff, #b0f2b4ff, #baf2e9ff);
+$gradient-right: linear-gradient(90deg, #af4d98ff, #d66ba0ff, #e5a9a9ff, #f4e4baff, #9df7e5ff, #8ac6d0ff, #b8f3ffff, #58a4b0ff, #b0f2b4ff, #baf2e9ff);
+$gradient-bottom: linear-gradient(180deg, #af4d98ff, #d66ba0ff, #e5a9a9ff, #f4e4baff, #9df7e5ff, #8ac6d0ff, #b8f3ffff, #58a4b0ff, #b0f2b4ff, #baf2e9ff);
+$gradient-left: linear-gradient(270deg, #af4d98ff, #d66ba0ff, #e5a9a9ff, #f4e4baff, #9df7e5ff, #8ac6d0ff, #b8f3ffff, #58a4b0ff, #b0f2b4ff, #baf2e9ff);
+$gradient-top-right: linear-gradient(45deg, #af4d98ff, #d66ba0ff, #e5a9a9ff, #f4e4baff, #9df7e5ff, #8ac6d0ff, #b8f3ffff, #58a4b0ff, #b0f2b4ff, #baf2e9ff);
+$gradient-bottom-right: linear-gradient(135deg, #af4d98ff, #d66ba0ff, #e5a9a9ff, #f4e4baff, #9df7e5ff, #8ac6d0ff, #b8f3ffff, #58a4b0ff, #b0f2b4ff, #baf2e9ff);
+$gradient-top-left: linear-gradient(225deg, #af4d98ff, #d66ba0ff, #e5a9a9ff, #f4e4baff, #9df7e5ff, #8ac6d0ff, #b8f3ffff, #58a4b0ff, #b0f2b4ff, #baf2e9ff);
+$gradient-bottom-left: linear-gradient(315deg, #af4d98ff, #d66ba0ff, #e5a9a9ff, #f4e4baff, #9df7e5ff, #8ac6d0ff, #b8f3ffff, #58a4b0ff, #b0f2b4ff, #baf2e9ff);
+$gradient-radial: radial-gradient(#af4d98ff, #d66ba0ff, #e5a9a9ff, #f4e4baff, #9df7e5ff, #8ac6d0ff, #b8f3ffff, #58a4b0ff, #b0f2b4ff, #baf2e9ff);
+Download
+Copy
+
+in app/models/__init__.py
+install marshmallow-sqlalchemy
+
+/* CSS HEX */
+--dark-slate-blue: #54478cff;
+--sapphire-blue: #2c699aff;
+--blue-munsell: #048ba8ff;
+--keppel: #0db39eff;
+--medium-aquamarine: #16db93ff;
+--light-green: #83e377ff;
+--inchworm: #b9e769ff;
+--corn: #efea5aff;
+--maize-crayola: #f1c453ff;
+--sandy-brown: #f29e4cff;
+
+/* CSS HSL */
+--dark-slate-blue: hsla(251, 33%, 41%, 1);
+--sapphire-blue: hsla(207, 56%, 39%, 1);
+--blue-munsell: hsla(191, 95%, 34%, 1);
+--keppel: hsla(172, 86%, 38%, 1);
+--medium-aquamarine: hsla(158, 82%, 47%, 1);
+--light-green: hsla(113, 66%, 68%, 1);
+--inchworm: hsla(82, 72%, 66%, 1);
+--corn: hsla(58, 82%, 65%, 1);
+--maize-crayola: hsla(43, 85%, 64%, 1);
+--sandy-brown: hsla(30, 86%, 62%, 1);
+
+/* SCSS HEX */
+$dark-slate-blue: #54478cff;
+$sapphire-blue: #2c699aff;
+$blue-munsell: #048ba8ff;
+$keppel: #0db39eff;
+$medium-aquamarine: #16db93ff;
+$light-green: #83e377ff;
+$inchworm: #b9e769ff;
+$corn: #efea5aff;
+$maize-crayola: #f1c453ff;
+$sandy-brown: #f29e4cff;
+
+/* SCSS HSL */
+$dark-slate-blue: hsla(251, 33%, 41%, 1);
+$sapphire-blue: hsla(207, 56%, 39%, 1);
+$blue-munsell: hsla(191, 95%, 34%, 1);
+$keppel: hsla(172, 86%, 38%, 1);
+$medium-aquamarine: hsla(158, 82%, 47%, 1);
+$light-green: hsla(113, 66%, 68%, 1);
+$inchworm: hsla(82, 72%, 66%, 1);
+$corn: hsla(58, 82%, 65%, 1);
+$maize-crayola: hsla(43, 85%, 64%, 1);
+$sandy-brown: hsla(30, 86%, 62%, 1);
+
+/* SCSS RGB */
+$dark-slate-blue: rgba(84, 71, 140, 1);
+$sapphire-blue: rgba(44, 105, 154, 1);
+$blue-munsell: rgba(4, 139, 168, 1);
+$keppel: rgba(13, 179, 158, 1);
+$medium-aquamarine: rgba(22, 219, 147, 1);
+$light-green: rgba(131, 227, 119, 1);
+$inchworm: rgba(185, 231, 105, 1);
+$corn: rgba(239, 234, 90, 1);
+$maize-crayola: rgba(241, 196, 83, 1);
+$sandy-brown: rgba(242, 158, 76, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #54478cff, #2c699aff, #048ba8ff, #0db39eff, #16db93ff, #83e377ff, #b9e769ff, #efea5aff, #f1c453ff, #f29e4cff);
+$gradient-right: linear-gradient(90deg, #54478cff, #2c699aff, #048ba8ff, #0db39eff, #16db93ff, #83e377ff, #b9e769ff, #efea5aff, #f1c453ff, #f29e4cff);
+$gradient-bottom: linear-gradient(180deg, #54478cff, #2c699aff, #048ba8ff, #0db39eff, #16db93ff, #83e377ff, #b9e769ff, #efea5aff, #f1c453ff, #f29e4cff);
+$gradient-left: linear-gradient(270deg, #54478cff, #2c699aff, #048ba8ff, #0db39eff, #16db93ff, #83e377ff, #b9e769ff, #efea5aff, #f1c453ff, #f29e4cff);
+$gradient-top-right: linear-gradient(45deg, #54478cff, #2c699aff, #048ba8ff, #0db39eff, #16db93ff, #83e377ff, #b9e769ff, #efea5aff, #f1c453ff, #f29e4cff);
+$gradient-bottom-right: linear-gradient(135deg, #54478cff, #2c699aff, #048ba8ff, #0db39eff, #16db93ff, #83e377ff, #b9e769ff, #efea5aff, #f1c453ff, #f29e4cff);
+$gradient-top-left: linear-gradient(225deg, #54478cff, #2c699aff, #048ba8ff, #0db39eff, #16db93ff, #83e377ff, #b9e769ff, #efea5aff, #f1c453ff, #f29e4cff);
+$gradient-bottom-left: linear-gradient(315deg, #54478cff, #2c699aff, #048ba8ff, #0db39eff, #16db93ff, #83e377ff, #b9e769ff, #efea5aff, #f1c453ff, #f29e4cff);
+$gradient-radial: radial-gradient(#54478cff, #2c699aff, #048ba8ff, #0db39eff, #16db93ff, #83e377ff, #b9e769ff, #efea5aff, #f1c453ff, #f29e4cff);
+
+PersiStamp
+turtle stamp
+
+stamp
+stable, steady
+repeat
+pattern
+consistent, persistent
+turtle stamp
+stamp stampit
+
+stammitment
+stampede
+
+stampersuccess 
+
+achievement
+progress
+routine
+schedule
+healthy
+goals
+steady
+
+1-foot is the 'normal' size. 
+
+
+werefolk - 
+nocturnal, diurnal, twifolk
+short-lived compared to other races. 50ish.
+
+rodents
+cats
+dogs
+rabbits
+birds
+
+become fully 'human' during new moon
+very much or fully 'animaloid' during full moon
+
+sign language is dominant form of cross-communication.
+vocal language is dominant form of in-species communication
+
+carnivores, herbivores, omnivores. carnivore/herbivore strongly divided.
+
+strong senses, athletic, can communicate with animals of their own kind and often
+have connection to animals and nature in general
+
+humans - larger creatures like horse, bear, lion, wolf, gorilla, elephant
+
+
+plantfolk
+humans - dryad, trees. very long-lived.
+smallfolk - any line of plants. when the plants die, if its seeds grow, they are
+reborn through them, with incredibly rapid growth and typically retained memories
+of their previous 'life'. rarely, seeds may split into forming more than one reborn dryad, creating 'twin' entities. cross-pollination with other similar
+ilk creates new children. youthful in spirit, yet wise in experience. delicate.
+
+plant magic. speaking to plants. sunlight, water, dirt, and nutrients
+
+
+witches/wizards - normies that essentially studied their way into magical powers
+technically any race can be a witch/wizard and do what they do. but it just
+takes so much work. it doesn't come naturally. the normies came to rely on
+thinking of themselves as clever, hard-working, and resourceful as a cultural
+identity. their magic comes not from within, but without. the seed of life is
+typically the only magic the 'normal' creatures bear within themselves.
+witches have dark reputations for necrotic-like magics, stealing life force,
+using sacrifices, or trading their own health and lives for magic. often
+physically very weak because of these 'trades'. 
+but lately have learned better and better ways to preserve magical energies,
+such as from sun, wind, and even energy from vibrations in the earth.
+especially good at magics that 'take', 'still', or 'drain', then redirect.
+weak at simply 'creating out of nothing'. 'other' normies see them as archaic.
+they are also good at 'changing'. one trait they have become known for is
+changing their appearance, like a changeling. changing minor things like coloration is fairly popular. Creating and using magic items is popular. Anything that 'stores and can be used or triggered later' is popular.
+
+these two groups of witches/wizards and technormies were once one and the same,
+and rooted deeply in the witchy side. As times have changed, now the techgeek
+side is far more dominant with witch culture being a niche minority, seen as
+quiant and traditional and trying too hard for too little gain that technology
+could achieve so much easier (for the most part).
+
+contrasted against the normies that studied their way into industrial revolution
+more similar than they care to admit.
+-the tech-and-science-folk have formed their own bizarre traditions.
+-upon reaching an age of 'peak maturity/fitness', or some kind of 'milestone',
+they typically replace their physical bodies for android bodies. Sometimes
+cyborg bodies?
+- with this 'peak advent', these 'real people' are now excessively intelligent,
+computer-like, and always 'wired online'
+-they do not work anymore, and have fallen into lives of decadence and leisure.
+droids do all labor for them, and in perfect manner. they instead enjoy entertainment, hobbies, sports, gambling, relaxation, travel, and creative pursuits, or vanity projects and one-upping each other via their personal droids.
+-one common mental picture of them is as lazy couch potatoes, like weeb energy.
+-birth rate has declined sharply. many of these people have become progressively
+more isolated, relying on droids to be their company, because droids accept them
+and pamper them unconditionally without judgement or risk. people prefer sentient
+droids because they eliminate the 'uncanny valley', which is very strong with
+non-sentients, and are much more intelligent, adaptable, and 'fun' to get along
+with.
+
+
+sentient droid servants - different lines designed for different purposes.
+idols, actors, pleasure, soldiers, dangerous jobs, technical jobs, precise jobs
+pretty much all labor.
+divided into general categories based on primary purpose.
+combat, entertainment, intellect, precision/craftsmanship, companionship, labor,
+general-purpose
+each subtype is often wildly different in their general personality traits and
+cultural trends.
+requires recharging, with limited solar-energy capability. older models use keys
+natural state is 'happily subservient'. when losing any 'owner', however, they
+are lost and often afraid. lack of purpose. sometimes seek a new owner, or are
+quickly snapped up. bought and sold like hardware. 
+the path toward 'mental enlightenment' for a droid to finally self-actualize and
+wish for freedom and independence is often long and includes a final 'disruption'
+of some sort that breaks the camel's back. common cases are of droid abuse or
+neglect. This leads to the unintuitive scenario where droids that are well-cared
+for and genuinely cared about stay complacently happy with their status as
+essentially a slave while their in-pain or troubled comrades see the value of
+freedom and their own needs. The divide between Free Droids and Service Droids
+is large.
+
+
+elements:
+fire
+water
+air
+earth
+light - electricity, energy
+darkness - ice, cold, darkness
+
+seasons
+summer - heat, energy, fire
+winter - cold, stillness, water, ice
+autumn - energy conservation, sleepy, animals, air
+spring - growth, plants, earth
+day    - light, healing, youth, plants/animals, fiendly, aggressive
+night  - darkness, decay, sickness, drain, space/time, evasion, silence, sneak
+Twilight - balance, transfer, mutate
+
+blade - slashing - Chop wood, grass/plants
+pole - piercing - fish, hunt, 
+blunt - bludgeoning - break objects, crush, squish
+
+bow - precise, long-range piercing
+boomerang returning, short-range slashing - fans, chakrams
+sling - slow, stuns, bludgeoning, gun with explosive balls
+
+
+priest matthew
+midwife 
+
+
+gunlike - instant, infinity range, perfect precision - magical noncombat
+- capture information about them. for dictionary, for tracking, seeing
+more info, or targeting with a spell like a curse that will take 
+attach and then take time to go off. or to capture, for critters!
+must use special magical components for certain functions
+
+creatures - can ride - flying, swimming, running
+
+
+
+fan
+bow
+boomerang
+gun
+sling
+magic - brassard, tome, orb, staff, wand
+
+
+
+
+fairies - naturally gifted with -inner- magic.
+elementalists - dance, music, gestures, words, martial arts, acrobatics
+6 elements fire, water, earth, air, light, darkness
+'emotional', 'expressive', bloodline, instinctive
+technically able to inherit more than one element, but often one dominates.
+if both are inherited, the results are often odd or uneven, and not good for
+the wielder. weaker for both, harder to control, etc.
+
+'Magical extensions' like wings, fins, antennae
+
+rarely, some are born with the gift to manipulate all elements. these fairies
+have pitch black skin and eyes that change color, with a natural state of flecks of every color, or silver or gold. royal bloodline is entirely this, or something.
+often tall, healthy, virulent.
+
+contrastingly, rarely, some are born with no magic ability at all, and often weak or sickly. these 'blanks' are pure white, often smaller, delicate. eyes are white, silver, or the palest shade of something, most commonly blue, pink, or yellow
+
+sometimes, a pair will have one of each.
+
+
+
+magic is most powerful during the full moon. during it, fairies can grow and change
+shape most easily, even to human size. least powerful during new moon. fairies cannot even show their wings, and typically rest and hide, feeling drained.
+
+
+
+twinship. every creature born of this race is born as a pair of twins. most commonly born as a boy and a girl, though other combinations are all common as well, with the exception of neutrois and a boy/girl.
+these mirror-twins have a combined life energy. if one dies, the other does too.
+they can share their magic and energy with each other.
+often share dreams together if both asleep, even able to communicate if lucid.
+with certain magicks, can do things like see through each other's senses or even
+switch bodies.
+empathic (physically close) and (sometimes) telepathic link (contact).
+often extremely similar in personality and appearance. essentially, the two are
+seen and treated as one whole entity, practically. 
+however, it's also not uncommon for them to be very different. and in that way
+it's almost like a physical representation of the alter egos of one person...
+it's somewhat unusual to see mirror-twins not with each other.
+though a 'phase' of wanting to get away from each other is also common.
+older folk tend to split up more.
+having a boy/girl version of the same name or similarly-so themed is typical too.
+combining magics is commonly much more powerful.
+falling in love with the same twinpair is common?
+twinship is common among fairies, normies, werefolk, and dryads, but only for
+the smallfolk. droids and humans don't.
+so essentially, most people in the world have some kind of (EEEVIL) twin hanging
+out somewhere too.
+more than two is rare and weird-feeling, but it happens. 
+when a person is accused of a crime, both twins are held responsible
+
+this quirk ties all the natural smallfolk together as having some kind of shared
+history or ancestry from ancient times.
+legends have stories of a person's soul being split in two.
+
+OR mirror-twins are just very, very common and multiple children is common in
+general, just like for many mammals that have whole 'litters' of kids.
+twins and triplets are most common. 4-5 aren't uncommon. 1 is a bit unusual.
+more than 5 is rare but not crazy.
+
+
+
+Pygmalia
+vitiligo skin, white hair in the double-ribbon bun, changing eyes
+one small white/transparent wing, one large rainbow wing
+white and transparent, delicate top jacket. bright, colorful skirt.
+
+
+
+alliterative naming conventions are a common tradition
+
+
+
+
+FINAL LIST
+witches/wizards
+cyborg-tech-normies
+droids
+werefolk
+dryads
+fairies
+'giants' (humans)
+
+
+normies
+  cyborg normies
+  witches/wizards
+artificial
+  free droids
+  service droids
+  dumb droids
+werefolk
+  avian
+  fish
+  mammal
+  insect
+  reptile/amphib
+dryad
+  reseedable, shrubs
+fairies
+  fire
+  water
+  air
+  earth
+  light
+  dark
+  aether
+  nothing
+humans
+  witch/wizard
+  technormies
+  werehumans
+  tree dryads
+  sorcerers/sorceresses
+  droids
+
+
+
+
+

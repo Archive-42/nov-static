@@ -196,30 +196,27 @@ Chai provides three assertion styles you can choose from
 
 1. Assert style
 
-
-    ```js
-      let assert = require('chai').assert
-      let nums = [1,2,3,4]
-      assert.isArray(nums, 'is array of nums')
-    ```
+   ```js
+   let assert = require("chai").assert;
+   let nums = [1, 2, 3, 4];
+   assert.isArray(nums, "is array of nums");
+   ```
 
 2. Expect style
 
-
-    ```js
-      let expect = require('chai').expect
-      let nums = [1,2,3,4]
-      expect(nums).to.be.an('array').that.includes(2);
-    ```
+   ```js
+   let expect = require("chai").expect;
+   let nums = [1, 2, 3, 4];
+   expect(nums).to.be.an("array").that.includes(2);
+   ```
 
 3. Should style
 
-
-    ```js
-      let should = require('chai').should
-      let nums = [1,2,3,4]
-      nums.should.be.an('array').that.includes(2);
-    ```
+   ```js
+   let should = require("chai").should;
+   let nums = [1, 2, 3, 4];
+   nums.should.be.an("array").that.includes(2);
+   ```
 
 Mocha interface system
 

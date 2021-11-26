@@ -1,0 +1,75 @@
+extends layout.pug
+
+block content
+    link(rel="stylesheet" type="text/css" href="/styles/story.css")
+    script(defer type="module" src="/js/story.js")
+    article(class="story-container")
+      h1(class="story-title" id="story-title" data-storyinfo=storyInfo)= storyInfo.title
+      .story-author-info-top
+        img(class="md-icon top-author-img" src="/icons/avatar (1).svg" alt=`Author ${ storyInfo.authorInfo.authorFN } ${ storyInfo.authorInfo.authorLN }`)
+        span(class="top-author-name") #{ storyInfo.authorInfo.authorFN } #{ storyInfo.authorInfo.authorLN }
+        span(class="top-story-date")= storyInfo.createdAt
+        button(class="follow-button top-author-follow btn-primary-inverted" data-author=storyInfo.authorInfo.authorId) Follow
+
+      .bookmark-wing
+        img(class="bkmrk bookmark-top md-icon clickable-icon" src="/icons/bookmark.svg")
+
+      img(class="story-image" src=`/assets/stories/${ storyInfo.storyId }-1.jpg` alt="Story Image")
+
+      .story-body= storyInfo.body
+
+      div(class="below-body-options")
+        .likes-on-side.clickable-icon
+          img(class="sm-icon i-like-this" src="/icons/heart.svg" data-storyid=storyInfo.storyId data-likes=storyInfo.likes)
+          span(class="bottom-option-span likeCount") #{ storyInfo.likeCount } Likes
+        .comments-on-side.comment-show.clickable-icon
+          if storyInfo.commentsCount > 0
+            img(class="sm-icon" src="/icons/chat_blue.svg")
+          else
+            img(class="sm-icon" src="/icons/chat.svg")
+          span(class="bottom-option-span") #{ storyInfo.commentsCount } Comments
+
+      div(class="author-below-body")
+        img(class="author-below-item md-icon" src="/icons/avatar (1).svg" alt=`Author ${ storyInfo.authorInfo.authorFN } ${ storyInfo.authorInfo.authorLN }`)
+        span(class="author-below-item auth-name") #{ storyInfo.authorInfo.authorFN } #{ storyInfo.authorInfo.authorLN }
+        button(class="author-below-item follow-button btn-primary-inverted" data-author=storyInfo.authorInfo.authorId) Follow
+
+    div(class="story-options")
+      span #{ storyInfo.authorInfo.authorFN } #{ storyInfo.authorInfo.authorLN }
+      button(class="follow-button btn-primary-inverted" data-author=storyInfo.authorInfo.authorId) Follow
+      span(class="flex-opt double clickable-icon")
+        img(class="sm-icon i-like-this" src="/icons/heart.svg" data-storyid=storyInfo.storyId data-likes=storyInfo.likes)
+        span(class="count likeCount")= storyInfo.likeCount
+      span(class="flex-opt double comment-show clickable-icon")
+        if storyInfo.commentsCount > 0
+          img(class="sm-icon" src="/icons/chat_blue.svg")
+        else
+          img(class="sm-icon" src="/icons/chat.svg")
+        span(class="the-comment-count")= storyInfo.commentsCount
+      img(class="bkmrk sm-icon flex-opt clickable-icon" src="/icons/bookmark.svg")
+
+
+    .comments-bar#comments
+      span(id="comment-bar-header")
+        h2 Comments (
+          span(class="the-comment-count") #{ storyInfo.commentsCount })
+        img(class="md-icon close-comments-btn" alt="close comments" src="/icons/close_icon.svg")
+      form(method="post" action="/comments" id="commentForm" data-story=storyInfo.storyId)
+        span(id="curentCommentingUserDisplay")
+          img(class="sm-icon" id="commenting-person-head" src="/icons/avatar (1).svg")
+          span(id="currentUserName")
+        textarea(id="comment" class="my-original-comment" name="comment" placeholder="Tell us what you think...")
+        button(type="submit" id="submitComment" class="btn-primary") Submit Comment
+      ul(id="commentList")
+        if storyInfo.commentsCount > 0
+          each comment in storyInfo.comments
+            li(class="full-comment" data-commentid=comment.id data-user=comment.userId)
+              ul(class="comment-ul")
+                li(class="commenting-user")
+                  img(class="sm-icon" src="/icons/avatar (1).svg")
+                  span #{ comment.firstName } #{ comment.lastName }
+                li(class="comment-body")= comment.body
+                li(class="comment-time")= comment.created
+                li(class="my-comment-options" data-user=comment.userId)
+                  button(class="editBtn btn-primary") Edit
+                  button(class="dltBtn btn-primary-red") Delete

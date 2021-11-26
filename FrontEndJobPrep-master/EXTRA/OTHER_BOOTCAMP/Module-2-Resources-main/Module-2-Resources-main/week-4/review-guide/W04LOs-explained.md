@@ -4,8 +4,7 @@
 
 1. Explain the difference between the BOM (browser object model) and the DOM(document object model).
 
-
-    - The DOM is the collection of nodes that represent the hierarchy of HTML elements that are rendered on the page. The BOM is the hierarchy of the browser objects, such as the window and the navigator of the browser. The DOM is thus a smaller part of the BOM.
+   - The DOM is the collection of nodes that represent the hierarchy of HTML elements that are rendered on the page. The BOM is the hierarchy of the browser objects, such as the window and the navigator of the browser. The DOM is thus a smaller part of the BOM.
 
 2. Given a diagram of all the different parts of the Browser identify each part.
    ![Browser Parts](browser.png)
@@ -23,8 +22,7 @@ newWindow.resizeTo(400, 200);
 
 4. Identify the context of an anonymous functions running in the Browser (the window).
 
-
-    - We can double check by console logging `this` in the browser
+   - We can double check by console logging `this` in the browser
 
 ```js
 let func = () => {
@@ -65,27 +63,23 @@ window.onload = () => { ...code }
 
 7. Identify three ways to prevent JS code from executing until an entire HTML page is loaded
 
-
-    - An event listener in the JavaScript file (`window.addEventListener('DOMContentLoaded', callback)` or `window.onload = callback`)
-    - Have the script tag at the end of the HTML file
-    - Use the keywords `async` and/or `defer` in the script tag
+   - An event listener in the JavaScript file (`window.addEventListener('DOMContentLoaded', callback)` or `window.onload = callback`)
+   - Have the script tag at the end of the HTML file
+   - Use the keywords `async` and/or `defer` in the script tag
 
 8. Label a diagram on the Request/Response cycle.
    ![Request Response Cycle](request-response-cycle.png)
 
 9. Explain the Browser's main role in the request/response cycle.
 
-
-    - Parsing HTML,CSS, JS
-    - Rendering that information to the user by constructing a DOM tree and rendering it)
+   - Parsing HTML,CSS, JS
+   - Rendering that information to the user by constructing a DOM tree and rendering it)
 
 10. Given several detractors - identify which real-world situations could be implemented with the Web Storage API
-
 
     - Shopping cart, form data, user preferences like a night mode
 
 11. Given a website to visit that depends on cookies (like Amazon), students should be able to go to that site add something to their cart and then delete that cookie using the Chrome Developer tools in order to empty their cart.
-
 
     - Open Developer tools
     - Go to the Application tab
@@ -394,17 +388,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 7. Identify the definition of the bubbling principle.
 
-
-    - When an event occurs on an element, any handlers that respond to that event on the target are invoked, then on the parent element, then on its parent, all the way up the DOM hierarchy. We can prevent this bubbling by invoking `event.stopPropogation()`.
+   - When an event occurs on an element, any handlers that respond to that event on the target are invoked, then on the parent element, then on its parent, all the way up the DOM hierarchy. We can prevent this bubbling by invoking `event.stopPropogation()`.
 
 ## JSON
 
 1. Identify and generate valid JSON-formatted strings
 
-
-    - In most cases we can just add "" around our data. Whenever we are reference a string, we have to escape a " character with \".
-    - {key1: "value", key2: 12} becomes "{\"key1\": \"value\", \"key2\": 12}"
-    - Important to note that the keys in this object are strings, so we add in the escaped quotes around each key. {key1: "value"} is the same as {"key1": "value"}
+   - In most cases we can just add "" around our data. Whenever we are reference a string, we have to escape a " character with \".
+   - {key1: "value", key2: 12} becomes "{\"key1\": \"value\", \"key2\": 12}"
+   - Important to note that the keys in this object are strings, so we add in the escaped quotes around each key. {key1: "value"} is the same as {"key1": "value"}
 
 2. Use JSON.parse to deserialize JSON-formatted strings
 
@@ -422,13 +414,11 @@ const objJSON = JSON.stringify(obj);
 
 4. Correctly identify the definition of "deserialize"
 
-
-    - Taking a string and turning it into data. We say string here because we are working with JSON. More broadly, it could refer to another format, such as bits, that we are turning into data.
+   - Taking a string and turning it into data. We say string here because we are working with JSON. More broadly, it could refer to another format, such as bits, that we are turning into data.
 
 5. Correctly identify the definition of "serialize"
 
-
-    - Taking data and turning it into a string format in order to send or store more easily. (Same applies with the usage of strings, could be a different format if we're not talking about JSON)
+   - Taking data and turning it into a string format in order to send or store more easily. (Same applies with the usage of strings, could be a different format if we're not talking about JSON)
 
 ## Storage
 

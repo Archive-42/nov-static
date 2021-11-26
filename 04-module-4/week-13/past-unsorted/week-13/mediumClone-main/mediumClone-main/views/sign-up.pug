@@ -1,0 +1,20 @@
+include includes/utils.pug
+
+block signIn
+  .form-container
+    .logHeader
+      a.button.closeForm X
+    h2.sign-up-h2 Sign Up
+    .errors-container
+    form(class="signUpForm").modalForm
+      input(name='firstName' class='signUpInput' type='text' placeholder='First Name' required).modalInput
+      input(name='lastName' class='signUpInput' type='text' placeholder='Last Name' required).modalInput
+      input(name='email' class='signUpInput' type='email' placeholder='Enter Email' required).modalInput
+      input(name='password' class='signUpInput' type='password' placeholder='Enter Password' required).modalInput
+      input(name='confirmPassword' class='signUpInput' type='password' placeholder='Confirm Password' required).modalInput
+      button.btn.btn-primary(type='submit').modalInput Sign Up
+    p Already have an account?
+      a.swapToLogIn  Log in here.
+    //- button.demo.btn.btn-primary(type='submit') Demo Login
+
+

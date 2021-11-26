@@ -1,0 +1,9 @@
+extends profile
+include includes/utils
+
+block userTabContent
+  ul.profileFeed
+    h2.tabTitle #{user.firstName} #{user.lastName}'s Followers
+    each user in followingUsers
+    
+      li.card: +userCard(user.Follower)

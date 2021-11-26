@@ -206,13 +206,14 @@ When **g** is then **invoked**, the scope chain includes three objects:
 - **the call object of f**
 - **the global object**
 
-**function** f(){ /\* **my scope chain when invoked consists of**  
- 1) my own call object  
- 2) the global object \*/ **function** g(){ /\* **my** **scope chain when invoked consists of**  
- 1) my own call object  
- 2) the call object of f when I was defined  
- 3) the global object \*/ }  
-}
+**function** f(){ /\* **my scope chain when invoked consists of**
+
+1.  my own call object
+2.  the global object \*/ **function** g(){ /\* **my** **scope chain when invoked consists of**
+3.  my own call object
+4.  the call object of f when I was defined
+5.  the global object \*/ }  
+    }
 
 If the nested function is used **only within the outer function**, the only reference to the nested function is ONLY in the **call object**. Then, when the outer function returns, the nested function refers to the call object, and the call object refers to the nested function, but since there are no other references to either one, both objects become available for **garbage collection**.
 

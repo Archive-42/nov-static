@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "34e81719-5d99-48e1-b811-6758c2e40832",
+    "name": "Present Your Projects",
+    "repo": "Modular-Curriculum",
+    "path": "content/course/topics/individual-projects/readings/reading-individual-presentation.md",
+    "type": "Reading",
+    "timeEstimate": 7200,
+    "urls": [
+      "present-your-projects"
+    ],
+    "topic": "Monday",
+    "subtopic": "Presentations",
+    "body": "# Show And Tell\n\nIt's time to show off all the hard work that you've done! Great job! You worked\nreally hard to get your project done, pushed hard through the gauntlet, spent\ntireless hours making your project come to life.\n\nYou are a real software engineer!\n\nEach presentation should last between five and ten minutes. Some things that you\nmay want to highlight:\n\n* The way that you integrated front- and back-ends.\n* Anything that you added that went beyond the bound of what you learned in\n  class and how that went.\n* Reflect on what went well in the experience, as well as blockers or tricky\n  bugs. What you would do differently if you could start over with all the\n  knowledge you have right now?\n"
+  },
+  "success": true
+}

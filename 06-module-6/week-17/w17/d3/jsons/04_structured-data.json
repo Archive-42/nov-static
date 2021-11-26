@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "4b90d3b4-b54b-43d0-aa7e-d3376db303e7",
+    "name": "Structured Data",
+    "repo": "Modular-Curriculum",
+    "path": "content/python/topics/structures/readings/reading-structures-py.md",
+    "type": "Reading",
+    "timeEstimate": 600,
+    "urls": [
+      "structured-data"
+    ],
+    "topic": "Homework for Wednesday",
+    "subtopic": "Homework",
+    "body": "# Structured Data Explained\n\nWhen you complete this lesson, you should be able to\n- Define *sequence*, *collection* and *iterable*\n- Explain *immutable*\n\n## Sequences\n\nThe most basic data structure in Python is a **sequence**. Each item in a \nsequence is assigned an **index** and this index determines the *order* of\nthe sequence. The first index is zero.\n\nYou are already familiar with the text sequence type `str`, a.k.a. strings. \nThe three basic sequence types you'll study in this lesson are *list*, *tuple* \nand *range*.\n\n## Collections\n\nCollections are unordered data structures. Instead of indexes, collections\nuse hashable values. In simple terms, a *hashable* value never changes during \nits lifetime. Since hashable values may be compared to determine equality, they\nare usable as a key in a dictionary or as the member of a set. You'll study\n*dictionaries* and *sets* in this lesson.\n\n## Iterable\n\nAn *iterable* can be thought of as the generic name for a sequence or \ncollection. Specifically, an iterable is any object on which a loop \ncan run (a.k.a. iterate over) to access the elements in the item.\n\n## Immutable\n\nIterables come in two forms: **mutable** and **immutable**. In short, *mutable* \niterators can be modified or changed and *immutable* ones are frozen (similar \nto constants) so cannot be changed.\n\nCommon actions for sequences include\n* Checking for the presence of an item: `if x in mylist`\n* Looping: `for x in mylist`\n* Adding: `[1,2,3] + [4,5,6]`\n* Multiplying `('am','pm') * 3`\n\nMutable sequences have additional actions like\n* Adding items: `append`\n* Removing items: `remove`\n* Ordering: `sort`, `reverse`\n* Splicing (a.k.a. partial replacements): `splice`\n\nAny function which modifies an iterable (that is, from the second list) will \nthrow an error if you try to run it on an immutable object.\n\n## What you've learned\n\nIn this article, you learned that Python has two types of *iterable* data \nstructures: *sequence* and *collection*. You also learned that *immutable* \niterables, like constants, cannot be changed.\n"
+  },
+  "success": true
+}

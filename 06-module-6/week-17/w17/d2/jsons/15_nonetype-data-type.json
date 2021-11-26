@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "a10e0ba6-2054-4af2-baef-9444a794c527",
+    "name": "NoneType Data Type",
+    "repo": "Modular-Curriculum",
+    "path": "content/python/topics/expressions/readings/reading-none-py.md",
+    "type": "Reading",
+    "timeEstimate": 0,
+    "urls": [
+      "nonetype-data-type"
+    ],
+    "topic": "Homework for Tuesday",
+    "subtopic": "Homework",
+    "body": "# The NoneType Data Type\n\nWhere JavaScript has both the `null` and `undefined` values that can imply the\nlack of existence of a value, Python only has one.\n\nIn Python there is a value called `None`, which represents the absence of a\nvalue. `None` is the only value of the `NoneType` data type. Just like the\nBoolean `True` and `False` values, `None` must be typed with a capital N.\n\nThis value-without-a-value can be helpful when you need to store something\nthat won’t be confused for a real value in a variable. One place where `None` is\nused is as the return value of functions that do not explicitly return a value,\nmuch in the same way that JavaScript will return `undefined` for functions that\ndo not return a value.\n\nBehind the scenes, Python adds `return None` to the end of any function\ndefinition with no return statement. Also, if you use a `return` statement\nwithout a value (that is, just the `return` keyword by itself), then `None` is\nreturned.\n"
+  },
+  "success": true
+}

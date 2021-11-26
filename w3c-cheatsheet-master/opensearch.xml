@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+   <ShortName>W3C Cheatsheet</ShortName>
+   <Description>Look up information on HTML, CSS, SVG, XPath from the W3C Cheatsheet.</Description>
+   <Contact>dom@w3.org</Contact>
+   <Url type="text/html" 
+        template="http://dev.w3.org/2009/cheatsheet/?dev#search,{searchTerms}"/>
+   <Url type="application/opensearchdescription+xml"
+     rel="self"
+        template="http://dev.w3.org/2009/cheatsheet/opensearch.xml"/>
+   <Url type="application/x-suggestions+json"
+        template="http://www.w3.org/2009/cheatsheet/suggest?term={searchTerms}"/>
+
+   <Image height="64" width="64" type="image/png">http://www.w3.org/2009/cheatsheet/icons/64x.png</Image>
+   <Image height="16" width="16" type="image/png">http://www.w3.org/2009/cheatsheet/icons/16x.png</Image>
+
+ </OpenSearchDescription>

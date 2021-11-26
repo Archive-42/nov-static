@@ -1,0 +1,148 @@
+.
+├── Outline-Reference/
+├── days/
+│   ├── friday/
+│   │   ├── Aug-2020-official/
+│   │   │   ├── Eod/
+│   │   │   │   └── Learning-Objectives/
+│   │   │   ├── Lecture/
+│   │   │   └── Other/
+│   │   ├── My-Notes/
+│   │   │   ├── Documentation/
+│   │   │   ├── External-Resources/
+│   │   │   └── Lecture/
+│   │   ├── Past-Cohort/
+│   │   │   ├── Misc-Unsorted/
+│   │   │   ├── Project-Solutions/
+│   │   │   ├── Readings/
+│   │   │   └── Useful/
+│   │   └── Projects/
+│   │   |   ├── Attempted/
+│   │   |   ├── Official-or-other-solutions/
+│   │   |   └── Zipped-folders/
+|   |     ── Misc-Unsorted/
+|   |
+│   ├── Monday/
+│   ├── Thursday/
+│   ├── Tuesday/
+│   └── Wednesday/
+│  
+├── miscellaneous/
+|
+└── test-prep/
+    ├── Moc-Tests/
+    ├── Student-Made-possibly-Imperfect/
+    ├── Study-Guides/
+    └── weeks-LOs/   
+
+
+
+
+├── Outline-Reference
+├── days
+│   ├── friday
+│   │   ├── Aug-2020-official
+│   │   │   ├── Eod
+│   │   │   │   └── Learning-Objectives
+│   │   │   ├── Lecture
+│   │   │   └── Other
+│   │   ├── Misc-Unsorted
+│   │   ├── My-Notes
+│   │   │   ├── Documentation
+│   │   │   ├── External-Resources
+│   │   │   └── Lecture
+│   │   ├── Past-Cohort
+│   │   │   ├── Misc-Unsorted
+│   │   │   ├── Project-Solutions
+│   │   │   ├── Redings
+│   │   │   └── Useful
+│   │   └── Projects
+│   │       ├── Attempted
+│   │       ├── Official-or-other-solutions
+│   │       └── Zipped-folders
+│   ├── monday
+│   │   ├── Aug-2020-official
+│   │   │   ├── Eod
+│   │   │   │   └── Learning-Objectives
+│   │   │   ├── Lecture
+│   │   │   └── Other
+│   │   ├── Misc-Unsorted
+│   │   ├── My-Notes
+│   │   │   ├── Documentation
+│   │   │   ├── External-Resources
+│   │   │   └── Lecture
+│   │   ├── Past-Cohort
+│   │   │   ├── Misc-Unsorted
+│   │   │   ├── Project-Solutions
+│   │   │   ├── Redings
+│   │   │   └── Useful
+│   │   └── Projects
+│   │       ├── Attempted
+│   │       ├── Official-or-other-solutions
+│   │       └── Zipped-folders
+│   ├── thursday
+│   │   ├── Aug-2020-official
+│   │   │   ├── Eod
+│   │   │   │   └── Learning-Objectives
+│   │   │   ├── Lecture
+│   │   │   └── Other
+│   │   ├── Misc-Unsorted
+│   │   ├── My-Notes
+│   │   │   ├── Documentation
+│   │   │   ├── External-Resources
+│   │   │   └── Lecture
+│   │   ├── Past-Cohort
+│   │   │   ├── Misc-Unsorted
+│   │   │   ├── Project-Solutions
+│   │   │   ├── Redings
+│   │   │   └── Useful
+│   │   └── Projects
+│   │       ├── Attempted
+│   │       ├── Official-or-other-solutions
+│   │       └── Zipped-folders
+│   ├── tuesday
+│   │   ├── Aug-2020-official
+│   │   │   ├── Eod
+│   │   │   │   └── Learning-Objectives
+│   │   │   ├── Lecture
+│   │   │   └── Other
+│   │   ├── Misc-Unsorted
+│   │   ├── My-Notes
+│   │   │   ├── Documentation
+│   │   │   ├── External-Resources
+│   │   │   └── Lecture
+│   │   ├── Past-Cohort
+│   │   │   ├── Misc-Unsorted
+│   │   │   ├── Project-Solutions
+│   │   │   ├── Redings
+│   │   │   └── Useful
+│   │   └── Projects
+│   │       ├── Attempted
+│   │       ├── Official-or-other-solutions
+│   │       └── Zipped-folders
+│   └── wednesday
+│       ├── Aug-2020-official
+│       │   ├── Eod
+│       │   │   └── Learning-Objectives
+│       │   ├── Lecture
+│       │   └── Other
+│       ├── Misc-Unsorted
+│       ├── My-Notes
+│       │   ├── Documentation
+│       │   ├── External-Resources
+│       │   └── Lecture
+│       ├── Past-Cohort
+│       │   ├── Misc-Unsorted
+│       │   ├── Project-Solutions
+│       │   ├── Redings
+│       │   └── Useful
+│       └── Projects
+│           ├── Attempted
+│           ├── Official-or-other-solutions
+│           └── Zipped-folders
+├── miscellaneous
+└── test-prep
+    ├── Moc-Tests
+    ├── Student-Made-possibly-Imperfect
+    ├── Study-Guides
+    └── weeks-LOs
