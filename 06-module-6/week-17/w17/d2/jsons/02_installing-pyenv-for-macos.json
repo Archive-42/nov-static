@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "46f1bc31-dd83-4c17-bd7c-02be8e63f37b",
+    "name": "Installing Pyenv For macOS",
+    "repo": "Modular-Curriculum",
+    "path": "content/python/topics/setup/readings/reading-install-pyenv-on-macos-py.md",
+    "type": "Reading",
+    "timeEstimate": 0,
+    "urls": [
+      "installing-pyenv-for-macos"
+    ],
+    "topic": "Homework for Tuesday",
+    "subtopic": "Homework",
+    "body": "# Installing Pyenv On macOS\n\nThe **pyenv** tool is one of the tools that lets you install different versions\nof Python on your local machine and use the different ones on the command line.\n\nIt is basically **nvm**, but for Python.\n\nLuckily, there's a Homebrew recipe for you.\n\n```shell\nbrew install pyenv\n```\n\nNow, figure out what shell you're using. Open a Terminal and type `echo $SHELL`.\nFind the section below that matches the output of that command.\n\n## /bin/zsh\n\nYou need to update your **.zshrc** file to define the \"PYENV_ROOT\" environment\nvariable, and to add the executable directory to your path. Open your\n**.zshrc**.\n\n```shell\ncode ~/.zshrc\n```\n\nThen, in the file, add the following lines.\n\n```shell\n# Add pyenv executable directory to PATH\nexport PATH=\"$PYENV_ROOT/bin:$PATH\"\n\n# Initialize pyenv if it exists\nif command -v pyenv 1>/dev/null 2>&1\nthen\n  eval \"$(pyenv init -)\"\nfi\n```\n\n## /bin/bash\n\nYou need to update your profile to define the \"PYENV_ROOT\" environment variable,\nand to add the executable directory to your path.\n\nType `ls ~/.bash_profile`. Either you will see a file listed there _or_ you\nwill get an error message that reads \"No such file or directory\". If you get the\nerror message, type `ls ~/.profile`. You _should_ see a file name listed.\n\nIf you saw **/Users/your-user/.bash_profile**, then type this:\n\n```shell\ncode ~/.bash_profile\n```\n\nIf you saw **/Users/your-user/.profile**, then type this:\n\n```shell\ncode ~/.profile\n```\n\nThen, in the file, add the following lines.\n\n```shell\n# Add pyenv executable directory to PATH\nexport PATH=\"$PYENV_ROOT/bin:$PATH\"\n\n# Initialize pyenv if it exists\nif command -v pyenv 1>/dev/null 2>&1\nthen\n  eval \"$(pyenv init -)\"\nfi\n```\n\n## Everyone, altogether!\n\nClose your Terminal and open a new one.\n\nNow, install Python 3.8.3 as your default Python installation for **pyenv**.\nThis can take a while.\n\n```\npyenv install 3.8.3\n```\n\nNow, set 3.8.3 as your default Python installation for **pyenv**.\n\n```\npyenv global 3.8.3\n```\n\nMake sure that everything is now set by running `python --version`. You should\nsee \"Python 3.8.3\" get printed to your screen.\n"
+  },
+  "success": true
+}

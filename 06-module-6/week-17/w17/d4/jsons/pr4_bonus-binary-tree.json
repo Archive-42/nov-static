@@ -1,0 +1,19 @@
+{
+  "template": {
+    "taskId": "157ae4d1-3318-45c3-8c42-51d362dd2ef9",
+    "name": "Bonus: Binary Tree Project",
+    "repo": "Modular-Curriculum",
+    "path": "content/python/topics/structures/projects/binary-tree/README.md",
+    "type": "Project",
+    "timeEstimate": 0,
+    "urls": [
+      "bonus--binary-tree-project"
+    ],
+    "topic": "Friday",
+    "subtopic": "Knights Travail",
+    "download": "",
+    "solution": "",
+    "body": "# Binary Tree Project\n\nThis project contains a skeleton for you to implement a binary tree. You'll\nbegin by implementing a node class for the tree and setting the tree order.\nBegin by cloning the starter project from\nhttps://github.com/appacademy-starters/python-binary-tree.\n\n## Instructions\n\nYou'll notice that you have three files:\n  * **tree_node.py** to implement the `TreeNode` class; and\n  * **tree_order.py** to implement the `in_order_traversal` and\n    `post_order_traversal` functions to traverse a tree; and\n  * **leet_code_105.py** as a scratch pad.\n\n### TreeNode\n\nImplement a `TreeNode` class in the `tree_node.py` file. The `__init__` method\nshould set a `value` input as an attribute. The method should also initialize\n`left` and `right` attributes to `None`. Uncomment the print statements and run\nyour script with `python3 tree_node.py` to test whether your `__init__` method\nsuccessfully sets a node `value` and whether you can successfully set `left` and\n`right` child nodes.\n\n### Tree Order\n\nIn the `tree_order.py` file, you'll implement two functions to traverse the tree\neither _in-order_ or in _post-order_. As a quick reminder, tree traversal is the\nprocess of visiting each node in a tree exactly once in some order. There are\nthree main ways to traverse a tree: pre-order, in-order, and post-order. Today,\nyou'll be implement functions to traverse a tree in-order and post-order. In the\nbonus LeetCode function, you'll build a tree by taking in a pre-ordered tree as\nwell as an in-ordered tree.\n\n**In-order** traversal is when the left node is visited before the root node,\nand the root node is visited before the right node: left node → root node →\nright node.\n\n![in-order-diagram][in-order]\n\n**Post-order** traversal is when the left and right nodes are visited before the\nroot node: left node → right node → root node.\n\n![post-order-diagram][post-order]\n\n**Pre-order** traversal is simply the pattern where the root node is visited\nbefore the left and right nodes: root node → left node → right node.\n\n![pre-order-diagram][pre-order]\n\nThe `in_order_traversal` function will return an _in-order_ list containing\nvalues of the binary tree while the `post_order_traversal` function will return\na list containing values following _post-order_. When given an empty tree, both\nfunctions will return an empty list.\n\nNotice how the top of the file imports the `TreeNode` class from the\n`tree_node.py` file. Your `TreeNode` class is imported to allow for manual\ntesting. There is one test case provided for you. Now it's time for you to\npractice structuring your own testing! You can start by thinking about possible\nedge cases and writing manual tests to check your code with those edge cases!\n\n[in-order]:\nhttps://appacademy-open-assets.s3-us-west-1.amazonaws.com/Modular-Curriculum/content/python/topics/structures/assets/in-order.png\n\n[post-order]:\nhttps://appacademy-open-assets.s3-us-west-1.amazonaws.com/Modular-Curriculum/content/python/topics/structures/assets/post-order.png\n\n[pre-order]:\nhttps://appacademy-open-assets.s3-us-west-1.amazonaws.com/Modular-Curriculum/content/python/topics/structures/assets/pre-order.png\n"
+  },
+  "success": true
+}

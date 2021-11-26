@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "6b09dd9e-d052-4b48-be7f-d286339ff463",
+    "name": "Identity vs. Equality",
+    "repo": "Modular-Curriculum",
+    "path": "content/python/topics/expressions/readings/reading-identity-py.md",
+    "type": "Reading",
+    "timeEstimate": 600,
+    "urls": [
+      "identity-vs--equality"
+    ],
+    "topic": "Homework for Tuesday",
+    "subtopic": "Homework",
+    "body": "# Identity vs. Equality\n\nWhen you finish this article, you should be able to\n- Explain the difference between `==` and `is`\n- Explain when `not` will throw an exception\n\n## Equality Operators\n\nA quick refresher:\n- `>` (greater than)\n- `<` (less than)\n- `>=` (greater than or equal to)\n- `<=` (less than or equal to)\n- `==` (equal to)\n- `!=` (not equal to)\n\nComing from JavaScript you already know how to use these!\n\n> Notice that there are only 2 equal signs for equality (**equal to**) and one \n> following the exclamation point for inequality (**not equal to**).\n\n## Identity Operators\n\nPython has a different way to handle strict comparisons: `is` and `is not`.\n\n- `is` (strictly equal to)\n- `is not` (not strictly equal to)\n\nStrings and numbers are similar, but not exactly the same. Both `==` and `is` \nconsider them not equal.\n\n```python\nprint (2 == '2')    # => False\nprint (2 is '2')    # => False\n```\n\nStrings are strings. It doesn't matter if they were made with double quote (`\"`)\nor single quote (`'`).\n\n```python\nprint (\"2\" == '2')    # => True\nprint (\"2\" is '2')    # => True\n```\n\nNumbers, however, come in several types; for example, with or without a \ndecimal point. The equality operator (`==`) considers them equal, but the\nidentity operator (`is`) does not.\n\n```python\nprint (2 == 2.0)    # => True\nprint (2 is 2.0)    # => False\n```\n\nIn the Python community, `is` and `is not` are regarded as the preferred option \nover `==` and `!=`. Both for the simplicity and readability, as well as the\nstrict type checking.\n\nAs you can see the `is` identity operator in Python is similar to the \n`===` equality operator in JavaScript.\n\n## What you've learned\n- Explain the difference between `==` and `is`\n- Explain when `not` will throw an exception\n"
+  },
+  "success": true
+}

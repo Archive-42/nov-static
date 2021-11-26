@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "697323a0-61a1-4467-9f92-fc5b6f6c803d",
+    "name": "Learning Objectives For The Week",
+    "repo": "Modular-Curriculum",
+    "path": "content/python/objectives/reading-objectives-first-week.md",
+    "type": "Reading",
+    "timeEstimate": 0,
+    "urls": [
+      "objectives-for-the-week"
+    ],
+    "topic": "Monday",
+    "subtopic": "Lecture",
+    "body": "# Learning Objectives For The Week\n\nThis is the introduction to Python. When you learned JavaScript, you may have\nbeen starting out for the first time learning a language. This time, though,\nyou're learning a second language, which means you have some of the\nunderstanding of concepts without necessarily knowing the syntax. As such, this\nis a busy week with a lot to learn. You should be able to explain and use any\nof the following in Python\n\n* The `None` value\n* Boolean values\n* Number values\n* String values\n* Variables\n* Comparison operators\n* Assignment operators\n* Flow-control statements: if, while, for\n* Functions\n* Classes, methods, and properties\n* Lists\n* Dictionaries\n* Sets\n* Tuples\n* Ranges\n* List comprehensions\n* Built-in functions: filter, map, sorted, enumerate, zip, len, max, min, sum,\n  any, all, dir\n* Importing packages and modules\n"
+  },
+  "success": true
+}

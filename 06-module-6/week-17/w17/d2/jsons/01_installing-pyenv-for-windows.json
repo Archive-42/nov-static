@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "657f1ff1-8b82-46e2-9fb8-861ae71d57b7",
+    "name": "Installing Pyenv For Windows",
+    "repo": "Modular-Curriculum",
+    "path": "content/python/topics/setup/readings/reading-install-pyenv-on-wsl-py.md",
+    "type": "Reading",
+    "timeEstimate": 0,
+    "urls": [
+      "installing-pyenv-for-windows"
+    ],
+    "topic": "Homework for Tuesday",
+    "subtopic": "Homework",
+    "body": "# Installing Pyenv On WSL\n\nThe **pyenv** tool is one of the tools that lets you install different versions\nof Python on your local machine and use the different ones on the command line.\n\nIt is basically **nvm**, but for Python.\n\nFirst, install the prerequisites you'll need to build different Python packages.\nWhen prompted, tell Apt that, yes, you really do want to install those packages.\n\n```shell\nsudo apt-get update\nsudo apt-get install --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev\n```\n\nOnce that finishes, install the **pyenv** code by cloning the GitHub repository\nthat hosts it. You can do that with the following command line.\n\n```shell\n$ git clone https://github.com/pyenv/pyenv.git ~/.pyenv\n```\n\nOnce you have that, you need to update your **.bash_profile** file to define\nthe \"PYENV_ROOT\" environment variable, and to add the executable directory to\nyour path. Open your **.bash_profile**. (Note: If you have no **.bash_profile**\nbut you _do_ have a **.profile**, open that instead.)\n\n```shell\ncode ~/.bash_profile\n```\n\nThen, in the file, add the following lines. If you cloned the repository into\na different path than **~/.pyenv**, then make sure that is the path you set for\n\"PYENV_ROOT\".\n\n```shell\n# PYENV_ROOT used by pyenv to know where to look for its stuff\nexport PYENV_ROOT=\"$HOME/.pyenv\"\n\n# Add pyenv executable directory to PATH\nexport PATH=\"$PYENV_ROOT/bin:$PATH\"\n\n# Initialize pyenv if it exists\nif command -v pyenv 1>/dev/null 2>&1\nthen\n  eval \"$(pyenv init -)\"\nfi\n```\n\nClose your Terminal and open a new one. You should see no errors in the Terminal\nwhen it starts.\n\nNow, install Python 3.8. This can take a while.\n\n```\npyenv install 3.8.3\n```\n\nNow, set 3.8.3 as your default Python installation for **pyenv**.\n\n```\npyenv global 3.8.3\n```\n\nMake sure that everything is now set by running `python --version`. You should\nsee \"Python 3.8.3\" get printed to your screen.\n"
+  },
+  "success": true
+}

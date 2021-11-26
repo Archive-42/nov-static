@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "55378826-7207-4df8-abee-523d5e99b9e8",
+    "name": "Getting Input From The Command Line",
+    "repo": "Modular-Curriculum",
+    "path": "content/python/topics/structures/readings/reading-input-py.md",
+    "type": "Reading",
+    "timeEstimate": 300,
+    "urls": [
+      "getting-input-from-the-command-line"
+    ],
+    "topic": "Homework for Wednesday",
+    "subtopic": "Homework",
+    "body": "# User Input\n\nScripts and programs in Python often need to interact with the user \nrunning them.\n\nWhen you finish this article, you should be able to\n- Gather user `input` through the terminal\n\n## User input\n\nThe most basic approach is to show an `input` prompt where the user types \ntheir answer and hits enter to send it back into the program.\n\nPython runs synchronously. This means the program execution stops and waits for\nuser input when it is requested. There are not events, listeners and promises\nto manage like in JavaScript. This simplicity is one of many reasons development\nteams may choose Python instead of NodeJS for a particular project.\n\nThe `input` function shows a **prompt** to the user and waits for them to type\nENTER. Whatever characters the user types before ENTER are returned so you can\nstore them in a variable and use them later.\n\nUpgrade your first program to interact with the user.\n```python\nprint(\"hello world\")\nanswer = input(\"how are you?\")\nprint(\"I am fine\")\n```\n\nExecuting the program would print out the following\n```plaintext\nhello world\nhow are you?\n```\n\nAfter typing \"super fantastic\" and pressing ENTER on the keyboard, the output\nwould look like this\n```plaintext\nhello world\nhow are you?super fantastic\nI am fine\n```\n\nThat worked great!\n\nYou may notice, however, that there's no space after the \"?\". Sometimes that's\nfine. Sometimes you may way to include a space or linebreak at the end of\nyour prompt to help users feel more comfortable.\n\n```python\nprint(\"hello world\")\nanswer = input(\"how are you? \")  # <== notice space before closing quote\nprint(\"I am fine\")\n```\n\nWhich produces this output when the program is run.\n```plaintext\nhello world\nhow are you? super fantastic\nI am fine\n```\n\n## What you've learned\n\n- Gather user `input` through the terminal\n"
+  },
+  "success": true
+}

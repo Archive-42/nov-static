@@ -1,0 +1,17 @@
+{
+  "template": {
+    "taskId": "22d9a82a-4bd7-441a-ae7d-c20c50071890",
+    "name": "Tree Refresher",
+    "repo": "Modular-Curriculum",
+    "path": "content/python/topics/classes/readings/reading-trees-py.md",
+    "type": "Reading",
+    "timeEstimate": 600,
+    "urls": [
+      "tree-refresher"
+    ],
+    "topic": "Homework for Thursday",
+    "subtopic": "Homework",
+    "body": "# Tree Refresher\n\n(From _Intro to Algorithms and Data Structures_ in the in-person curriculum.)\n\n[Trees][1] store data in a hierarchy of layers. An element, or node at each\nlayer can have links to lower level nodes. One simple example is a file system:\n\n```\n* /\n    * Users\n        * markov\n            * Desktop\n            * Documents\n            * Downloads\n        * oppenheimer\n            * Desktop\n            * Downloads\n    * System\n        * Library\n```\n\nThe top-level node is called the _root_. Each node can hold a value: here the\nroot holds \"/\". The _children_ of a node are the nodes one level deeper. The\nchildren of the \"Users\" node hold \"markov\" and \"oppenheimer\". The lowest level\nnodes (the ones with no children) are called _leaves_.\n\nIn general, nodes can have any number of children.\n\n## Depth first search ([DFS][2])\n\nGiven a tree, you may wish to enumerate all the values held by nodes in the tree.\nFor instance, you may wish to go through the files/folders of the tree and print\neach one.\n\nOne common way to traverse (i.e., visit all the nodes) a tree is depth first\nsearch. The nodes are numbered in the order that we visit them:\n\n```\n          1\n         / \\\n        2   5\n       /   / \\\n      3   6   9\n     /   / \\\n    4   7   8\n```\n\nEach time, you try to visit the left child, if it exists and hasn't been visited\nyet. If it has, you try to visit the right child, if it exists and hasn't been\nvisited yet. If all the children have been visited, then you move up one level\nand repeat.\n\n## Breadth first search ([BFS][3])\n\nBreadth first search is an alternative to depth-first search.\n\n```\n          1\n         / \\\n        2   3\n       /   / \\\n      4   5   6\n     /   / \\\n    7   8   9\n```\n\nHere you visit a node, then each of its children, then each of their children,\netc. Watch [this animation][4] to see the order that you want to visit nodes in the\ntree.\n\nAn advantage of breadth-first search is that it considers shallower nodes before\ndeeper ones.\n\n## Algorithm\n\nDFS and BFS are _algorithms_. What's the difference between an algorithm and a\nmethod? An algorithm is an idea, an unambiguous but unrealized process that\nsolves a problem and which potentially could be written in any language. A\nmethod is the _implementation_, a conversion of an algorithm into code which can\nthen be run.\n\nAn algorithm can be coded up in any language.\n\n## References\n\n* Wikipedia: [Data structure][5]\n* Wikipedia: [Algorithm][6]\n\n[1]: http://en.wikipedia.org/wiki/Tree_data_structure\n[2]: http://en.wikipedia.org/wiki/Depth-first_search\n[3]: http://en.wikipedia.org/wiki/Breadth-first_search\n[4]: http://www.how2examples.com/artificial-intelligence/images/Breadth-First-Search.gif\n[5]: http://en.wikipedia.org/wiki/Data_structure\n[6]: http://en.wikipedia.org/wiki/Algorithm\n"
+  },
+  "success": true
+}

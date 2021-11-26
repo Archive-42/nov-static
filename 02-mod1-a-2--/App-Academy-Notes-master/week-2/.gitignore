@@ -1,0 +1,39 @@
+.DS_store
+node_modules/
+*.git
+*.init
+*.mp4
+*.webm
+*.desktop.ini
+*.desktop.init
+Week 5-messy/
+Week 6/Days/Tuesday/Projects/Promise-Project/
+Week 6/Days/Wednesday/Projects/Exploring Promises/
+Week 6/Days/Wednesday/Projects/Trivia-Game-Three-Ways/
+Week2/My_Notes/Day_3_Wed_Callbacks_w2/Week_2_Notes_and_Examples/
+Week3/Git_Hub_Skeleton/my-shared-timeline/
+Week3/Readings/project Solutions/Git_Solutions/my-shared-timeline/
+Week4/Days/Friday/
+Week4/Days/Monday/
+Week 6/Days/Monday/Projects/http-from-zero-to-server-starter/
+Week4/Days/Thursday/Tic-Tac-Toe/
+Week4/Days/Thursday/d4-json-and-storage/
+Week4/Days/Thursday/local-storage-project/
+Week4/Days/Wednesday/spud-face-project/
+week5/Days/Thursday/Connect Four/
+week5/Days/Tuesday/Monday/Projects/going-further-with-npm-project/
+week5/Days/Wednesday/Projects/
+week5/Connect Four Final/oop-connect-four/
+node_modules/
+*.mp4
+*.webm
+*Lecture/Sat-Study.mp4
+*Lecture/W1D5
+Lecture/friday review.mp4
+.mp4
+.webm
+*Lecture/friday review.mp4
+Week1\Video Lecture/
+C:\Users\15512\Google Drive\App Academy August Cohort 2020\Weeks\Week1\Video Lecture/
+
+
