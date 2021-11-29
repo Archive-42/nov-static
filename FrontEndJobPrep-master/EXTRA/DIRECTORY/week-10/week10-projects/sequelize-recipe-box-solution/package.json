@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "mocha": "^7.1.1",
-    "nodemon": "^2.0.2"
+    "nodemon": "2.0.15"
   },
   "scripts": {
     "s": "sequelize-cli",
