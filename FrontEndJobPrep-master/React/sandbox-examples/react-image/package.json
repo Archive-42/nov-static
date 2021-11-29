@@ -5,7 +5,7 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "@types/prop-types": "15.7.3",
+    "@types/prop-types": "15.7.4",
     "mini-debounce": "1.0.6",
     "prop-types": "15.7.2",
     "react": "16.12.0",
